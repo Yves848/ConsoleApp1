@@ -1,0 +1,2785 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CPCLModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Allergies">
+    <Key>
+      <PropertyRef Name="AllergyID" />
+    </Key>
+    <Property Name="AllergyID" Type="int" Nullable="false" />
+    <Property Name="PatientIdCPCL" Type="int" Nullable="false" />
+    <Property Name="ATCCode" Type="varchar" MaxLength="50" />
+    <Property Name="ArtID" Type="int" />
+  </EntityType>
+  <EntityType Name="Attestations">
+    <Key>
+      <PropertyRef Name="AttestID" />
+    </Key>
+    <Property Name="AttestID" Type="int" Nullable="false" />
+    <Property Name="PatIdCPCL" Type="int" Nullable="false" />
+    <Property Name="ArtID" Type="int" Nullable="false" />
+    <Property Name="CNKNr" Type="varchar" MaxLength="10" />
+    <Property Name="AttestationType" Type="varchar" MaxLength="2" />
+    <Property Name="AttestationNr" Type="varchar" MaxLength="20" />
+    <Property Name="DateActiveStart" Type="datetime" />
+    <Property Name="DateActiveEnd" Type="datetime" />
+    <Property Name="ArtReimbCatCode" Type="varchar" MaxLength="2" />
+    <Property Name="AttestationQty" Type="int" Nullable="false" />
+    <Property Name="GreenockID" Type="int" />
+    <Property Name="ReimbExcptCode" Type="varchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="Credit">
+    <Key>
+      <PropertyRef Name="CreditId" />
+    </Key>
+    <Property Name="CreditId" Type="int" Nullable="false" />
+    <Property Name="PatIdCPCL" Type="int" Nullable="false" />
+    <Property Name="DateSale" Type="datetime" Nullable="false" />
+    <Property Name="Amount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="SlsID" Type="int" />
+    <Property Name="CreditType" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="GreenockId" Type="int" />
+  </EntityType>
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="CustomerIdCPCL" />
+    </Key>
+    <Property Name="CustomerIdCPCL" Type="int" Nullable="false" />
+    <Property Name="CustomerName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="80" />
+    <Property Name="PlaceID" Type="int" />
+    <Property Name="Phone" Type="varchar" MaxLength="30" />
+    <Property Name="Fax" Type="varchar" MaxLength="30" />
+    <Property Name="GSM" Type="varchar" MaxLength="30" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="VatNr" Type="varchar" MaxLength="12" />
+    <Property Name="BankAccNr" Type="varchar" MaxLength="12" />
+    <Property Name="langCode" Type="varchar" MaxLength="1" />
+    <Property Name="GreenockID" Type="int" />
+    <Property Name="Memo" Type="varchar(max)" />
+    <Property Name="CustRistGrpCode" Type="varchar" MaxLength="5" />
+    <Property Name="PharmApbNr" Type="varchar" MaxLength="10" />
+    <Property Name="PaymMethodType" Type="varchar" MaxLength="1" />
+    <Property Name="IsIvc" Type="smallint" />
+    <Property Name="IsMultidose" Type="smallint" />
+    <Property Name="RefHomeLink" Type="varchar" MaxLength="20" />
+    <Property Name="AccountingId" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="InsrCovers">
+    <Key>
+      <PropertyRef Name="InsrCoverId" />
+    </Key>
+    <Property Name="InsrCoverId" Type="int" Nullable="false" />
+    <Property Name="PatIdCPCL" Type="int" Nullable="false" />
+    <Property Name="DateRead" Type="datetime" />
+    <Property Name="Nsuite" Type="int" Nullable="false" />
+    <Property Name="FedNr" Type="varchar" MaxLength="3" />
+    <Property Name="IsOaviExist" Type="bit" Nullable="false" />
+    <Property Name="RegistrationNr" Type="varchar" MaxLength="13" />
+    <Property Name="CgctCt1Cpy" Type="varchar" MaxLength="3" />
+    <Property Name="CgctCt2Cpy" Type="varchar" MaxLength="3" />
+    <Property Name="SisCardNr" Type="varchar" MaxLength="10" />
+    <Property Name="DateActiveStart" Type="datetime" />
+    <Property Name="DateActiveEnd" Type="datetime" />
+    <Property Name="DateValidityEnd" Type="datetime" />
+    <Property Name="DateValidityStart" Type="datetime" />
+    <Property Name="Siscertificate" Type="varchar" MaxLength="32" />
+    <Property Name="IsAttestSIS" Type="bit" />
+    <Property Name="SochelpThresholdAmnt" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="SochelpThresholdType" Type="int" />
+    <Property Name="OaviCode" Type="varchar" MaxLength="2" />
+    <Property Name="InsrCatCode" Type="varchar" MaxLength="1" />
+    <Property Name="GreenockID" Type="int" />
+    <Property Name="OaviVersion" Type="int" />
+    <Property Name="DateOrdo" Type="datetime" />
+    <Property Name="Periode" Type="varchar" MaxLength="5" />
+    <Property Name="InsrCoverSource" Type="smallint" />
+  </EntityType>
+  <EntityType Name="Parameter">
+    <Key>
+      <PropertyRef Name="PharmacyName" />
+    </Key>
+    <Property Name="PharmacyName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SoftName" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="50" />
+    <Property Name="PlaceID" Type="int" />
+    <Property Name="APBNr" Type="varchar" MaxLength="6" />
+    <Property Name="PharmacyOrderNr" Type="varchar" MaxLength="50" />
+    <Property Name="RIZIVNr" Type="varchar" MaxLength="12" />
+    <Property Name="PhoneNr" Type="varchar" MaxLength="12" />
+    <Property Name="FaxNr" Type="varchar" MaxLength="12" />
+    <Property Name="GSMNr" Type="varchar" MaxLength="12" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="BanckAccNr" Type="varchar" MaxLength="12" />
+    <Property Name="BanckAccNr2" Type="varchar" MaxLength="12" />
+    <Property Name="CommercialNr" Type="varchar" MaxLength="15" />
+    <Property Name="VatNr" Type="varchar" MaxLength="12" />
+    <Property Name="Langcode" Type="varchar" MaxLength="1" />
+    <Property Name="ExportDate" Type="datetime" />
+    <Property Name="LastNrSale" Type="int" />
+    <Property Name="InportExportVersion" Type="varchar" MaxLength="50" />
+    <Property Name="LastInvoiceNr" Type="int" />
+  </EntityType>
+  <EntityType Name="Pathologies">
+    <Key>
+      <PropertyRef Name="PathologyID" />
+    </Key>
+    <Property Name="PathologyID" Type="int" Nullable="false" />
+    <Property Name="PatIdCPCL" Type="int" />
+    <Property Name="DelphiPathologyCode" Type="varchar" MaxLength="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Patients">
+    <Key>
+      <PropertyRef Name="PatIdCPCL" />
+    </Key>
+    <Property Name="PatIdCPCL" Type="int" Nullable="false" />
+    <Property Name="FullName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="30" />
+    <Property Name="LastName" Type="nchar" MaxLength="50" />
+    <Property Name="FirstName2" Type="varchar" MaxLength="1" />
+    <Property Name="NissinszNr" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="80" />
+    <Property Name="PlaceID" Type="int" />
+    <Property Name="Phone" Type="varchar" MaxLength="30" />
+    <Property Name="Fax" Type="varchar" MaxLength="30" />
+    <Property Name="GSM" Type="varchar" MaxLength="30" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="DateBirth" Type="datetime" />
+    <Property Name="GenderCode" Type="varchar" MaxLength="1" />
+    <Property Name="LangCode" Type="varchar" MaxLength="1" />
+    <Property Name="CustomerID" Type="int" />
+    <Property Name="PrescriberID" Type="int" />
+    <Property Name="LastDateSale" Type="datetime" />
+    <Property Name="PatIDFamilly" Type="int" />
+    <Property Name="F704PrintType" Type="int" />
+    <Property Name="CblPrintType" Type="int" />
+    <Property Name="BlocNr" Type="varchar" MaxLength="15" />
+    <Property Name="FloorNr" Type="varchar" MaxLength="15" />
+    <Property Name="RoomNr" Type="varchar" MaxLength="15" />
+    <Property Name="Deceased" Type="varchar" MaxLength="1" />
+    <Property Name="GreenockID" Type="int" />
+    <Property Name="ActorCID" Type="int" />
+    <Property Name="Memo" Type="varchar(max)" />
+    <Property Name="RecuPrintType" Type="int" />
+    <Property Name="BVACPrintType" Type="int" />
+    <Property Name="PatLink" Type="int" />
+    <Property Name="CustRistGrpCode" Type="varchar" MaxLength="5" />
+    <Property Name="PaymMethodType" Type="varchar" MaxLength="1" />
+    <Property Name="IsIvc" Type="smallint" />
+    <Property Name="IsMultidose" Type="smallint" />
+  </EntityType>
+  <EntityType Name="Pharmacies">
+    <Key>
+      <PropertyRef Name="PharmID" />
+    </Key>
+    <Property Name="PharmID" Type="int" Nullable="false" />
+    <Property Name="TitulName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ImsCode" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="PharmApbNr" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="PharmApbNrSuffix" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="InamirizvNr" Type="varchar" MaxLength="11" />
+    <Property Name="TdpPharmID" Type="smallint" Nullable="false" />
+    <Property Name="EmailTaroffice" Type="varchar" MaxLength="50" />
+    <Property Name="TradeRegstNr" Type="varchar" MaxLength="15" />
+    <Property Name="PlaceIDTradeRegst" Type="int" />
+    <Property Name="ISAcod_perm_db" Type="varchar" MaxLength="256" />
+    <Property Name="TarProtVersionNr" Type="int" Nullable="false" />
+    <Property Name="DateTarProtVersionStart" Type="datetime" Nullable="false" />
+    <Property Name="RprrpmNr" Type="varchar" MaxLength="20" />
+    <Property Name="GroupType" Type="char" MaxLength="7" />
+    <Property Name="GroupID" Type="int" />
+    <Property Name="PharmacyName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="80" />
+    <Property Name="PlaceID" Type="int" />
+    <Property Name="Phone" Type="varchar" MaxLength="30" />
+    <Property Name="Fax" Type="varchar" MaxLength="30" />
+    <Property Name="GSM" Type="varchar" MaxLength="30" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="LangCode" Type="varchar" MaxLength="1" />
+    <Property Name="CurrencyIsoCodeCust" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="PlaceLabels">
+    <Key>
+      <PropertyRef Name="PlaceID" />
+      <PropertyRef Name="LangCode" />
+    </Key>
+    <Property Name="PlaceID" Type="int" Nullable="false" />
+    <Property Name="LangCode" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="PlaceLabel" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Places">
+    <Key>
+      <PropertyRef Name="PlaceID" />
+    </Key>
+    <Property Name="PlaceID" Type="int" Nullable="false" />
+    <Property Name="PostalCode" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="CountryCode" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="GreenockID" Type="int" />
+  </EntityType>
+  <EntityType Name="Prescribers">
+    <Key>
+      <PropertyRef Name="PrescriberIDCPCL" />
+    </Key>
+    <Property Name="PrescriberIDCPCL" Type="int" Nullable="false" />
+    <Property Name="PrescriberName" Type="varchar" MaxLength="50" />
+    <Property Name="InamirizvNr" Type="varchar" MaxLength="11" />
+    <Property Name="Address" Type="varchar" MaxLength="80" />
+    <Property Name="PlaceID" Type="int" />
+    <Property Name="phone" Type="varchar" MaxLength="30" />
+    <Property Name="GSM" Type="varchar" MaxLength="30" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="GreenockID" Type="int" />
+    <Property Name="IsPrespTheft" Type="smallint" />
+    <Property Name="DatePrespTheft" Type="datetime" />
+    <Property Name="PresbProfCode" Type="varchar" MaxLength="3" />
+    <Property Name="Fax" Type="varchar" MaxLength="30" />
+    <Property Name="Memo" Type="varchar(max)" />
+    <Property Name="CustRistGrpCode" Type="varchar" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="RistCards">
+    <Key>
+      <PropertyRef Name="CardNr" />
+    </Key>
+    <Property Name="CardNr" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="AccountID" Type="int" Nullable="false" />
+    <Property Name="CustIdCPCL" Type="int" />
+    <Property Name="DateStart" Type="datetime" />
+    <Property Name="CardStatus" Type="bit" />
+    <Property Name="GreenockID" Type="int" />
+    <Property Name="CentralizationStatus" Type="smallint" />
+  </EntityType>
+  <EntityType Name="RistCardsAccounts">
+    <Key>
+      <PropertyRef Name="RcAccountID" />
+    </Key>
+    <Property Name="RcAccountID" Type="int" Nullable="false" />
+    <Property Name="CustID" Type="int" />
+    <Property Name="CustRistGrpCode" Type="varchar" MaxLength="5" />
+    <Property Name="ReleaseType" Type="varchar" MaxLength="1" />
+    <Property Name="ReleaseLimit" Type="varchar" MaxLength="6" />
+    <Property Name="RcAccStatusType" Type="int" Nullable="false" />
+    <Property Name="GreenockID" Type="int" />
+    <Property Name="RcAccountCID" Type="int" />
+    <Property Name="CentralizationStatus" Type="smallint" />
+  </EntityType>
+  <EntityType Name="Suppliers">
+    <Key>
+      <PropertyRef Name="SupplierIDCPCL" />
+    </Key>
+    <Property Name="SupplierIDCPCL" Type="int" Nullable="false" />
+    <Property Name="SupplierName" Type="varchar(max)" Nullable="false" />
+    <Property Name="PhoneNr1" Type="varchar" MaxLength="30" />
+    <Property Name="PhoneNr2" Type="varchar" MaxLength="30" />
+    <Property Name="PasswordBIDI" Type="varchar" MaxLength="8" />
+    <Property Name="Protocole" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="SupplierCode" Type="nchar" MaxLength="10" />
+    <Property Name="UrlIbotp1" Type="varchar" MaxLength="100" />
+    <Property Name="UrlIbotp2" Type="varchar" MaxLength="100" />
+    <Property Name="LogginIbotp" Type="varchar" MaxLength="50" />
+    <Property Name="PasswordIbotp" Type="varchar" MaxLength="50" />
+    <Property Name="GreenockID" Type="int" />
+    <Property Name="SupplierType" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="ContactName" Type="varchar" MaxLength="50" />
+    <Property Name="LabApbCode" Type="varchar" MaxLength="10" />
+    <Property Name="Memo" Type="varchar(max)" />
+    <Property Name="ContactPhoneNr" Type="varchar" MaxLength="30" />
+    <Property Name="ContactEmail" Type="varchar" MaxLength="50" />
+    <Property Name="OrderMemo" Type="varchar(max)" />
+    <Property Name="ISAcod_typ_maj_fou" Type="varchar" MaxLength="10" />
+    <Property Name="ISAis_gest_art_fou" Type="smallint" />
+    <Property Name="AssemblyOrderType" Type="varchar" MaxLength="1" />
+    <Property Name="FilterText" Type="varchar(max)" />
+    <Property Name="SuppPrefFilter" Type="smallint" />
+    <Property Name="StupFilter" Type="smallint" />
+    <Property Name="MissingFilter" Type="smallint" />
+    <Property Name="IsExpensiveFilter" Type="smallint" />
+    <Property Name="IsReservedFilter" Type="smallint" />
+    <Property Name="WarehouseFilter" Type="smallint" />
+    <Property Name="Address" Type="varchar" MaxLength="80" />
+    <Property Name="PlaceID" Type="int" />
+    <Property Name="OriginalID" Type="int" />
+    <Property Name="ActorCID" Type="int" />
+  </EntityType>
+  <EntityType Name="Articles">
+    <Key>
+      <PropertyRef Name="ArtIdCPCL" />
+    </Key>
+    <Property Name="ArtIdCPCL" Type="int" Nullable="false" />
+    <Property Name="CNKNr" Type="varchar" MaxLength="10" />
+    <Property Name="PubPrice" Type="decimal" Precision="30" Scale="4" />
+    <Property Name="VatCode" Type="varchar" MaxLength="2" />
+    <Property Name="StockMngmntType" Type="int" Nullable="false" />
+    <Property Name="HasExpiry" Type="smallint" Nullable="false" />
+    <Property Name="IsPrintLabel" Type="smallint" />
+    <Property Name="StorageType" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="BuyPriceCalc" Type="decimal" Precision="30" Scale="4" />
+    <Property Name="BuyPriceSrc" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="ApbUdStatusCode" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="DateChange" Type="datetime" />
+    <Property Name="AllowUdPubPriceChangeType" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="ApbCatCode" Type="varchar" MaxLength="1" />
+    <Property Name="ApbLegCode" Type="varchar" MaxLength="2" />
+    <Property Name="EanNr" Type="varchar" MaxLength="13" />
+    <Property Name="AvailabilityCode" Type="varchar" MaxLength="4" />
+    <Property Name="EffectiveBuyPrice" Type="decimal" Precision="30" Scale="4" />
+    <Property Name="IsReimbHomeo" Type="smallint" />
+    <Property Name="TherapUseID" Type="int" />
+    <Property Name="StupNr" Type="varchar" MaxLength="6" />
+    <Property Name="HasLocation" Type="smallint" Nullable="false" />
+    <Property Name="IsOxygen" Type="smallint" />
+    <Property Name="IsSubstitutionTreatment" Type="smallint" />
+    <Property Name="ArtType" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="InvCatCode" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Memo" Type="varchar(max)" />
+    <Property Name="GreenockID" Type="int" />
+    <Property Name="ArtCID" Type="int" />
+    <Property Name="IsMultidose" Type="smallint" />
+    <Property Name="PackageQty" Type="int" />
+  </EntityType>
+  <EntityType Name="ArtNames">
+    <Key>
+      <PropertyRef Name="ArtIdCPCL" />
+      <PropertyRef Name="NameNr" />
+      <PropertyRef Name="LangCode" />
+    </Key>
+    <Property Name="ArtIdCPCL" Type="int" Nullable="false" />
+    <Property Name="NameNr" Type="int" Nullable="false" />
+    <Property Name="LangCode" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="ArtName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="GreenockID" Type="int" />
+    <Property Name="HasArtNameLocked" Type="bit" />
+  </EntityType>
+  <EntityType Name="ChemicalNames">
+    <Key>
+      <PropertyRef Name="ArtIdCPCL" />
+      <PropertyRef Name="NameNr" />
+      <PropertyRef Name="LangCode" />
+    </Key>
+    <Property Name="ArtIdCPCL" Type="int" Nullable="false" />
+    <Property Name="NameNr" Type="int" Nullable="false" />
+    <Property Name="LangCode" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="ArtName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Show" Type="bit" />
+    <Property Name="Statistics" Type="int" />
+    <Property Name="GreenockID" Type="int" />
+  </EntityType>
+  <EntityType Name="Chemicals">
+    <Key>
+      <PropertyRef Name="ArtIdCPCL" />
+    </Key>
+    <Property Name="ArtIdCPCL" Type="int" Nullable="false" />
+    <Property Name="CNKNr" Type="varchar" MaxLength="10" />
+    <Property Name="PubPrice" Type="decimal" Precision="30" Scale="4" />
+    <Property Name="VatCode" Type="varchar" MaxLength="2" />
+    <Property Name="StockMngmntType" Type="int" Nullable="false" />
+    <Property Name="HasExpiry" Type="smallint" Nullable="false" />
+    <Property Name="IsPrintLabel" Type="smallint" />
+    <Property Name="StorageType" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="BuyPriceCalc" Type="decimal" Precision="30" Scale="4" />
+    <Property Name="BuyPriceSrc" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="ApbUdStatusCode" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="DateChange" Type="datetime" />
+    <Property Name="AllowUdPubPriceChangeType" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="ApbCatCode" Type="varchar" MaxLength="1" />
+    <Property Name="ApbLegCode" Type="varchar" MaxLength="2" />
+    <Property Name="EanNr" Type="varchar" MaxLength="13" />
+    <Property Name="AvailabilityCode" Type="varchar" MaxLength="4" />
+    <Property Name="EffectiveBuyPrice" Type="decimal" Precision="30" Scale="4" />
+    <Property Name="IsReimbHomeo" Type="smallint" />
+    <Property Name="TherapUseID" Type="int" />
+    <Property Name="StupNr" Type="varchar" MaxLength="6" />
+    <Property Name="HasLocation" Type="smallint" Nullable="false" />
+    <Property Name="IsOxygen" Type="smallint" />
+    <Property Name="IsSubstitutionTreatment" Type="smallint" />
+    <Property Name="ArtType" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="InvCatCode" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Memo" Type="varchar(max)" />
+    <Property Name="GreenockID" Type="int" />
+    <Property Name="ArtCID" Type="int" />
+    <Property Name="ChemicalType" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="ChemPricePerUnit" Type="decimal" Precision="30" Scale="6" Nullable="false" />
+    <Property Name="Qtd" Type="decimal" Precision="28" Scale="18" />
+    <Property Name="UnitCode" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="PriceSource" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Density" Type="decimal" Precision="30" Scale="5" Nullable="false" />
+    <Property Name="PlantCode" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="DefaultPresbQtd" Type="decimal" Precision="28" Scale="18" />
+    <Property Name="UnitCodeDefaultPresb" Type="varchar" MaxLength="3" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HvtNames">
+    <Key>
+      <PropertyRef Name="ArtIdCPCL" />
+      <PropertyRef Name="NameNr" />
+      <PropertyRef Name="LangCode" />
+    </Key>
+    <Property Name="ArtIdCPCL" Type="int" Nullable="false" />
+    <Property Name="NameNr" Type="int" Nullable="false" />
+    <Property Name="LangCode" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="ArtName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="GreenockID" Type="int" />
+  </EntityType>
+  <EntityType Name="HvtQtyPrices">
+    <Key>
+      <PropertyRef Name="ArtHvtID" />
+      <PropertyRef Name="HvtQtyCode" />
+    </Key>
+    <Property Name="ArtHvtID" Type="int" Nullable="false" />
+    <Property Name="HvtQtyCode" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="HvtQtd" Type="decimal" Precision="30" Scale="2" Nullable="false" />
+    <Property Name="PubPrice" Type="decimal" Precision="30" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Hvts">
+    <Key>
+      <PropertyRef Name="ArtHvtID" />
+    </Key>
+    <Property Name="ArtHvtID" Type="int" Nullable="false" />
+    <Property Name="GroupingCode" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="TarGroupCode" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="IsList2" Type="smallint" />
+    <Property Name="SupplemLabel" Type="varchar" MaxLength="70" Nullable="false" />
+    <Property Name="DataUdID" Type="int" />
+    <Property Name="GreenockID" Type="int" />
+    <Property Name="CNKNr" Type="varchar" MaxLength="10" />
+    <Property Name="ArtCID" Type="int" />
+  </EntityType>
+  <EntityType Name="IdealStockThresholds">
+    <Key>
+      <PropertyRef Name="MinQtdSoldPerMonth" />
+    </Key>
+    <Property Name="MinQtdSoldPerMonth" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="MaxQtdSoldPerMonth" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="MinThd" Type="int" Nullable="false" />
+    <Property Name="MaxThd" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LabelEditorArticles">
+    <Key>
+      <PropertyRef Name="ArtIdCPCL" />
+      <PropertyRef Name="LabelEditorLocCode" />
+    </Key>
+    <Property Name="ArtIdCPCL" Type="int" Nullable="false" />
+    <Property Name="LabelEditorLocCode" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LabelEditorLocs">
+    <Key>
+      <PropertyRef Name="LabelEditorLocCode" />
+    </Key>
+    <Property Name="LabelEditorLocCode" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="LabelEditorLocLabel" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="WarehouseCode" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="GreenockID" Type="int" />
+  </EntityType>
+  <EntityType Name="Localization">
+    <Key>
+      <PropertyRef Name="LocalizationCode" />
+    </Key>
+    <Property Name="LocalizationCode" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="LocalizationName" Type="varchar(max)" Nullable="false" />
+    <Property Name="GreenockID" Type="int" />
+  </EntityType>
+  <EntityType Name="LocalizationStock">
+    <Key>
+      <PropertyRef Name="StockIDCPCL" />
+      <PropertyRef Name="WarehouseCode" />
+      <PropertyRef Name="LocalisationCode" />
+    </Key>
+    <Property Name="StockIDCPCL" Type="int" Nullable="false" />
+    <Property Name="WarehouseCode" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="LocalisationCode" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Stock" Type="int" Nullable="false" />
+    <Property Name="MinThd" Type="int" />
+    <Property Name="MaxThd" Type="int" />
+    <Property Name="UnitOrder" Type="int" />
+    <Property Name="GreenockID" Type="int" />
+  </EntityType>
+  <EntityType Name="MultidoseLinks">
+    <Key>
+      <PropertyRef Name="ArtIdCPCL" />
+      <PropertyRef Name="CustomerIdCpcl" />
+    </Key>
+    <Property Name="ArtIdCPCL" Type="int" Nullable="false" />
+    <Property Name="CustomerIdCpcl" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Peremption">
+    <Key>
+      <PropertyRef Name="PeremptionDate" />
+      <PropertyRef Name="LotNr" />
+      <PropertyRef Name="ArtIdCPCL" />
+    </Key>
+    <Property Name="PeremptionDate" Type="datetime" Nullable="false" />
+    <Property Name="LotNr" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ArtIdCPCL" Type="int" Nullable="false" />
+    <Property Name="CNKNr" Type="varchar" MaxLength="10" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="GreenockID" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CPCL.Article.ProductInOrder' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ProductInOrder">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+      <PropertyRef Name="Date" />
+      <PropertyRef Name="ArtIdCPCL" />
+    </Key>
+    <Property Name="CustomerID" Type="int" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="ArtIdCPCL" Type="int" Nullable="false" />
+    <Property Name="CNKNr" Type="varchar" MaxLength="10" />
+    <Property Name="QtySend" Type="int" />
+    <Property Name="OrderNr" Type="int" />
+    <Property Name="FreeText" Type="varchar(max)" />
+    <Property Name="GreenockID" Type="int" />
+  </EntityType>
+  <EntityType Name="Statistic">
+    <Key>
+      <PropertyRef Name="ArtIDCPCL" />
+      <PropertyRef Name="Year" />
+      <PropertyRef Name="Month" />
+      <PropertyRef Name="Day" />
+    </Key>
+    <Property Name="ArtIDCPCL" Type="int" Nullable="false" />
+    <Property Name="Year" Type="int" Nullable="false" />
+    <Property Name="Month" Type="int" Nullable="false" />
+    <Property Name="Day" Type="int" Nullable="false" />
+    <Property Name="CNK" Type="varchar" MaxLength="10" />
+    <Property Name="StatisticBuy" Type="int" />
+    <Property Name="StatisticSell" Type="int" />
+    <Property Name="GreenockID" Type="int" />
+  </EntityType>
+  <EntityType Name="StockLog">
+    <Key>
+      <PropertyRef Name="StockLogID" />
+    </Key>
+    <Property Name="StockLogID" Type="int" Nullable="false" />
+    <Property Name="StockChangeCode" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="StockChangeReasonCode" Type="varchar" MaxLength="3" />
+    <Property Name="DateLog" Type="datetime" Nullable="false" />
+    <Property Name="UID" Type="int" Nullable="false" />
+    <Property Name="WrkstatCode" Type="varchar" MaxLength="50" />
+    <Property Name="ArtIdCPCL" Type="int" Nullable="false" />
+    <Property Name="QtyInStock_Before" Type="int" />
+    <Property Name="OnOrderQty_Before" Type="int" />
+    <Property Name="ExtraOrderQty_Before" Type="int" />
+    <Property Name="ReservedQty_Before" Type="int" />
+    <Property Name="IsAllowThresholdChange_Before" Type="smallint" />
+    <Property Name="MinThd_Before" Type="int" />
+    <Property Name="MaxThd_Before" Type="int" />
+    <Property Name="OrderPromoQty_Before" Type="int" />
+    <Property Name="OrderStatusType_Before" Type="int" />
+    <Property Name="DateTimeShortageEnd_Before" Type="datetime" />
+    <Property Name="MaxThdCalc_Before" Type="decimal" Precision="28" Scale="18" />
+    <Property Name="AvgStock_Before" Type="decimal" Precision="28" Scale="18" />
+    <Property Name="BuyPriceWeighted_Before" Type="decimal" Precision="30" Scale="4" />
+    <Property Name="QtyInStock_After" Type="int" />
+    <Property Name="OnOrderQty_After" Type="int" />
+    <Property Name="ExtraOrderQty_After" Type="int" />
+    <Property Name="ReservedQty_After" Type="int" />
+    <Property Name="IsAllowThresholdChange_After" Type="smallint" />
+    <Property Name="MinThd_After" Type="int" />
+    <Property Name="MaxThd_After" Type="int" />
+    <Property Name="OrderPromoQty_After" Type="int" />
+    <Property Name="OrderStatusType_After" Type="int" />
+    <Property Name="DateTimeShortageEnd_After" Type="datetime" />
+    <Property Name="MaxThdCalc_After" Type="decimal" Precision="28" Scale="18" />
+    <Property Name="AvgStock_After" Type="decimal" Precision="28" Scale="18" />
+    <Property Name="BuyPriceWeighted_After" Type="decimal" Precision="30" Scale="4" />
+    <Property Name="DateFirstReceipt" Type="datetime" />
+    <Property Name="SlsID" Type="int" />
+    <Property Name="OrdID" Type="int" />
+    <Property Name="DateLastSale_Before" Type="datetime" />
+    <Property Name="DateLastSale_After" Type="datetime" />
+    <Property Name="CentralizationStatus" Type="smallint" />
+    <Property Name="RescueThd_Before" Type="int" />
+    <Property Name="RescueThd_After" Type="int" />
+  </EntityType>
+  <EntityType Name="Stocks">
+    <Key>
+      <PropertyRef Name="ArtIdCPCL" />
+    </Key>
+    <Property Name="ArtIdCPCL" Type="int" Nullable="false" />
+    <Property Name="QtyInStock" Type="int" />
+    <Property Name="OnOrderQty" Type="int" />
+    <Property Name="ExtraOrderQty" Type="int" />
+    <Property Name="ReservedQty" Type="int" />
+    <Property Name="IsAllowThresholdChange" Type="smallint" />
+    <Property Name="MinThd" Type="int" Nullable="false" />
+    <Property Name="MaxThd" Type="int" Nullable="false" />
+    <Property Name="OrderPromoQty" Type="int" Nullable="false" />
+    <Property Name="OrderStatusType" Type="int" Nullable="false" />
+    <Property Name="DateTimeShortageEnd" Type="datetime" />
+    <Property Name="MaxThdCalc" Type="decimal" Precision="28" Scale="18" />
+    <Property Name="DateFirstReceipt" Type="datetime" />
+    <Property Name="AvgStock" Type="decimal" Precision="28" Scale="18" />
+    <Property Name="IsTdpWaitingTrf" Type="smallint" />
+    <Property Name="BuyPriceWeighted" Type="decimal" Precision="30" Scale="4" />
+    <Property Name="OnOrderRepresQty" Type="int" />
+    <Property Name="DateLastSale" Type="datetime" />
+    <Property Name="greenockID" Type="int" />
+    <Property Name="AllowUdPubPriceChangeType" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="SupplierIDPref" Type="int" />
+    <Property Name="SupplierIDNextOrder" Type="int" />
+  </EntityType>
+  <EntityType Name="TherapUses">
+    <Key>
+      <PropertyRef Name="TherapUseID" />
+    </Key>
+    <Property Name="TherapUseID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Warehouses">
+    <Key>
+      <PropertyRef Name="WarehouseCode" />
+    </Key>
+    <Property Name="WarehouseCode" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="WarehouseName" Type="varchar(max)" Nullable="false" />
+    <Property Name="IsAutomat" Type="bit" Nullable="false" />
+    <Property Name="GreenockID" Type="int" />
+  </EntityType>
+  <EntityType Name="AppVersions">
+    <Key>
+      <PropertyRef Name="ApplicationType" />
+      <PropertyRef Name="UpdateType" />
+    </Key>
+    <Property Name="ApplicationType" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="UpdateType" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="UpdateVersionNr" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ComplementaryMention">
+    <Key>
+      <PropertyRef Name="ComplementaryMentionID" />
+    </Key>
+    <Property Name="ComplementaryMentionID" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="ComplementaryMention" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Counters">
+    <Key>
+      <PropertyRef Name="TableName" />
+    </Key>
+    <Property Name="TableName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastCounterNr" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="CountryCode" />
+    </Key>
+    <Property Name="CountryCode" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="CountryLabel" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="GreenockID" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="CPCLParamValues">
+    <Key>
+      <PropertyRef Name="ParamID" />
+    </Key>
+    <Property Name="ParamID" Type="int" Nullable="false" />
+    <Property Name="OldSoftParamValue" Type="varchar" MaxLength="256" />
+    <Property Name="GreenockParamValue" Type="varchar" MaxLength="256" />
+    <Property Name="MinSecurityLevel" Type="int" />
+  </EntityType>
+  <EntityType Name="CPCLTables">
+    <Key>
+      <PropertyRef Name="TableName" />
+    </Key>
+    <Property Name="TableName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SchemaName" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CustRistGroupLabels">
+    <Key>
+      <PropertyRef Name="CustRistGrpCode" />
+      <PropertyRef Name="LangCode" />
+    </Key>
+    <Property Name="CustRistGrpCode" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="LangCode" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="CustRistGroupLabel" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CustRistGroups">
+    <Key>
+      <PropertyRef Name="CustRistGrpCode" />
+    </Key>
+    <Property Name="CustRistGrpCode" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="IsPatient" Type="smallint" />
+    <Property Name="DefaultRistType" Type="varchar" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GenderCode">
+    <Key>
+      <PropertyRef Name="GenderCode" />
+    </Key>
+    <Property Name="GenderCode" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="GenderName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="GreenockID" Type="varchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="GreenockUsers">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ShortUserName" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+    <Property Name="TemplateBiometric" Type="varchar(max)" />
+    <Property Name="UserCID" Type="int" />
+  </EntityType>
+  <EntityType Name="MagType">
+    <Key>
+      <PropertyRef Name="MagType" />
+    </Key>
+    <Property Name="MagType" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="MagName" Type="varchar" MaxLength="50" />
+    <Property Name="GreenockID" Type="int" />
+  </EntityType>
+  <EntityType Name="OldSoftTableNames">
+    <Key>
+      <PropertyRef Name="TableName" />
+      <PropertyRef Name="ApplicationType" />
+    </Key>
+    <Property Name="TableName" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="ApplicationType" Type="varchar" MaxLength="3" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ParameterLabels">
+    <Key>
+      <PropertyRef Name="ParameterType" />
+      <PropertyRef Name="LangCode" />
+    </Key>
+    <Property Name="ParameterType" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="LangCode" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="ParameterTypeLabel" Type="varchar" MaxLength="130" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ParameterTypes">
+    <Key>
+      <PropertyRef Name="ParameterType" />
+    </Key>
+    <Property Name="ParameterType" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="SortNr" Type="smallint" Nullable="false" />
+    <Property Name="Offigest" Type="bit" Nullable="false" />
+    <Property Name="Isa" Type="bit" Nullable="false" />
+    <Property Name="Farmix" Type="bit" Nullable="false" />
+    <Property Name="ParamInteger" Type="int" />
+    <Property Name="ParamDecimal" Type="decimal" Precision="18" Scale="8" />
+    <Property Name="ParamDate" Type="datetime" />
+    <Property Name="ParamBoolean" Type="bit" />
+    <Property Name="ParamText" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="PaymMethods">
+    <Key>
+      <PropertyRef Name="PaymMethodCode" />
+    </Key>
+    <Property Name="PaymMethodCode" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="GreenockID" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="PharmDocDataLabels">
+    <Key>
+      <PropertyRef Name="PharmID" />
+      <PropertyRef Name="PharmaDocType" />
+      <PropertyRef Name="LangCode" />
+    </Key>
+    <Property Name="PharmID" Type="int" Nullable="false" />
+    <Property Name="PharmaDocType" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="LangCode" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="1024" />
+    <Property Name="Chksum" Type="varchar" MaxLength="1024" />
+    <Property Name="Address" Type="varchar" MaxLength="1024" />
+    <Property Name="TelNr" Type="varchar" MaxLength="30" />
+    <Property Name="FaxNr" Type="varchar" MaxLength="30" />
+    <Property Name="RebateLabel" Type="varchar" MaxLength="1024" />
+    <Property Name="RistPrefixLabel" Type="varchar" MaxLength="1024" />
+    <Property Name="RistSuffixLabel" Type="varchar" MaxLength="1024" />
+    <Property Name="HeaderLabel" Type="varchar" MaxLength="1024" />
+    <Property Name="FooterLabel" Type="varchar" MaxLength="1024" />
+  </EntityType>
+  <EntityType Name="PharmDocDatas">
+    <Key>
+      <PropertyRef Name="PharmID" />
+      <PropertyRef Name="PharmaDocType" />
+    </Key>
+    <Property Name="PharmID" Type="int" Nullable="false" />
+    <Property Name="PharmaDocType" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="80" />
+    <Property Name="Url" Type="varchar" MaxLength="80" />
+    <Property Name="ImageFilename" Type="varchar" MaxLength="1024" />
+    <Property Name="ImageWidth" Type="int" Nullable="false" />
+    <Property Name="ImageHeight" Type="int" Nullable="false" />
+    <Property Name="RebateToken" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="RistToken" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="PharmImage" Type="varbinary(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CPCL.Config.PrgRecupVersion' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PrgRecupVersion">
+    <Key>
+      <PropertyRef Name="MajorNr" />
+    </Key>
+    <Property Name="MajorNr" Type="int" Nullable="false" />
+    <Property Name="MinorNr" Type="int" />
+    <Property Name="RevisionNr" Type="int" />
+    <Property Name="LastUpgradeDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CPCL.Config.ProfileLabels' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ProfileLabels">
+    <Key>
+      <PropertyRef Name="ProfileType" />
+      <PropertyRef Name="LangCode" />
+    </Key>
+    <Property Name="ProfileType" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="ProfileLabel" Type="varchar" MaxLength="30" />
+    <Property Name="LangCode" Type="varchar" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Profiles">
+    <Key>
+      <PropertyRef Name="ProfileType" />
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="ProfileType" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="SecurityLevel" Type="int" Nullable="false" />
+    <Property Name="RoleID" Type="int" Nullable="false" />
+    <Property Name="CRC" Type="binary" MaxLength="4" />
+    <Property Name="DateLastChange" Type="datetime" />
+    <Property Name="UIDLastChange" Type="int" />
+  </EntityType>
+  <EntityType Name="ProfileTypes">
+    <Key>
+      <PropertyRef Name="ProfileType" />
+    </Key>
+    <Property Name="ProfileType" Type="varchar" MaxLength="12" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Registration">
+    <Key>
+      <PropertyRef Name="PharmApbNr" />
+    </Key>
+    <Property Name="PharmApbNr" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TimeCallCorilus" Type="datetime" />
+    <Property Name="CorilusLicenseCode" Type="varchar" MaxLength="50" />
+    <Property Name="GroupType" Type="varchar" MaxLength="50" />
+    <Property Name="DBIID" Type="char" MaxLength="36" />
+    <Property Name="WsAccount" Type="varchar" MaxLength="30" />
+    <Property Name="WsPassword" Type="varchar" MaxLength="30" />
+    <Property Name="PermissionCode" Type="varchar" MaxLength="1024" />
+    <Property Name="Permissions" Type="varchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="RegulationType">
+    <Key>
+      <PropertyRef Name="RegulationType" />
+    </Key>
+    <Property Name="RegulationType" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="RegulationName" Type="varchar" MaxLength="50" />
+    <Property Name="GreenockID" Type="int" />
+  </EntityType>
+  <EntityType Name="RoleLabels">
+    <Key>
+      <PropertyRef Name="RoleID" />
+      <PropertyRef Name="LangCode" />
+    </Key>
+    <Property Name="RoleID" Type="int" Nullable="false" />
+    <Property Name="LangCode" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="RoleLabel" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="int" Nullable="false" />
+    <Property Name="CorilusRoleType" Type="int" Nullable="false" />
+    <Property Name="RoleType" Type="varchar" MaxLength="3" />
+    <Property Name="IsPharmRole" Type="smallint" />
+    <Property Name="IsCentralRole" Type="smallint" />
+    <Property Name="DateLastChange" Type="datetime" />
+    <Property Name="IsUsed" Type="smallint" Nullable="false" />
+    <Property Name="ViewLayoutType" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'CPCL.Config.Settings' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Settings">
+          <Property Name="SourceApplication" Type="int" />
+          <Property Name="DatabaseProvider" Type="nvarchar" MaxLength="255" />
+          <Property Name="ConnectionString" Type="nvarchar" MaxLength="512" />
+        </EntityType>-->
+  <EntityType Name="TaskGroupLabels">
+    <Key>
+      <PropertyRef Name="GroupType" />
+      <PropertyRef Name="LangCode" />
+    </Key>
+    <Property Name="GroupType" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="LangCode" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="GroupTypeLabel" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TaskGroupTypes">
+    <Key>
+      <PropertyRef Name="GroupType" />
+    </Key>
+    <Property Name="GroupType" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="SortNr" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TaskLabels">
+    <Key>
+      <PropertyRef Name="TaskType" />
+      <PropertyRef Name="LangCode" />
+    </Key>
+    <Property Name="TaskType" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="LangCode" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="TaskTypeLabel" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TaskTypes">
+    <Key>
+      <PropertyRef Name="TaskType" />
+    </Key>
+    <Property Name="TaskType" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="SortNr" Type="int" Nullable="false" />
+    <Property Name="GroupType" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Checked" Type="smallint" Nullable="false" />
+    <Property Name="DateStart" Type="datetime" />
+    <Property Name="NbrMonths" Type="int" />
+    <Property Name="MaxErrorPercent" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ToVerify">
+    <Key>
+      <PropertyRef Name="ToVerifyID" />
+    </Key>
+    <Property Name="ToVerifyID" Type="int" Nullable="false" />
+    <Property Name="IsVerified" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ToVerifyLabel">
+    <Key>
+      <PropertyRef Name="ToVerifyID" />
+      <PropertyRef Name="LangCode" />
+    </Key>
+    <Property Name="ToVerifyID" Type="int" Nullable="false" />
+    <Property Name="LangCode" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="ToVerifyName" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Trace">
+    <Key>
+      <PropertyRef Name="TraceID" />
+    </Key>
+    <Property Name="TraceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TableName" Type="varchar" MaxLength="50" />
+    <Property Name="Message" Type="varchar(max)" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="Event" Type="varchar" MaxLength="50" />
+    <Property Name="LigneNr" Type="int" />
+    <Property Name="LigneRead" Type="int" />
+    <Property Name="LigneInsert" Type="int" />
+    <Property Name="LigneInError" Type="int" />
+    <Property Name="LigneUpdate" Type="int" />
+  </EntityType>
+  <EntityType Name="TransactionType">
+    <Key>
+      <PropertyRef Name="TransactionType" />
+    </Key>
+    <Property Name="TransactionType" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="TransactionName" Type="varchar" MaxLength="50" />
+    <Property Name="GreenockID" Type="int" />
+  </EntityType>
+  <EntityType Name="TypeNote">
+    <Key>
+      <PropertyRef Name="TypeNote" />
+    </Key>
+    <Property Name="TypeNote" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="TypeNoteName" Type="varchar" MaxLength="50" />
+    <Property Name="GreenockID" Type="int" />
+  </EntityType>
+  <EntityType Name="UnitCode">
+    <Key>
+      <PropertyRef Name="UnitID" />
+    </Key>
+    <Property Name="UnitID" Type="int" Nullable="false" />
+    <Property Name="UnitCode" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="UserEmails">
+    <Key>
+      <PropertyRef Name="UID" />
+    </Key>
+    <Property Name="UID" Type="int" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="IsSelected" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UID" />
+    </Key>
+    <Property Name="UserName" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="DisplayName" Type="varchar" MaxLength="30" />
+    <Property Name="LangCode" Type="varchar" MaxLength="1" />
+    <Property Name="Memo" Type="varchar" MaxLength="80" />
+    <Property Name="UID" Type="int" Nullable="false" />
+    <Property Name="UxName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsLeftHanded" Type="smallint" Nullable="false" />
+    <Property Name="TicketNickname" Type="varchar" MaxLength="25" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ImageName" Type="varchar" MaxLength="50" />
+    <Property Name="UserImage" Type="varbinary(max)" />
+    <Property Name="RoleID" Type="int" Nullable="false" />
+    <Property Name="UserCID" Type="int" />
+    <Property Name="FirstName" Type="varchar" MaxLength="20" />
+    <Property Name="SysUID" Type="int" />
+    <Property Name="NissinszNr" Type="varchar" MaxLength="11" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="LastSynchroDateTime" Type="datetime" />
+    <Property Name="AppUserPassword" Type="varchar" MaxLength="100" />
+    <Property Name="CRC" Type="binary" MaxLength="4" />
+    <Property Name="DateLastChange" Type="datetime" />
+    <Property Name="UIDLastChange" Type="int" />
+  </EntityType>
+  <EntityType Name="Version">
+    <Key>
+      <PropertyRef Name="MajorNr" />
+    </Key>
+    <Property Name="MajorNr" Type="int" Nullable="false" />
+    <Property Name="MinorNr" Type="int" />
+    <Property Name="RevisionNr" Type="int" />
+    <Property Name="LastUpgradeDate" Type="datetime" />
+    <Property Name="DatabaseStatus" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Note">
+    <Key>
+      <PropertyRef Name="NoteID" />
+    </Key>
+    <Property Name="NoteID" Type="int" Nullable="false" />
+    <Property Name="TypeNote" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="LigneNr" Type="int" Nullable="false" />
+    <Property Name="Contents" Type="varchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CPCL.GkpCfg.Actor_Pharmacies' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Actor_Pharmacies">
+    <Key>
+      <PropertyRef Name="PharmID" />
+      <PropertyRef Name="TitulName" />
+      <PropertyRef Name="ImsCode" />
+      <PropertyRef Name="PharmApbNr" />
+      <PropertyRef Name="PharmApbNrSuffix" />
+      <PropertyRef Name="TdpPharmID" />
+      <PropertyRef Name="TarProtVersionNr" />
+      <PropertyRef Name="DateTarProtVersionStart" />
+      <PropertyRef Name="PharmacyName" />
+    </Key>
+    <Property Name="PharmID" Type="int" Nullable="false" />
+    <Property Name="TitulName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ImsCode" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="PharmApbNr" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="PharmApbNrSuffix" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="InamirizvNr" Type="varchar" MaxLength="11" />
+    <Property Name="TdpPharmID" Type="smallint" Nullable="false" />
+    <Property Name="EmailTaroffice" Type="varchar" MaxLength="50" />
+    <Property Name="TradeRegstNr" Type="varchar" MaxLength="15" />
+    <Property Name="PlaceIDTradeRegst" Type="int" />
+    <Property Name="ISAcod_perm_db" Type="varchar" MaxLength="256" />
+    <Property Name="TarProtVersionNr" Type="int" Nullable="false" />
+    <Property Name="DateTarProtVersionStart" Type="datetime" Nullable="false" />
+    <Property Name="RprrpmNr" Type="varchar" MaxLength="20" />
+    <Property Name="GroupType" Type="char" MaxLength="7" />
+    <Property Name="GroupID" Type="int" />
+    <Property Name="PharmacyName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="80" />
+    <Property Name="PlaceID" Type="int" />
+    <Property Name="Phone" Type="varchar" MaxLength="30" />
+    <Property Name="Fax" Type="varchar" MaxLength="30" />
+    <Property Name="GSM" Type="varchar" MaxLength="30" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="LangCode" Type="varchar" MaxLength="1" />
+    <Property Name="CurrencyIsoCodeCust" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CPCL.GkpCfg.BarcodeReaderTypes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="BarcodeReaderTypes">
+    <Key>
+      <PropertyRef Name="DeviceID" />
+      <PropertyRef Name="ScannerType" />
+    </Key>
+    <Property Name="DeviceID" Type="int" Nullable="false" />
+    <Property Name="ScannerType" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CustRistGroupLabels1">
+    <Key>
+      <PropertyRef Name="CustRistGrpCode" />
+      <PropertyRef Name="LangCode" />
+    </Key>
+    <Property Name="CustRistGrpCode" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="LangCode" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="CustRistGroupLabel" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CustRistGroups1">
+    <Key>
+      <PropertyRef Name="CustRistGrpCode" />
+    </Key>
+    <Property Name="CustRistGrpCode" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="IsPatient" Type="smallint" />
+    <Property Name="DefaultRistType" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="DateLastChange" Type="datetime" />
+    <Property Name="Deleted" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="MarginTypes">
+    <Key>
+      <PropertyRef Name="MarginTypeID" />
+    </Key>
+    <Property Name="MarginTypeID" Type="int" Nullable="false" />
+    <Property Name="MarginMin" Type="decimal" Precision="30" Scale="2" Nullable="false" />
+    <Property Name="MarginMax" Type="decimal" Precision="30" Scale="2" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CPCL.GkpCfg.Params' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Params">
+    <Key>
+      <PropertyRef Name="ParamID" />
+      <PropertyRef Name="MinSecurityLevel" />
+      <PropertyRef Name="IsCentralLocked" />
+    </Key>
+    <Property Name="ParamID" Type="int" Nullable="false" />
+    <Property Name="ParamValue" Type="varchar" MaxLength="256" />
+    <Property Name="ParamValueType" Type="varchar" MaxLength="5" />
+    <Property Name="MinSecurityLevel" Type="int" Nullable="false" />
+    <Property Name="IsCentralLocked" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Registers">
+    <Key>
+      <PropertyRef Name="RegisterCode" />
+    </Key>
+    <Property Name="RegisterCode" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="RegisterNr" Type="int" Nullable="false" />
+    <Property Name="IsBox" Type="smallint" Nullable="false" />
+    <Property Name="RegSessionNrCurrent" Type="int" />
+  </EntityType>
+  <EntityType Name="RistCustArticles">
+    <Key>
+      <PropertyRef Name="RistRuleID" />
+    </Key>
+    <Property Name="RistRuleID" Type="int" Nullable="false" />
+    <Property Name="MarginTypeID" Type="int" />
+    <Property Name="InvCatCode" Type="varchar" MaxLength="3" />
+    <Property Name="SupplierID" Type="int" />
+    <Property Name="ArtRangeLabel" Type="varchar" MaxLength="50" />
+    <Property Name="IsArtRange" Type="smallint" />
+    <Property Name="ArtID" Type="int" />
+    <Property Name="CnkNr" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="RistCustRistGroups">
+    <Key>
+      <PropertyRef Name="RistRuleID" />
+    </Key>
+    <Property Name="RistRuleID" Type="int" Nullable="false" />
+    <Property Name="ArticleStrategy" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="CustRistGrpCode" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="MarginTypeID" Type="int" />
+    <Property Name="InvCatCode" Type="varchar" MaxLength="3" />
+    <Property Name="SupplierID" Type="int" />
+    <Property Name="ArtRangeLabel" Type="varchar" MaxLength="50" />
+    <Property Name="IsArtRange" Type="smallint" />
+  </EntityType>
+  <EntityType Name="RistCustRules">
+    <Key>
+      <PropertyRef Name="RistRuleID" />
+    </Key>
+    <Property Name="RistRuleID" Type="int" Nullable="false" />
+    <Property Name="RistPercent" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="RistType" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="LimitType" Type="smallint" Nullable="false" />
+    <Property Name="AmntMax" Type="decimal" Precision="30" Scale="2" />
+    <Property Name="RistNonReimbType" Type="int" />
+    <Property Name="PharmID" Type="int" Nullable="false" />
+    <Property Name="PushStatusType" Type="int" Nullable="false" />
+    <Property Name="DateLastPush" Type="datetime" />
+    <Property Name="UID" Type="int" />
+    <Property Name="DateLastChange" Type="datetime" />
+    <Property Name="Deleted" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="RistPatRistGroups">
+    <Key>
+      <PropertyRef Name="RistRuleID" />
+    </Key>
+    <Property Name="RistRuleID" Type="int" Nullable="false" />
+    <Property Name="ArticleStrategy" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="CustGroupStrategy" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="CustRistGrpCode" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="MarginTypeID" Type="int" />
+    <Property Name="InvCatCode" Type="varchar" MaxLength="3" />
+    <Property Name="SupplierID" Type="int" />
+    <Property Name="ArtRangeLabel" Type="varchar" MaxLength="50" />
+    <Property Name="IsArtRange" Type="smallint" />
+  </EntityType>
+  <EntityType Name="UrlTypes">
+    <Key>
+      <PropertyRef Name="UrlName" />
+    </Key>
+    <Property Name="UrlName" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Url" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="UrlParams" Type="varchar" MaxLength="200" />
+    <Property Name="Login" Type="varchar" MaxLength="30" />
+    <Property Name="Password" Type="varchar" MaxLength="30" />
+    <Property Name="TimeOut" Type="int" Nullable="false" />
+    <Property Name="IsUpdatable" Type="smallint" Nullable="false" />
+    <Property Name="PortNr" Type="int" />
+  </EntityType>
+  <EntityType Name="WhLocationLabels">
+    <Key>
+      <PropertyRef Name="WhLocId" />
+      <PropertyRef Name="LangCode" />
+    </Key>
+    <Property Name="WhLocId" Type="int" Nullable="false" />
+    <Property Name="LangCode" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="WhLocationLabel" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="WhLocationShortLabel" Type="varchar" MaxLength="5" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WhLocs">
+    <Key>
+      <PropertyRef Name="WhLocId" />
+    </Key>
+    <Property Name="WhLocCode" Type="varchar" MaxLength="5" />
+    <Property Name="WhID" Type="int" Nullable="false" />
+    <Property Name="WhLocId" Type="int" Nullable="false" />
+    <Property Name="LocHorizontalPos" Type="varchar" MaxLength="2" />
+    <Property Name="LocVerticalPos" Type="int" />
+    <Property Name="LocWidth" Type="int" />
+  </EntityType>
+  <EntityType Name="WorkstationDevices">
+    <Key>
+      <PropertyRef Name="WrkstatDeviceID" />
+    </Key>
+    <Property Name="WrkstatDeviceID" Type="int" Nullable="false" />
+    <Property Name="WrkstatCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DeviceID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Workstations">
+    <Key>
+      <PropertyRef Name="WrkstatCode" />
+    </Key>
+    <Property Name="WrkstatCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="WrkstatDescrText" Type="varchar(max)" />
+    <Property Name="KeyboardCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="RegisterCode" Type="varchar" MaxLength="3" />
+    <Property Name="TicketPrinterID" Type="int" />
+    <Property Name="FormPrinterID" Type="int" />
+    <Property Name="ListPrinterID" Type="int" />
+    <Property Name="CardPrinterID" Type="int" />
+    <Property Name="LabelCompositePrinterID" Type="int" />
+    <Property Name="LabelContinuPrinterID" Type="int" />
+    <Property Name="LabelPluralPrinterID" Type="int" />
+    <Property Name="LabelSinglePrinterID" Type="int" />
+    <Property Name="SlipPrinterID" Type="int" />
+    <Property Name="ScreenID" Type="int" />
+    <Property Name="SisReaderID" Type="int" />
+    <Property Name="EftID" Type="int" />
+    <Property Name="CashDrawerID" Type="int" />
+    <Property Name="ModemID" Type="int" />
+    <Property Name="RobotID" Type="int" />
+    <Property Name="EidReaderID" Type="int" />
+    <Property Name="PaperScanID" Type="int" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="BarcodeReaderID" Type="int" />
+  </EntityType>
+  <EntityType Name="WrkstatBackups">
+    <Key>
+      <PropertyRef Name="WrkstatDeviceID" />
+    </Key>
+    <Property Name="WrkstatDeviceID" Type="int" Nullable="false" />
+    <Property Name="OutputDir" Type="varchar" MaxLength="256" />
+    <Property Name="MediaType" Type="int" />
+  </EntityType>
+  <EntityType Name="WrkstatBarcodeReaders">
+    <Key>
+      <PropertyRef Name="WrkstatDeviceID" />
+    </Key>
+    <Property Name="WrkstatDeviceID" Type="int" Nullable="false" />
+    <Property Name="PreAmble" Type="varchar" MaxLength="5" />
+    <Property Name="PostAmble" Type="varchar" MaxLength="5" />
+    <Property Name="ConfigType" Type="varchar" MaxLength="8" />
+  </EntityType>
+  <EntityType Name="WrkstatCashDrawers">
+    <Key>
+      <PropertyRef Name="WrkstatDeviceID" />
+    </Key>
+    <Property Name="WrkstatDeviceID" Type="int" Nullable="false" />
+    <Property Name="PrinterPort" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WrkstatEfts">
+    <Key>
+      <PropertyRef Name="WrkstatDeviceID" />
+    </Key>
+    <Property Name="WrkstatDeviceID" Type="int" Nullable="false" />
+    <Property Name="TerminalName" Type="varchar" MaxLength="8" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WrkstatEidReaders">
+    <Key>
+      <PropertyRef Name="WrkstatDeviceID" />
+    </Key>
+    <Property Name="WrkstatDeviceID" Type="int" Nullable="false" />
+    <Property Name="ReaderName" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WrkstatModems">
+    <Key>
+      <PropertyRef Name="WrkstatDeviceID" />
+    </Key>
+    <Property Name="WrkstatDeviceID" Type="int" Nullable="false" />
+    <Property Name="Rs232Port" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WrkstatPaperScans">
+    <Key>
+      <PropertyRef Name="WrkstatDeviceID" />
+    </Key>
+    <Property Name="WrkstatDeviceID" Type="int" Nullable="false" />
+    <Property Name="WIADeviceID" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="PaperScanMode" Type="int" Nullable="false" />
+    <Property Name="HorizontalResolution" Type="int" Nullable="false" />
+    <Property Name="VerticalResolution" Type="int" Nullable="false" />
+    <Property Name="ScanName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="WrkstatPrinters">
+    <Key>
+      <PropertyRef Name="WrkstatDeviceID" />
+    </Key>
+    <Property Name="WrkstatDeviceID" Type="int" Nullable="false" />
+    <Property Name="PrinterPort" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="LayoutType" Type="int" Nullable="false" />
+    <Property Name="Tray" Type="int" Nullable="false" />
+    <Property Name="Duplex" Type="int" Nullable="false" />
+    <Property Name="NameTray" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="WrkstatRobots">
+    <Key>
+      <PropertyRef Name="WrkstatDeviceID" />
+    </Key>
+    <Property Name="WrkstatDeviceID" Type="int" Nullable="false" />
+    <Property Name="ServerUnc" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="ServerIpPort" Type="int" Nullable="false" />
+    <Property Name="RobotOutletNr" Type="int" Nullable="false" />
+    <Property Name="RobotPriority" Type="smallint" />
+  </EntityType>
+  <EntityType Name="WrkstatScreens">
+    <Key>
+      <PropertyRef Name="WrkstatDeviceID" />
+    </Key>
+    <Property Name="WrkstatDeviceID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WrkstatSisReaders">
+    <Key>
+      <PropertyRef Name="WrkstatDeviceID" />
+    </Key>
+    <Property Name="WrkstatDeviceID" Type="int" Nullable="false" />
+    <Property Name="SamCode" Type="varchar" MaxLength="4" />
+    <Property Name="TrialDate" Type="datetime" />
+    <Property Name="Trial" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Analysis">
+    <Key>
+      <PropertyRef Name="AnalysisNr" />
+    </Key>
+    <Property Name="AnalysisNr" Type="int" Nullable="false" />
+    <Property Name="BuyDate" Type="datetime" Nullable="false" />
+    <Property Name="DateAnalysis" Type="datetime" />
+    <Property Name="Qtd" Type="decimal" Precision="28" Scale="18" />
+    <Property Name="UnitCode" Type="varchar" MaxLength="5" />
+    <Property Name="LotNr" Type="varchar" MaxLength="5" />
+    <Property Name="LotNrSuffix" Type="varchar" MaxLength="15" />
+    <Property Name="DateExpiry" Type="datetime" />
+    <Property Name="ArtID" Type="int" Nullable="false" />
+    <Property Name="SupplierIDSupplier" Type="int" Nullable="false" />
+    <Property Name="SupplierIDManuf" Type="int" Nullable="false" />
+    <Property Name="AuthorisNr" Type="varchar" MaxLength="15" />
+    <Property Name="PhcopeeType" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Report" Type="varchar" MaxLength="1024" />
+    <Property Name="IsConform" Type="smallint" />
+    <Property Name="DateOpened" Type="datetime" />
+    <Property Name="DateEmpty" Type="datetime" />
+    <Property Name="BuyPrice" Type="decimal" Precision="30" Scale="4" />
+    <Property Name="Location" Type="varchar" MaxLength="25" />
+    <Property Name="ArtIDTsp" Type="int" />
+    <Property Name="AnalysisStatusType" Type="varchar" MaxLength="5" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FormulaItems">
+    <Key>
+      <PropertyRef Name="FormID" />
+      <PropertyRef Name="FormItemNr" />
+    </Key>
+    <Property Name="FormID" Type="int" Nullable="false" />
+    <Property Name="FormItemNr" Type="int" Nullable="false" />
+    <Property Name="FormItemType" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="Memo" Type="varchar(max)" />
+    <Property Name="Qtd" Type="decimal" Precision="28" Scale="18" />
+    <Property Name="UnitCode" Type="varchar" MaxLength="3" />
+    <Property Name="ArtID" Type="int" />
+    <Property Name="SpecHonCode" Type="varchar" MaxLength="2" />
+    <Property Name="QtyQualifier" Type="int" Nullable="false" />
+    <Property Name="GreenockID" Type="int" />
+  </EntityType>
+  <EntityType Name="FormulaLabels">
+    <Key>
+      <PropertyRef Name="FormID" />
+      <PropertyRef Name="LangCode" />
+    </Key>
+    <Property Name="FormID" Type="int" Nullable="false" />
+    <Property Name="LangCode" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="FormulariumLabel" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FormulariumLabelNr" Type="int" />
+  </EntityType>
+  <EntityType Name="Formulas">
+    <Key>
+      <PropertyRef Name="FormID" />
+    </Key>
+    <Property Name="FormID" Type="int" Nullable="false" />
+    <Property Name="FormQtd" Type="decimal" Precision="28" Scale="18" />
+    <Property Name="UnitCodePrepQtd" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="IsApb" Type="smallint" />
+    <Property Name="Density" Type="decimal" Precision="30" Scale="5" />
+    <Property Name="FormulariumCode" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="GalformCode" Type="varchar" MaxLength="5" />
+    <Property Name="DtQty" Type="int" />
+    <Property Name="GreenockID" Type="int" />
+    <Property Name="CnkNr" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="InvCatBreakds">
+    <Key>
+      <PropertyRef Name="RegTransactID" />
+      <PropertyRef Name="InvCatCode" />
+      <PropertyRef Name="SsecType" />
+    </Key>
+    <Property Name="RegTransactID" Type="int" Nullable="false" />
+    <Property Name="InvCatCode" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="SsecType" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="PubPrice" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="AmntVat" Type="decimal" Precision="10" Scale="4" Nullable="false" />
+    <Property Name="AmntPaid" Type="decimal" Precision="10" Scale="4" Nullable="false" />
+    <Property Name="AmntRebate" Type="decimal" Precision="10" Scale="4" Nullable="false" />
+    <Property Name="TurnoverCatType" Type="smallint" />
+  </EntityType>
+  <EntityType Name="PaymEftBreakds">
+    <Key>
+      <PropertyRef Name="RegTransactID" />
+      <PropertyRef Name="PaymMethodCode" />
+      <PropertyRef Name="CurrencyIsoCodeCust" />
+    </Key>
+    <Property Name="RegTransactID" Type="int" Nullable="false" />
+    <Property Name="PaymMethodCode" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="CurrencyIsoCodeCust" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="EftTerminalName" Type="varchar" MaxLength="8" />
+    <Property Name="EftTermID" Type="varchar" MaxLength="8" />
+    <Property Name="EftTxvictxamt" Type="decimal" Precision="16" Scale="2" />
+    <Property Name="EftAppid" Type="int" />
+    <Property Name="EftCardID" Type="varchar" MaxLength="24" />
+    <Property Name="EftVictxid" Type="varchar" MaxLength="10" />
+    <Property Name="EftPdvclctnr" Type="varchar" MaxLength="4" />
+    <Property Name="EftPdvgentxnb" Type="varchar" MaxLength="10" />
+    <Property Name="EftEmvcvm" Type="varchar" MaxLength="1" />
+    <Property Name="EftEmvdatetime" Type="varchar" MaxLength="14" />
+    <Property Name="EftEmvtransid" Type="varchar" MaxLength="8" />
+    <Property Name="DatePaymEft" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PaymMethodBreakds">
+    <Key>
+      <PropertyRef Name="RegTransactID" />
+      <PropertyRef Name="PaymMethodCode" />
+      <PropertyRef Name="CurrencyIsoCodeCust" />
+    </Key>
+    <Property Name="RegTransactID" Type="int" Nullable="false" />
+    <Property Name="PaymMethodCode" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="CurrencyIsoCodeCust" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="AmntDefaultCurrencyIn" Type="decimal" Precision="30" Scale="2" Nullable="false" />
+    <Property Name="AmntCustCurrencyIn" Type="decimal" Precision="30" Scale="2" Nullable="false" />
+    <Property Name="AmntDefaultCurrencyOut" Type="decimal" Precision="30" Scale="2" Nullable="false" />
+    <Property Name="AmntCustCurrencyOut" Type="decimal" Precision="30" Scale="2" Nullable="false" />
+    <Property Name="PaymMethodCost" Type="decimal" Precision="30" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PaymMethodLabels">
+    <Key>
+      <PropertyRef Name="PaymMethodCode" />
+      <PropertyRef Name="LangCode" />
+    </Key>
+    <Property Name="PaymMethodCode" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="LangCode" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="PaymMethodLabel" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PaymMethods1">
+    <Key>
+      <PropertyRef Name="PaymMethodCode" />
+    </Key>
+    <Property Name="PaymMethodCode" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="PaymMethodCost" Type="decimal" Precision="30" Scale="2" Nullable="false" />
+    <Property Name="RegSortNr" Type="int" Nullable="false" />
+    <Property Name="RegSheetDirectionType" Type="int" Nullable="false" />
+    <Property Name="IsShowRegSheet" Type="smallint" />
+    <Property Name="PaymMethodCostMinAmnt" Type="decimal" Precision="11" Scale="2" Nullable="false" />
+    <Property Name="IsEft" Type="smallint" />
+    <Property Name="PaymMethodCostType" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Registers1">
+    <Key>
+      <PropertyRef Name="RegisterCode" />
+    </Key>
+    <Property Name="RegisterCode" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="RegisterDescrText" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="RegSessionNrCurrent" Type="int" Nullable="false" />
+    <Property Name="RegisterNr" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RegSessions">
+    <Key>
+      <PropertyRef Name="RegSessionNr" />
+    </Key>
+    <Property Name="RegSessionNr" Type="int" Nullable="false" />
+    <Property Name="DateOpened" Type="datetime" />
+    <Property Name="DateClosed" Type="datetime" />
+    <Property Name="OpenType" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="RegSessionNrPrevious" Type="int" Nullable="false" />
+    <Property Name="IsAccyFlatrate" Type="smallint" />
+  </EntityType>
+  <EntityType Name="RegTransactions">
+    <Key>
+      <PropertyRef Name="RegTransactID" />
+    </Key>
+    <Property Name="RegTransactID" Type="int" Nullable="false" />
+    <Property Name="DateTimeTransact" Type="datetime" Nullable="false" />
+    <Property Name="RegTransactType" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="TotalAmntIn" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="TotalAmntVatex" Type="decimal" Precision="30" Scale="4" />
+    <Property Name="TotalAmntOut" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="RegisterCode" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="RegSessionNr" Type="int" Nullable="false" />
+    <Property Name="Memo" Type="varchar(max)" />
+    <Property Name="PendingID" Type="int" />
+    <Property Name="SlsID" Type="int" />
+    <Property Name="CurrencyIsoCodeCust" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="IsIvc" Type="smallint" Nullable="false" />
+    <Property Name="CentralizationStatus" Type="smallint" />
+  </EntityType>
+  <EntityType Name="WithdDeps">
+    <Key>
+      <PropertyRef Name="RegTransactID" />
+    </Key>
+    <Property Name="RegTransactID" Type="int" Nullable="false" />
+    <Property Name="WithdDepCode" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="TdpIvcReference" Type="varchar" MaxLength="30" />
+    <Property Name="AccyNr" Type="varchar" MaxLength="7" />
+    <Property Name="DateWithdDep" Type="datetime" />
+    <Property Name="IvcID" Type="int" />
+    <Property Name="PaymSeqNr" Type="int" />
+  </EntityType>
+  <EntityType Name="WithdDepTypes">
+    <Key>
+      <PropertyRef Name="WithdDepCode" />
+    </Key>
+    <Property Name="WithdDepCode" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="AccySchemeNr" Type="varchar" MaxLength="6" />
+    <Property Name="IsShowIvcReference" Type="smallint" />
+    <Property Name="IsShowAccySchemeNr" Type="smallint" />
+    <Property Name="WithdDepDirectionType" Type="int" Nullable="false" />
+    <Property Name="WithdDepLabel" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="Magistrals">
+    <Key>
+      <PropertyRef Name="MagistralID" />
+    </Key>
+    <Property Name="MagistralID" Type="int" Nullable="false" />
+    <Property Name="MagistralNr" Type="varchar" MaxLength="10" />
+    <Property Name="MagistralName" Type="varchar" MaxLength="50" />
+    <Property Name="DateMag" Type="datetime" Nullable="false" />
+    <Property Name="GalformCode" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="DtQty" Type="int" />
+    <Property Name="UnitCodePresb" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="PresbQtd" Type="decimal" Precision="28" Scale="18" />
+    <Property Name="BaseAmntNetto" Type="decimal" Precision="30" Scale="2" Nullable="false" />
+    <Property Name="MagFullPrice" Type="decimal" Precision="30" Scale="2" Nullable="false" />
+    <Property Name="AmntChem" Type="decimal" Precision="30" Scale="2" Nullable="false" />
+    <Property Name="AmntChemReimb" Type="decimal" Precision="30" Scale="2" Nullable="false" />
+    <Property Name="AmntExcipient" Type="decimal" Precision="30" Scale="2" Nullable="false" />
+    <Property Name="AmntExcipientReimb" Type="decimal" Precision="30" Scale="2" Nullable="false" />
+    <Property Name="ModCount" Type="int" Nullable="false" />
+    <Property Name="ReimbModCount" Type="int" Nullable="false" />
+    <Property Name="AmntHon" Type="decimal" Precision="30" Scale="2" Nullable="false" />
+    <Property Name="AmntHonReimb" Type="decimal" Precision="30" Scale="2" Nullable="false" />
+    <Property Name="RgtmCount" Type="int" Nullable="false" />
+    <Property Name="UnitPriceRgtm" Type="decimal" Precision="30" Scale="5" Nullable="false" />
+    <Property Name="RgtmType" Type="varchar" MaxLength="1" />
+    <Property Name="CoeffReductQtd" Type="decimal" Precision="28" Scale="18" />
+    <Property Name="CoeffReductDt" Type="decimal" Precision="28" Scale="18" />
+    <Property Name="MagCalcMethodCode" Type="varchar" MaxLength="1" />
+    <Property Name="IsNasalUse" Type="smallint" />
+    <Property Name="IsReimbHomeo" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MagItems">
+    <Key>
+      <PropertyRef Name="MagistralID" />
+      <PropertyRef Name="MitmNr" />
+    </Key>
+    <Property Name="MagistralID" Type="int" Nullable="false" />
+    <Property Name="MitmNr" Type="int" Nullable="false" />
+    <Property Name="SlsID" Type="int" />
+    <Property Name="SsecNr" Type="int" />
+    <Property Name="SitmNr" Type="int" />
+    <Property Name="MagItemType" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Memo" Type="varchar(max)" />
+    <Property Name="Thirdpartypaid" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="AmntNetto" Type="decimal" Precision="30" Scale="4" />
+    <Property Name="FullPrice" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="ArtIDSold" Type="int" />
+    <Property Name="Qtd" Type="decimal" Precision="28" Scale="18" />
+    <Property Name="QtdUnitCode" Type="varchar" MaxLength="3" />
+    <Property Name="QtyQualifier" Type="int" />
+    <Property Name="FormType" Type="varchar" MaxLength="1" />
+    <Property Name="FormID" Type="int" />
+    <Property Name="LegConstrListCpy" Type="varchar(max)" />
+    <Property Name="SpecHonCode" Type="varchar" MaxLength="2" />
+    <Property Name="RecrsDepth" Type="int" Nullable="false" />
+    <Property Name="IsAntioxidant" Type="smallint" />
+    <Property Name="InamirizivListNr" Type="int" />
+    <Property Name="ArtIDFromStock" Type="int" />
+    <Property Name="DeliveredQty" Type="int" />
+    <Property Name="ArtIdSoldType" Type="int" Nullable="false" />
+    <Property Name="ArtReimbCatCode" Type="varchar" MaxLength="2" />
+    <Property Name="ReimbExcptCode" Type="varchar" MaxLength="1" />
+    <Property Name="IsAttestNeeded" Type="smallint" Nullable="false" />
+    <Property Name="AttestID" Type="int" />
+    <Property Name="IsAttestMissing" Type="smallint" Nullable="false" />
+    <Property Name="IsReimbMarkNeeded" Type="smallint" Nullable="false" />
+    <Property Name="ArtReimbMarkCode" Type="int" />
+    <Property Name="IsStampNeeded" Type="smallint" Nullable="false" />
+    <Property Name="HasStamp" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RistCardsRists">
+    <Key>
+      <PropertyRef Name="UniqueId" />
+    </Key>
+    <Property Name="UniqueId" Type="int" Nullable="false" />
+    <Property Name="RistCardNr" Type="varchar" MaxLength="13" Nullable="false" />
+    <Property Name="DatetimeFirst" Type="datetime" Nullable="false" />
+    <Property Name="VatRate" Type="decimal" Precision="4" Scale="2" Nullable="false" />
+    <Property Name="AmntRist" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="RistTransactType" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="SlsID" Type="int" />
+    <Property Name="CentralizationStatus" Type="smallint" />
+  </EntityType>
+  <EntityType Name="SaleItems">
+    <Key>
+      <PropertyRef Name="SlsID" />
+      <PropertyRef Name="SsecNr" />
+      <PropertyRef Name="SitmNr" />
+    </Key>
+    <Property Name="SlsID" Type="int" Nullable="false" />
+    <Property Name="SsecNr" Type="int" Nullable="false" />
+    <Property Name="SitmNr" Type="int" Nullable="false" />
+    <Property Name="ArtID" Type="int" />
+    <Property Name="MagistralID" Type="int" />
+    <Property Name="PubPricePerUnit" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="BuyPriceEstmPerUnit" Type="decimal" Precision="30" Scale="4" />
+    <Property Name="SaleQty" Type="int" />
+    <Property Name="AttestID" Type="int" />
+    <Property Name="OriginalPrescpNr" Type="int" />
+    <Property Name="Dci" Type="bit" />
+    <Property Name="ClusterID" Type="varchar" MaxLength="6" />
+    <Property Name="SitmType" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Memo" Type="varchar(max)" />
+    <Property Name="SitmRegulType" Type="varchar" MaxLength="3" />
+    <Property Name="PendType" Type="varchar" MaxLength="1" />
+    <Property Name="VatRateCpy" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="DeliveredQty" Type="int" />
+    <Property Name="ReservedQty" Type="int" />
+    <Property Name="PayableQty" Type="int" />
+    <Property Name="RistType" Type="varchar" MaxLength="1" />
+    <Property Name="Thirdpartypaid" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="AmntNetto" Type="decimal" Precision="30" Scale="4" />
+    <Property Name="ArtIDFromStock" Type="int" />
+    <Property Name="Qtd" Type="decimal" Precision="28" Scale="18" />
+    <Property Name="LegConstrListCpy" Type="varchar" MaxLength="500" />
+    <Property Name="IsBackofficeMode" Type="smallint" Nullable="false" />
+    <Property Name="AmntPaid" Type="decimal" Precision="30" Scale="4" />
+    <Property Name="AmntRist" Type="decimal" Precision="30" Scale="4" Nullable="false" />
+    <Property Name="AmntRebate" Type="decimal" Precision="30" Scale="4" Nullable="false" />
+    <Property Name="AmntRistNetto" Type="decimal" Precision="30" Scale="4" />
+    <Property Name="AmntRebateNetto" Type="decimal" Precision="30" Scale="4" />
+    <Property Name="PaidQty" Type="int" Nullable="false" />
+    <Property Name="UnpaidDeliveredQty" Type="int" Nullable="false" />
+    <Property Name="RenewalCount" Type="int" Nullable="false" />
+    <Property Name="RenewalNr" Type="int" />
+    <Property Name="RenewalPeriodCount" Type="int" />
+    <Property Name="RenewalPeriodType" Type="varchar" MaxLength="1" />
+    <Property Name="IsTdpTarTrf" Type="smallint" />
+    <Property Name="IsTdpIvcTrfs" Type="smallint" />
+    <Property Name="BasepricePerUnit" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="AmntRistPat" Type="decimal" Precision="30" Scale="4" />
+    <Property Name="AmntRebatePat" Type="decimal" Precision="30" Scale="4" />
+    <Property Name="AmntRistPatNetto" Type="decimal" Precision="30" Scale="4" />
+    <Property Name="AmntRebatePatNetto" Type="decimal" Precision="30" Scale="4" />
+    <Property Name="DeferredDeliveryQty" Type="int" Nullable="false" />
+    <Property Name="F704PrintType" Type="smallint" />
+    <Property Name="BvacPrintType" Type="smallint" />
+    <Property Name="IsSubst" Type="smallint" />
+    <Property Name="ArtReimbCatCode" Type="varchar" MaxLength="2" />
+    <Property Name="ReimbExcptCode" Type="varchar" MaxLength="1" />
+    <Property Name="IsReimbMarkNeeded" Type="smallint" />
+    <Property Name="IsStampNeeded" Type="smallint" />
+    <Property Name="RgtmCount" Type="int" Nullable="false" />
+    <Property Name="AmntPaidSecondCover" Type="decimal" Precision="30" Scale="4" />
+    <Property Name="pendingResolve" Type="int" />
+    <Property Name="IsAttestMissing" Type="smallint" />
+    <Property Name="UnDeliveredQty" Type="int" />
+    <Property Name="IsFirstDeliv" Type="smallint" />
+    <Property Name="DeferredDeliveryType" Type="int" />
+    <Property Name="SupplPackageQty" Type="int" />
+    <Property Name="InnSubstPrescType" Type="smallint" />
+    <Property Name="RgtmCountReimbursable" Type="int" />
+  </EntityType>
+  <EntityType Name="SaleItemType">
+    <Key>
+      <PropertyRef Name="SaleItemType" />
+    </Key>
+    <Property Name="SaleItemType" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="SaleItemTypeName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SalePoso">
+    <Key>
+      <PropertyRef Name="SlsID" />
+      <PropertyRef Name="SaleSectionID" />
+      <PropertyRef Name="LignNr" />
+    </Key>
+    <Property Name="SlsID" Type="int" Nullable="false" />
+    <Property Name="SaleSectionID" Type="int" Nullable="false" />
+    <Property Name="LignNr" Type="int" Nullable="false" />
+    <Property Name="text" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Sales">
+    <Key>
+      <PropertyRef Name="SlsID" />
+    </Key>
+    <Property Name="SlsID" Type="int" Nullable="false" />
+    <Property Name="SaleTicketNr" Type="int" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="IsInvoiced" Type="bit" Nullable="false" />
+    <Property Name="InvoiceNr" Type="varchar" MaxLength="10" />
+    <Property Name="CustomerID" Type="int" />
+    <Property Name="PrintInvoiceDate" Type="datetime" />
+    <Property Name="DateSale" Type="datetime" Nullable="false" />
+    <Property Name="WrkstatCode" Type="varchar" MaxLength="50" />
+    <Property Name="AmntRebate" Type="decimal" Precision="30" Scale="2" Nullable="false" />
+    <Property Name="AmntRist" Type="decimal" Precision="30" Scale="2" Nullable="false" />
+    <Property Name="AmntNetto" Type="decimal" Precision="30" Scale="2" Nullable="false" />
+    <Property Name="AmntPaid" Type="decimal" Precision="30" Scale="2" Nullable="false" />
+    <Property Name="CurrencyIsoCodeCust" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="IsBackofficeMode" Type="smallint" Nullable="false" />
+    <Property Name="TimeSaleStart" Type="datetime" Nullable="false" />
+    <Property Name="TimeTicketPrinted" Type="datetime" />
+    <Property Name="GreenockID" Type="int" />
+  </EntityType>
+  <EntityType Name="SaleSections">
+    <Key>
+      <PropertyRef Name="SlsID" />
+      <PropertyRef Name="SsecNr" />
+    </Key>
+    <Property Name="SlsID" Type="int" Nullable="false" />
+    <Property Name="SsecNr" Type="int" Nullable="false" />
+    <Property Name="SectionType" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="PrescriptionNr" Type="int" />
+    <Property Name="DateDeliv" Type="datetime" Nullable="false" />
+    <Property Name="DatePresp" Type="datetime" />
+    <Property Name="PatID" Type="int" />
+    <Property Name="PrescriberID" Type="int" />
+    <Property Name="HonUrg" Type="bit" />
+    <Property Name="PriceHonUrg" Type="decimal" Precision="30" Scale="4" />
+    <Property Name="Oxygene" Type="varchar" MaxLength="10" />
+    <Property Name="CertificatSIS" Type="varchar" MaxLength="32" />
+    <Property Name="RenewalNr" Type="int" />
+    <Property Name="InamirizvNrCpy" Type="varchar" MaxLength="8" />
+    <Property Name="PresbSpecCodeCpy" Type="varchar" MaxLength="3" />
+    <Property Name="IsTariffing" Type="bit" Nullable="false" />
+    <Property Name="DateIsTar" Type="datetime" />
+    <Property Name="IsWaitingTaroffice" Type="smallint" Nullable="false" />
+    <Property Name="WaittingTarofficeReason" Type="varchar" MaxLength="50" />
+    <Property Name="IsBackofficeMode" Type="smallint" Nullable="false" />
+    <Property Name="DateChange" Type="datetime" />
+    <Property Name="InsrCoverID" Type="int" />
+    <Property Name="InsrCoverSecondID" Type="int" />
+    <Property Name="IsSisCardMissing" Type="smallint" />
+    <Property Name="DateStartOxygen" Type="datetime" />
+    <Property Name="DateStopOxygen" Type="datetime" />
+    <Property Name="FlowOxygen" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="DelivTypeOxygen" Type="int" />
+    <Property Name="DailyAmntOxygen" Type="time" Precision="7" />
+    <Property Name="DatetimeSisRead" Type="datetime" />
+    <Property Name="DateMaxDeliv" Type="datetime" />
+    <Property Name="DateMaxReimb" Type="datetime" />
+    <Property Name="CertificateSeed" Type="varchar" MaxLength="10" />
+    <Property Name="OttdCheckDigits" Type="varchar" MaxLength="2" />
+    <Property Name="IsMyCareNetBackup" Type="smallint" />
+  </EntityType>
+  <EntityType Name="SaleSectionType">
+    <Key>
+      <PropertyRef Name="SaleSectionType" />
+    </Key>
+    <Property Name="SaleSectionType" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="SaleSectionName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SitmHons">
+    <Key>
+      <PropertyRef Name="SlsID" />
+      <PropertyRef Name="SsecNr" />
+      <PropertyRef Name="SitmNr" />
+      <PropertyRef Name="SeqNr" />
+    </Key>
+    <Property Name="SlsID" Type="int" Nullable="false" />
+    <Property Name="SsecNr" Type="int" Nullable="false" />
+    <Property Name="SitmNr" Type="int" Nullable="false" />
+    <Property Name="SeqNr" Type="int" Nullable="false" />
+    <Property Name="SitmHonType" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="ArtID" Type="int" />
+    <Property Name="HonPrice" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="AmntHonThirdpartypaid" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SitmUbcs">
+    <Key>
+      <PropertyRef Name="SitmUbcYear" />
+      <PropertyRef Name="UbcNr" />
+    </Key>
+    <Property Name="SitmUbcYear" Type="int" Nullable="false" />
+    <Property Name="UbcNr" Type="varchar" MaxLength="16" Nullable="false" />
+    <Property Name="SlsID" Type="int" Nullable="false" />
+    <Property Name="SsecNr" Type="int" Nullable="false" />
+    <Property Name="SitmNr" Type="int" Nullable="false" />
+    <Property Name="SitmUbcNr" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SpecHonCode">
+    <Key>
+      <PropertyRef Name="SpecHonID" />
+    </Key>
+    <Property Name="SpecHonID" Type="int" Nullable="false" />
+    <Property Name="SpecHonCode" Type="int" />
+    <Property Name="GreenockID" Type="int" />
+    <Property Name="SpecHonName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ReturnAwaitings">
+    <Key>
+      <PropertyRef Name="ReturnAwaitingID" />
+    </Key>
+    <Property Name="ReturnAwaitingID" Type="int" Nullable="false" />
+    <Property Name="ReturnType" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="DateReturn" Type="datetime" Nullable="false" />
+    <Property Name="SupplierID" Type="int" />
+    <Property Name="Memo" Type="varchar(max)" />
+    <Property Name="ArtID" Type="int" Nullable="false" />
+    <Property Name="Qty" Type="int" Nullable="false" />
+    <Property Name="BuyPricePerUnit" Type="decimal" Precision="10" Scale="4" />
+    <Property Name="DateExpiry" Type="datetime" />
+    <Property Name="LotNr" Type="varchar" MaxLength="10" />
+    <Property Name="WrkstatCode" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_ArtNames_Articles">
+    <End Role="Articles" Type="Self.Articles" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ArtNames" Type="Self.ArtNames" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articles">
+        <PropertyRef Name="ArtIdCPCL" />
+      </Principal>
+      <Dependent Role="ArtNames">
+        <PropertyRef Name="ArtIdCPCL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChemicalNames_Chemicals">
+    <End Role="Chemicals" Type="Self.Chemicals" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ChemicalNames" Type="Self.ChemicalNames" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chemicals">
+        <PropertyRef Name="ArtIdCPCL" />
+      </Principal>
+      <Dependent Role="ChemicalNames">
+        <PropertyRef Name="ArtIdCPCL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Emails_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="UserEmails" Type="Self.UserEmails" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="UserEmails">
+        <PropertyRef Name="UID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FormulaItems_Formulas">
+    <End Role="Formulas" Type="Self.Formulas" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="FormulaItems" Type="Self.FormulaItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Formulas">
+        <PropertyRef Name="FormID" />
+      </Principal>
+      <Dependent Role="FormulaItems">
+        <PropertyRef Name="FormID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FormulaLabels_Formulas">
+    <End Role="Formulas" Type="Self.Formulas" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="FormulaLabels" Type="Self.FormulaLabels" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Formulas">
+        <PropertyRef Name="FormID" />
+      </Principal>
+      <Dependent Role="FormulaLabels">
+        <PropertyRef Name="FormID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HeadPrescp_Sale">
+    <End Role="Sales" Type="Self.Sales" Multiplicity="1" />
+    <End Role="SaleSections" Type="Self.SaleSections" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sales">
+        <PropertyRef Name="SlsID" />
+      </Principal>
+      <Dependent Role="SaleSections">
+        <PropertyRef Name="SlsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HvtNames_Hvts">
+    <End Role="Hvts" Type="Self.Hvts" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="HvtNames" Type="Self.HvtNames" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hvts">
+        <PropertyRef Name="ArtHvtID" />
+      </Principal>
+      <Dependent Role="HvtNames">
+        <PropertyRef Name="ArtIdCPCL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HvtQtyPrices_Hvts">
+    <End Role="Hvts" Type="Self.Hvts" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="HvtQtyPrices" Type="Self.HvtQtyPrices" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hvts">
+        <PropertyRef Name="ArtHvtID" />
+      </Principal>
+      <Dependent Role="HvtQtyPrices">
+        <PropertyRef Name="ArtHvtID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LabelEditorLocs_Warehouses">
+    <End Role="Warehouses" Type="Self.Warehouses" Multiplicity="1" />
+    <End Role="LabelEditorLocs" Type="Self.LabelEditorLocs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Warehouses">
+        <PropertyRef Name="WarehouseCode" />
+      </Principal>
+      <Dependent Role="LabelEditorLocs">
+        <PropertyRef Name="WarehouseCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_lig_vte3">
+    <End Role="SaleItems" Type="Self.SaleItems" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SitmUbcs" Type="Self.SitmUbcs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SaleItems">
+        <PropertyRef Name="SlsID" />
+        <PropertyRef Name="SsecNr" />
+        <PropertyRef Name="SitmNr" />
+      </Principal>
+      <Dependent Role="SitmUbcs">
+        <PropertyRef Name="SlsID" />
+        <PropertyRef Name="SsecNr" />
+        <PropertyRef Name="SitmNr" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LocalizationStock_Localization">
+    <End Role="Localization" Type="Self.Localization" Multiplicity="1" />
+    <End Role="LocalizationStock" Type="Self.LocalizationStock" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localization">
+        <PropertyRef Name="LocalizationCode" />
+      </Principal>
+      <Dependent Role="LocalizationStock">
+        <PropertyRef Name="LocalisationCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MagItems_Magistrals">
+    <End Role="Magistrals" Type="Self.Magistrals" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="MagItems" Type="Self.MagItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Magistrals">
+        <PropertyRef Name="MagistralID" />
+      </Principal>
+      <Dependent Role="MagItems">
+        <PropertyRef Name="MagistralID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ParameterLabels_ParameterTypes">
+    <End Role="ParameterTypes" Type="Self.ParameterTypes" Multiplicity="1" />
+    <End Role="ParameterLabels" Type="Self.ParameterLabels" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterTypes">
+        <PropertyRef Name="ParameterType" />
+      </Principal>
+      <Dependent Role="ParameterLabels">
+        <PropertyRef Name="ParameterType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PharmDocDataLabels_PharmDocDatas">
+    <End Role="PharmDocDatas" Type="Self.PharmDocDatas" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PharmDocDataLabels" Type="Self.PharmDocDataLabels" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PharmDocDatas">
+        <PropertyRef Name="PharmID" />
+        <PropertyRef Name="PharmaDocType" />
+      </Principal>
+      <Dependent Role="PharmDocDataLabels">
+        <PropertyRef Name="PharmID" />
+        <PropertyRef Name="PharmaDocType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlaceLabels_Places">
+    <End Role="Places" Type="Self.Places" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PlaceLabels" Type="Self.PlaceLabels" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Places">
+        <PropertyRef Name="PlaceID" />
+      </Principal>
+      <Dependent Role="PlaceLabels">
+        <PropertyRef Name="PlaceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_profilelabel">
+    <End Role="ProfileTypes" Type="Self.ProfileTypes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ProfileLabels" Type="Self.ProfileLabels" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProfileTypes">
+        <PropertyRef Name="ProfileType" />
+      </Principal>
+      <Dependent Role="ProfileLabels">
+        <PropertyRef Name="ProfileType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Profileroles">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Profiles" Type="Self.Profiles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="Profiles">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_profiletype">
+    <End Role="ProfileTypes" Type="Self.ProfileTypes" Multiplicity="1" />
+    <End Role="Profiles" Type="Self.Profiles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProfileTypes">
+        <PropertyRef Name="ProfileType" />
+      </Principal>
+      <Dependent Role="Profiles">
+        <PropertyRef Name="ProfileType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_rolelabel">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="RoleLabels" Type="Self.RoleLabels" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="RoleLabels">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SaleItems_Magistrals">
+    <End Role="Magistrals" Type="Self.Magistrals" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SaleItems" Type="Self.SaleItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Magistrals">
+        <PropertyRef Name="MagistralID" />
+      </Principal>
+      <Dependent Role="SaleItems">
+        <PropertyRef Name="MagistralID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SaleItems_SaleSections">
+    <End Role="SaleSections" Type="Self.SaleSections" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SaleItems" Type="Self.SaleItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SaleSections">
+        <PropertyRef Name="SlsID" />
+        <PropertyRef Name="SsecNr" />
+      </Principal>
+      <Dependent Role="SaleItems">
+        <PropertyRef Name="SlsID" />
+        <PropertyRef Name="SsecNr" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SalePoso_SaleItem">
+    <End Role="SaleItems" Type="Self.SaleItems" Multiplicity="1" />
+    <End Role="SalePoso" Type="Self.SalePoso" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="SaleItems">
+        <PropertyRef Name="SlsID" />
+        <PropertyRef Name="SsecNr" />
+        <PropertyRef Name="SitmNr" />
+      </Principal>
+      <Dependent Role="SalePoso">
+        <PropertyRef Name="SlsID" />
+        <PropertyRef Name="SaleSectionID" />
+        <PropertyRef Name="LignNr" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SaleSections_Sales">
+    <End Role="Sales" Type="Self.Sales" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SaleSections" Type="Self.SaleSections" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sales">
+        <PropertyRef Name="SlsID" />
+      </Principal>
+      <Dependent Role="SaleSections">
+        <PropertyRef Name="SlsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SitmHons_SaleItems">
+    <End Role="SaleItems" Type="Self.SaleItems" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SitmHons" Type="Self.SitmHons" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SaleItems">
+        <PropertyRef Name="SlsID" />
+        <PropertyRef Name="SsecNr" />
+        <PropertyRef Name="SitmNr" />
+      </Principal>
+      <Dependent Role="SitmHons">
+        <PropertyRef Name="SlsID" />
+        <PropertyRef Name="SsecNr" />
+        <PropertyRef Name="SitmNr" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TaskGroupLabels_TaskGroupTypes">
+    <End Role="TaskGroupTypes" Type="Self.TaskGroupTypes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TaskGroupLabels" Type="Self.TaskGroupLabels" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaskGroupTypes">
+        <PropertyRef Name="GroupType" />
+      </Principal>
+      <Dependent Role="TaskGroupLabels">
+        <PropertyRef Name="GroupType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TaskLabels_TaskTypes">
+    <End Role="TaskTypes" Type="Self.TaskTypes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TaskLabels" Type="Self.TaskLabels" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaskTypes">
+        <PropertyRef Name="TaskType" />
+      </Principal>
+      <Dependent Role="TaskLabels">
+        <PropertyRef Name="TaskType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TaskTypes_TaskGroupTypes">
+    <End Role="TaskGroupTypes" Type="Self.TaskGroupTypes" Multiplicity="1" />
+    <End Role="TaskTypes" Type="Self.TaskTypes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaskGroupTypes">
+        <PropertyRef Name="GroupType" />
+      </Principal>
+      <Dependent Role="TaskTypes">
+        <PropertyRef Name="GroupType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ToVerifyLabel_ToVerify">
+    <End Role="ToVerify" Type="Self.ToVerify" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ToVerifyLabel" Type="Self.ToVerifyLabel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ToVerify">
+        <PropertyRef Name="ToVerifyID" />
+      </Principal>
+      <Dependent Role="ToVerifyLabel">
+        <PropertyRef Name="ToVerifyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Users_Roles">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WhLocationLabels_WhLocs">
+    <End Role="WhLocs" Type="Self.WhLocs" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="WhLocationLabels" Type="Self.WhLocationLabels" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WhLocs">
+        <PropertyRef Name="WhLocId" />
+      </Principal>
+      <Dependent Role="WhLocationLabels">
+        <PropertyRef Name="WhLocId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WithdDeps_WithdDepTypes">
+    <End Role="WithdDepTypes" Type="Self.WithdDepTypes" Multiplicity="1" />
+    <End Role="WithdDeps" Type="Self.WithdDeps" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WithdDepTypes">
+        <PropertyRef Name="WithdDepCode" />
+      </Principal>
+      <Dependent Role="WithdDeps">
+        <PropertyRef Name="WithdDepCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkstationBackups_WorkstationDevices">
+    <End Role="WorkstationDevices" Type="Self.WorkstationDevices" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="WrkstatBackups" Type="Self.WrkstatBackups" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="WorkstationDevices">
+        <PropertyRef Name="WrkstatDeviceID" />
+      </Principal>
+      <Dependent Role="WrkstatBackups">
+        <PropertyRef Name="WrkstatDeviceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkstationCashDrawers_WorkstationDevices">
+    <End Role="WorkstationDevices" Type="Self.WorkstationDevices" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="WrkstatCashDrawers" Type="Self.WrkstatCashDrawers" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="WorkstationDevices">
+        <PropertyRef Name="WrkstatDeviceID" />
+      </Principal>
+      <Dependent Role="WrkstatCashDrawers">
+        <PropertyRef Name="WrkstatDeviceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkstationDevices_Workstations">
+    <End Role="Workstations" Type="Self.Workstations" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="WorkstationDevices" Type="Self.WorkstationDevices" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Workstations">
+        <PropertyRef Name="WrkstatCode" />
+      </Principal>
+      <Dependent Role="WorkstationDevices">
+        <PropertyRef Name="WrkstatCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkstationEfts_WorkstationDevices">
+    <End Role="WorkstationDevices" Type="Self.WorkstationDevices" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="WrkstatEfts" Type="Self.WrkstatEfts" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="WorkstationDevices">
+        <PropertyRef Name="WrkstatDeviceID" />
+      </Principal>
+      <Dependent Role="WrkstatEfts">
+        <PropertyRef Name="WrkstatDeviceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkstationEidReaders_WorkstationDevices">
+    <End Role="WorkstationDevices" Type="Self.WorkstationDevices" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="WrkstatEidReaders" Type="Self.WrkstatEidReaders" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="WorkstationDevices">
+        <PropertyRef Name="WrkstatDeviceID" />
+      </Principal>
+      <Dependent Role="WrkstatEidReaders">
+        <PropertyRef Name="WrkstatDeviceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkstationModems_WorkstationDevices">
+    <End Role="WorkstationDevices" Type="Self.WorkstationDevices" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="WrkstatModems" Type="Self.WrkstatModems" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="WorkstationDevices">
+        <PropertyRef Name="WrkstatDeviceID" />
+      </Principal>
+      <Dependent Role="WrkstatModems">
+        <PropertyRef Name="WrkstatDeviceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkstationPrinters_WorkstationDevices">
+    <End Role="WorkstationDevices" Type="Self.WorkstationDevices" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="WrkstatPrinters" Type="Self.WrkstatPrinters" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="WorkstationDevices">
+        <PropertyRef Name="WrkstatDeviceID" />
+      </Principal>
+      <Dependent Role="WrkstatPrinters">
+        <PropertyRef Name="WrkstatDeviceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkstationRobots_WorkstationDevices">
+    <End Role="WorkstationDevices" Type="Self.WorkstationDevices" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="WrkstatRobots" Type="Self.WrkstatRobots" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="WorkstationDevices">
+        <PropertyRef Name="WrkstatDeviceID" />
+      </Principal>
+      <Dependent Role="WrkstatRobots">
+        <PropertyRef Name="WrkstatDeviceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkstationScreens_WorkstationDevices">
+    <End Role="WorkstationDevices" Type="Self.WorkstationDevices" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="WrkstatScreens" Type="Self.WrkstatScreens" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="WorkstationDevices">
+        <PropertyRef Name="WrkstatDeviceID" />
+      </Principal>
+      <Dependent Role="WrkstatScreens">
+        <PropertyRef Name="WrkstatDeviceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkstationSisReaders_WorkstationDevices">
+    <End Role="WorkstationDevices" Type="Self.WorkstationDevices" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="WrkstatSisReaders" Type="Self.WrkstatSisReaders" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="WorkstationDevices">
+        <PropertyRef Name="WrkstatDeviceID" />
+      </Principal>
+      <Dependent Role="WrkstatSisReaders">
+        <PropertyRef Name="WrkstatDeviceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CPCLModelStoreContainer">
+    <EntitySet Name="Allergies" EntityType="Self.Allergies" Schema="Actor" store:Type="Tables" />
+    <EntitySet Name="Attestations" EntityType="Self.Attestations" Schema="Actor" store:Type="Tables" />
+    <EntitySet Name="Credit" EntityType="Self.Credit" Schema="Actor" store:Type="Tables" />
+    <EntitySet Name="Customers" EntityType="Self.Customers" Schema="Actor" store:Type="Tables" />
+    <EntitySet Name="InsrCovers" EntityType="Self.InsrCovers" Schema="Actor" store:Type="Tables" />
+    <EntitySet Name="Parameter" EntityType="Self.Parameter" Schema="Actor" store:Type="Tables" />
+    <EntitySet Name="Pathologies" EntityType="Self.Pathologies" Schema="Actor" store:Type="Tables" />
+    <EntitySet Name="Patients" EntityType="Self.Patients" Schema="Actor" store:Type="Tables" />
+    <EntitySet Name="Pharmacies" EntityType="Self.Pharmacies" Schema="Actor" store:Type="Tables" />
+    <EntitySet Name="PlaceLabels" EntityType="Self.PlaceLabels" Schema="Actor" store:Type="Tables" />
+    <EntitySet Name="Places" EntityType="Self.Places" Schema="Actor" store:Type="Tables" />
+    <EntitySet Name="Prescribers" EntityType="Self.Prescribers" Schema="Actor" store:Type="Tables" />
+    <EntitySet Name="RistCards" EntityType="Self.RistCards" Schema="Actor" store:Type="Tables" />
+    <EntitySet Name="RistCardsAccounts" EntityType="Self.RistCardsAccounts" Schema="Actor" store:Type="Tables" />
+    <EntitySet Name="Suppliers" EntityType="Self.Suppliers" Schema="Actor" store:Type="Tables" />
+    <EntitySet Name="Articles" EntityType="Self.Articles" Schema="Article" store:Type="Tables" />
+    <EntitySet Name="ArtNames" EntityType="Self.ArtNames" Schema="Article" store:Type="Tables" />
+    <EntitySet Name="ChemicalNames" EntityType="Self.ChemicalNames" Schema="Article" store:Type="Tables" />
+    <EntitySet Name="Chemicals" EntityType="Self.Chemicals" Schema="Article" store:Type="Tables" />
+    <EntitySet Name="HvtNames" EntityType="Self.HvtNames" Schema="Article" store:Type="Tables" />
+    <EntitySet Name="HvtQtyPrices" EntityType="Self.HvtQtyPrices" Schema="Article" store:Type="Tables" />
+    <EntitySet Name="Hvts" EntityType="Self.Hvts" Schema="Article" store:Type="Tables" />
+    <EntitySet Name="IdealStockThresholds" EntityType="Self.IdealStockThresholds" Schema="Article" store:Type="Tables" />
+    <EntitySet Name="LabelEditorArticles" EntityType="Self.LabelEditorArticles" Schema="Article" store:Type="Tables" />
+    <EntitySet Name="LabelEditorLocs" EntityType="Self.LabelEditorLocs" Schema="Article" store:Type="Tables" />
+    <EntitySet Name="Localization" EntityType="Self.Localization" Schema="Article" store:Type="Tables" />
+    <EntitySet Name="LocalizationStock" EntityType="Self.LocalizationStock" Schema="Article" store:Type="Tables" />
+    <EntitySet Name="MultidoseLinks" EntityType="Self.MultidoseLinks" Schema="Article" store:Type="Tables" />
+    <EntitySet Name="Peremption" EntityType="Self.Peremption" Schema="Article" store:Type="Tables" />
+    <EntitySet Name="Statistic" EntityType="Self.Statistic" Schema="Article" store:Type="Tables" />
+    <EntitySet Name="StockLog" EntityType="Self.StockLog" Schema="Article" store:Type="Tables" />
+    <EntitySet Name="Stocks" EntityType="Self.Stocks" Schema="Article" store:Type="Tables" />
+    <EntitySet Name="TherapUses" EntityType="Self.TherapUses" Schema="Article" store:Type="Tables" />
+    <EntitySet Name="Warehouses" EntityType="Self.Warehouses" Schema="Article" store:Type="Tables" />
+    <EntitySet Name="AppVersions" EntityType="Self.AppVersions" Schema="Config" store:Type="Tables" />
+    <EntitySet Name="ComplementaryMention" EntityType="Self.ComplementaryMention" Schema="Config" store:Type="Tables" />
+    <EntitySet Name="Counters" EntityType="Self.Counters" Schema="Config" store:Type="Tables" />
+    <EntitySet Name="Country" EntityType="Self.Country" Schema="Config" store:Type="Tables" />
+    <EntitySet Name="CPCLParamValues" EntityType="Self.CPCLParamValues" Schema="Config" store:Type="Tables" />
+    <EntitySet Name="CPCLTables" EntityType="Self.CPCLTables" Schema="Config" store:Type="Tables" />
+    <EntitySet Name="CustRistGroupLabels" EntityType="Self.CustRistGroupLabels" Schema="Config" store:Type="Tables" />
+    <EntitySet Name="CustRistGroups" EntityType="Self.CustRistGroups" Schema="Config" store:Type="Tables" />
+    <EntitySet Name="GenderCode" EntityType="Self.GenderCode" Schema="Config" store:Type="Tables" />
+    <EntitySet Name="GreenockUsers" EntityType="Self.GreenockUsers" Schema="Config" store:Type="Tables" />
+    <EntitySet Name="MagType" EntityType="Self.MagType" Schema="Config" store:Type="Tables" />
+    <EntitySet Name="OldSoftTableNames" EntityType="Self.OldSoftTableNames" Schema="Config" store:Type="Tables" />
+    <EntitySet Name="ParameterLabels" EntityType="Self.ParameterLabels" Schema="Config" store:Type="Tables" />
+    <EntitySet Name="ParameterTypes" EntityType="Self.ParameterTypes" Schema="Config" store:Type="Tables" />
+    <EntitySet Name="PaymMethods" EntityType="Self.PaymMethods" Schema="Config" store:Type="Tables" />
+    <EntitySet Name="PharmDocDataLabels" EntityType="Self.PharmDocDataLabels" Schema="Config" store:Type="Tables" />
+    <EntitySet Name="PharmDocDatas" EntityType="Self.PharmDocDatas" Schema="Config" store:Type="Tables" />
+    <EntitySet Name="Profiles" EntityType="Self.Profiles" Schema="Config" store:Type="Tables" />
+    <EntitySet Name="ProfileTypes" EntityType="Self.ProfileTypes" Schema="Config" store:Type="Tables" />
+    <EntitySet Name="Registration" EntityType="Self.Registration" Schema="Config" store:Type="Tables" />
+    <EntitySet Name="RegulationType" EntityType="Self.RegulationType" Schema="Config" store:Type="Tables" />
+    <EntitySet Name="RoleLabels" EntityType="Self.RoleLabels" Schema="Config" store:Type="Tables" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" Schema="Config" store:Type="Tables" />
+    <EntitySet Name="TaskGroupLabels" EntityType="Self.TaskGroupLabels" Schema="Config" store:Type="Tables" />
+    <EntitySet Name="TaskGroupTypes" EntityType="Self.TaskGroupTypes" Schema="Config" store:Type="Tables" />
+    <EntitySet Name="TaskLabels" EntityType="Self.TaskLabels" Schema="Config" store:Type="Tables" />
+    <EntitySet Name="TaskTypes" EntityType="Self.TaskTypes" Schema="Config" store:Type="Tables" />
+    <EntitySet Name="ToVerify" EntityType="Self.ToVerify" Schema="Config" store:Type="Tables" />
+    <EntitySet Name="ToVerifyLabel" EntityType="Self.ToVerifyLabel" Schema="Config" store:Type="Tables" />
+    <EntitySet Name="Trace" EntityType="Self.Trace" Schema="Config" store:Type="Tables" />
+    <EntitySet Name="TransactionType" EntityType="Self.TransactionType" Schema="Config" store:Type="Tables" />
+    <EntitySet Name="TypeNote" EntityType="Self.TypeNote" Schema="Config" store:Type="Tables" />
+    <EntitySet Name="UnitCode" EntityType="Self.UnitCode" Schema="Config" store:Type="Tables" />
+    <EntitySet Name="UserEmails" EntityType="Self.UserEmails" Schema="Config" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="Config" store:Type="Tables" />
+    <EntitySet Name="Version" EntityType="Self.Version" Schema="Config" store:Type="Tables" />
+    <EntitySet Name="Note" EntityType="Self.Note" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CustRistGroupLabels1" EntityType="Self.CustRistGroupLabels1" Schema="GkpCfg" Table="CustRistGroupLabels" store:Type="Tables" />
+    <EntitySet Name="CustRistGroups1" EntityType="Self.CustRistGroups1" Schema="GkpCfg" Table="CustRistGroups" store:Type="Tables" />
+    <EntitySet Name="MarginTypes" EntityType="Self.MarginTypes" Schema="GkpCfg" store:Type="Tables" />
+    <EntitySet Name="Registers" EntityType="Self.Registers" Schema="GkpCfg" store:Type="Tables" />
+    <EntitySet Name="RistCustArticles" EntityType="Self.RistCustArticles" Schema="GkpCfg" store:Type="Tables" />
+    <EntitySet Name="RistCustRistGroups" EntityType="Self.RistCustRistGroups" Schema="GkpCfg" store:Type="Tables" />
+    <EntitySet Name="RistCustRules" EntityType="Self.RistCustRules" Schema="GkpCfg" store:Type="Tables" />
+    <EntitySet Name="RistPatRistGroups" EntityType="Self.RistPatRistGroups" Schema="GkpCfg" store:Type="Tables" />
+    <EntitySet Name="UrlTypes" EntityType="Self.UrlTypes" Schema="GkpCfg" store:Type="Tables" />
+    <EntitySet Name="WhLocationLabels" EntityType="Self.WhLocationLabels" Schema="GkpCfg" store:Type="Tables" />
+    <EntitySet Name="WhLocs" EntityType="Self.WhLocs" Schema="GkpCfg" store:Type="Tables" />
+    <EntitySet Name="WorkstationDevices" EntityType="Self.WorkstationDevices" Schema="GkpCfg" store:Type="Tables" />
+    <EntitySet Name="Workstations" EntityType="Self.Workstations" Schema="GkpCfg" store:Type="Tables" />
+    <EntitySet Name="WrkstatBackups" EntityType="Self.WrkstatBackups" Schema="GkpCfg" store:Type="Tables" />
+    <EntitySet Name="WrkstatBarcodeReaders" EntityType="Self.WrkstatBarcodeReaders" Schema="GkpCfg" store:Type="Tables" />
+    <EntitySet Name="WrkstatCashDrawers" EntityType="Self.WrkstatCashDrawers" Schema="GkpCfg" store:Type="Tables" />
+    <EntitySet Name="WrkstatEfts" EntityType="Self.WrkstatEfts" Schema="GkpCfg" store:Type="Tables" />
+    <EntitySet Name="WrkstatEidReaders" EntityType="Self.WrkstatEidReaders" Schema="GkpCfg" store:Type="Tables" />
+    <EntitySet Name="WrkstatModems" EntityType="Self.WrkstatModems" Schema="GkpCfg" store:Type="Tables" />
+    <EntitySet Name="WrkstatPaperScans" EntityType="Self.WrkstatPaperScans" Schema="GkpCfg" store:Type="Tables" />
+    <EntitySet Name="WrkstatPrinters" EntityType="Self.WrkstatPrinters" Schema="GkpCfg" store:Type="Tables" />
+    <EntitySet Name="WrkstatRobots" EntityType="Self.WrkstatRobots" Schema="GkpCfg" store:Type="Tables" />
+    <EntitySet Name="WrkstatScreens" EntityType="Self.WrkstatScreens" Schema="GkpCfg" store:Type="Tables" />
+    <EntitySet Name="WrkstatSisReaders" EntityType="Self.WrkstatSisReaders" Schema="GkpCfg" store:Type="Tables" />
+    <EntitySet Name="Analysis" EntityType="Self.Analysis" Schema="Mag" store:Type="Tables" />
+    <EntitySet Name="FormulaItems" EntityType="Self.FormulaItems" Schema="Mag" store:Type="Tables" />
+    <EntitySet Name="FormulaLabels" EntityType="Self.FormulaLabels" Schema="Mag" store:Type="Tables" />
+    <EntitySet Name="Formulas" EntityType="Self.Formulas" Schema="Mag" store:Type="Tables" />
+    <EntitySet Name="InvCatBreakds" EntityType="Self.InvCatBreakds" Schema="Register" store:Type="Tables" />
+    <EntitySet Name="PaymEftBreakds" EntityType="Self.PaymEftBreakds" Schema="Register" store:Type="Tables" />
+    <EntitySet Name="PaymMethodBreakds" EntityType="Self.PaymMethodBreakds" Schema="Register" store:Type="Tables" />
+    <EntitySet Name="PaymMethodLabels" EntityType="Self.PaymMethodLabels" Schema="Register" store:Type="Tables" />
+    <EntitySet Name="PaymMethods1" EntityType="Self.PaymMethods1" Schema="Register" Table="PaymMethods" store:Type="Tables" />
+    <EntitySet Name="Registers1" EntityType="Self.Registers1" Schema="Register" Table="Registers" store:Type="Tables" />
+    <EntitySet Name="RegSessions" EntityType="Self.RegSessions" Schema="Register" store:Type="Tables" />
+    <EntitySet Name="RegTransactions" EntityType="Self.RegTransactions" Schema="Register" store:Type="Tables" />
+    <EntitySet Name="WithdDeps" EntityType="Self.WithdDeps" Schema="Register" store:Type="Tables" />
+    <EntitySet Name="WithdDepTypes" EntityType="Self.WithdDepTypes" Schema="Register" store:Type="Tables" />
+    <EntitySet Name="Magistrals" EntityType="Self.Magistrals" Schema="Sales" store:Type="Tables" />
+    <EntitySet Name="MagItems" EntityType="Self.MagItems" Schema="Sales" store:Type="Tables" />
+    <EntitySet Name="RistCardsRists" EntityType="Self.RistCardsRists" Schema="Sales" store:Type="Tables" />
+    <EntitySet Name="SaleItems" EntityType="Self.SaleItems" Schema="Sales" store:Type="Tables" />
+    <EntitySet Name="SaleItemType" EntityType="Self.SaleItemType" Schema="Sales" store:Type="Tables" />
+    <EntitySet Name="SalePoso" EntityType="Self.SalePoso" Schema="Sales" store:Type="Tables" />
+    <EntitySet Name="Sales" EntityType="Self.Sales" Schema="Sales" store:Type="Tables" />
+    <EntitySet Name="SaleSections" EntityType="Self.SaleSections" Schema="Sales" store:Type="Tables" />
+    <EntitySet Name="SaleSectionType" EntityType="Self.SaleSectionType" Schema="Sales" store:Type="Tables" />
+    <EntitySet Name="SitmHons" EntityType="Self.SitmHons" Schema="Sales" store:Type="Tables" />
+    <EntitySet Name="SitmUbcs" EntityType="Self.SitmUbcs" Schema="Sales" store:Type="Tables" />
+    <EntitySet Name="SpecHonCode" EntityType="Self.SpecHonCode" Schema="Sales" store:Type="Tables" />
+    <EntitySet Name="ReturnAwaitings" EntityType="Self.ReturnAwaitings" Schema="Supply" store:Type="Tables" />
+    <EntitySet Name="ProductInOrder" EntityType="Self.ProductInOrder" store:Type="Tables" store:Schema="Article">
+      <DefiningQuery>SELECT 
+    [ProductInOrder].[CustomerID] AS [CustomerID], 
+    [ProductInOrder].[Date] AS [Date], 
+    [ProductInOrder].[ArtIdCPCL] AS [ArtIdCPCL], 
+    [ProductInOrder].[CNKNr] AS [CNKNr], 
+    [ProductInOrder].[QtySend] AS [QtySend], 
+    [ProductInOrder].[OrderNr] AS [OrderNr], 
+    [ProductInOrder].[FreeText] AS [FreeText], 
+    [ProductInOrder].[GreenockID] AS [GreenockID]
+    FROM [Article].[ProductInOrder] AS [ProductInOrder]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PrgRecupVersion" EntityType="Self.PrgRecupVersion" store:Type="Tables" store:Schema="Config">
+      <DefiningQuery>SELECT 
+    [PrgRecupVersion].[MajorNr] AS [MajorNr], 
+    [PrgRecupVersion].[MinorNr] AS [MinorNr], 
+    [PrgRecupVersion].[RevisionNr] AS [RevisionNr], 
+    [PrgRecupVersion].[LastUpgradeDate] AS [LastUpgradeDate]
+    FROM [Config].[PrgRecupVersion] AS [PrgRecupVersion]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ProfileLabels" EntityType="Self.ProfileLabels" store:Type="Tables" store:Schema="Config">
+      <DefiningQuery>SELECT 
+    [ProfileLabels].[ProfileType] AS [ProfileType], 
+    [ProfileLabels].[ProfileLabel] AS [ProfileLabel], 
+    [ProfileLabels].[LangCode] AS [LangCode]
+    FROM [Config].[ProfileLabels] AS [ProfileLabels]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Actor_Pharmacies" EntityType="Self.Actor_Pharmacies" store:Type="Tables" store:Schema="GkpCfg">
+      <DefiningQuery>SELECT 
+    [Actor_Pharmacies].[PharmID] AS [PharmID], 
+    [Actor_Pharmacies].[TitulName] AS [TitulName], 
+    [Actor_Pharmacies].[ImsCode] AS [ImsCode], 
+    [Actor_Pharmacies].[PharmApbNr] AS [PharmApbNr], 
+    [Actor_Pharmacies].[PharmApbNrSuffix] AS [PharmApbNrSuffix], 
+    [Actor_Pharmacies].[InamirizvNr] AS [InamirizvNr], 
+    [Actor_Pharmacies].[TdpPharmID] AS [TdpPharmID], 
+    [Actor_Pharmacies].[EmailTaroffice] AS [EmailTaroffice], 
+    [Actor_Pharmacies].[TradeRegstNr] AS [TradeRegstNr], 
+    [Actor_Pharmacies].[PlaceIDTradeRegst] AS [PlaceIDTradeRegst], 
+    [Actor_Pharmacies].[ISAcod_perm_db] AS [ISAcod_perm_db], 
+    [Actor_Pharmacies].[TarProtVersionNr] AS [TarProtVersionNr], 
+    [Actor_Pharmacies].[DateTarProtVersionStart] AS [DateTarProtVersionStart], 
+    [Actor_Pharmacies].[RprrpmNr] AS [RprrpmNr], 
+    [Actor_Pharmacies].[GroupType] AS [GroupType], 
+    [Actor_Pharmacies].[GroupID] AS [GroupID], 
+    [Actor_Pharmacies].[PharmacyName] AS [PharmacyName], 
+    [Actor_Pharmacies].[Address] AS [Address], 
+    [Actor_Pharmacies].[PlaceID] AS [PlaceID], 
+    [Actor_Pharmacies].[Phone] AS [Phone], 
+    [Actor_Pharmacies].[Fax] AS [Fax], 
+    [Actor_Pharmacies].[GSM] AS [GSM], 
+    [Actor_Pharmacies].[Email] AS [Email], 
+    [Actor_Pharmacies].[LangCode] AS [LangCode], 
+    [Actor_Pharmacies].[CurrencyIsoCodeCust] AS [CurrencyIsoCodeCust]
+    FROM [GkpCfg].[Actor_Pharmacies] AS [Actor_Pharmacies]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="BarcodeReaderTypes" EntityType="Self.BarcodeReaderTypes" store:Type="Tables" store:Schema="GkpCfg">
+      <DefiningQuery>SELECT 
+    [BarcodeReaderTypes].[DeviceID] AS [DeviceID], 
+    [BarcodeReaderTypes].[ScannerType] AS [ScannerType]
+    FROM [GkpCfg].[BarcodeReaderTypes] AS [BarcodeReaderTypes]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Params" EntityType="Self.Params" store:Type="Tables" store:Schema="GkpCfg">
+      <DefiningQuery>SELECT 
+    [Params].[ParamID] AS [ParamID], 
+    [Params].[ParamValue] AS [ParamValue], 
+    [Params].[ParamValueType] AS [ParamValueType], 
+    [Params].[MinSecurityLevel] AS [MinSecurityLevel], 
+    [Params].[IsCentralLocked] AS [IsCentralLocked]
+    FROM [GkpCfg].[Params] AS [Params]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_ArtNames_Articles" Association="Self.FK_ArtNames_Articles">
+      <End Role="Articles" EntitySet="Articles" />
+      <End Role="ArtNames" EntitySet="ArtNames" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChemicalNames_Chemicals" Association="Self.FK_ChemicalNames_Chemicals">
+      <End Role="Chemicals" EntitySet="Chemicals" />
+      <End Role="ChemicalNames" EntitySet="ChemicalNames" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Emails_Users" Association="Self.fk_Emails_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="UserEmails" EntitySet="UserEmails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FormulaItems_Formulas" Association="Self.FK_FormulaItems_Formulas">
+      <End Role="Formulas" EntitySet="Formulas" />
+      <End Role="FormulaItems" EntitySet="FormulaItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FormulaLabels_Formulas" Association="Self.FK_FormulaLabels_Formulas">
+      <End Role="Formulas" EntitySet="Formulas" />
+      <End Role="FormulaLabels" EntitySet="FormulaLabels" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HeadPrescp_Sale" Association="Self.FK_HeadPrescp_Sale">
+      <End Role="Sales" EntitySet="Sales" />
+      <End Role="SaleSections" EntitySet="SaleSections" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HvtNames_Hvts" Association="Self.FK_HvtNames_Hvts">
+      <End Role="Hvts" EntitySet="Hvts" />
+      <End Role="HvtNames" EntitySet="HvtNames" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HvtQtyPrices_Hvts" Association="Self.FK_HvtQtyPrices_Hvts">
+      <End Role="Hvts" EntitySet="Hvts" />
+      <End Role="HvtQtyPrices" EntitySet="HvtQtyPrices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LabelEditorLocs_Warehouses" Association="Self.FK_LabelEditorLocs_Warehouses">
+      <End Role="Warehouses" EntitySet="Warehouses" />
+      <End Role="LabelEditorLocs" EntitySet="LabelEditorLocs" />
+    </AssociationSet>
+    <AssociationSet Name="fk_lig_vte3" Association="Self.fk_lig_vte3">
+      <End Role="SaleItems" EntitySet="SaleItems" />
+      <End Role="SitmUbcs" EntitySet="SitmUbcs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LocalizationStock_Localization" Association="Self.FK_LocalizationStock_Localization">
+      <End Role="Localization" EntitySet="Localization" />
+      <End Role="LocalizationStock" EntitySet="LocalizationStock" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MagItems_Magistrals" Association="Self.FK_MagItems_Magistrals">
+      <End Role="Magistrals" EntitySet="Magistrals" />
+      <End Role="MagItems" EntitySet="MagItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ParameterLabels_ParameterTypes" Association="Self.FK_ParameterLabels_ParameterTypes">
+      <End Role="ParameterTypes" EntitySet="ParameterTypes" />
+      <End Role="ParameterLabels" EntitySet="ParameterLabels" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PharmDocDataLabels_PharmDocDatas" Association="Self.FK_PharmDocDataLabels_PharmDocDatas">
+      <End Role="PharmDocDatas" EntitySet="PharmDocDatas" />
+      <End Role="PharmDocDataLabels" EntitySet="PharmDocDataLabels" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlaceLabels_Places" Association="Self.FK_PlaceLabels_Places">
+      <End Role="Places" EntitySet="Places" />
+      <End Role="PlaceLabels" EntitySet="PlaceLabels" />
+    </AssociationSet>
+    <AssociationSet Name="fk_profilelabel" Association="Self.fk_profilelabel">
+      <End Role="ProfileTypes" EntitySet="ProfileTypes" />
+      <End Role="ProfileLabels" EntitySet="ProfileLabels" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Profileroles" Association="Self.fk_Profileroles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Profiles" EntitySet="Profiles" />
+    </AssociationSet>
+    <AssociationSet Name="fk_profiletype" Association="Self.fk_profiletype">
+      <End Role="ProfileTypes" EntitySet="ProfileTypes" />
+      <End Role="Profiles" EntitySet="Profiles" />
+    </AssociationSet>
+    <AssociationSet Name="fk_rolelabel" Association="Self.fk_rolelabel">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="RoleLabels" EntitySet="RoleLabels" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SaleItems_Magistrals" Association="Self.FK_SaleItems_Magistrals">
+      <End Role="Magistrals" EntitySet="Magistrals" />
+      <End Role="SaleItems" EntitySet="SaleItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SaleItems_SaleSections" Association="Self.FK_SaleItems_SaleSections">
+      <End Role="SaleSections" EntitySet="SaleSections" />
+      <End Role="SaleItems" EntitySet="SaleItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SalePoso_SaleItem" Association="Self.FK_SalePoso_SaleItem">
+      <End Role="SaleItems" EntitySet="SaleItems" />
+      <End Role="SalePoso" EntitySet="SalePoso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SaleSections_Sales" Association="Self.FK_SaleSections_Sales">
+      <End Role="Sales" EntitySet="Sales" />
+      <End Role="SaleSections" EntitySet="SaleSections" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SitmHons_SaleItems" Association="Self.FK_SitmHons_SaleItems">
+      <End Role="SaleItems" EntitySet="SaleItems" />
+      <End Role="SitmHons" EntitySet="SitmHons" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TaskGroupLabels_TaskGroupTypes" Association="Self.FK_TaskGroupLabels_TaskGroupTypes">
+      <End Role="TaskGroupTypes" EntitySet="TaskGroupTypes" />
+      <End Role="TaskGroupLabels" EntitySet="TaskGroupLabels" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TaskLabels_TaskTypes" Association="Self.FK_TaskLabels_TaskTypes">
+      <End Role="TaskTypes" EntitySet="TaskTypes" />
+      <End Role="TaskLabels" EntitySet="TaskLabels" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TaskTypes_TaskGroupTypes" Association="Self.FK_TaskTypes_TaskGroupTypes">
+      <End Role="TaskGroupTypes" EntitySet="TaskGroupTypes" />
+      <End Role="TaskTypes" EntitySet="TaskTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ToVerifyLabel_ToVerify" Association="Self.FK_ToVerifyLabel_ToVerify">
+      <End Role="ToVerify" EntitySet="ToVerify" />
+      <End Role="ToVerifyLabel" EntitySet="ToVerifyLabel" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Users_Roles" Association="Self.fk_Users_Roles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WhLocationLabels_WhLocs" Association="Self.FK_WhLocationLabels_WhLocs">
+      <End Role="WhLocs" EntitySet="WhLocs" />
+      <End Role="WhLocationLabels" EntitySet="WhLocationLabels" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WithdDeps_WithdDepTypes" Association="Self.FK_WithdDeps_WithdDepTypes">
+      <End Role="WithdDepTypes" EntitySet="WithdDepTypes" />
+      <End Role="WithdDeps" EntitySet="WithdDeps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkstationBackups_WorkstationDevices" Association="Self.FK_WorkstationBackups_WorkstationDevices">
+      <End Role="WorkstationDevices" EntitySet="WorkstationDevices" />
+      <End Role="WrkstatBackups" EntitySet="WrkstatBackups" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkstationCashDrawers_WorkstationDevices" Association="Self.FK_WorkstationCashDrawers_WorkstationDevices">
+      <End Role="WorkstationDevices" EntitySet="WorkstationDevices" />
+      <End Role="WrkstatCashDrawers" EntitySet="WrkstatCashDrawers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkstationDevices_Workstations" Association="Self.FK_WorkstationDevices_Workstations">
+      <End Role="Workstations" EntitySet="Workstations" />
+      <End Role="WorkstationDevices" EntitySet="WorkstationDevices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkstationEfts_WorkstationDevices" Association="Self.FK_WorkstationEfts_WorkstationDevices">
+      <End Role="WorkstationDevices" EntitySet="WorkstationDevices" />
+      <End Role="WrkstatEfts" EntitySet="WrkstatEfts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkstationEidReaders_WorkstationDevices" Association="Self.FK_WorkstationEidReaders_WorkstationDevices">
+      <End Role="WorkstationDevices" EntitySet="WorkstationDevices" />
+      <End Role="WrkstatEidReaders" EntitySet="WrkstatEidReaders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkstationModems_WorkstationDevices" Association="Self.FK_WorkstationModems_WorkstationDevices">
+      <End Role="WorkstationDevices" EntitySet="WorkstationDevices" />
+      <End Role="WrkstatModems" EntitySet="WrkstatModems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkstationPrinters_WorkstationDevices" Association="Self.FK_WorkstationPrinters_WorkstationDevices">
+      <End Role="WorkstationDevices" EntitySet="WorkstationDevices" />
+      <End Role="WrkstatPrinters" EntitySet="WrkstatPrinters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkstationRobots_WorkstationDevices" Association="Self.FK_WorkstationRobots_WorkstationDevices">
+      <End Role="WorkstationDevices" EntitySet="WorkstationDevices" />
+      <End Role="WrkstatRobots" EntitySet="WrkstatRobots" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkstationScreens_WorkstationDevices" Association="Self.FK_WorkstationScreens_WorkstationDevices">
+      <End Role="WorkstationDevices" EntitySet="WorkstationDevices" />
+      <End Role="WrkstatScreens" EntitySet="WrkstatScreens" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkstationSisReaders_WorkstationDevices" Association="Self.FK_WorkstationSisReaders_WorkstationDevices">
+      <End Role="WorkstationDevices" EntitySet="WorkstationDevices" />
+      <End Role="WrkstatSisReaders" EntitySet="WrkstatSisReaders" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

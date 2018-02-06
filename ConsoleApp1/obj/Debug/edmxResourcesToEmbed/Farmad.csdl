@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Farmad" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="FarmadContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="FTBADRESSEN" EntityType="Farmad.FTBADRESSEN" />
+    <EntitySet Name="FTBKLANTEN" EntityType="Farmad.FTBKLANTEN" />
+    <EntitySet Name="FTBKLANTSIS" EntityType="Farmad.FTBKLANTSIS" />
+    <EntitySet Name="FTBTELNUMMERS" EntityType="Farmad.FTBTELNUMMERS" />
+    <EntitySet Name="FTBPOSTCODES" EntityType="Farmad.FTBPOSTCODES" />
+    <EntitySet Name="FTBPRODUCTEN" EntityType="Farmad.FTBPRODUCTEN" />
+    <EntitySet Name="FTBPRODUCTSTOCK" EntityType="Farmad.FTBPRODUCTSTOCK" />
+    <EntitySet Name="FTBVERKOPEN" EntityType="Farmad.FTBVERKOPEN" />
+    <EntitySet Name="FTBVERKOOPITEMS" EntityType="Farmad.FTBVERKOOPITEMS" />
+  </EntityContainer>
+  <EntityType Name="FTBADRESSEN">
+    <Key>
+      <PropertyRef Name="A_UID" />
+    </Key>
+    <Property Name="A_UID" Type="Int32" Nullable="false" />
+    <Property Name="A_OBJECTNUMMER" Type="Int32" />
+    <Property Name="A_KAMERNUMMER" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="A_STRAAT" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="A_LAND" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="A_PC_ID" Type="Int32" />
+    <Property Name="A_TYPE" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="A_ISFACTURATIEADRES" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="A_OBJECT_TYPE" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="FTBKLANTEN">
+    <Key>
+      <PropertyRef Name="K_KLANTNUMMER" />
+    </Key>
+    <Property Name="K_KLANTNUMMER" Type="Int32" Nullable="false" />
+    <Property Name="K_FAMILIENAAM" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="K_VOORNAAM" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="K_ARTSNUMMER" Type="Int32" />
+    <Property Name="K_704" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_AFSCHRIFT" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_LAATSTE_BEZOEK" Type="DateTime" />
+    <Property Name="K_SOUNDEX" Type="String" MaxLength="4" FixedLength="true" Unicode="true" />
+    <Property Name="K_RIJKSWACHT" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_DOSSIERNUMMER" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="K_WGID" Type="Int32" />
+    <Property Name="K_IS_DUMMY" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_ZOEK" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="K_FACTGROEP" Type="Int32" />
+    <Property Name="K_EERSTE_AFLEV" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="K_INTER_TONEN" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="K_POS_TONEN" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="K_EMAIL_ADRES" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="K_HEEFT_KREDIET" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_BTWNUMMER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="K_HEEFT_UNIX_KREDIET" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_GESCHRAPT" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_KSID" Type="Int32" />
+    <Property Name="K_VOL_NAAM" Type="String" MaxLength="32765" FixedLength="false" Unicode="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="K_ISVETERINAIR" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_TAALCODE" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="K_GEBRUIKT_KORTTABEL" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_FAMILIE_ID" Type="Int32" />
+    <Property Name="K_SPAARKAARTID" Type="String" MaxLength="13" FixedLength="true" Unicode="true" />
+    <Property Name="K_INSZ" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
+    <Property Name="K_TAAL_CBL" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="K_MUT2_SOORT" Type="Int32" />
+    <Property Name="K_MUT2_STAMNUMMER" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="K_MEDSEINVOORKEUR" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="K_GEENKORTING" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_SCHEMAID" Type="Int32" />
+    <Property Name="K_GEENPROMO" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_VOLNAAM" Type="String" MaxLength="32765" FixedLength="false" Unicode="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="K_KORTINGSPERCENT" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="K_DEFAULT_ADRES_ID" Type="Int32" />
+    <Property Name="K_TEKST" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="K_NEWKSID" Type="Int32" />
+    <Property Name="K_UDROBOT" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_EXTSTOCK" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_DIABETES_NIETMEERTONEN" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_LEEFGROEP" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="K_CONTACTNR" Type="String" MaxLength="12" FixedLength="true" Unicode="true" />
+    <Property Name="K_OVERLEDEN" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_OVERLEDEN_DATUM" Type="DateTime" />
+    <Property Name="K_EMAIL_ADRES_GEBRUIKEN" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_EMAIL_ADRES2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="K_EMAIL_ADRES2_GEBRUIKEN" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_PARASTATAAL" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_DEFAULT_TEL_ID" Type="Int32" />
+    <Property Name="K_MUT2_CAT" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
+    <Property Name="K_GFD_CONSENT" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="K_MST_GEDETAILLEERD_OVERZICHT" Type="Int32" />
+    <Property Name="K_MST_DAGSCHEMA" Type="Int32" />
+    <Property Name="K_MST_DAGSCHEMA_WEEK" Type="Int32" />
+    <Property Name="K_MST_WEEKSCHEMA" Type="Int32" />
+    <Property Name="K_MST_MAANDSCHEMA" Type="Int32" />
+    <Property Name="K_PASSANT" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_KORTVERBLIJVER" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_CONSENTREFUSEDON" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="FTBKLANTSIS">
+    <Key>
+      <PropertyRef Name="KS_ID" />
+    </Key>
+    <Property Name="KS_ID" Type="Int32" Nullable="false" />
+    <Property Name="KS_KLANTNUMMER" Type="Int32" />
+    <Property Name="KS_MUT" Type="Int32" />
+    <Property Name="KS_CG1" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
+    <Property Name="KS_CG2" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
+    <Property Name="KS_CATEGORIE" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="KS_STAMNUMMER" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="KS_SIS_GELEZEN" Type="DateTime" />
+    <Property Name="KS_NR_SIS" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="KS_VERSIE_VERZ" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+    <Property Name="KS_CERTIFICAAT" Type="String" MaxLength="32" FixedLength="true" Unicode="true" />
+    <Property Name="KS_SISGELDIGHEID" Type="DateTime" />
+    <Property Name="KS_SISLEZERID" Type="Int32" />
+    <Property Name="KS_GESLACHT" Type="Int16" />
+    <Property Name="KS_GEBOORTEDATUM" Type="DateTime" />
+    <Property Name="KS_FAMILIENAAM" Type="String" MaxLength="48" FixedLength="false" Unicode="true" />
+    <Property Name="KS_VOORNAAM" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
+    <Property Name="KS_VOL_MUT" Type="String" MaxLength="32765" FixedLength="false" Unicode="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="KS_CG1CG2" Type="String" MaxLength="32765" FixedLength="false" Unicode="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="KS_VOL_NAAM" Type="String" MaxLength="32765" FixedLength="false" Unicode="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="KS_ATTEST" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="KS_LEEFTIJD_IN_MND" Type="Int32" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="KS_CONTACTNR" Type="String" MaxLength="12" FixedLength="true" Unicode="true" />
+    <Property Name="KS_CONTROLECODE_TD" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+    <Property Name="KS_TYPE" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="KS_DATUM_START" Type="DateTime" />
+    <Property Name="KS_PA_SEED" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="KS_LEEFTIJD" Type="Int64" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="KS_DATUM_OVERLIJDEN" Type="DateTime" />
+    <Property Name="KS_RIZIVNR_WZC" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
+    <Property Name="KS_GEHOSPITALISEERD" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="KS_PHARMA_CHECKDIGIT" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+    <Property Name="KS_INSZ" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="FTBTELNUMMERS">
+    <Key>
+      <PropertyRef Name="T_ID" />
+    </Key>
+    <Property Name="T_ID" Type="Int32" Nullable="false" />
+    <Property Name="T_OBJECTNUMMER" Type="Int32" />
+    <Property Name="T_TELEFOONNUMMER" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="T_OBJECT_TYPE" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="T_TYPE" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="FTBPOSTCODES">
+    <Key>
+      <PropertyRef Name="PC_ID" />
+    </Key>
+    <Property Name="PC_ID" Type="Int32" Nullable="false" />
+    <Property Name="PC_NUMMER" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="PC_GEMEENTE" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="PC_VOL_NAAM" Type="String" MaxLength="32765" FixedLength="false" Unicode="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="PC_OCMW_NUMMER" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="FTBPRODUCTEN">
+    <Key>
+      <PropertyRef Name="P_CNKNUMMER" />
+    </Key>
+    <Property Name="P_CNKNUMMER" Type="String" Nullable="false" MaxLength="7" FixedLength="true" Unicode="true" />
+    <Property Name="P_PRIJS" Type="Decimal" Precision="15" Scale="4" />
+    <Property Name="P_VORIGE_PUBPRIJS" Type="Decimal" Precision="15" Scale="4" />
+    <Property Name="P_MAN_BHOEVEELHEID" Type="Int32" />
+    <Property Name="P_VERKOOPPRIJS" Type="Decimal" Precision="15" Scale="4" />
+    <Property Name="P_BTW_VERKOOP" Type="Int32" />
+    <Property Name="P_KODE_VVD" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="P_DAT_CREATIE" Type="DateTime" />
+    <Property Name="P_SCHRAPDATUM" Type="DateTime" />
+    <Property Name="P_VERVALDATUM" Type="DateTime" />
+    <Property Name="P_TYPE_PRODUCT" Type="Int16" />
+    <Property Name="P_WETTELIJKE_CODE" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
+    <Property Name="P_TYPE_VERKPRIJS" Type="Int16" />
+    <Property Name="P_VERKOOPSVORM" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="P_TMBLINK" Type="String" MaxLength="7" FixedLength="true" Unicode="true" />
+    <Property Name="P_AUTO_BPOLITIEK" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="P_BEWAARCODE" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
+    <Property Name="P_VSPLICHTIG" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="P_VERDOVINGSNUMMER" Type="String" MaxLength="7" FixedLength="true" Unicode="true" />
+    <Property Name="P_APBZEGEL" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="P_VERKOOPHOEV" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="P_EIGENPRODUCT" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="P_IS_KRUID" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="P_IS_STOCKITEM" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="P_UPDATECODE" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="P_DATUM_WIJZ" Type="DateTime" />
+    <Property Name="P_DATUM_PRIJSWIJZ" Type="DateTime" />
+    <Property Name="P_IS_HOSPAK" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="P_BIJSLUITER" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="P_KRITIEKPUNT" Type="Int32" />
+    <Property Name="P_LEVNUM" Type="Int32" />
+    <Property Name="P_KRITIEKLEVNUM" Type="Int32" />
+    <Property Name="P_SCHRAPCODE" Type="Int16" />
+    <Property Name="P_VOORRAADPLAATS" Type="Int32" />
+    <Property Name="P_GEBRUIKVRAC" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="P_LABO" Type="Int32" />
+    <Property Name="P_PRODUCTCODE" Type="Int16" />
+    <Property Name="P_BARCODE" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="P_IN_TARIEF" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="P_INBESTELLING" Type="Int32" />
+    <Property Name="P_IS_VERDOVING" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="P_WACHTKOFFER" Type="Int32" />
+    <Property Name="P_YFORM" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="P_WMARGE_AANKOOP" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="P_WMARGE_VERKOOP" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="P_REST_CODE" Type="Int16" />
+    <Property Name="P_STOCK_CODE" Type="Int16" />
+    <Property Name="P_HOMEO_AANVAARD" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="P_RECHTSTR_LEVNUM" Type="Int32" />
+    <Property Name="P_RECHTSTREEKS" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="P_UPDATEFLAGS" Type="Int32" />
+    <Property Name="P_GEBRUIK_IN_ZOEK" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="P_AANT_MAANDEN" Type="Int16" />
+    <Property Name="P_HOE_VVD" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="P_AANKOOP_PRIJS" Type="Decimal" Precision="9" Scale="4" />
+    <Property Name="P_DRAAGT_UBC" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="P_TARINFO" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="P_DOPINGVL" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="P_DOPINGFR" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="P_MAG_IN_ROBOT" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="P_ROBOT_STOCK" Type="Int32" />
+    <Property Name="P_REFPRIJS" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="P_REGLET" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="P_VERKOOPPRIJS_PERCENT" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="P_GEENKORTING" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="P_TEKST" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="P_IN_WEBSHOP" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="P_TEKST_PRIJSAANDUIDING" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="P_BVAC" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="P_URL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="P_LEVNUM_DRINGEND" Type="Int32" />
+    <Property Name="P_KLASSEOVERGANG" Type="Int32" Nullable="false" />
+    <Property Name="P_AANTAL_DAGEN" Type="Int32" />
+    <Property Name="P_VERKOOPHOEV_NUM" Type="Decimal" Nullable="false" Precision="9" Scale="2" />
+    <Property Name="P_UDROBOT" Type="Int32" Nullable="false" />
+    <Property Name="P_UNITDOSE" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="P_GROEPSAANKOOPPRIJS" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="P_GROEPSKORTING_PERCENT" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="P_GROEPSPRIJS_AANPASDATUM" Type="DateTime" />
+    <Property Name="P_MANREX" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="P_BESTELKLASSE_OPTIMAAL" Type="Int32" />
+    <Property Name="P_IS_DYNAMISCH" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="P_SUBCAT" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="P_TRANSTD" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="P_IS_07NR" Type="String" MaxLength="32765" FixedLength="true" Unicode="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="P_IS_UDCNK" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="P_AANKOOPPRIJS_UPDATE" Type="Decimal" Precision="9" Scale="4" />
+    <Property Name="P_DIABETES" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="P_ORIG" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="P_BRON_PRIJS" Type="Int32" />
+    <Property Name="P_LAAGSTE_PRIJS" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="P_OP_DOSIS_RPT" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="P_HON_BASIS" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="P_PRIJS_AF" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="P_DATUM_PRIJSDALING" Type="DateTime" />
+    <Property Name="P_RVTPICKLIJSTOPNEMEN" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="P_ACTIEFBESTANDDEEL" Type="Double" />
+    <Property Name="P_INHOUD" Type="Double" />
+    <Property Name="P_GALVORM_INDEX" Type="Int32" />
+    <Property Name="P_GEBRUIK" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="P_CATAPB" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="P_IS_BUITENLANDS" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="P_MANUEEL_LOTNUMMER" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="P_RIZIVCLUSTER" Type="Int32" />
+    <Property Name="P_GOEDKOOP" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="P_SUBST_VERPLICHT" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="P_NOOIT_KLANTSTOCK" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="P_VOEDINGSSUP" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="P_BNM" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="P_AP_HUIDIG" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="P_PP_HUIDIG" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="P_AP_TOEK" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="P_PP_TOEK" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="P_TERUGBET_IN_BEREIDING" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="P_IS_VERGUND" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="P_HEEFT_ANALYSECERTIFICAAT" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="P_VERGUNNINGSNUMMER" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="P_VERBOD_VROEDVROUW" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="P_KORTINGSPERCENT_AP" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="P_HOE_AP_UPDATEN" Type="Int32" />
+    <Property Name="P_KLASSEOVERGANG_VRAAG_KLASSE1" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="P_WINKELDOCHTERS" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="P_WINKELDOCHTERS_AANTAL" Type="Int32" />
+    <Property Name="P_WINKELDOCHTERS_DATUMTIJD" Type="DateTime" />
+    <Property Name="P_PIL_ID" Type="String" MaxLength="7" FixedLength="true" Unicode="true" />
+    <Property Name="P_FORMULARIUM_ROBOT_IMPORT" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="P_GROOTSTE_VERPAK" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="P_COMBI" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="P_VOORDELIGSTE" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="FTBPRODUCTSTOCK">
+    <Key>
+      <PropertyRef Name="PS_CNKNUMMER" />
+    </Key>
+    <Property Name="PS_CNKNUMMER" Type="String" Nullable="false" MaxLength="7" FixedLength="true" Unicode="true" />
+    <Property Name="PS_INSTOCK" Type="Int32" Nullable="false" />
+    <Property Name="PS_LAATSTVERKOCHT" Type="DateTime" />
+    <Property Name="PS_LAATSTBESTELD" Type="DateTime" />
+    <Property Name="PS_DUBBELESTOCK" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="PS_MIN_APOTHEEK" Type="Int16" />
+    <Property Name="PS_MAX_APOTHEEK" Type="Int16" />
+    <Property Name="PS_BUFFER_STOCK" Type="Int16" />
+    <Property Name="PS_APOTHEEK_STOCK" Type="Int64" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="PS_BESTELPOLITIEK" Type="Int32" Nullable="false" />
+    <Property Name="PS_BESTELKLASSE" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FTBVERKOPEN">
+    <Key>
+      <PropertyRef Name="V_VERKOOPSID" />
+    </Key>
+    <Property Name="V_VERKOOPSID" Type="Int32" Nullable="false" />
+    <Property Name="V_AFLEVERDATUM" Type="DateTime" Nullable="false" />
+    <Property Name="V_KORTING" Type="Decimal" Nullable="false" Precision="9" Scale="2" />
+    <Property Name="V_RESTNUMMER" Type="String" MaxLength="13" FixedLength="true" Unicode="true" />
+    <Property Name="V_RESTBETAALD" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="V_BEDR_BETAALD" Type="Decimal" Nullable="false" Precision="9" Scale="2" />
+    <Property Name="V_RESTORNO" Type="Decimal" Nullable="false" Precision="9" Scale="2" />
+    <Property Name="V_CASH" Type="Decimal" Nullable="false" Precision="9" Scale="2" />
+    <Property Name="V_PROTON" Type="Decimal" Nullable="false" Precision="9" Scale="2" />
+    <Property Name="V_CREDITCARD" Type="Decimal" Nullable="false" Precision="9" Scale="2" />
+    <Property Name="V_BANCONTACT" Type="Decimal" Nullable="false" Precision="9" Scale="2" />
+    <Property Name="V_KORTINGPERCENTAGE" Type="Int32" Nullable="false" />
+    <Property Name="V_BETALER" Type="Int32" />
+    <Property Name="V_SPAARREKENINGID" Type="Int32" />
+    <Property Name="V_SPAARKAARTGELEZEN" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="V_BANK" Type="Decimal" Nullable="false" Precision="9" Scale="2" />
+    <Property Name="V_FACTUURNR" Type="Int32" Nullable="false" />
+    <Property Name="V_COMPUTER" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="V_GEBRUIKER" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="V_EXTERNEBETALING" Type="Decimal" Nullable="false" Precision="9" Scale="2" />
+    <Property Name="V_TYPE" Type="Int16" />
+  </EntityType>
+  <EntityType Name="FTBVERKOOPITEMS">
+    <Key>
+      <PropertyRef Name="VI_ID" />
+    </Key>
+    <Property Name="VI_ID" Type="Int32" Nullable="false" />
+    <Property Name="VI_VSNUMMER" Type="Int32" Nullable="false" />
+    <Property Name="VI_CNKNUMMER" Type="String" Nullable="false" MaxLength="7" FixedLength="true" Unicode="true" />
+    <Property Name="VI_AANTAL_AFGELEV" Type="Int16" />
+    <Property Name="VI_AANTAL_AFTELEV" Type="Int16" />
+    <Property Name="VI_PUBLIEKSPRIJS" Type="Decimal" Precision="15" Scale="4" />
+    <Property Name="VI_REMGELD" Type="Decimal" Precision="15" Scale="4" />
+    <Property Name="VI_TEBETALEN" Type="Decimal" Precision="15" Scale="4" />
+    <Property Name="VI_RESTORNO" Type="Decimal" Precision="9" Scale="4" />
+    <Property Name="VI_KORTING" Type="Decimal" Precision="9" Scale="4" />
+    <Property Name="VI_ATTESTID" Type="Int32" />
+    <Property Name="VI_TERUGBET_CAT" Type="String" MaxLength="4" FixedLength="true" Unicode="true" />
+    <Property Name="VI_AFLEVERING" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+    <Property Name="VI_ISBETAALD" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="VI_ISVERWERKT" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="VI_ISSPECIAAL" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="VI_CLASSNAME" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="VI_PRODUCTCODE" Type="Int32" />
+    <Property Name="VI_AANTAL_GEFACT" Type="Int32" />
+    <Property Name="VI_DATUM" Type="DateTime" />
+    <Property Name="VI_RESTSTOCK" Type="Int32" />
+    <Property Name="VI_MAG_CNKNUMMER" Type="String" MaxLength="7" FixedLength="true" Unicode="true" />
+    <Property Name="VI_ISUITGESTELD" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="VI_GEENATTEST" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="VI_UITSTELLING_AFGELEVERD" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="VI_BEDRAG_OCMW" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="VI_MAG_SPEC_BETAALBAAR" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="VI_VARIA_ID" Type="Int32" />
+    <Property Name="VI_NIETOPFACTUUR" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="VI_ISVERBETERING" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="VI_POSOLOGIEID" Type="Int32" />
+    <Property Name="VI_UNIEKE_BC" Type="String" MaxLength="16" FixedLength="true" Unicode="true" />
+    <Property Name="VI_ISVOS" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="VI_PRIJSTYPE" Type="Int32" />
+    <Property Name="VI_OPFACTUUR" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="VI_RESULTAAT_AEGATE" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="VI_KREDIET_BLOKKEREN" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="VI_KORTINGLOGIC" Type="Int32" />
+    <Property Name="VI_KORTING_PATIENT" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="VI_TBVW_ANTW" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="VI_EIGENBEDRAGOCMW" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="VI_OCMW" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="VI_AFSCHRIFT_OCMW" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="VI_ORDERNR" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="VI_ORDERLINEUID" Type="Int32" Nullable="false" />
+    <Property Name="VI_IS_07NR" Type="String" MaxLength="32765" FixedLength="true" Unicode="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="VI_DIABETES" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="VI_ZORGTRAJECT" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="VI_HON_H4" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="VI_HON_1STE_UIT" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="VI_HON_VOS" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="VI_HON_BASIS" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="VI_HON_H4_BEDRAG" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="VI_HON_VOS_BEDRAG" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="VI_HON_1STE_UIT_BEDRAG" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="VI_HON_BEDRAG_OCMW" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="VI_HON_CONTANT" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="VI_SYNKEY" Type="String" MaxLength="4" FixedLength="true" Unicode="true" />
+    <Property Name="VI_BEDRAG_BETAALD" Type="Decimal" Precision="15" Scale="4" />
+    <Property Name="VI_BEDRAG_FACTUUR_BETAALD" Type="Decimal" Precision="15" Scale="4" />
+    <Property Name="VI_BEDRAG_TEBETALEN" Type="Decimal" Precision="15" Scale="4" />
+    <Property Name="VI_BEDRAG_FACTUUR_TEBETALEN" Type="Decimal" Precision="15" Scale="4" />
+    <Property Name="VI_WEB" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="VI_BETAALWIJZE" Type="Int32" />
+    <Property Name="VI_RBS_ID" Type="Int32" />
+    <Property Name="VI_PATIENTSTOCK" Type="Int32" />
+    <Property Name="VI_VET_VOEDSELPROD" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="VI_NOMENCLATUUR" Type="String" MaxLength="6" FixedLength="true" Unicode="true" />
+    <Property Name="VI_BANDAG_GEBRUIK" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="VI_ISGRATIS" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="VI_THERAP_BEZWAAR" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="VI_SUBST_VERPLICHT" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="VI_OVERMACHT" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="VI_CONTANT" Type="Int32" Nullable="false" />
+    <Property Name="VI_IMV" Type="Int32" Nullable="false" />
+    <Property Name="VI_IMV_LEVERANCIER" Type="Int32" Nullable="false" />
+    <Property Name="VI_LINKED_VERKOOPITEM" Type="Int32" />
+    <Property Name="VI_GFD_DGUID" Type="String" MaxLength="36" FixedLength="true" Unicode="true" />
+    <Property Name="VI_GFD_SGUID" Type="String" MaxLength="36" FixedLength="true" Unicode="true" />
+    <Property Name="A" Type="Int32" />
+    <Property Name="VI_TUSSENKOMST" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="VI_RESTORNO_GEGEVEN" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="VI_RESTORNO_ON_RESTORNO" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="VI_KLANTNUMMER" Type="Int32" />
+    <Property Name="VI_ISDOORFACTURATIE" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="VI_AANKOOPPRIJS" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="VI_FACTGROEP_ID" Type="Int32" />
+    <Property Name="VI_WINST" Type="Decimal" Precision="15" Scale="4" />
+    <Property Name="VI_BTWPERCENT" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="VI_BTWPERCENT_USED" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="VI_TYPE" Type="Int32" Nullable="false" />
+    <Property Name="VI_UITSTOCK" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="VI_SESSIE" Type="Int32" />
+    <Property Name="VI_AANTAL_KEER_GEFACT" Type="Int32" />
+    <Property Name="VI_MAF" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="VI_AANTAL_PILLEN_TOTAAL" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="VI_AANTAL_PILLEN_RESTEREND" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="VI_TPE_FLAG1" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="VI_TPE_TYPE" Type="Int16" />
+    <Property Name="VI_ISAANGEREKEND" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

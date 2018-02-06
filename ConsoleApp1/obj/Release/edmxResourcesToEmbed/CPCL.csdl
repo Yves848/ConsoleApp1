@@ -1,0 +1,2783 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CPCLModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Allergies">
+    <Key>
+      <PropertyRef Name="AllergyID" />
+    </Key>
+    <Property Name="AllergyID" Type="Int32" Nullable="false" />
+    <Property Name="PatientIdCPCL" Type="Int32" Nullable="false" />
+    <Property Name="ATCCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ArtID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Attestations">
+    <Key>
+      <PropertyRef Name="AttestID" />
+    </Key>
+    <Property Name="AttestID" Type="Int32" Nullable="false" />
+    <Property Name="PatIdCPCL" Type="Int32" Nullable="false" />
+    <Property Name="ArtID" Type="Int32" Nullable="false" />
+    <Property Name="CNKNr" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="AttestationType" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="AttestationNr" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DateActiveStart" Type="DateTime" Precision="3" />
+    <Property Name="DateActiveEnd" Type="DateTime" Precision="3" />
+    <Property Name="ArtReimbCatCode" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="AttestationQty" Type="Int32" Nullable="false" />
+    <Property Name="GreenockID" Type="Int32" />
+    <Property Name="ReimbExcptCode" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Credit">
+    <Key>
+      <PropertyRef Name="CreditId" />
+    </Key>
+    <Property Name="CreditId" Type="Int32" Nullable="false" />
+    <Property Name="PatIdCPCL" Type="Int32" Nullable="false" />
+    <Property Name="DateSale" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="SlsID" Type="Int32" />
+    <Property Name="CreditType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GreenockId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="CustomerIdCPCL" />
+    </Key>
+    <Property Name="CustomerIdCPCL" Type="Int32" Nullable="false" />
+    <Property Name="CustomerName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="PlaceID" Type="Int32" />
+    <Property Name="Phone" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Fax" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="GSM" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VatNr" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="BankAccNr" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="langCode" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="GreenockID" Type="Int32" />
+    <Property Name="Memo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CustRistGrpCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="PharmApbNr" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="PaymMethodType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="IsIvc" Type="Int16" />
+    <Property Name="IsMultidose" Type="Int16" />
+    <Property Name="RefHomeLink" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="AccountingId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="InsrCovers">
+    <Key>
+      <PropertyRef Name="InsrCoverId" />
+    </Key>
+    <Property Name="InsrCoverId" Type="Int32" Nullable="false" />
+    <Property Name="PatIdCPCL" Type="Int32" Nullable="false" />
+    <Property Name="DateRead" Type="DateTime" Precision="3" />
+    <Property Name="Nsuite" Type="Int32" Nullable="false" />
+    <Property Name="FedNr" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="IsOaviExist" Type="Boolean" Nullable="false" />
+    <Property Name="RegistrationNr" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Name="CgctCt1Cpy" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="CgctCt2Cpy" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="SisCardNr" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DateActiveStart" Type="DateTime" Precision="3" />
+    <Property Name="DateActiveEnd" Type="DateTime" Precision="3" />
+    <Property Name="DateValidityEnd" Type="DateTime" Precision="3" />
+    <Property Name="DateValidityStart" Type="DateTime" Precision="3" />
+    <Property Name="Siscertificate" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="IsAttestSIS" Type="Boolean" />
+    <Property Name="SochelpThresholdAmnt" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="SochelpThresholdType" Type="Int32" />
+    <Property Name="OaviCode" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="InsrCatCode" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="GreenockID" Type="Int32" />
+    <Property Name="OaviVersion" Type="Int32" />
+    <Property Name="DateOrdo" Type="DateTime" Precision="3" />
+    <Property Name="Periode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="InsrCoverSource" Type="Int16" />
+  </EntityType>
+  <EntityType Name="Parameter">
+    <Key>
+      <PropertyRef Name="PharmacyName" />
+    </Key>
+    <Property Name="PharmacyName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SoftName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PlaceID" Type="Int32" />
+    <Property Name="APBNr" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="PharmacyOrderNr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RIZIVNr" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneNr" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="FaxNr" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="GSMNr" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BanckAccNr" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="BanckAccNr2" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="CommercialNr" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="VatNr" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="Langcode" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="ExportDate" Type="DateTime" Precision="3" />
+    <Property Name="LastNrSale" Type="Int32" />
+    <Property Name="InportExportVersion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastInvoiceNr" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Pathologies">
+    <Key>
+      <PropertyRef Name="PathologyID" />
+    </Key>
+    <Property Name="PathologyID" Type="Int32" Nullable="false" />
+    <Property Name="PatIdCPCL" Type="Int32" />
+    <Property Name="DelphiPathologyCode" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Patients">
+    <Key>
+      <PropertyRef Name="PatIdCPCL" />
+    </Key>
+    <Property Name="PatIdCPCL" Type="Int32" Nullable="false" />
+    <Property Name="FullName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="FirstName2" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="NissinszNr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="PlaceID" Type="Int32" />
+    <Property Name="Phone" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Fax" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="GSM" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateBirth" Type="DateTime" Precision="3" />
+    <Property Name="GenderCode" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="LangCode" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="CustomerID" Type="Int32" />
+    <Property Name="PrescriberID" Type="Int32" />
+    <Property Name="LastDateSale" Type="DateTime" Precision="3" />
+    <Property Name="PatIDFamilly" Type="Int32" />
+    <Property Name="F704PrintType" Type="Int32" />
+    <Property Name="CblPrintType" Type="Int32" />
+    <Property Name="BlocNr" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="FloorNr" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="RoomNr" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Deceased" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="GreenockID" Type="Int32" />
+    <Property Name="ActorCID" Type="Int32" />
+    <Property Name="Memo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="RecuPrintType" Type="Int32" />
+    <Property Name="BVACPrintType" Type="Int32" />
+    <Property Name="PatLink" Type="Int32" />
+    <Property Name="CustRistGrpCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="PaymMethodType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="IsIvc" Type="Int16" />
+    <Property Name="IsMultidose" Type="Int16" />
+  </EntityType>
+  <EntityType Name="Pharmacies">
+    <Key>
+      <PropertyRef Name="PharmID" />
+    </Key>
+    <Property Name="PharmID" Type="Int32" Nullable="false" />
+    <Property Name="TitulName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ImsCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PharmApbNr" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PharmApbNrSuffix" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="InamirizvNr" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="TdpPharmID" Type="Int16" Nullable="false" />
+    <Property Name="EmailTaroffice" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TradeRegstNr" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="PlaceIDTradeRegst" Type="Int32" />
+    <Property Name="ISAcod_perm_db" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="TarProtVersionNr" Type="Int32" Nullable="false" />
+    <Property Name="DateTarProtVersionStart" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="RprrpmNr" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="GroupType" Type="String" MaxLength="7" FixedLength="true" Unicode="false" />
+    <Property Name="GroupID" Type="Int32" />
+    <Property Name="PharmacyName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="PlaceID" Type="Int32" />
+    <Property Name="Phone" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Fax" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="GSM" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LangCode" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="CurrencyIsoCodeCust" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="PlaceLabels">
+    <Key>
+      <PropertyRef Name="PlaceID" />
+      <PropertyRef Name="LangCode" />
+    </Key>
+    <Property Name="PlaceID" Type="Int32" Nullable="false" />
+    <Property Name="LangCode" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PlaceLabel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Places" Relationship="Self.FK_PlaceLabels_Places" FromRole="PlaceLabels" ToRole="Places" />
+  </EntityType>
+  <EntityType Name="Places">
+    <Key>
+      <PropertyRef Name="PlaceID" />
+    </Key>
+    <Property Name="PlaceID" Type="Int32" Nullable="false" />
+    <Property Name="PostalCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CountryCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GreenockID" Type="Int32" />
+    <NavigationProperty Name="PlaceLabels" Relationship="Self.FK_PlaceLabels_Places" FromRole="Places" ToRole="PlaceLabels" />
+  </EntityType>
+  <EntityType Name="Prescribers">
+    <Key>
+      <PropertyRef Name="PrescriberIDCPCL" />
+    </Key>
+    <Property Name="PrescriberIDCPCL" Type="Int32" Nullable="false" />
+    <Property Name="PrescriberName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="InamirizvNr" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="PlaceID" Type="Int32" />
+    <Property Name="phone" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="GSM" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GreenockID" Type="Int32" />
+    <Property Name="IsPrespTheft" Type="Int16" />
+    <Property Name="DatePrespTheft" Type="DateTime" Precision="3" />
+    <Property Name="PresbProfCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Fax" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Memo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CustRistGrpCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="RistCards">
+    <Key>
+      <PropertyRef Name="CardNr" />
+    </Key>
+    <Property Name="CardNr" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AccountID" Type="Int32" Nullable="false" />
+    <Property Name="CustIdCPCL" Type="Int32" />
+    <Property Name="DateStart" Type="DateTime" Precision="3" />
+    <Property Name="CardStatus" Type="Boolean" />
+    <Property Name="GreenockID" Type="Int32" />
+    <Property Name="CentralizationStatus" Type="Int16" />
+  </EntityType>
+  <EntityType Name="RistCardsAccounts">
+    <Key>
+      <PropertyRef Name="RcAccountID" />
+    </Key>
+    <Property Name="RcAccountID" Type="Int32" Nullable="false" />
+    <Property Name="CustID" Type="Int32" />
+    <Property Name="CustRistGrpCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="ReleaseType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="ReleaseLimit" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="RcAccStatusType" Type="Int32" Nullable="false" />
+    <Property Name="GreenockID" Type="Int32" />
+    <Property Name="RcAccountCID" Type="Int32" />
+    <Property Name="CentralizationStatus" Type="Int16" />
+  </EntityType>
+  <EntityType Name="Suppliers">
+    <Key>
+      <PropertyRef Name="SupplierIDCPCL" />
+    </Key>
+    <Property Name="SupplierIDCPCL" Type="Int32" Nullable="false" />
+    <Property Name="SupplierName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PhoneNr1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneNr2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="PasswordBIDI" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="Protocole" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SupplierCode" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="UrlIbotp1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UrlIbotp2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LogginIbotp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PasswordIbotp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GreenockID" Type="Int32" />
+    <Property Name="SupplierType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ContactName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LabApbCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Memo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ContactPhoneNr" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ContactEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OrderMemo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ISAcod_typ_maj_fou" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ISAis_gest_art_fou" Type="Int16" />
+    <Property Name="AssemblyOrderType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="FilterText" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="SuppPrefFilter" Type="Int16" />
+    <Property Name="StupFilter" Type="Int16" />
+    <Property Name="MissingFilter" Type="Int16" />
+    <Property Name="IsExpensiveFilter" Type="Int16" />
+    <Property Name="IsReservedFilter" Type="Int16" />
+    <Property Name="WarehouseFilter" Type="Int16" />
+    <Property Name="Address" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="PlaceID" Type="Int32" />
+    <Property Name="OriginalID" Type="Int32" />
+    <Property Name="ActorCID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Articles">
+    <Key>
+      <PropertyRef Name="ArtIdCPCL" />
+    </Key>
+    <Property Name="ArtIdCPCL" Type="Int32" Nullable="false" />
+    <Property Name="CNKNr" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="PubPrice" Type="Decimal" Precision="30" Scale="4" />
+    <Property Name="VatCode" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="StockMngmntType" Type="Int32" Nullable="false" />
+    <Property Name="HasExpiry" Type="Int16" Nullable="false" />
+    <Property Name="IsPrintLabel" Type="Int16" />
+    <Property Name="StorageType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BuyPriceCalc" Type="Decimal" Precision="30" Scale="4" />
+    <Property Name="BuyPriceSrc" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ApbUdStatusCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DateChange" Type="DateTime" Precision="3" />
+    <Property Name="AllowUdPubPriceChangeType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ApbCatCode" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="ApbLegCode" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="EanNr" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Name="AvailabilityCode" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="EffectiveBuyPrice" Type="Decimal" Precision="30" Scale="4" />
+    <Property Name="IsReimbHomeo" Type="Int16" />
+    <Property Name="TherapUseID" Type="Int32" />
+    <Property Name="StupNr" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="HasLocation" Type="Int16" Nullable="false" />
+    <Property Name="IsOxygen" Type="Int16" />
+    <Property Name="IsSubstitutionTreatment" Type="Int16" />
+    <Property Name="ArtType" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="InvCatCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Memo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="GreenockID" Type="Int32" />
+    <Property Name="ArtCID" Type="Int32" />
+    <Property Name="IsMultidose" Type="Int16" />
+    <Property Name="PackageQty" Type="Int32" />
+    <NavigationProperty Name="ArtNames" Relationship="Self.FK_ArtNames_Articles" FromRole="Articles" ToRole="ArtNames" />
+  </EntityType>
+  <EntityType Name="ArtNames">
+    <Key>
+      <PropertyRef Name="ArtIdCPCL" />
+      <PropertyRef Name="NameNr" />
+      <PropertyRef Name="LangCode" />
+    </Key>
+    <Property Name="ArtIdCPCL" Type="Int32" Nullable="false" />
+    <Property Name="NameNr" Type="Int32" Nullable="false" />
+    <Property Name="LangCode" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ArtName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GreenockID" Type="Int32" />
+    <Property Name="HasArtNameLocked" Type="Boolean" />
+    <NavigationProperty Name="Articles" Relationship="Self.FK_ArtNames_Articles" FromRole="ArtNames" ToRole="Articles" />
+  </EntityType>
+  <EntityType Name="ChemicalNames">
+    <Key>
+      <PropertyRef Name="ArtIdCPCL" />
+      <PropertyRef Name="NameNr" />
+      <PropertyRef Name="LangCode" />
+    </Key>
+    <Property Name="ArtIdCPCL" Type="Int32" Nullable="false" />
+    <Property Name="NameNr" Type="Int32" Nullable="false" />
+    <Property Name="LangCode" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ArtName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Show" Type="Boolean" />
+    <Property Name="Statistics" Type="Int32" />
+    <Property Name="GreenockID" Type="Int32" />
+    <NavigationProperty Name="Chemicals" Relationship="Self.FK_ChemicalNames_Chemicals" FromRole="ChemicalNames" ToRole="Chemicals" />
+  </EntityType>
+  <EntityType Name="Chemicals">
+    <Key>
+      <PropertyRef Name="ArtIdCPCL" />
+    </Key>
+    <Property Name="ArtIdCPCL" Type="Int32" Nullable="false" />
+    <Property Name="CNKNr" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="PubPrice" Type="Decimal" Precision="30" Scale="4" />
+    <Property Name="VatCode" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="StockMngmntType" Type="Int32" Nullable="false" />
+    <Property Name="HasExpiry" Type="Int16" Nullable="false" />
+    <Property Name="IsPrintLabel" Type="Int16" />
+    <Property Name="StorageType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BuyPriceCalc" Type="Decimal" Precision="30" Scale="4" />
+    <Property Name="BuyPriceSrc" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ApbUdStatusCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DateChange" Type="DateTime" Precision="3" />
+    <Property Name="AllowUdPubPriceChangeType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ApbCatCode" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="ApbLegCode" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="EanNr" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Name="AvailabilityCode" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="EffectiveBuyPrice" Type="Decimal" Precision="30" Scale="4" />
+    <Property Name="IsReimbHomeo" Type="Int16" />
+    <Property Name="TherapUseID" Type="Int32" />
+    <Property Name="StupNr" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="HasLocation" Type="Int16" Nullable="false" />
+    <Property Name="IsOxygen" Type="Int16" />
+    <Property Name="IsSubstitutionTreatment" Type="Int16" />
+    <Property Name="ArtType" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="InvCatCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Memo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="GreenockID" Type="Int32" />
+    <Property Name="ArtCID" Type="Int32" />
+    <Property Name="ChemicalType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ChemPricePerUnit" Type="Decimal" Precision="30" Scale="6" Nullable="false" />
+    <Property Name="Qtd" Type="Decimal" Precision="28" Scale="18" />
+    <Property Name="UnitCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PriceSource" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Density" Type="Decimal" Precision="30" Scale="5" Nullable="false" />
+    <Property Name="PlantCode" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DefaultPresbQtd" Type="Decimal" Precision="28" Scale="18" />
+    <Property Name="UnitCodeDefaultPresb" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ChemicalNames" Relationship="Self.FK_ChemicalNames_Chemicals" FromRole="Chemicals" ToRole="ChemicalNames" />
+  </EntityType>
+  <EntityType Name="HvtNames">
+    <Key>
+      <PropertyRef Name="ArtIdCPCL" />
+      <PropertyRef Name="NameNr" />
+      <PropertyRef Name="LangCode" />
+    </Key>
+    <Property Name="ArtIdCPCL" Type="Int32" Nullable="false" />
+    <Property Name="NameNr" Type="Int32" Nullable="false" />
+    <Property Name="LangCode" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ArtName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GreenockID" Type="Int32" />
+    <NavigationProperty Name="Hvts" Relationship="Self.FK_HvtNames_Hvts" FromRole="HvtNames" ToRole="Hvts" />
+  </EntityType>
+  <EntityType Name="HvtQtyPrices">
+    <Key>
+      <PropertyRef Name="ArtHvtID" />
+      <PropertyRef Name="HvtQtyCode" />
+    </Key>
+    <Property Name="ArtHvtID" Type="Int32" Nullable="false" />
+    <Property Name="HvtQtyCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="HvtQtd" Type="Decimal" Precision="30" Scale="2" Nullable="false" />
+    <Property Name="PubPrice" Type="Decimal" Precision="30" Scale="2" Nullable="false" />
+    <NavigationProperty Name="Hvts" Relationship="Self.FK_HvtQtyPrices_Hvts" FromRole="HvtQtyPrices" ToRole="Hvts" />
+  </EntityType>
+  <EntityType Name="Hvts">
+    <Key>
+      <PropertyRef Name="ArtHvtID" />
+    </Key>
+    <Property Name="ArtHvtID" Type="Int32" Nullable="false" />
+    <Property Name="GroupingCode" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TarGroupCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsList2" Type="Int16" />
+    <Property Name="SupplemLabel" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DataUdID" Type="Int32" />
+    <Property Name="GreenockID" Type="Int32" />
+    <Property Name="CNKNr" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ArtCID" Type="Int32" />
+    <NavigationProperty Name="HvtNames" Relationship="Self.FK_HvtNames_Hvts" FromRole="Hvts" ToRole="HvtNames" />
+    <NavigationProperty Name="HvtQtyPrices" Relationship="Self.FK_HvtQtyPrices_Hvts" FromRole="Hvts" ToRole="HvtQtyPrices" />
+  </EntityType>
+  <EntityType Name="IdealStockThresholds">
+    <Key>
+      <PropertyRef Name="MinQtdSoldPerMonth" />
+    </Key>
+    <Property Name="MinQtdSoldPerMonth" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="MaxQtdSoldPerMonth" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="MinThd" Type="Int32" Nullable="false" />
+    <Property Name="MaxThd" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LabelEditorArticles">
+    <Key>
+      <PropertyRef Name="ArtIdCPCL" />
+      <PropertyRef Name="LabelEditorLocCode" />
+    </Key>
+    <Property Name="ArtIdCPCL" Type="Int32" Nullable="false" />
+    <Property Name="LabelEditorLocCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LabelEditorLocs">
+    <Key>
+      <PropertyRef Name="LabelEditorLocCode" />
+    </Key>
+    <Property Name="LabelEditorLocCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LabelEditorLocLabel" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="WarehouseCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GreenockID" Type="Int32" />
+    <NavigationProperty Name="Warehouses" Relationship="Self.FK_LabelEditorLocs_Warehouses" FromRole="LabelEditorLocs" ToRole="Warehouses" />
+  </EntityType>
+  <EntityType Name="Localization">
+    <Key>
+      <PropertyRef Name="LocalizationCode" />
+    </Key>
+    <Property Name="LocalizationCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LocalizationName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GreenockID" Type="Int32" />
+    <NavigationProperty Name="LocalizationStock" Relationship="Self.FK_LocalizationStock_Localization" FromRole="Localization" ToRole="LocalizationStock" />
+  </EntityType>
+  <EntityType Name="LocalizationStock">
+    <Key>
+      <PropertyRef Name="StockIDCPCL" />
+      <PropertyRef Name="WarehouseCode" />
+      <PropertyRef Name="LocalisationCode" />
+    </Key>
+    <Property Name="StockIDCPCL" Type="Int32" Nullable="false" />
+    <Property Name="WarehouseCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LocalisationCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Stock" Type="Int32" Nullable="false" />
+    <Property Name="MinThd" Type="Int32" />
+    <Property Name="MaxThd" Type="Int32" />
+    <Property Name="UnitOrder" Type="Int32" />
+    <Property Name="GreenockID" Type="Int32" />
+    <NavigationProperty Name="Localization" Relationship="Self.FK_LocalizationStock_Localization" FromRole="LocalizationStock" ToRole="Localization" />
+  </EntityType>
+  <EntityType Name="MultidoseLinks">
+    <Key>
+      <PropertyRef Name="ArtIdCPCL" />
+      <PropertyRef Name="CustomerIdCpcl" />
+    </Key>
+    <Property Name="ArtIdCPCL" Type="Int32" Nullable="false" />
+    <Property Name="CustomerIdCpcl" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Peremption">
+    <Key>
+      <PropertyRef Name="PeremptionDate" />
+      <PropertyRef Name="LotNr" />
+      <PropertyRef Name="ArtIdCPCL" />
+    </Key>
+    <Property Name="PeremptionDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LotNr" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ArtIdCPCL" Type="Int32" Nullable="false" />
+    <Property Name="CNKNr" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="GreenockID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Statistic">
+    <Key>
+      <PropertyRef Name="ArtIDCPCL" />
+      <PropertyRef Name="Year" />
+      <PropertyRef Name="Month" />
+      <PropertyRef Name="Day" />
+    </Key>
+    <Property Name="ArtIDCPCL" Type="Int32" Nullable="false" />
+    <Property Name="Year" Type="Int32" Nullable="false" />
+    <Property Name="Month" Type="Int32" Nullable="false" />
+    <Property Name="Day" Type="Int32" Nullable="false" />
+    <Property Name="CNK" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="StatisticBuy" Type="Int32" />
+    <Property Name="StatisticSell" Type="Int32" />
+    <Property Name="GreenockID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="StockLog">
+    <Key>
+      <PropertyRef Name="StockLogID" />
+    </Key>
+    <Property Name="StockLogID" Type="Int32" Nullable="false" />
+    <Property Name="StockChangeCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="StockChangeReasonCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="DateLog" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UID" Type="Int32" Nullable="false" />
+    <Property Name="WrkstatCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ArtIdCPCL" Type="Int32" Nullable="false" />
+    <Property Name="QtyInStock_Before" Type="Int32" />
+    <Property Name="OnOrderQty_Before" Type="Int32" />
+    <Property Name="ExtraOrderQty_Before" Type="Int32" />
+    <Property Name="ReservedQty_Before" Type="Int32" />
+    <Property Name="IsAllowThresholdChange_Before" Type="Int16" />
+    <Property Name="MinThd_Before" Type="Int32" />
+    <Property Name="MaxThd_Before" Type="Int32" />
+    <Property Name="OrderPromoQty_Before" Type="Int32" />
+    <Property Name="OrderStatusType_Before" Type="Int32" />
+    <Property Name="DateTimeShortageEnd_Before" Type="DateTime" Precision="3" />
+    <Property Name="MaxThdCalc_Before" Type="Decimal" Precision="28" Scale="18" />
+    <Property Name="AvgStock_Before" Type="Decimal" Precision="28" Scale="18" />
+    <Property Name="BuyPriceWeighted_Before" Type="Decimal" Precision="30" Scale="4" />
+    <Property Name="QtyInStock_After" Type="Int32" />
+    <Property Name="OnOrderQty_After" Type="Int32" />
+    <Property Name="ExtraOrderQty_After" Type="Int32" />
+    <Property Name="ReservedQty_After" Type="Int32" />
+    <Property Name="IsAllowThresholdChange_After" Type="Int16" />
+    <Property Name="MinThd_After" Type="Int32" />
+    <Property Name="MaxThd_After" Type="Int32" />
+    <Property Name="OrderPromoQty_After" Type="Int32" />
+    <Property Name="OrderStatusType_After" Type="Int32" />
+    <Property Name="DateTimeShortageEnd_After" Type="DateTime" Precision="3" />
+    <Property Name="MaxThdCalc_After" Type="Decimal" Precision="28" Scale="18" />
+    <Property Name="AvgStock_After" Type="Decimal" Precision="28" Scale="18" />
+    <Property Name="BuyPriceWeighted_After" Type="Decimal" Precision="30" Scale="4" />
+    <Property Name="DateFirstReceipt" Type="DateTime" Precision="3" />
+    <Property Name="SlsID" Type="Int32" />
+    <Property Name="OrdID" Type="Int32" />
+    <Property Name="DateLastSale_Before" Type="DateTime" Precision="3" />
+    <Property Name="DateLastSale_After" Type="DateTime" Precision="3" />
+    <Property Name="CentralizationStatus" Type="Int16" />
+    <Property Name="RescueThd_Before" Type="Int32" />
+    <Property Name="RescueThd_After" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Stocks">
+    <Key>
+      <PropertyRef Name="ArtIdCPCL" />
+    </Key>
+    <Property Name="ArtIdCPCL" Type="Int32" Nullable="false" />
+    <Property Name="QtyInStock" Type="Int32" />
+    <Property Name="OnOrderQty" Type="Int32" />
+    <Property Name="ExtraOrderQty" Type="Int32" />
+    <Property Name="ReservedQty" Type="Int32" />
+    <Property Name="IsAllowThresholdChange" Type="Int16" />
+    <Property Name="MinThd" Type="Int32" Nullable="false" />
+    <Property Name="MaxThd" Type="Int32" Nullable="false" />
+    <Property Name="OrderPromoQty" Type="Int32" Nullable="false" />
+    <Property Name="OrderStatusType" Type="Int32" Nullable="false" />
+    <Property Name="DateTimeShortageEnd" Type="DateTime" Precision="3" />
+    <Property Name="MaxThdCalc" Type="Decimal" Precision="28" Scale="18" />
+    <Property Name="DateFirstReceipt" Type="DateTime" Precision="3" />
+    <Property Name="AvgStock" Type="Decimal" Precision="28" Scale="18" />
+    <Property Name="IsTdpWaitingTrf" Type="Int16" />
+    <Property Name="BuyPriceWeighted" Type="Decimal" Precision="30" Scale="4" />
+    <Property Name="OnOrderRepresQty" Type="Int32" />
+    <Property Name="DateLastSale" Type="DateTime" Precision="3" />
+    <Property Name="greenockID" Type="Int32" />
+    <Property Name="AllowUdPubPriceChangeType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SupplierIDPref" Type="Int32" />
+    <Property Name="SupplierIDNextOrder" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TherapUses">
+    <Key>
+      <PropertyRef Name="TherapUseID" />
+    </Key>
+    <Property Name="TherapUseID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Warehouses">
+    <Key>
+      <PropertyRef Name="WarehouseCode" />
+    </Key>
+    <Property Name="WarehouseCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="WarehouseName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsAutomat" Type="Boolean" Nullable="false" />
+    <Property Name="GreenockID" Type="Int32" />
+    <NavigationProperty Name="LabelEditorLocs" Relationship="Self.FK_LabelEditorLocs_Warehouses" FromRole="Warehouses" ToRole="LabelEditorLocs" />
+  </EntityType>
+  <EntityType Name="AppVersions">
+    <Key>
+      <PropertyRef Name="ApplicationType" />
+      <PropertyRef Name="UpdateType" />
+    </Key>
+    <Property Name="ApplicationType" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UpdateType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UpdateVersionNr" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ComplementaryMention">
+    <Key>
+      <PropertyRef Name="ComplementaryMentionID" />
+    </Key>
+    <Property Name="ComplementaryMentionID" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ComplementaryMention1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Counters">
+    <Key>
+      <PropertyRef Name="TableName" />
+    </Key>
+    <Property Name="TableName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastCounterNr" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="CountryCode" />
+    </Key>
+    <Property Name="CountryCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CountryLabel" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GreenockID" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CPCLParamValues">
+    <Key>
+      <PropertyRef Name="ParamID" />
+    </Key>
+    <Property Name="ParamID" Type="Int32" Nullable="false" />
+    <Property Name="OldSoftParamValue" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="GreenockParamValue" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="MinSecurityLevel" Type="Int32" />
+  </EntityType>
+  <EntityType Name="CPCLTables">
+    <Key>
+      <PropertyRef Name="TableName" />
+    </Key>
+    <Property Name="TableName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SchemaName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CustRistGroupLabels">
+    <Key>
+      <PropertyRef Name="CustRistGrpCode" />
+      <PropertyRef Name="LangCode" />
+    </Key>
+    <Property Name="CustRistGrpCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LangCode" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CustRistGroupLabel" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CustRistGroups">
+    <Key>
+      <PropertyRef Name="CustRistGrpCode" />
+    </Key>
+    <Property Name="CustRistGrpCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsPatient" Type="Int16" />
+    <Property Name="DefaultRistType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GenderCode">
+    <Key>
+      <PropertyRef Name="GenderCode1" />
+    </Key>
+    <Property Name="GenderCode1" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GenderName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GreenockID" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="GreenockUsers">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ShortUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TemplateBiometric" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UserCID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="MagType">
+    <Key>
+      <PropertyRef Name="MagType1" />
+    </Key>
+    <Property Name="MagType1" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MagName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GreenockID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="OldSoftTableNames">
+    <Key>
+      <PropertyRef Name="TableName" />
+      <PropertyRef Name="ApplicationType" />
+    </Key>
+    <Property Name="TableName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ApplicationType" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ParameterLabels">
+    <Key>
+      <PropertyRef Name="ParameterType" />
+      <PropertyRef Name="LangCode" />
+    </Key>
+    <Property Name="ParameterType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LangCode" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ParameterTypeLabel" Type="String" MaxLength="130" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ParameterTypes" Relationship="Self.FK_ParameterLabels_ParameterTypes" FromRole="ParameterLabels" ToRole="ParameterTypes" />
+  </EntityType>
+  <EntityType Name="ParameterTypes">
+    <Key>
+      <PropertyRef Name="ParameterType" />
+    </Key>
+    <Property Name="ParameterType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SortNr" Type="Int16" Nullable="false" />
+    <Property Name="Offigest" Type="Boolean" Nullable="false" />
+    <Property Name="Isa" Type="Boolean" Nullable="false" />
+    <Property Name="Farmix" Type="Boolean" Nullable="false" />
+    <Property Name="ParamInteger" Type="Int32" />
+    <Property Name="ParamDecimal" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="ParamDate" Type="DateTime" Precision="3" />
+    <Property Name="ParamBoolean" Type="Boolean" />
+    <Property Name="ParamText" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ParameterLabels" Relationship="Self.FK_ParameterLabels_ParameterTypes" FromRole="ParameterTypes" ToRole="ParameterLabels" />
+  </EntityType>
+  <EntityType Name="PaymMethods">
+    <Key>
+      <PropertyRef Name="PaymMethodCode" />
+    </Key>
+    <Property Name="PaymMethodCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GreenockID" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="PharmDocDataLabels">
+    <Key>
+      <PropertyRef Name="PharmID" />
+      <PropertyRef Name="PharmaDocType" />
+      <PropertyRef Name="LangCode" />
+    </Key>
+    <Property Name="PharmID" Type="Int32" Nullable="false" />
+    <Property Name="PharmaDocType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LangCode" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="Chksum" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="TelNr" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="FaxNr" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="RebateLabel" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="RistPrefixLabel" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="RistSuffixLabel" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="HeaderLabel" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="FooterLabel" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="PharmDocDatas" Relationship="Self.FK_PharmDocDataLabels_PharmDocDatas" FromRole="PharmDocDataLabels" ToRole="PharmDocDatas" />
+  </EntityType>
+  <EntityType Name="PharmDocDatas">
+    <Key>
+      <PropertyRef Name="PharmID" />
+      <PropertyRef Name="PharmaDocType" />
+    </Key>
+    <Property Name="PharmID" Type="Int32" Nullable="false" />
+    <Property Name="PharmaDocType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="Url" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="ImageFilename" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="ImageWidth" Type="Int32" Nullable="false" />
+    <Property Name="ImageHeight" Type="Int32" Nullable="false" />
+    <Property Name="RebateToken" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RistToken" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PharmImage" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="PharmDocDataLabels" Relationship="Self.FK_PharmDocDataLabels_PharmDocDatas" FromRole="PharmDocDatas" ToRole="PharmDocDataLabels" />
+  </EntityType>
+  <EntityType Name="Profiles">
+    <Key>
+      <PropertyRef Name="ProfileType" />
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="ProfileType" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SecurityLevel" Type="Int32" Nullable="false" />
+    <Property Name="RoleID" Type="Int32" Nullable="false" />
+    <Property Name="CRC" Type="Binary" MaxLength="4" FixedLength="true" />
+    <Property Name="DateLastChange" Type="DateTime" Precision="3" />
+    <Property Name="UIDLastChange" Type="Int32" />
+    <NavigationProperty Name="Roles" Relationship="Self.fk_Profileroles" FromRole="Profiles" ToRole="Roles" />
+    <NavigationProperty Name="ProfileTypes" Relationship="Self.fk_profiletype" FromRole="Profiles" ToRole="ProfileTypes" />
+  </EntityType>
+  <EntityType Name="ProfileTypes">
+    <Key>
+      <PropertyRef Name="ProfileType" />
+    </Key>
+    <Property Name="ProfileType" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Profiles" Relationship="Self.fk_profiletype" FromRole="ProfileTypes" ToRole="Profiles" />
+    <NavigationProperty Name="ProfileLabels" Relationship="Self.fk_profilelabel" FromRole="ProfileTypes" ToRole="ProfileLabels" />
+  </EntityType>
+  <EntityType Name="Registration">
+    <Key>
+      <PropertyRef Name="PharmApbNr" />
+    </Key>
+    <Property Name="PharmApbNr" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TimeCallCorilus" Type="DateTime" Precision="3" />
+    <Property Name="CorilusLicenseCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GroupType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DBIID" Type="String" MaxLength="36" FixedLength="true" Unicode="false" />
+    <Property Name="WsAccount" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="WsPassword" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="PermissionCode" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="Permissions" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="RegulationType">
+    <Key>
+      <PropertyRef Name="RegulationType1" />
+    </Key>
+    <Property Name="RegulationType1" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RegulationName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GreenockID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="RoleLabels">
+    <Key>
+      <PropertyRef Name="RoleID" />
+      <PropertyRef Name="LangCode" />
+    </Key>
+    <Property Name="RoleID" Type="Int32" Nullable="false" />
+    <Property Name="LangCode" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RoleLabel" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Roles" Relationship="Self.fk_rolelabel" FromRole="RoleLabels" ToRole="Roles" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="Int32" Nullable="false" />
+    <Property Name="CorilusRoleType" Type="Int32" Nullable="false" />
+    <Property Name="RoleType" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="IsPharmRole" Type="Int16" />
+    <Property Name="IsCentralRole" Type="Int16" />
+    <Property Name="DateLastChange" Type="DateTime" Precision="3" />
+    <Property Name="IsUsed" Type="Int16" Nullable="false" />
+    <Property Name="ViewLayoutType" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Profiles" Relationship="Self.fk_Profileroles" FromRole="Roles" ToRole="Profiles" />
+    <NavigationProperty Name="RoleLabels" Relationship="Self.fk_rolelabel" FromRole="Roles" ToRole="RoleLabels" />
+    <NavigationProperty Name="Users" Relationship="Self.fk_Users_Roles" FromRole="Roles" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="TaskGroupLabels">
+    <Key>
+      <PropertyRef Name="GroupType" />
+      <PropertyRef Name="LangCode" />
+    </Key>
+    <Property Name="GroupType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LangCode" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GroupTypeLabel" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="TaskGroupTypes" Relationship="Self.FK_TaskGroupLabels_TaskGroupTypes" FromRole="TaskGroupLabels" ToRole="TaskGroupTypes" />
+  </EntityType>
+  <EntityType Name="TaskGroupTypes">
+    <Key>
+      <PropertyRef Name="GroupType" />
+    </Key>
+    <Property Name="GroupType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SortNr" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="TaskGroupLabels" Relationship="Self.FK_TaskGroupLabels_TaskGroupTypes" FromRole="TaskGroupTypes" ToRole="TaskGroupLabels" />
+    <NavigationProperty Name="TaskTypes" Relationship="Self.FK_TaskTypes_TaskGroupTypes" FromRole="TaskGroupTypes" ToRole="TaskTypes" />
+  </EntityType>
+  <EntityType Name="TaskLabels">
+    <Key>
+      <PropertyRef Name="TaskType" />
+      <PropertyRef Name="LangCode" />
+    </Key>
+    <Property Name="TaskType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LangCode" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TaskTypeLabel" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="TaskTypes" Relationship="Self.FK_TaskLabels_TaskTypes" FromRole="TaskLabels" ToRole="TaskTypes" />
+  </EntityType>
+  <EntityType Name="TaskTypes">
+    <Key>
+      <PropertyRef Name="TaskType" />
+    </Key>
+    <Property Name="TaskType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SortNr" Type="Int32" Nullable="false" />
+    <Property Name="GroupType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Checked" Type="Int16" Nullable="false" />
+    <Property Name="DateStart" Type="DateTime" Precision="3" />
+    <Property Name="NbrMonths" Type="Int32" />
+    <Property Name="MaxErrorPercent" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="TaskGroupTypes" Relationship="Self.FK_TaskTypes_TaskGroupTypes" FromRole="TaskTypes" ToRole="TaskGroupTypes" />
+    <NavigationProperty Name="TaskLabels" Relationship="Self.FK_TaskLabels_TaskTypes" FromRole="TaskTypes" ToRole="TaskLabels" />
+  </EntityType>
+  <EntityType Name="ToVerify">
+    <Key>
+      <PropertyRef Name="ToVerifyID" />
+    </Key>
+    <Property Name="ToVerifyID" Type="Int32" Nullable="false" />
+    <Property Name="IsVerified" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="ToVerifyLabel" Relationship="Self.FK_ToVerifyLabel_ToVerify" FromRole="ToVerify" ToRole="ToVerifyLabel" />
+  </EntityType>
+  <EntityType Name="ToVerifyLabel">
+    <Key>
+      <PropertyRef Name="ToVerifyID" />
+      <PropertyRef Name="LangCode" />
+    </Key>
+    <Property Name="ToVerifyID" Type="Int32" Nullable="false" />
+    <Property Name="LangCode" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ToVerifyName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ToVerify" Relationship="Self.FK_ToVerifyLabel_ToVerify" FromRole="ToVerifyLabel" ToRole="ToVerify" />
+  </EntityType>
+  <EntityType Name="Trace">
+    <Key>
+      <PropertyRef Name="TraceID" />
+    </Key>
+    <Property Name="TraceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TableName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Event" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LigneNr" Type="Int32" />
+    <Property Name="LigneRead" Type="Int32" />
+    <Property Name="LigneInsert" Type="Int32" />
+    <Property Name="LigneInError" Type="Int32" />
+    <Property Name="LigneUpdate" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TransactionType">
+    <Key>
+      <PropertyRef Name="TransactionType1" />
+    </Key>
+    <Property Name="TransactionType1" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TransactionName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GreenockID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TypeNote">
+    <Key>
+      <PropertyRef Name="TypeNote1" />
+    </Key>
+    <Property Name="TypeNote1" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TypeNoteName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GreenockID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="UnitCode">
+    <Key>
+      <PropertyRef Name="UnitID" />
+    </Key>
+    <Property Name="UnitID" Type="Int32" Nullable="false" />
+    <Property Name="UnitCode1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="UserEmails">
+    <Key>
+      <PropertyRef Name="UID" />
+    </Key>
+    <Property Name="UID" Type="Int32" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsSelected" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Users" Relationship="Self.fk_Emails_Users" FromRole="UserEmails" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UID" />
+    </Key>
+    <Property Name="UserName" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DisplayName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="LangCode" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="Memo" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="UID" Type="Int32" Nullable="false" />
+    <Property Name="UxName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsLeftHanded" Type="Int16" Nullable="false" />
+    <Property Name="TicketNickname" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ImageName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserImage" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="RoleID" Type="Int32" Nullable="false" />
+    <Property Name="UserCID" Type="Int32" />
+    <Property Name="FirstName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SysUID" Type="Int32" />
+    <Property Name="NissinszNr" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastSynchroDateTime" Type="DateTime" Precision="3" />
+    <Property Name="AppUserPassword" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CRC" Type="Binary" MaxLength="4" FixedLength="true" />
+    <Property Name="DateLastChange" Type="DateTime" Precision="3" />
+    <Property Name="UIDLastChange" Type="Int32" />
+    <NavigationProperty Name="Roles" Relationship="Self.fk_Users_Roles" FromRole="Users" ToRole="Roles" />
+    <NavigationProperty Name="UserEmails" Relationship="Self.fk_Emails_Users" FromRole="Users" ToRole="UserEmails" />
+  </EntityType>
+  <EntityType Name="Version">
+    <Key>
+      <PropertyRef Name="MajorNr" />
+    </Key>
+    <Property Name="MajorNr" Type="Int32" Nullable="false" />
+    <Property Name="MinorNr" Type="Int32" />
+    <Property Name="RevisionNr" Type="Int32" />
+    <Property Name="LastUpgradeDate" Type="DateTime" Precision="3" />
+    <Property Name="DatabaseStatus" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Note">
+    <Key>
+      <PropertyRef Name="NoteID" />
+    </Key>
+    <Property Name="NoteID" Type="Int32" Nullable="false" />
+    <Property Name="TypeNote" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LigneNr" Type="Int32" Nullable="false" />
+    <Property Name="Contents" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CustRistGroupLabels1">
+    <Key>
+      <PropertyRef Name="CustRistGrpCode" />
+      <PropertyRef Name="LangCode" />
+    </Key>
+    <Property Name="CustRistGrpCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LangCode" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CustRistGroupLabel" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CustRistGroups1">
+    <Key>
+      <PropertyRef Name="CustRistGrpCode" />
+    </Key>
+    <Property Name="CustRistGrpCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsPatient" Type="Int16" />
+    <Property Name="DefaultRistType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DateLastChange" Type="DateTime" Precision="3" />
+    <Property Name="Deleted" Type="Byte" />
+  </EntityType>
+  <EntityType Name="MarginTypes">
+    <Key>
+      <PropertyRef Name="MarginTypeID" />
+    </Key>
+    <Property Name="MarginTypeID" Type="Int32" Nullable="false" />
+    <Property Name="MarginMin" Type="Decimal" Precision="30" Scale="2" Nullable="false" />
+    <Property Name="MarginMax" Type="Decimal" Precision="30" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Registers">
+    <Key>
+      <PropertyRef Name="RegisterCode" />
+    </Key>
+    <Property Name="RegisterCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RegisterNr" Type="Int32" Nullable="false" />
+    <Property Name="IsBox" Type="Int16" Nullable="false" />
+    <Property Name="RegSessionNrCurrent" Type="Int32" />
+  </EntityType>
+  <EntityType Name="RistCustArticles">
+    <Key>
+      <PropertyRef Name="RistRuleID" />
+    </Key>
+    <Property Name="RistRuleID" Type="Int32" Nullable="false" />
+    <Property Name="MarginTypeID" Type="Int32" />
+    <Property Name="InvCatCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="SupplierID" Type="Int32" />
+    <Property Name="ArtRangeLabel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsArtRange" Type="Int16" />
+    <Property Name="ArtID" Type="Int32" />
+    <Property Name="CnkNr" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="RistCustRistGroups">
+    <Key>
+      <PropertyRef Name="RistRuleID" />
+    </Key>
+    <Property Name="RistRuleID" Type="Int32" Nullable="false" />
+    <Property Name="ArticleStrategy" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CustRistGrpCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MarginTypeID" Type="Int32" />
+    <Property Name="InvCatCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="SupplierID" Type="Int32" />
+    <Property Name="ArtRangeLabel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsArtRange" Type="Int16" />
+  </EntityType>
+  <EntityType Name="RistCustRules">
+    <Key>
+      <PropertyRef Name="RistRuleID" />
+    </Key>
+    <Property Name="RistRuleID" Type="Int32" Nullable="false" />
+    <Property Name="RistPercent" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="RistType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LimitType" Type="Int16" Nullable="false" />
+    <Property Name="AmntMax" Type="Decimal" Precision="30" Scale="2" />
+    <Property Name="RistNonReimbType" Type="Int32" />
+    <Property Name="PharmID" Type="Int32" Nullable="false" />
+    <Property Name="PushStatusType" Type="Int32" Nullable="false" />
+    <Property Name="DateLastPush" Type="DateTime" Precision="3" />
+    <Property Name="UID" Type="Int32" />
+    <Property Name="DateLastChange" Type="DateTime" Precision="3" />
+    <Property Name="Deleted" Type="Byte" />
+  </EntityType>
+  <EntityType Name="RistPatRistGroups">
+    <Key>
+      <PropertyRef Name="RistRuleID" />
+    </Key>
+    <Property Name="RistRuleID" Type="Int32" Nullable="false" />
+    <Property Name="ArticleStrategy" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CustGroupStrategy" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CustRistGrpCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MarginTypeID" Type="Int32" />
+    <Property Name="InvCatCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="SupplierID" Type="Int32" />
+    <Property Name="ArtRangeLabel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsArtRange" Type="Int16" />
+  </EntityType>
+  <EntityType Name="UrlTypes">
+    <Key>
+      <PropertyRef Name="UrlName" />
+    </Key>
+    <Property Name="UrlName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Url" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UrlParams" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Login" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="TimeOut" Type="Int32" Nullable="false" />
+    <Property Name="IsUpdatable" Type="Int16" Nullable="false" />
+    <Property Name="PortNr" Type="Int32" />
+  </EntityType>
+  <EntityType Name="WhLocationLabels">
+    <Key>
+      <PropertyRef Name="WhLocId" />
+      <PropertyRef Name="LangCode" />
+    </Key>
+    <Property Name="WhLocId" Type="Int32" Nullable="false" />
+    <Property Name="LangCode" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="WhLocationLabel" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="WhLocationShortLabel" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="WhLocs" Relationship="Self.FK_WhLocationLabels_WhLocs" FromRole="WhLocationLabels" ToRole="WhLocs" />
+  </EntityType>
+  <EntityType Name="WhLocs">
+    <Key>
+      <PropertyRef Name="WhLocId" />
+    </Key>
+    <Property Name="WhLocCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="WhID" Type="Int32" Nullable="false" />
+    <Property Name="WhLocId" Type="Int32" Nullable="false" />
+    <Property Name="LocHorizontalPos" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="LocVerticalPos" Type="Int32" />
+    <Property Name="LocWidth" Type="Int32" />
+    <NavigationProperty Name="WhLocationLabels" Relationship="Self.FK_WhLocationLabels_WhLocs" FromRole="WhLocs" ToRole="WhLocationLabels" />
+  </EntityType>
+  <EntityType Name="WorkstationDevices">
+    <Key>
+      <PropertyRef Name="WrkstatDeviceID" />
+    </Key>
+    <Property Name="WrkstatDeviceID" Type="Int32" Nullable="false" />
+    <Property Name="WrkstatCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DeviceID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="WrkstatBackups" Relationship="Self.FK_WorkstationBackups_WorkstationDevices" FromRole="WorkstationDevices" ToRole="WrkstatBackups" />
+    <NavigationProperty Name="WrkstatCashDrawers" Relationship="Self.FK_WorkstationCashDrawers_WorkstationDevices" FromRole="WorkstationDevices" ToRole="WrkstatCashDrawers" />
+    <NavigationProperty Name="Workstations" Relationship="Self.FK_WorkstationDevices_Workstations" FromRole="WorkstationDevices" ToRole="Workstations" />
+    <NavigationProperty Name="WrkstatEfts" Relationship="Self.FK_WorkstationEfts_WorkstationDevices" FromRole="WorkstationDevices" ToRole="WrkstatEfts" />
+    <NavigationProperty Name="WrkstatEidReaders" Relationship="Self.FK_WorkstationEidReaders_WorkstationDevices" FromRole="WorkstationDevices" ToRole="WrkstatEidReaders" />
+    <NavigationProperty Name="WrkstatModems" Relationship="Self.FK_WorkstationModems_WorkstationDevices" FromRole="WorkstationDevices" ToRole="WrkstatModems" />
+    <NavigationProperty Name="WrkstatPrinters" Relationship="Self.FK_WorkstationPrinters_WorkstationDevices" FromRole="WorkstationDevices" ToRole="WrkstatPrinters" />
+    <NavigationProperty Name="WrkstatRobots" Relationship="Self.FK_WorkstationRobots_WorkstationDevices" FromRole="WorkstationDevices" ToRole="WrkstatRobots" />
+    <NavigationProperty Name="WrkstatScreens" Relationship="Self.FK_WorkstationScreens_WorkstationDevices" FromRole="WorkstationDevices" ToRole="WrkstatScreens" />
+    <NavigationProperty Name="WrkstatSisReaders" Relationship="Self.FK_WorkstationSisReaders_WorkstationDevices" FromRole="WorkstationDevices" ToRole="WrkstatSisReaders" />
+  </EntityType>
+  <EntityType Name="Workstations">
+    <Key>
+      <PropertyRef Name="WrkstatCode" />
+    </Key>
+    <Property Name="WrkstatCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="WrkstatDescrText" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="KeyboardCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RegisterCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="TicketPrinterID" Type="Int32" />
+    <Property Name="FormPrinterID" Type="Int32" />
+    <Property Name="ListPrinterID" Type="Int32" />
+    <Property Name="CardPrinterID" Type="Int32" />
+    <Property Name="LabelCompositePrinterID" Type="Int32" />
+    <Property Name="LabelContinuPrinterID" Type="Int32" />
+    <Property Name="LabelPluralPrinterID" Type="Int32" />
+    <Property Name="LabelSinglePrinterID" Type="Int32" />
+    <Property Name="SlipPrinterID" Type="Int32" />
+    <Property Name="ScreenID" Type="Int32" />
+    <Property Name="SisReaderID" Type="Int32" />
+    <Property Name="EftID" Type="Int32" />
+    <Property Name="CashDrawerID" Type="Int32" />
+    <Property Name="ModemID" Type="Int32" />
+    <Property Name="RobotID" Type="Int32" />
+    <Property Name="EidReaderID" Type="Int32" />
+    <Property Name="PaperScanID" Type="Int32" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="BarcodeReaderID" Type="Int32" />
+    <NavigationProperty Name="WorkstationDevices" Relationship="Self.FK_WorkstationDevices_Workstations" FromRole="Workstations" ToRole="WorkstationDevices" />
+  </EntityType>
+  <EntityType Name="WrkstatBackups">
+    <Key>
+      <PropertyRef Name="WrkstatDeviceID" />
+    </Key>
+    <Property Name="WrkstatDeviceID" Type="Int32" Nullable="false" />
+    <Property Name="OutputDir" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="MediaType" Type="Int32" />
+    <NavigationProperty Name="WorkstationDevices" Relationship="Self.FK_WorkstationBackups_WorkstationDevices" FromRole="WrkstatBackups" ToRole="WorkstationDevices" />
+  </EntityType>
+  <EntityType Name="WrkstatBarcodeReaders">
+    <Key>
+      <PropertyRef Name="WrkstatDeviceID" />
+    </Key>
+    <Property Name="WrkstatDeviceID" Type="Int32" Nullable="false" />
+    <Property Name="PreAmble" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="PostAmble" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="ConfigType" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="WrkstatCashDrawers">
+    <Key>
+      <PropertyRef Name="WrkstatDeviceID" />
+    </Key>
+    <Property Name="WrkstatDeviceID" Type="Int32" Nullable="false" />
+    <Property Name="PrinterPort" Type="String" MaxLength="256" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="WorkstationDevices" Relationship="Self.FK_WorkstationCashDrawers_WorkstationDevices" FromRole="WrkstatCashDrawers" ToRole="WorkstationDevices" />
+  </EntityType>
+  <EntityType Name="WrkstatEfts">
+    <Key>
+      <PropertyRef Name="WrkstatDeviceID" />
+    </Key>
+    <Property Name="WrkstatDeviceID" Type="Int32" Nullable="false" />
+    <Property Name="TerminalName" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="WorkstationDevices" Relationship="Self.FK_WorkstationEfts_WorkstationDevices" FromRole="WrkstatEfts" ToRole="WorkstationDevices" />
+  </EntityType>
+  <EntityType Name="WrkstatEidReaders">
+    <Key>
+      <PropertyRef Name="WrkstatDeviceID" />
+    </Key>
+    <Property Name="WrkstatDeviceID" Type="Int32" Nullable="false" />
+    <Property Name="ReaderName" Type="String" MaxLength="256" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="WorkstationDevices" Relationship="Self.FK_WorkstationEidReaders_WorkstationDevices" FromRole="WrkstatEidReaders" ToRole="WorkstationDevices" />
+  </EntityType>
+  <EntityType Name="WrkstatModems">
+    <Key>
+      <PropertyRef Name="WrkstatDeviceID" />
+    </Key>
+    <Property Name="WrkstatDeviceID" Type="Int32" Nullable="false" />
+    <Property Name="Rs232Port" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="WorkstationDevices" Relationship="Self.FK_WorkstationModems_WorkstationDevices" FromRole="WrkstatModems" ToRole="WorkstationDevices" />
+  </EntityType>
+  <EntityType Name="WrkstatPaperScans">
+    <Key>
+      <PropertyRef Name="WrkstatDeviceID" />
+    </Key>
+    <Property Name="WrkstatDeviceID" Type="Int32" Nullable="false" />
+    <Property Name="WIADeviceID" Type="String" MaxLength="256" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PaperScanMode" Type="Int32" Nullable="false" />
+    <Property Name="HorizontalResolution" Type="Int32" Nullable="false" />
+    <Property Name="VerticalResolution" Type="Int32" Nullable="false" />
+    <Property Name="ScanName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="WrkstatPrinters">
+    <Key>
+      <PropertyRef Name="WrkstatDeviceID" />
+    </Key>
+    <Property Name="WrkstatDeviceID" Type="Int32" Nullable="false" />
+    <Property Name="PrinterPort" Type="String" MaxLength="256" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LayoutType" Type="Int32" Nullable="false" />
+    <Property Name="Tray" Type="Int32" Nullable="false" />
+    <Property Name="Duplex" Type="Int32" Nullable="false" />
+    <Property Name="NameTray" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="WorkstationDevices" Relationship="Self.FK_WorkstationPrinters_WorkstationDevices" FromRole="WrkstatPrinters" ToRole="WorkstationDevices" />
+  </EntityType>
+  <EntityType Name="WrkstatRobots">
+    <Key>
+      <PropertyRef Name="WrkstatDeviceID" />
+    </Key>
+    <Property Name="WrkstatDeviceID" Type="Int32" Nullable="false" />
+    <Property Name="ServerUnc" Type="String" MaxLength="256" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ServerIpPort" Type="Int32" Nullable="false" />
+    <Property Name="RobotOutletNr" Type="Int32" Nullable="false" />
+    <Property Name="RobotPriority" Type="Int16" />
+    <NavigationProperty Name="WorkstationDevices" Relationship="Self.FK_WorkstationRobots_WorkstationDevices" FromRole="WrkstatRobots" ToRole="WorkstationDevices" />
+  </EntityType>
+  <EntityType Name="WrkstatScreens">
+    <Key>
+      <PropertyRef Name="WrkstatDeviceID" />
+    </Key>
+    <Property Name="WrkstatDeviceID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="WorkstationDevices" Relationship="Self.FK_WorkstationScreens_WorkstationDevices" FromRole="WrkstatScreens" ToRole="WorkstationDevices" />
+  </EntityType>
+  <EntityType Name="WrkstatSisReaders">
+    <Key>
+      <PropertyRef Name="WrkstatDeviceID" />
+    </Key>
+    <Property Name="WrkstatDeviceID" Type="Int32" Nullable="false" />
+    <Property Name="SamCode" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="TrialDate" Type="DateTime" Precision="3" />
+    <Property Name="Trial" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="WorkstationDevices" Relationship="Self.FK_WorkstationSisReaders_WorkstationDevices" FromRole="WrkstatSisReaders" ToRole="WorkstationDevices" />
+  </EntityType>
+  <EntityType Name="Analysis">
+    <Key>
+      <PropertyRef Name="AnalysisNr" />
+    </Key>
+    <Property Name="AnalysisNr" Type="Int32" Nullable="false" />
+    <Property Name="BuyDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateAnalysis" Type="DateTime" Precision="3" />
+    <Property Name="Qtd" Type="Decimal" Precision="28" Scale="18" />
+    <Property Name="UnitCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="LotNr" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="LotNrSuffix" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="DateExpiry" Type="DateTime" Precision="3" />
+    <Property Name="ArtID" Type="Int32" Nullable="false" />
+    <Property Name="SupplierIDSupplier" Type="Int32" Nullable="false" />
+    <Property Name="SupplierIDManuf" Type="Int32" Nullable="false" />
+    <Property Name="AuthorisNr" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="PhcopeeType" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Report" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="IsConform" Type="Int16" />
+    <Property Name="DateOpened" Type="DateTime" Precision="3" />
+    <Property Name="DateEmpty" Type="DateTime" Precision="3" />
+    <Property Name="BuyPrice" Type="Decimal" Precision="30" Scale="4" />
+    <Property Name="Location" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ArtIDTsp" Type="Int32" />
+    <Property Name="AnalysisStatusType" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FormulaItems">
+    <Key>
+      <PropertyRef Name="FormID" />
+      <PropertyRef Name="FormItemNr" />
+    </Key>
+    <Property Name="FormID" Type="Int32" Nullable="false" />
+    <Property Name="FormItemNr" Type="Int32" Nullable="false" />
+    <Property Name="FormItemType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Memo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Qtd" Type="Decimal" Precision="28" Scale="18" />
+    <Property Name="UnitCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="ArtID" Type="Int32" />
+    <Property Name="SpecHonCode" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="QtyQualifier" Type="Int32" Nullable="false" />
+    <Property Name="GreenockID" Type="Int32" />
+    <NavigationProperty Name="Formulas" Relationship="Self.FK_FormulaItems_Formulas" FromRole="FormulaItems" ToRole="Formulas" />
+  </EntityType>
+  <EntityType Name="FormulaLabels">
+    <Key>
+      <PropertyRef Name="FormID" />
+      <PropertyRef Name="LangCode" />
+    </Key>
+    <Property Name="FormID" Type="Int32" Nullable="false" />
+    <Property Name="LangCode" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FormulariumLabel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FormulariumLabelNr" Type="Int32" />
+    <NavigationProperty Name="Formulas" Relationship="Self.FK_FormulaLabels_Formulas" FromRole="FormulaLabels" ToRole="Formulas" />
+  </EntityType>
+  <EntityType Name="Formulas">
+    <Key>
+      <PropertyRef Name="FormID" />
+    </Key>
+    <Property Name="FormID" Type="Int32" Nullable="false" />
+    <Property Name="FormQtd" Type="Decimal" Precision="28" Scale="18" />
+    <Property Name="UnitCodePrepQtd" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsApb" Type="Int16" />
+    <Property Name="Density" Type="Decimal" Precision="30" Scale="5" />
+    <Property Name="FormulariumCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GalformCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="DtQty" Type="Int32" />
+    <Property Name="GreenockID" Type="Int32" />
+    <Property Name="CnkNr" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="FormulaItems" Relationship="Self.FK_FormulaItems_Formulas" FromRole="Formulas" ToRole="FormulaItems" />
+    <NavigationProperty Name="FormulaLabels" Relationship="Self.FK_FormulaLabels_Formulas" FromRole="Formulas" ToRole="FormulaLabels" />
+  </EntityType>
+  <EntityType Name="InvCatBreakds">
+    <Key>
+      <PropertyRef Name="RegTransactID" />
+      <PropertyRef Name="InvCatCode" />
+      <PropertyRef Name="SsecType" />
+    </Key>
+    <Property Name="RegTransactID" Type="Int32" Nullable="false" />
+    <Property Name="InvCatCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SsecType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PubPrice" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="AmntVat" Type="Decimal" Precision="10" Scale="4" Nullable="false" />
+    <Property Name="AmntPaid" Type="Decimal" Precision="10" Scale="4" Nullable="false" />
+    <Property Name="AmntRebate" Type="Decimal" Precision="10" Scale="4" Nullable="false" />
+    <Property Name="TurnoverCatType" Type="Int16" />
+  </EntityType>
+  <EntityType Name="PaymEftBreakds">
+    <Key>
+      <PropertyRef Name="RegTransactID" />
+      <PropertyRef Name="PaymMethodCode" />
+      <PropertyRef Name="CurrencyIsoCodeCust" />
+    </Key>
+    <Property Name="RegTransactID" Type="Int32" Nullable="false" />
+    <Property Name="PaymMethodCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CurrencyIsoCodeCust" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EftTerminalName" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="EftTermID" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="EftTxvictxamt" Type="Decimal" Precision="16" Scale="2" />
+    <Property Name="EftAppid" Type="Int32" />
+    <Property Name="EftCardID" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+    <Property Name="EftVictxid" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="EftPdvclctnr" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="EftPdvgentxnb" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="EftEmvcvm" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EftEmvdatetime" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Name="EftEmvtransid" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="DatePaymEft" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="PaymMethodBreakds">
+    <Key>
+      <PropertyRef Name="RegTransactID" />
+      <PropertyRef Name="PaymMethodCode" />
+      <PropertyRef Name="CurrencyIsoCodeCust" />
+    </Key>
+    <Property Name="RegTransactID" Type="Int32" Nullable="false" />
+    <Property Name="PaymMethodCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CurrencyIsoCodeCust" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AmntDefaultCurrencyIn" Type="Decimal" Precision="30" Scale="2" Nullable="false" />
+    <Property Name="AmntCustCurrencyIn" Type="Decimal" Precision="30" Scale="2" Nullable="false" />
+    <Property Name="AmntDefaultCurrencyOut" Type="Decimal" Precision="30" Scale="2" Nullable="false" />
+    <Property Name="AmntCustCurrencyOut" Type="Decimal" Precision="30" Scale="2" Nullable="false" />
+    <Property Name="PaymMethodCost" Type="Decimal" Precision="30" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PaymMethodLabels">
+    <Key>
+      <PropertyRef Name="PaymMethodCode" />
+      <PropertyRef Name="LangCode" />
+    </Key>
+    <Property Name="PaymMethodCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LangCode" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PaymMethodLabel" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PaymMethods1">
+    <Key>
+      <PropertyRef Name="PaymMethodCode" />
+    </Key>
+    <Property Name="PaymMethodCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PaymMethodCost" Type="Decimal" Precision="30" Scale="2" Nullable="false" />
+    <Property Name="RegSortNr" Type="Int32" Nullable="false" />
+    <Property Name="RegSheetDirectionType" Type="Int32" Nullable="false" />
+    <Property Name="IsShowRegSheet" Type="Int16" />
+    <Property Name="PaymMethodCostMinAmnt" Type="Decimal" Precision="11" Scale="2" Nullable="false" />
+    <Property Name="IsEft" Type="Int16" />
+    <Property Name="PaymMethodCostType" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Registers1">
+    <Key>
+      <PropertyRef Name="RegisterCode" />
+    </Key>
+    <Property Name="RegisterCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RegisterDescrText" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RegSessionNrCurrent" Type="Int32" Nullable="false" />
+    <Property Name="RegisterNr" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RegSessions">
+    <Key>
+      <PropertyRef Name="RegSessionNr" />
+    </Key>
+    <Property Name="RegSessionNr" Type="Int32" Nullable="false" />
+    <Property Name="DateOpened" Type="DateTime" Precision="3" />
+    <Property Name="DateClosed" Type="DateTime" Precision="3" />
+    <Property Name="OpenType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RegSessionNrPrevious" Type="Int32" Nullable="false" />
+    <Property Name="IsAccyFlatrate" Type="Int16" />
+  </EntityType>
+  <EntityType Name="RegTransactions">
+    <Key>
+      <PropertyRef Name="RegTransactID" />
+    </Key>
+    <Property Name="RegTransactID" Type="Int32" Nullable="false" />
+    <Property Name="DateTimeTransact" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="RegTransactType" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TotalAmntIn" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="TotalAmntVatex" Type="Decimal" Precision="30" Scale="4" />
+    <Property Name="TotalAmntOut" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="RegisterCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RegSessionNr" Type="Int32" Nullable="false" />
+    <Property Name="Memo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PendingID" Type="Int32" />
+    <Property Name="SlsID" Type="Int32" />
+    <Property Name="CurrencyIsoCodeCust" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsIvc" Type="Int16" Nullable="false" />
+    <Property Name="CentralizationStatus" Type="Int16" />
+  </EntityType>
+  <EntityType Name="WithdDeps">
+    <Key>
+      <PropertyRef Name="RegTransactID" />
+    </Key>
+    <Property Name="RegTransactID" Type="Int32" Nullable="false" />
+    <Property Name="WithdDepCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TdpIvcReference" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="AccyNr" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="DateWithdDep" Type="DateTime" Precision="3" />
+    <Property Name="IvcID" Type="Int32" />
+    <Property Name="PaymSeqNr" Type="Int32" />
+    <NavigationProperty Name="WithdDepTypes" Relationship="Self.FK_WithdDeps_WithdDepTypes" FromRole="WithdDeps" ToRole="WithdDepTypes" />
+  </EntityType>
+  <EntityType Name="WithdDepTypes">
+    <Key>
+      <PropertyRef Name="WithdDepCode" />
+    </Key>
+    <Property Name="WithdDepCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AccySchemeNr" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="IsShowIvcReference" Type="Int16" />
+    <Property Name="IsShowAccySchemeNr" Type="Int16" />
+    <Property Name="WithdDepDirectionType" Type="Int32" Nullable="false" />
+    <Property Name="WithdDepLabel" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="WithdDeps" Relationship="Self.FK_WithdDeps_WithdDepTypes" FromRole="WithdDepTypes" ToRole="WithdDeps" />
+  </EntityType>
+  <EntityType Name="Magistrals">
+    <Key>
+      <PropertyRef Name="MagistralID" />
+    </Key>
+    <Property Name="MagistralID" Type="Int32" Nullable="false" />
+    <Property Name="MagistralNr" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="MagistralName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateMag" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="GalformCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DtQty" Type="Int32" />
+    <Property Name="UnitCodePresb" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PresbQtd" Type="Decimal" Precision="28" Scale="18" />
+    <Property Name="BaseAmntNetto" Type="Decimal" Precision="30" Scale="2" Nullable="false" />
+    <Property Name="MagFullPrice" Type="Decimal" Precision="30" Scale="2" Nullable="false" />
+    <Property Name="AmntChem" Type="Decimal" Precision="30" Scale="2" Nullable="false" />
+    <Property Name="AmntChemReimb" Type="Decimal" Precision="30" Scale="2" Nullable="false" />
+    <Property Name="AmntExcipient" Type="Decimal" Precision="30" Scale="2" Nullable="false" />
+    <Property Name="AmntExcipientReimb" Type="Decimal" Precision="30" Scale="2" Nullable="false" />
+    <Property Name="ModCount" Type="Int32" Nullable="false" />
+    <Property Name="ReimbModCount" Type="Int32" Nullable="false" />
+    <Property Name="AmntHon" Type="Decimal" Precision="30" Scale="2" Nullable="false" />
+    <Property Name="AmntHonReimb" Type="Decimal" Precision="30" Scale="2" Nullable="false" />
+    <Property Name="RgtmCount" Type="Int32" Nullable="false" />
+    <Property Name="UnitPriceRgtm" Type="Decimal" Precision="30" Scale="5" Nullable="false" />
+    <Property Name="RgtmType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="CoeffReductQtd" Type="Decimal" Precision="28" Scale="18" />
+    <Property Name="CoeffReductDt" Type="Decimal" Precision="28" Scale="18" />
+    <Property Name="MagCalcMethodCode" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="IsNasalUse" Type="Int16" />
+    <Property Name="IsReimbHomeo" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="MagItems" Relationship="Self.FK_MagItems_Magistrals" FromRole="Magistrals" ToRole="MagItems" />
+    <NavigationProperty Name="SaleItems" Relationship="Self.FK_SaleItems_Magistrals" FromRole="Magistrals" ToRole="SaleItems" />
+  </EntityType>
+  <EntityType Name="MagItems">
+    <Key>
+      <PropertyRef Name="MagistralID" />
+      <PropertyRef Name="MitmNr" />
+    </Key>
+    <Property Name="MagistralID" Type="Int32" Nullable="false" />
+    <Property Name="MitmNr" Type="Int32" Nullable="false" />
+    <Property Name="SlsID" Type="Int32" />
+    <Property Name="SsecNr" Type="Int32" />
+    <Property Name="SitmNr" Type="Int32" />
+    <Property Name="MagItemType" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Memo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Thirdpartypaid" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="AmntNetto" Type="Decimal" Precision="30" Scale="4" />
+    <Property Name="FullPrice" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="ArtIDSold" Type="Int32" />
+    <Property Name="Qtd" Type="Decimal" Precision="28" Scale="18" />
+    <Property Name="QtdUnitCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="QtyQualifier" Type="Int32" />
+    <Property Name="FormType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="FormID" Type="Int32" />
+    <Property Name="LegConstrListCpy" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="SpecHonCode" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="RecrsDepth" Type="Int32" Nullable="false" />
+    <Property Name="IsAntioxidant" Type="Int16" />
+    <Property Name="InamirizivListNr" Type="Int32" />
+    <Property Name="ArtIDFromStock" Type="Int32" />
+    <Property Name="DeliveredQty" Type="Int32" />
+    <Property Name="ArtIdSoldType" Type="Int32" Nullable="false" />
+    <Property Name="ArtReimbCatCode" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="ReimbExcptCode" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="IsAttestNeeded" Type="Int16" Nullable="false" />
+    <Property Name="AttestID" Type="Int32" />
+    <Property Name="IsAttestMissing" Type="Int16" Nullable="false" />
+    <Property Name="IsReimbMarkNeeded" Type="Int16" Nullable="false" />
+    <Property Name="ArtReimbMarkCode" Type="Int32" />
+    <Property Name="IsStampNeeded" Type="Int16" Nullable="false" />
+    <Property Name="HasStamp" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="Magistrals" Relationship="Self.FK_MagItems_Magistrals" FromRole="MagItems" ToRole="Magistrals" />
+  </EntityType>
+  <EntityType Name="RistCardsRists">
+    <Key>
+      <PropertyRef Name="UniqueId" />
+    </Key>
+    <Property Name="UniqueId" Type="Int32" Nullable="false" />
+    <Property Name="RistCardNr" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DatetimeFirst" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="VatRate" Type="Decimal" Precision="4" Scale="2" Nullable="false" />
+    <Property Name="AmntRist" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="RistTransactType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SlsID" Type="Int32" />
+    <Property Name="CentralizationStatus" Type="Int16" />
+  </EntityType>
+  <EntityType Name="SaleItems">
+    <Key>
+      <PropertyRef Name="SlsID" />
+      <PropertyRef Name="SsecNr" />
+      <PropertyRef Name="SitmNr" />
+    </Key>
+    <Property Name="SlsID" Type="Int32" Nullable="false" />
+    <Property Name="SsecNr" Type="Int32" Nullable="false" />
+    <Property Name="SitmNr" Type="Int32" Nullable="false" />
+    <Property Name="ArtID" Type="Int32" />
+    <Property Name="MagistralID" Type="Int32" />
+    <Property Name="PubPricePerUnit" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="BuyPriceEstmPerUnit" Type="Decimal" Precision="30" Scale="4" />
+    <Property Name="SaleQty" Type="Int32" />
+    <Property Name="AttestID" Type="Int32" />
+    <Property Name="OriginalPrescpNr" Type="Int32" />
+    <Property Name="Dci" Type="Boolean" />
+    <Property Name="ClusterID" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="SitmType" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Memo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="SitmRegulType" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="PendType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="VatRateCpy" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="DeliveredQty" Type="Int32" />
+    <Property Name="ReservedQty" Type="Int32" />
+    <Property Name="PayableQty" Type="Int32" />
+    <Property Name="RistType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="Thirdpartypaid" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="AmntNetto" Type="Decimal" Precision="30" Scale="4" />
+    <Property Name="ArtIDFromStock" Type="Int32" />
+    <Property Name="Qtd" Type="Decimal" Precision="28" Scale="18" />
+    <Property Name="LegConstrListCpy" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="IsBackofficeMode" Type="Int16" Nullable="false" />
+    <Property Name="AmntPaid" Type="Decimal" Precision="30" Scale="4" />
+    <Property Name="AmntRist" Type="Decimal" Precision="30" Scale="4" Nullable="false" />
+    <Property Name="AmntRebate" Type="Decimal" Precision="30" Scale="4" Nullable="false" />
+    <Property Name="AmntRistNetto" Type="Decimal" Precision="30" Scale="4" />
+    <Property Name="AmntRebateNetto" Type="Decimal" Precision="30" Scale="4" />
+    <Property Name="PaidQty" Type="Int32" Nullable="false" />
+    <Property Name="UnpaidDeliveredQty" Type="Int32" Nullable="false" />
+    <Property Name="RenewalCount" Type="Int32" Nullable="false" />
+    <Property Name="RenewalNr" Type="Int32" />
+    <Property Name="RenewalPeriodCount" Type="Int32" />
+    <Property Name="RenewalPeriodType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="IsTdpTarTrf" Type="Int16" />
+    <Property Name="IsTdpIvcTrfs" Type="Int16" />
+    <Property Name="BasepricePerUnit" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="AmntRistPat" Type="Decimal" Precision="30" Scale="4" />
+    <Property Name="AmntRebatePat" Type="Decimal" Precision="30" Scale="4" />
+    <Property Name="AmntRistPatNetto" Type="Decimal" Precision="30" Scale="4" />
+    <Property Name="AmntRebatePatNetto" Type="Decimal" Precision="30" Scale="4" />
+    <Property Name="DeferredDeliveryQty" Type="Int32" Nullable="false" />
+    <Property Name="F704PrintType" Type="Int16" />
+    <Property Name="BvacPrintType" Type="Int16" />
+    <Property Name="IsSubst" Type="Int16" />
+    <Property Name="ArtReimbCatCode" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="ReimbExcptCode" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="IsReimbMarkNeeded" Type="Int16" />
+    <Property Name="IsStampNeeded" Type="Int16" />
+    <Property Name="RgtmCount" Type="Int32" Nullable="false" />
+    <Property Name="AmntPaidSecondCover" Type="Decimal" Precision="30" Scale="4" />
+    <Property Name="pendingResolve" Type="Int32" />
+    <Property Name="IsAttestMissing" Type="Int16" />
+    <Property Name="UnDeliveredQty" Type="Int32" />
+    <Property Name="IsFirstDeliv" Type="Int16" />
+    <Property Name="DeferredDeliveryType" Type="Int32" />
+    <Property Name="SupplPackageQty" Type="Int32" />
+    <Property Name="InnSubstPrescType" Type="Int16" />
+    <Property Name="RgtmCountReimbursable" Type="Int32" />
+    <NavigationProperty Name="Magistrals" Relationship="Self.FK_SaleItems_Magistrals" FromRole="SaleItems" ToRole="Magistrals" />
+    <NavigationProperty Name="SitmUbcs" Relationship="Self.fk_lig_vte3" FromRole="SaleItems" ToRole="SitmUbcs" />
+    <NavigationProperty Name="SaleSections" Relationship="Self.FK_SaleItems_SaleSections" FromRole="SaleItems" ToRole="SaleSections" />
+    <NavigationProperty Name="SalePoso" Relationship="Self.FK_SalePoso_SaleItem" FromRole="SaleItems" ToRole="SalePoso" />
+    <NavigationProperty Name="SitmHons" Relationship="Self.FK_SitmHons_SaleItems" FromRole="SaleItems" ToRole="SitmHons" />
+  </EntityType>
+  <EntityType Name="SaleItemType">
+    <Key>
+      <PropertyRef Name="SaleItemType1" />
+    </Key>
+    <Property Name="SaleItemType1" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SaleItemTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SalePoso">
+    <Key>
+      <PropertyRef Name="SlsID" />
+      <PropertyRef Name="SaleSectionID" />
+      <PropertyRef Name="LignNr" />
+    </Key>
+    <Property Name="SlsID" Type="Int32" Nullable="false" />
+    <Property Name="SaleSectionID" Type="Int32" Nullable="false" />
+    <Property Name="LignNr" Type="Int32" Nullable="false" />
+    <Property Name="text" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SaleItems" Relationship="Self.FK_SalePoso_SaleItem" FromRole="SalePoso" ToRole="SaleItems" />
+  </EntityType>
+  <EntityType Name="Sales">
+    <Key>
+      <PropertyRef Name="SlsID" />
+    </Key>
+    <Property Name="SlsID" Type="Int32" Nullable="false" />
+    <Property Name="SaleTicketNr" Type="Int32" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="IsInvoiced" Type="Boolean" Nullable="false" />
+    <Property Name="InvoiceNr" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CustomerID" Type="Int32" />
+    <Property Name="PrintInvoiceDate" Type="DateTime" Precision="3" />
+    <Property Name="DateSale" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="WrkstatCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AmntRebate" Type="Decimal" Precision="30" Scale="2" Nullable="false" />
+    <Property Name="AmntRist" Type="Decimal" Precision="30" Scale="2" Nullable="false" />
+    <Property Name="AmntNetto" Type="Decimal" Precision="30" Scale="2" Nullable="false" />
+    <Property Name="AmntPaid" Type="Decimal" Precision="30" Scale="2" Nullable="false" />
+    <Property Name="CurrencyIsoCodeCust" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsBackofficeMode" Type="Int16" Nullable="false" />
+    <Property Name="TimeSaleStart" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TimeTicketPrinted" Type="DateTime" Precision="3" />
+    <Property Name="GreenockID" Type="Int32" />
+    <NavigationProperty Name="SaleSections" Relationship="Self.FK_HeadPrescp_Sale" FromRole="Sales" ToRole="SaleSections" />
+    <NavigationProperty Name="SaleSections1" Relationship="Self.FK_SaleSections_Sales" FromRole="Sales" ToRole="SaleSections" />
+  </EntityType>
+  <EntityType Name="SaleSections">
+    <Key>
+      <PropertyRef Name="SlsID" />
+      <PropertyRef Name="SsecNr" />
+    </Key>
+    <Property Name="SlsID" Type="Int32" Nullable="false" />
+    <Property Name="SsecNr" Type="Int32" Nullable="false" />
+    <Property Name="SectionType" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PrescriptionNr" Type="Int32" />
+    <Property Name="DateDeliv" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DatePresp" Type="DateTime" Precision="3" />
+    <Property Name="PatID" Type="Int32" />
+    <Property Name="PrescriberID" Type="Int32" />
+    <Property Name="HonUrg" Type="Boolean" />
+    <Property Name="PriceHonUrg" Type="Decimal" Precision="30" Scale="4" />
+    <Property Name="Oxygene" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CertificatSIS" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="RenewalNr" Type="Int32" />
+    <Property Name="InamirizvNrCpy" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="PresbSpecCodeCpy" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="IsTariffing" Type="Boolean" Nullable="false" />
+    <Property Name="DateIsTar" Type="DateTime" Precision="3" />
+    <Property Name="IsWaitingTaroffice" Type="Int16" Nullable="false" />
+    <Property Name="WaittingTarofficeReason" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsBackofficeMode" Type="Int16" Nullable="false" />
+    <Property Name="DateChange" Type="DateTime" Precision="3" />
+    <Property Name="InsrCoverID" Type="Int32" />
+    <Property Name="InsrCoverSecondID" Type="Int32" />
+    <Property Name="IsSisCardMissing" Type="Int16" />
+    <Property Name="DateStartOxygen" Type="DateTime" Precision="3" />
+    <Property Name="DateStopOxygen" Type="DateTime" Precision="3" />
+    <Property Name="FlowOxygen" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="DelivTypeOxygen" Type="Int32" />
+    <Property Name="DailyAmntOxygen" Type="Time" Precision="7" />
+    <Property Name="DatetimeSisRead" Type="DateTime" Precision="3" />
+    <Property Name="DateMaxDeliv" Type="DateTime" Precision="3" />
+    <Property Name="DateMaxReimb" Type="DateTime" Precision="3" />
+    <Property Name="CertificateSeed" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="OttdCheckDigits" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="IsMyCareNetBackup" Type="Int16" />
+    <NavigationProperty Name="SaleItems" Relationship="Self.FK_SaleItems_SaleSections" FromRole="SaleSections" ToRole="SaleItems" />
+    <NavigationProperty Name="Sales" Relationship="Self.FK_HeadPrescp_Sale" FromRole="SaleSections" ToRole="Sales" />
+    <NavigationProperty Name="Sales1" Relationship="Self.FK_SaleSections_Sales" FromRole="SaleSections" ToRole="Sales" />
+  </EntityType>
+  <EntityType Name="SaleSectionType">
+    <Key>
+      <PropertyRef Name="SaleSectionType1" />
+    </Key>
+    <Property Name="SaleSectionType1" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SaleSectionName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SitmHons">
+    <Key>
+      <PropertyRef Name="SlsID" />
+      <PropertyRef Name="SsecNr" />
+      <PropertyRef Name="SitmNr" />
+      <PropertyRef Name="SeqNr" />
+    </Key>
+    <Property Name="SlsID" Type="Int32" Nullable="false" />
+    <Property Name="SsecNr" Type="Int32" Nullable="false" />
+    <Property Name="SitmNr" Type="Int32" Nullable="false" />
+    <Property Name="SeqNr" Type="Int32" Nullable="false" />
+    <Property Name="SitmHonType" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ArtID" Type="Int32" />
+    <Property Name="HonPrice" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="AmntHonThirdpartypaid" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="SaleItems" Relationship="Self.FK_SitmHons_SaleItems" FromRole="SitmHons" ToRole="SaleItems" />
+  </EntityType>
+  <EntityType Name="SitmUbcs">
+    <Key>
+      <PropertyRef Name="SitmUbcYear" />
+      <PropertyRef Name="UbcNr" />
+    </Key>
+    <Property Name="SitmUbcYear" Type="Int32" Nullable="false" />
+    <Property Name="UbcNr" Type="String" MaxLength="16" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SlsID" Type="Int32" Nullable="false" />
+    <Property Name="SsecNr" Type="Int32" Nullable="false" />
+    <Property Name="SitmNr" Type="Int32" Nullable="false" />
+    <Property Name="SitmUbcNr" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="SaleItems" Relationship="Self.fk_lig_vte3" FromRole="SitmUbcs" ToRole="SaleItems" />
+  </EntityType>
+  <EntityType Name="SpecHonCode">
+    <Key>
+      <PropertyRef Name="SpecHonID" />
+    </Key>
+    <Property Name="SpecHonID" Type="Int32" Nullable="false" />
+    <Property Name="SpecHonCode1" Type="Int32" />
+    <Property Name="GreenockID" Type="Int32" />
+    <Property Name="SpecHonName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ReturnAwaitings">
+    <Key>
+      <PropertyRef Name="ReturnAwaitingID" />
+    </Key>
+    <Property Name="ReturnAwaitingID" Type="Int32" Nullable="false" />
+    <Property Name="ReturnType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DateReturn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SupplierID" Type="Int32" />
+    <Property Name="Memo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ArtID" Type="Int32" Nullable="false" />
+    <Property Name="Qty" Type="Int32" Nullable="false" />
+    <Property Name="BuyPricePerUnit" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="DateExpiry" Type="DateTime" Precision="3" />
+    <Property Name="LotNr" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="WrkstatCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProductInOrder">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+      <PropertyRef Name="Date" />
+      <PropertyRef Name="ArtIdCPCL" />
+    </Key>
+    <Property Name="CustomerID" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ArtIdCPCL" Type="Int32" Nullable="false" />
+    <Property Name="CNKNr" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="QtySend" Type="Int32" />
+    <Property Name="OrderNr" Type="Int32" />
+    <Property Name="FreeText" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="GreenockID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="PrgRecupVersion">
+    <Key>
+      <PropertyRef Name="MajorNr" />
+    </Key>
+    <Property Name="MajorNr" Type="Int32" Nullable="false" />
+    <Property Name="MinorNr" Type="Int32" />
+    <Property Name="RevisionNr" Type="Int32" />
+    <Property Name="LastUpgradeDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ProfileLabels">
+    <Key>
+      <PropertyRef Name="ProfileType" />
+      <PropertyRef Name="LangCode" />
+    </Key>
+    <Property Name="ProfileType" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ProfileLabel" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="LangCode" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ProfileTypes" Relationship="Self.fk_profilelabel" FromRole="ProfileLabels" ToRole="ProfileTypes" />
+  </EntityType>
+  <EntityType Name="Actor_Pharmacies">
+    <Key>
+      <PropertyRef Name="PharmID" />
+      <PropertyRef Name="TitulName" />
+      <PropertyRef Name="ImsCode" />
+      <PropertyRef Name="PharmApbNr" />
+      <PropertyRef Name="PharmApbNrSuffix" />
+      <PropertyRef Name="TdpPharmID" />
+      <PropertyRef Name="TarProtVersionNr" />
+      <PropertyRef Name="DateTarProtVersionStart" />
+      <PropertyRef Name="PharmacyName" />
+    </Key>
+    <Property Name="PharmID" Type="Int32" Nullable="false" />
+    <Property Name="TitulName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ImsCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PharmApbNr" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PharmApbNrSuffix" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="InamirizvNr" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="TdpPharmID" Type="Int16" Nullable="false" />
+    <Property Name="EmailTaroffice" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TradeRegstNr" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="PlaceIDTradeRegst" Type="Int32" />
+    <Property Name="ISAcod_perm_db" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="TarProtVersionNr" Type="Int32" Nullable="false" />
+    <Property Name="DateTarProtVersionStart" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="RprrpmNr" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="GroupType" Type="String" MaxLength="7" FixedLength="true" Unicode="false" />
+    <Property Name="GroupID" Type="Int32" />
+    <Property Name="PharmacyName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="PlaceID" Type="Int32" />
+    <Property Name="Phone" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Fax" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="GSM" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LangCode" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="CurrencyIsoCodeCust" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="BarcodeReaderTypes">
+    <Key>
+      <PropertyRef Name="DeviceID" />
+      <PropertyRef Name="ScannerType" />
+    </Key>
+    <Property Name="DeviceID" Type="Int32" Nullable="false" />
+    <Property Name="ScannerType" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Params">
+    <Key>
+      <PropertyRef Name="ParamID" />
+      <PropertyRef Name="MinSecurityLevel" />
+      <PropertyRef Name="IsCentralLocked" />
+    </Key>
+    <Property Name="ParamID" Type="Int32" Nullable="false" />
+    <Property Name="ParamValue" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="ParamValueType" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="MinSecurityLevel" Type="Int32" Nullable="false" />
+    <Property Name="IsCentralLocked" Type="Int16" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_PlaceLabels_Places">
+    <End Role="Places" Type="Self.Places" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PlaceLabels" Type="Self.PlaceLabels" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Places">
+        <PropertyRef Name="PlaceID" />
+      </Principal>
+      <Dependent Role="PlaceLabels">
+        <PropertyRef Name="PlaceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ArtNames_Articles">
+    <End Role="Articles" Type="Self.Articles" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ArtNames" Type="Self.ArtNames" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articles">
+        <PropertyRef Name="ArtIdCPCL" />
+      </Principal>
+      <Dependent Role="ArtNames">
+        <PropertyRef Name="ArtIdCPCL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChemicalNames_Chemicals">
+    <End Role="Chemicals" Type="Self.Chemicals" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ChemicalNames" Type="Self.ChemicalNames" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chemicals">
+        <PropertyRef Name="ArtIdCPCL" />
+      </Principal>
+      <Dependent Role="ChemicalNames">
+        <PropertyRef Name="ArtIdCPCL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HvtNames_Hvts">
+    <End Role="Hvts" Type="Self.Hvts" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="HvtNames" Type="Self.HvtNames" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hvts">
+        <PropertyRef Name="ArtHvtID" />
+      </Principal>
+      <Dependent Role="HvtNames">
+        <PropertyRef Name="ArtIdCPCL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HvtQtyPrices_Hvts">
+    <End Role="Hvts" Type="Self.Hvts" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="HvtQtyPrices" Type="Self.HvtQtyPrices" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hvts">
+        <PropertyRef Name="ArtHvtID" />
+      </Principal>
+      <Dependent Role="HvtQtyPrices">
+        <PropertyRef Name="ArtHvtID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LabelEditorLocs_Warehouses">
+    <End Role="Warehouses" Type="Self.Warehouses" Multiplicity="1" />
+    <End Role="LabelEditorLocs" Type="Self.LabelEditorLocs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Warehouses">
+        <PropertyRef Name="WarehouseCode" />
+      </Principal>
+      <Dependent Role="LabelEditorLocs">
+        <PropertyRef Name="WarehouseCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LocalizationStock_Localization">
+    <End Role="Localization" Type="Self.Localization" Multiplicity="1" />
+    <End Role="LocalizationStock" Type="Self.LocalizationStock" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localization">
+        <PropertyRef Name="LocalizationCode" />
+      </Principal>
+      <Dependent Role="LocalizationStock">
+        <PropertyRef Name="LocalisationCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ParameterLabels_ParameterTypes">
+    <End Role="ParameterTypes" Type="Self.ParameterTypes" Multiplicity="1" />
+    <End Role="ParameterLabels" Type="Self.ParameterLabels" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterTypes">
+        <PropertyRef Name="ParameterType" />
+      </Principal>
+      <Dependent Role="ParameterLabels">
+        <PropertyRef Name="ParameterType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PharmDocDataLabels_PharmDocDatas">
+    <End Role="PharmDocDatas" Type="Self.PharmDocDatas" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PharmDocDataLabels" Type="Self.PharmDocDataLabels" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PharmDocDatas">
+        <PropertyRef Name="PharmID" />
+        <PropertyRef Name="PharmaDocType" />
+      </Principal>
+      <Dependent Role="PharmDocDataLabels">
+        <PropertyRef Name="PharmID" />
+        <PropertyRef Name="PharmaDocType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Profileroles">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Profiles" Type="Self.Profiles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="Profiles">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_profiletype">
+    <End Role="ProfileTypes" Type="Self.ProfileTypes" Multiplicity="1" />
+    <End Role="Profiles" Type="Self.Profiles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProfileTypes">
+        <PropertyRef Name="ProfileType" />
+      </Principal>
+      <Dependent Role="Profiles">
+        <PropertyRef Name="ProfileType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_profilelabel">
+    <End Role="ProfileTypes" Type="Self.ProfileTypes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ProfileLabels" Type="Self.ProfileLabels" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProfileTypes">
+        <PropertyRef Name="ProfileType" />
+      </Principal>
+      <Dependent Role="ProfileLabels">
+        <PropertyRef Name="ProfileType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_rolelabel">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="RoleLabels" Type="Self.RoleLabels" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="RoleLabels">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Users_Roles">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TaskGroupLabels_TaskGroupTypes">
+    <End Role="TaskGroupTypes" Type="Self.TaskGroupTypes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TaskGroupLabels" Type="Self.TaskGroupLabels" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaskGroupTypes">
+        <PropertyRef Name="GroupType" />
+      </Principal>
+      <Dependent Role="TaskGroupLabels">
+        <PropertyRef Name="GroupType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TaskTypes_TaskGroupTypes">
+    <End Role="TaskGroupTypes" Type="Self.TaskGroupTypes" Multiplicity="1" />
+    <End Role="TaskTypes" Type="Self.TaskTypes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaskGroupTypes">
+        <PropertyRef Name="GroupType" />
+      </Principal>
+      <Dependent Role="TaskTypes">
+        <PropertyRef Name="GroupType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TaskLabels_TaskTypes">
+    <End Role="TaskTypes" Type="Self.TaskTypes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TaskLabels" Type="Self.TaskLabels" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaskTypes">
+        <PropertyRef Name="TaskType" />
+      </Principal>
+      <Dependent Role="TaskLabels">
+        <PropertyRef Name="TaskType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ToVerifyLabel_ToVerify">
+    <End Role="ToVerify" Type="Self.ToVerify" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ToVerifyLabel" Type="Self.ToVerifyLabel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ToVerify">
+        <PropertyRef Name="ToVerifyID" />
+      </Principal>
+      <Dependent Role="ToVerifyLabel">
+        <PropertyRef Name="ToVerifyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Emails_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="UserEmails" Type="Self.UserEmails" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="UserEmails">
+        <PropertyRef Name="UID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WhLocationLabels_WhLocs">
+    <End Role="WhLocs" Type="Self.WhLocs" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="WhLocationLabels" Type="Self.WhLocationLabels" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WhLocs">
+        <PropertyRef Name="WhLocId" />
+      </Principal>
+      <Dependent Role="WhLocationLabels">
+        <PropertyRef Name="WhLocId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkstationBackups_WorkstationDevices">
+    <End Role="WorkstationDevices" Type="Self.WorkstationDevices" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="WrkstatBackups" Type="Self.WrkstatBackups" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="WorkstationDevices">
+        <PropertyRef Name="WrkstatDeviceID" />
+      </Principal>
+      <Dependent Role="WrkstatBackups">
+        <PropertyRef Name="WrkstatDeviceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkstationCashDrawers_WorkstationDevices">
+    <End Role="WorkstationDevices" Type="Self.WorkstationDevices" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="WrkstatCashDrawers" Type="Self.WrkstatCashDrawers" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="WorkstationDevices">
+        <PropertyRef Name="WrkstatDeviceID" />
+      </Principal>
+      <Dependent Role="WrkstatCashDrawers">
+        <PropertyRef Name="WrkstatDeviceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkstationDevices_Workstations">
+    <End Role="Workstations" Type="Self.Workstations" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="WorkstationDevices" Type="Self.WorkstationDevices" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Workstations">
+        <PropertyRef Name="WrkstatCode" />
+      </Principal>
+      <Dependent Role="WorkstationDevices">
+        <PropertyRef Name="WrkstatCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkstationEfts_WorkstationDevices">
+    <End Role="WorkstationDevices" Type="Self.WorkstationDevices" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="WrkstatEfts" Type="Self.WrkstatEfts" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="WorkstationDevices">
+        <PropertyRef Name="WrkstatDeviceID" />
+      </Principal>
+      <Dependent Role="WrkstatEfts">
+        <PropertyRef Name="WrkstatDeviceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkstationEidReaders_WorkstationDevices">
+    <End Role="WorkstationDevices" Type="Self.WorkstationDevices" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="WrkstatEidReaders" Type="Self.WrkstatEidReaders" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="WorkstationDevices">
+        <PropertyRef Name="WrkstatDeviceID" />
+      </Principal>
+      <Dependent Role="WrkstatEidReaders">
+        <PropertyRef Name="WrkstatDeviceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkstationModems_WorkstationDevices">
+    <End Role="WorkstationDevices" Type="Self.WorkstationDevices" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="WrkstatModems" Type="Self.WrkstatModems" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="WorkstationDevices">
+        <PropertyRef Name="WrkstatDeviceID" />
+      </Principal>
+      <Dependent Role="WrkstatModems">
+        <PropertyRef Name="WrkstatDeviceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkstationPrinters_WorkstationDevices">
+    <End Role="WorkstationDevices" Type="Self.WorkstationDevices" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="WrkstatPrinters" Type="Self.WrkstatPrinters" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="WorkstationDevices">
+        <PropertyRef Name="WrkstatDeviceID" />
+      </Principal>
+      <Dependent Role="WrkstatPrinters">
+        <PropertyRef Name="WrkstatDeviceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkstationRobots_WorkstationDevices">
+    <End Role="WorkstationDevices" Type="Self.WorkstationDevices" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="WrkstatRobots" Type="Self.WrkstatRobots" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="WorkstationDevices">
+        <PropertyRef Name="WrkstatDeviceID" />
+      </Principal>
+      <Dependent Role="WrkstatRobots">
+        <PropertyRef Name="WrkstatDeviceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkstationScreens_WorkstationDevices">
+    <End Role="WorkstationDevices" Type="Self.WorkstationDevices" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="WrkstatScreens" Type="Self.WrkstatScreens" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="WorkstationDevices">
+        <PropertyRef Name="WrkstatDeviceID" />
+      </Principal>
+      <Dependent Role="WrkstatScreens">
+        <PropertyRef Name="WrkstatDeviceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkstationSisReaders_WorkstationDevices">
+    <End Role="WorkstationDevices" Type="Self.WorkstationDevices" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="WrkstatSisReaders" Type="Self.WrkstatSisReaders" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="WorkstationDevices">
+        <PropertyRef Name="WrkstatDeviceID" />
+      </Principal>
+      <Dependent Role="WrkstatSisReaders">
+        <PropertyRef Name="WrkstatDeviceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FormulaItems_Formulas">
+    <End Role="Formulas" Type="Self.Formulas" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="FormulaItems" Type="Self.FormulaItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Formulas">
+        <PropertyRef Name="FormID" />
+      </Principal>
+      <Dependent Role="FormulaItems">
+        <PropertyRef Name="FormID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FormulaLabels_Formulas">
+    <End Role="Formulas" Type="Self.Formulas" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="FormulaLabels" Type="Self.FormulaLabels" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Formulas">
+        <PropertyRef Name="FormID" />
+      </Principal>
+      <Dependent Role="FormulaLabels">
+        <PropertyRef Name="FormID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WithdDeps_WithdDepTypes">
+    <End Role="WithdDepTypes" Type="Self.WithdDepTypes" Multiplicity="1" />
+    <End Role="WithdDeps" Type="Self.WithdDeps" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WithdDepTypes">
+        <PropertyRef Name="WithdDepCode" />
+      </Principal>
+      <Dependent Role="WithdDeps">
+        <PropertyRef Name="WithdDepCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MagItems_Magistrals">
+    <End Role="Magistrals" Type="Self.Magistrals" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="MagItems" Type="Self.MagItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Magistrals">
+        <PropertyRef Name="MagistralID" />
+      </Principal>
+      <Dependent Role="MagItems">
+        <PropertyRef Name="MagistralID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SaleItems_Magistrals">
+    <End Role="Magistrals" Type="Self.Magistrals" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SaleItems" Type="Self.SaleItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Magistrals">
+        <PropertyRef Name="MagistralID" />
+      </Principal>
+      <Dependent Role="SaleItems">
+        <PropertyRef Name="MagistralID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_lig_vte3">
+    <End Role="SaleItems" Type="Self.SaleItems" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SitmUbcs" Type="Self.SitmUbcs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SaleItems">
+        <PropertyRef Name="SlsID" />
+        <PropertyRef Name="SsecNr" />
+        <PropertyRef Name="SitmNr" />
+      </Principal>
+      <Dependent Role="SitmUbcs">
+        <PropertyRef Name="SlsID" />
+        <PropertyRef Name="SsecNr" />
+        <PropertyRef Name="SitmNr" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SaleItems_SaleSections">
+    <End Role="SaleSections" Type="Self.SaleSections" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SaleItems" Type="Self.SaleItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SaleSections">
+        <PropertyRef Name="SlsID" />
+        <PropertyRef Name="SsecNr" />
+      </Principal>
+      <Dependent Role="SaleItems">
+        <PropertyRef Name="SlsID" />
+        <PropertyRef Name="SsecNr" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SalePoso_SaleItem">
+    <End Role="SaleItems" Type="Self.SaleItems" Multiplicity="1" />
+    <End Role="SalePoso" Type="Self.SalePoso" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="SaleItems">
+        <PropertyRef Name="SlsID" />
+        <PropertyRef Name="SsecNr" />
+        <PropertyRef Name="SitmNr" />
+      </Principal>
+      <Dependent Role="SalePoso">
+        <PropertyRef Name="SlsID" />
+        <PropertyRef Name="SaleSectionID" />
+        <PropertyRef Name="LignNr" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SitmHons_SaleItems">
+    <End Role="SaleItems" Type="Self.SaleItems" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SitmHons" Type="Self.SitmHons" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SaleItems">
+        <PropertyRef Name="SlsID" />
+        <PropertyRef Name="SsecNr" />
+        <PropertyRef Name="SitmNr" />
+      </Principal>
+      <Dependent Role="SitmHons">
+        <PropertyRef Name="SlsID" />
+        <PropertyRef Name="SsecNr" />
+        <PropertyRef Name="SitmNr" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HeadPrescp_Sale">
+    <End Role="Sales" Type="Self.Sales" Multiplicity="1" />
+    <End Role="SaleSections" Type="Self.SaleSections" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sales">
+        <PropertyRef Name="SlsID" />
+      </Principal>
+      <Dependent Role="SaleSections">
+        <PropertyRef Name="SlsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SaleSections_Sales">
+    <End Role="Sales" Type="Self.Sales" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SaleSections" Type="Self.SaleSections" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sales">
+        <PropertyRef Name="SlsID" />
+      </Principal>
+      <Dependent Role="SaleSections">
+        <PropertyRef Name="SlsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CPCLEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Allergies" EntityType="Self.Allergies" />
+    <EntitySet Name="Attestations" EntityType="Self.Attestations" />
+    <EntitySet Name="Credit" EntityType="Self.Credit" />
+    <EntitySet Name="Customers" EntityType="Self.Customers" />
+    <EntitySet Name="InsrCovers" EntityType="Self.InsrCovers" />
+    <EntitySet Name="Parameter" EntityType="Self.Parameter" />
+    <EntitySet Name="Pathologies" EntityType="Self.Pathologies" />
+    <EntitySet Name="Patients" EntityType="Self.Patients" />
+    <EntitySet Name="Pharmacies" EntityType="Self.Pharmacies" />
+    <EntitySet Name="PlaceLabels" EntityType="Self.PlaceLabels" />
+    <EntitySet Name="Places" EntityType="Self.Places" />
+    <EntitySet Name="Prescribers" EntityType="Self.Prescribers" />
+    <EntitySet Name="RistCards" EntityType="Self.RistCards" />
+    <EntitySet Name="RistCardsAccounts" EntityType="Self.RistCardsAccounts" />
+    <EntitySet Name="Suppliers" EntityType="Self.Suppliers" />
+    <EntitySet Name="Articles" EntityType="Self.Articles" />
+    <EntitySet Name="ArtNames" EntityType="Self.ArtNames" />
+    <EntitySet Name="ChemicalNames" EntityType="Self.ChemicalNames" />
+    <EntitySet Name="Chemicals" EntityType="Self.Chemicals" />
+    <EntitySet Name="HvtNames" EntityType="Self.HvtNames" />
+    <EntitySet Name="HvtQtyPrices" EntityType="Self.HvtQtyPrices" />
+    <EntitySet Name="Hvts" EntityType="Self.Hvts" />
+    <EntitySet Name="IdealStockThresholds" EntityType="Self.IdealStockThresholds" />
+    <EntitySet Name="LabelEditorArticles" EntityType="Self.LabelEditorArticles" />
+    <EntitySet Name="LabelEditorLocs" EntityType="Self.LabelEditorLocs" />
+    <EntitySet Name="Localization" EntityType="Self.Localization" />
+    <EntitySet Name="LocalizationStock" EntityType="Self.LocalizationStock" />
+    <EntitySet Name="MultidoseLinks" EntityType="Self.MultidoseLinks" />
+    <EntitySet Name="Peremption" EntityType="Self.Peremption" />
+    <EntitySet Name="Statistic" EntityType="Self.Statistic" />
+    <EntitySet Name="StockLog" EntityType="Self.StockLog" />
+    <EntitySet Name="Stocks" EntityType="Self.Stocks" />
+    <EntitySet Name="TherapUses" EntityType="Self.TherapUses" />
+    <EntitySet Name="Warehouses" EntityType="Self.Warehouses" />
+    <EntitySet Name="AppVersions" EntityType="Self.AppVersions" />
+    <EntitySet Name="ComplementaryMention" EntityType="Self.ComplementaryMention" />
+    <EntitySet Name="Counters" EntityType="Self.Counters" />
+    <EntitySet Name="Country" EntityType="Self.Country" />
+    <EntitySet Name="CPCLParamValues" EntityType="Self.CPCLParamValues" />
+    <EntitySet Name="CPCLTables" EntityType="Self.CPCLTables" />
+    <EntitySet Name="CustRistGroupLabels" EntityType="Self.CustRistGroupLabels" />
+    <EntitySet Name="CustRistGroups" EntityType="Self.CustRistGroups" />
+    <EntitySet Name="GenderCode" EntityType="Self.GenderCode" />
+    <EntitySet Name="GreenockUsers" EntityType="Self.GreenockUsers" />
+    <EntitySet Name="MagType" EntityType="Self.MagType" />
+    <EntitySet Name="OldSoftTableNames" EntityType="Self.OldSoftTableNames" />
+    <EntitySet Name="ParameterLabels" EntityType="Self.ParameterLabels" />
+    <EntitySet Name="ParameterTypes" EntityType="Self.ParameterTypes" />
+    <EntitySet Name="PaymMethods" EntityType="Self.PaymMethods" />
+    <EntitySet Name="PharmDocDataLabels" EntityType="Self.PharmDocDataLabels" />
+    <EntitySet Name="PharmDocDatas" EntityType="Self.PharmDocDatas" />
+    <EntitySet Name="Profiles" EntityType="Self.Profiles" />
+    <EntitySet Name="ProfileTypes" EntityType="Self.ProfileTypes" />
+    <EntitySet Name="Registration" EntityType="Self.Registration" />
+    <EntitySet Name="RegulationType" EntityType="Self.RegulationType" />
+    <EntitySet Name="RoleLabels" EntityType="Self.RoleLabels" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" />
+    <EntitySet Name="TaskGroupLabels" EntityType="Self.TaskGroupLabels" />
+    <EntitySet Name="TaskGroupTypes" EntityType="Self.TaskGroupTypes" />
+    <EntitySet Name="TaskLabels" EntityType="Self.TaskLabels" />
+    <EntitySet Name="TaskTypes" EntityType="Self.TaskTypes" />
+    <EntitySet Name="ToVerify" EntityType="Self.ToVerify" />
+    <EntitySet Name="ToVerifyLabel" EntityType="Self.ToVerifyLabel" />
+    <EntitySet Name="Trace" EntityType="Self.Trace" />
+    <EntitySet Name="TransactionType" EntityType="Self.TransactionType" />
+    <EntitySet Name="TypeNote" EntityType="Self.TypeNote" />
+    <EntitySet Name="UnitCode" EntityType="Self.UnitCode" />
+    <EntitySet Name="UserEmails" EntityType="Self.UserEmails" />
+    <EntitySet Name="Users" EntityType="Self.Users" />
+    <EntitySet Name="Version" EntityType="Self.Version" />
+    <EntitySet Name="Note" EntityType="Self.Note" />
+    <EntitySet Name="CustRistGroupLabels1" EntityType="Self.CustRistGroupLabels1" />
+    <EntitySet Name="CustRistGroups1" EntityType="Self.CustRistGroups1" />
+    <EntitySet Name="MarginTypes" EntityType="Self.MarginTypes" />
+    <EntitySet Name="Registers" EntityType="Self.Registers" />
+    <EntitySet Name="RistCustArticles" EntityType="Self.RistCustArticles" />
+    <EntitySet Name="RistCustRistGroups" EntityType="Self.RistCustRistGroups" />
+    <EntitySet Name="RistCustRules" EntityType="Self.RistCustRules" />
+    <EntitySet Name="RistPatRistGroups" EntityType="Self.RistPatRistGroups" />
+    <EntitySet Name="UrlTypes" EntityType="Self.UrlTypes" />
+    <EntitySet Name="WhLocationLabels" EntityType="Self.WhLocationLabels" />
+    <EntitySet Name="WhLocs" EntityType="Self.WhLocs" />
+    <EntitySet Name="WorkstationDevices" EntityType="Self.WorkstationDevices" />
+    <EntitySet Name="Workstations" EntityType="Self.Workstations" />
+    <EntitySet Name="WrkstatBackups" EntityType="Self.WrkstatBackups" />
+    <EntitySet Name="WrkstatBarcodeReaders" EntityType="Self.WrkstatBarcodeReaders" />
+    <EntitySet Name="WrkstatCashDrawers" EntityType="Self.WrkstatCashDrawers" />
+    <EntitySet Name="WrkstatEfts" EntityType="Self.WrkstatEfts" />
+    <EntitySet Name="WrkstatEidReaders" EntityType="Self.WrkstatEidReaders" />
+    <EntitySet Name="WrkstatModems" EntityType="Self.WrkstatModems" />
+    <EntitySet Name="WrkstatPaperScans" EntityType="Self.WrkstatPaperScans" />
+    <EntitySet Name="WrkstatPrinters" EntityType="Self.WrkstatPrinters" />
+    <EntitySet Name="WrkstatRobots" EntityType="Self.WrkstatRobots" />
+    <EntitySet Name="WrkstatScreens" EntityType="Self.WrkstatScreens" />
+    <EntitySet Name="WrkstatSisReaders" EntityType="Self.WrkstatSisReaders" />
+    <EntitySet Name="Analysis" EntityType="Self.Analysis" />
+    <EntitySet Name="FormulaItems" EntityType="Self.FormulaItems" />
+    <EntitySet Name="FormulaLabels" EntityType="Self.FormulaLabels" />
+    <EntitySet Name="Formulas" EntityType="Self.Formulas" />
+    <EntitySet Name="InvCatBreakds" EntityType="Self.InvCatBreakds" />
+    <EntitySet Name="PaymEftBreakds" EntityType="Self.PaymEftBreakds" />
+    <EntitySet Name="PaymMethodBreakds" EntityType="Self.PaymMethodBreakds" />
+    <EntitySet Name="PaymMethodLabels" EntityType="Self.PaymMethodLabels" />
+    <EntitySet Name="PaymMethods1" EntityType="Self.PaymMethods1" />
+    <EntitySet Name="Registers1" EntityType="Self.Registers1" />
+    <EntitySet Name="RegSessions" EntityType="Self.RegSessions" />
+    <EntitySet Name="RegTransactions" EntityType="Self.RegTransactions" />
+    <EntitySet Name="WithdDeps" EntityType="Self.WithdDeps" />
+    <EntitySet Name="WithdDepTypes" EntityType="Self.WithdDepTypes" />
+    <EntitySet Name="Magistrals" EntityType="Self.Magistrals" />
+    <EntitySet Name="MagItems" EntityType="Self.MagItems" />
+    <EntitySet Name="RistCardsRists" EntityType="Self.RistCardsRists" />
+    <EntitySet Name="SaleItems" EntityType="Self.SaleItems" />
+    <EntitySet Name="SaleItemType" EntityType="Self.SaleItemType" />
+    <EntitySet Name="SalePoso" EntityType="Self.SalePoso" />
+    <EntitySet Name="Sales" EntityType="Self.Sales" />
+    <EntitySet Name="SaleSections" EntityType="Self.SaleSections" />
+    <EntitySet Name="SaleSectionType" EntityType="Self.SaleSectionType" />
+    <EntitySet Name="SitmHons" EntityType="Self.SitmHons" />
+    <EntitySet Name="SitmUbcs" EntityType="Self.SitmUbcs" />
+    <EntitySet Name="SpecHonCode" EntityType="Self.SpecHonCode" />
+    <EntitySet Name="ReturnAwaitings" EntityType="Self.ReturnAwaitings" />
+    <EntitySet Name="ProductInOrder" EntityType="Self.ProductInOrder" />
+    <EntitySet Name="PrgRecupVersion" EntityType="Self.PrgRecupVersion" />
+    <EntitySet Name="ProfileLabels" EntityType="Self.ProfileLabels" />
+    <EntitySet Name="Actor_Pharmacies" EntityType="Self.Actor_Pharmacies" />
+    <EntitySet Name="BarcodeReaderTypes" EntityType="Self.BarcodeReaderTypes" />
+    <EntitySet Name="Params" EntityType="Self.Params" />
+    <AssociationSet Name="FK_PlaceLabels_Places" Association="Self.FK_PlaceLabels_Places">
+      <End Role="Places" EntitySet="Places" />
+      <End Role="PlaceLabels" EntitySet="PlaceLabels" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ArtNames_Articles" Association="Self.FK_ArtNames_Articles">
+      <End Role="Articles" EntitySet="Articles" />
+      <End Role="ArtNames" EntitySet="ArtNames" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChemicalNames_Chemicals" Association="Self.FK_ChemicalNames_Chemicals">
+      <End Role="Chemicals" EntitySet="Chemicals" />
+      <End Role="ChemicalNames" EntitySet="ChemicalNames" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HvtNames_Hvts" Association="Self.FK_HvtNames_Hvts">
+      <End Role="Hvts" EntitySet="Hvts" />
+      <End Role="HvtNames" EntitySet="HvtNames" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HvtQtyPrices_Hvts" Association="Self.FK_HvtQtyPrices_Hvts">
+      <End Role="Hvts" EntitySet="Hvts" />
+      <End Role="HvtQtyPrices" EntitySet="HvtQtyPrices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LabelEditorLocs_Warehouses" Association="Self.FK_LabelEditorLocs_Warehouses">
+      <End Role="Warehouses" EntitySet="Warehouses" />
+      <End Role="LabelEditorLocs" EntitySet="LabelEditorLocs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LocalizationStock_Localization" Association="Self.FK_LocalizationStock_Localization">
+      <End Role="Localization" EntitySet="Localization" />
+      <End Role="LocalizationStock" EntitySet="LocalizationStock" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ParameterLabels_ParameterTypes" Association="Self.FK_ParameterLabels_ParameterTypes">
+      <End Role="ParameterTypes" EntitySet="ParameterTypes" />
+      <End Role="ParameterLabels" EntitySet="ParameterLabels" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PharmDocDataLabels_PharmDocDatas" Association="Self.FK_PharmDocDataLabels_PharmDocDatas">
+      <End Role="PharmDocDatas" EntitySet="PharmDocDatas" />
+      <End Role="PharmDocDataLabels" EntitySet="PharmDocDataLabels" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Profileroles" Association="Self.fk_Profileroles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Profiles" EntitySet="Profiles" />
+    </AssociationSet>
+    <AssociationSet Name="fk_profiletype" Association="Self.fk_profiletype">
+      <End Role="ProfileTypes" EntitySet="ProfileTypes" />
+      <End Role="Profiles" EntitySet="Profiles" />
+    </AssociationSet>
+    <AssociationSet Name="fk_profilelabel" Association="Self.fk_profilelabel">
+      <End Role="ProfileTypes" EntitySet="ProfileTypes" />
+      <End Role="ProfileLabels" EntitySet="ProfileLabels" />
+    </AssociationSet>
+    <AssociationSet Name="fk_rolelabel" Association="Self.fk_rolelabel">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="RoleLabels" EntitySet="RoleLabels" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Users_Roles" Association="Self.fk_Users_Roles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TaskGroupLabels_TaskGroupTypes" Association="Self.FK_TaskGroupLabels_TaskGroupTypes">
+      <End Role="TaskGroupTypes" EntitySet="TaskGroupTypes" />
+      <End Role="TaskGroupLabels" EntitySet="TaskGroupLabels" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TaskTypes_TaskGroupTypes" Association="Self.FK_TaskTypes_TaskGroupTypes">
+      <End Role="TaskGroupTypes" EntitySet="TaskGroupTypes" />
+      <End Role="TaskTypes" EntitySet="TaskTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TaskLabels_TaskTypes" Association="Self.FK_TaskLabels_TaskTypes">
+      <End Role="TaskTypes" EntitySet="TaskTypes" />
+      <End Role="TaskLabels" EntitySet="TaskLabels" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ToVerifyLabel_ToVerify" Association="Self.FK_ToVerifyLabel_ToVerify">
+      <End Role="ToVerify" EntitySet="ToVerify" />
+      <End Role="ToVerifyLabel" EntitySet="ToVerifyLabel" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Emails_Users" Association="Self.fk_Emails_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="UserEmails" EntitySet="UserEmails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WhLocationLabels_WhLocs" Association="Self.FK_WhLocationLabels_WhLocs">
+      <End Role="WhLocs" EntitySet="WhLocs" />
+      <End Role="WhLocationLabels" EntitySet="WhLocationLabels" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkstationBackups_WorkstationDevices" Association="Self.FK_WorkstationBackups_WorkstationDevices">
+      <End Role="WorkstationDevices" EntitySet="WorkstationDevices" />
+      <End Role="WrkstatBackups" EntitySet="WrkstatBackups" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkstationCashDrawers_WorkstationDevices" Association="Self.FK_WorkstationCashDrawers_WorkstationDevices">
+      <End Role="WorkstationDevices" EntitySet="WorkstationDevices" />
+      <End Role="WrkstatCashDrawers" EntitySet="WrkstatCashDrawers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkstationDevices_Workstations" Association="Self.FK_WorkstationDevices_Workstations">
+      <End Role="Workstations" EntitySet="Workstations" />
+      <End Role="WorkstationDevices" EntitySet="WorkstationDevices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkstationEfts_WorkstationDevices" Association="Self.FK_WorkstationEfts_WorkstationDevices">
+      <End Role="WorkstationDevices" EntitySet="WorkstationDevices" />
+      <End Role="WrkstatEfts" EntitySet="WrkstatEfts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkstationEidReaders_WorkstationDevices" Association="Self.FK_WorkstationEidReaders_WorkstationDevices">
+      <End Role="WorkstationDevices" EntitySet="WorkstationDevices" />
+      <End Role="WrkstatEidReaders" EntitySet="WrkstatEidReaders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkstationModems_WorkstationDevices" Association="Self.FK_WorkstationModems_WorkstationDevices">
+      <End Role="WorkstationDevices" EntitySet="WorkstationDevices" />
+      <End Role="WrkstatModems" EntitySet="WrkstatModems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkstationPrinters_WorkstationDevices" Association="Self.FK_WorkstationPrinters_WorkstationDevices">
+      <End Role="WorkstationDevices" EntitySet="WorkstationDevices" />
+      <End Role="WrkstatPrinters" EntitySet="WrkstatPrinters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkstationRobots_WorkstationDevices" Association="Self.FK_WorkstationRobots_WorkstationDevices">
+      <End Role="WorkstationDevices" EntitySet="WorkstationDevices" />
+      <End Role="WrkstatRobots" EntitySet="WrkstatRobots" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkstationScreens_WorkstationDevices" Association="Self.FK_WorkstationScreens_WorkstationDevices">
+      <End Role="WorkstationDevices" EntitySet="WorkstationDevices" />
+      <End Role="WrkstatScreens" EntitySet="WrkstatScreens" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkstationSisReaders_WorkstationDevices" Association="Self.FK_WorkstationSisReaders_WorkstationDevices">
+      <End Role="WorkstationDevices" EntitySet="WorkstationDevices" />
+      <End Role="WrkstatSisReaders" EntitySet="WrkstatSisReaders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FormulaItems_Formulas" Association="Self.FK_FormulaItems_Formulas">
+      <End Role="Formulas" EntitySet="Formulas" />
+      <End Role="FormulaItems" EntitySet="FormulaItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FormulaLabels_Formulas" Association="Self.FK_FormulaLabels_Formulas">
+      <End Role="Formulas" EntitySet="Formulas" />
+      <End Role="FormulaLabels" EntitySet="FormulaLabels" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WithdDeps_WithdDepTypes" Association="Self.FK_WithdDeps_WithdDepTypes">
+      <End Role="WithdDepTypes" EntitySet="WithdDepTypes" />
+      <End Role="WithdDeps" EntitySet="WithdDeps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MagItems_Magistrals" Association="Self.FK_MagItems_Magistrals">
+      <End Role="Magistrals" EntitySet="Magistrals" />
+      <End Role="MagItems" EntitySet="MagItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SaleItems_Magistrals" Association="Self.FK_SaleItems_Magistrals">
+      <End Role="Magistrals" EntitySet="Magistrals" />
+      <End Role="SaleItems" EntitySet="SaleItems" />
+    </AssociationSet>
+    <AssociationSet Name="fk_lig_vte3" Association="Self.fk_lig_vte3">
+      <End Role="SaleItems" EntitySet="SaleItems" />
+      <End Role="SitmUbcs" EntitySet="SitmUbcs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SaleItems_SaleSections" Association="Self.FK_SaleItems_SaleSections">
+      <End Role="SaleSections" EntitySet="SaleSections" />
+      <End Role="SaleItems" EntitySet="SaleItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SalePoso_SaleItem" Association="Self.FK_SalePoso_SaleItem">
+      <End Role="SaleItems" EntitySet="SaleItems" />
+      <End Role="SalePoso" EntitySet="SalePoso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SitmHons_SaleItems" Association="Self.FK_SitmHons_SaleItems">
+      <End Role="SaleItems" EntitySet="SaleItems" />
+      <End Role="SitmHons" EntitySet="SitmHons" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HeadPrescp_Sale" Association="Self.FK_HeadPrescp_Sale">
+      <End Role="Sales" EntitySet="Sales" />
+      <End Role="SaleSections" EntitySet="SaleSections" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SaleSections_Sales" Association="Self.FK_SaleSections_Sales">
+      <End Role="Sales" EntitySet="Sales" />
+      <End Role="SaleSections" EntitySet="SaleSections" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Farmad.Store" Provider="FirebirdSql.Data.FirebirdClient" ProviderManifestToken="2005" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="FTBADRESSEN">
+    <Key>
+      <PropertyRef Name="A_UID" />
+    </Key>
+    <Property Name="A_UID" Type="int" Nullable="false" />
+    <Property Name="A_OBJECTNUMMER" Type="int" />
+    <Property Name="A_KAMERNUMMER" Type="varchar" MaxLength="6" Unicode="true" />
+    <Property Name="A_STRAAT" Type="varchar" MaxLength="80" Unicode="true" />
+    <Property Name="A_LAND" Type="varchar" MaxLength="40" Unicode="true" />
+    <Property Name="A_PC_ID" Type="int" />
+    <Property Name="A_TYPE" Type="varchar" MaxLength="40" Unicode="true" />
+    <Property Name="A_ISFACTURATIEADRES" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="A_OBJECT_TYPE" Type="char" MaxLength="1" Unicode="false" />
+  </EntityType>
+  <EntityType Name="FTBKLANTEN">
+    <Key>
+      <PropertyRef Name="K_KLANTNUMMER" />
+    </Key>
+    <Property Name="K_KLANTNUMMER" Type="int" Nullable="false" />
+    <Property Name="K_FAMILIENAAM" Type="varchar" MaxLength="40" Unicode="true" />
+    <Property Name="K_VOORNAAM" Type="varchar" MaxLength="40" Unicode="true" />
+    <Property Name="K_ARTSNUMMER" Type="int" />
+    <Property Name="K_704" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="K_AFSCHRIFT" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="K_LAATSTE_BEZOEK" Type="date" />
+    <Property Name="K_SOUNDEX" Type="char" MaxLength="4" Unicode="false" />
+    <Property Name="K_RIJKSWACHT" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="K_DOSSIERNUMMER" Type="varchar" MaxLength="40" Unicode="true" />
+    <Property Name="K_WGID" Type="int" />
+    <Property Name="K_IS_DUMMY" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="K_ZOEK" Type="varchar" MaxLength="40" Unicode="true" />
+    <Property Name="K_FACTGROEP" Type="int" />
+    <Property Name="K_EERSTE_AFLEV" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="K_INTER_TONEN" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="K_POS_TONEN" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="K_EMAIL_ADRES" Type="varchar" MaxLength="50" Unicode="true" />
+    <Property Name="K_HEEFT_KREDIET" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="K_BTWNUMMER" Type="varchar" MaxLength="50" Unicode="true" />
+    <Property Name="K_HEEFT_UNIX_KREDIET" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="K_GESCHRAPT" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="K_KSID" Type="int" />
+    <Property Name="K_VOL_NAAM" Type="varchar" MaxLength="32765" Unicode="true" StoreGeneratedPattern="Computed" />
+    <Property Name="K_ISVETERINAIR" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="K_TAALCODE" Type="varchar" MaxLength="2" Unicode="true" />
+    <Property Name="K_GEBRUIKT_KORTTABEL" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="K_FAMILIE_ID" Type="int" />
+    <Property Name="K_SPAARKAARTID" Type="char" MaxLength="13" Unicode="false" />
+    <Property Name="K_INSZ" Type="char" MaxLength="11" Unicode="false" />
+    <Property Name="K_TAAL_CBL" Type="varchar" MaxLength="2" Unicode="true" />
+    <Property Name="K_MUT2_SOORT" Type="int" />
+    <Property Name="K_MUT2_STAMNUMMER" Type="varchar" MaxLength="20" Unicode="true" />
+    <Property Name="K_MEDSEINVOORKEUR" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="K_GEENKORTING" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="K_SCHEMAID" Type="int" />
+    <Property Name="K_GEENPROMO" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="K_VOLNAAM" Type="varchar" MaxLength="32765" Unicode="true" StoreGeneratedPattern="Computed" />
+    <Property Name="K_KORTINGSPERCENT" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="K_DEFAULT_ADRES_ID" Type="int" />
+    <Property Name="K_TEKST" Type="clob" Unicode="true" />
+    <Property Name="K_NEWKSID" Type="int" />
+    <Property Name="K_UDROBOT" Type="varchar" MaxLength="1" Unicode="true" Nullable="false" />
+    <Property Name="K_EXTSTOCK" Type="varchar" MaxLength="1" Unicode="true" Nullable="false" />
+    <Property Name="K_DIABETES_NIETMEERTONEN" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="K_LEEFGROEP" Type="char" MaxLength="20" Unicode="false" Nullable="false" />
+    <Property Name="K_CONTACTNR" Type="char" MaxLength="12" Unicode="false" />
+    <Property Name="K_OVERLEDEN" Type="varchar" MaxLength="1" Unicode="true" Nullable="false" />
+    <Property Name="K_OVERLEDEN_DATUM" Type="date" />
+    <Property Name="K_EMAIL_ADRES_GEBRUIKEN" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="K_EMAIL_ADRES2" Type="varchar" MaxLength="50" Unicode="true" />
+    <Property Name="K_EMAIL_ADRES2_GEBRUIKEN" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="K_PARASTATAAL" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="K_DEFAULT_TEL_ID" Type="int" />
+    <Property Name="K_MUT2_CAT" Type="char" MaxLength="3" Unicode="false" />
+    <Property Name="K_GFD_CONSENT" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="K_MST_GEDETAILLEERD_OVERZICHT" Type="int" />
+    <Property Name="K_MST_DAGSCHEMA" Type="int" />
+    <Property Name="K_MST_DAGSCHEMA_WEEK" Type="int" />
+    <Property Name="K_MST_WEEKSCHEMA" Type="int" />
+    <Property Name="K_MST_MAANDSCHEMA" Type="int" />
+    <Property Name="K_PASSANT" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="K_KORTVERBLIJVER" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="K_CONSENTREFUSEDON" Type="timestamp" />
+  </EntityType>
+  <EntityType Name="FTBKLANTSIS">
+    <Key>
+      <PropertyRef Name="KS_ID" />
+    </Key>
+    <Property Name="KS_ID" Type="int" Nullable="false" />
+    <Property Name="KS_KLANTNUMMER" Type="int" />
+    <Property Name="KS_MUT" Type="int" />
+    <Property Name="KS_CG1" Type="char" MaxLength="3" Unicode="false" />
+    <Property Name="KS_CG2" Type="char" MaxLength="3" Unicode="false" />
+    <Property Name="KS_CATEGORIE" Type="varchar" MaxLength="3" Unicode="true" />
+    <Property Name="KS_STAMNUMMER" Type="varchar" MaxLength="20" Unicode="true" />
+    <Property Name="KS_SIS_GELEZEN" Type="date" />
+    <Property Name="KS_NR_SIS" Type="char" MaxLength="10" Unicode="false" />
+    <Property Name="KS_VERSIE_VERZ" Type="char" MaxLength="2" Unicode="false" />
+    <Property Name="KS_CERTIFICAAT" Type="char" MaxLength="32" Unicode="false" />
+    <Property Name="KS_SISGELDIGHEID" Type="date" />
+    <Property Name="KS_SISLEZERID" Type="int" />
+    <Property Name="KS_GESLACHT" Type="smallint" />
+    <Property Name="KS_GEBOORTEDATUM" Type="date" />
+    <Property Name="KS_FAMILIENAAM" Type="varchar" MaxLength="48" Unicode="true" />
+    <Property Name="KS_VOORNAAM" Type="varchar" MaxLength="24" Unicode="true" />
+    <Property Name="KS_VOL_MUT" Type="varchar" MaxLength="32765" Unicode="true" StoreGeneratedPattern="Computed" />
+    <Property Name="KS_CG1CG2" Type="varchar" MaxLength="32765" Unicode="true" StoreGeneratedPattern="Computed" />
+    <Property Name="KS_VOL_NAAM" Type="varchar" MaxLength="32765" Unicode="true" StoreGeneratedPattern="Computed" />
+    <Property Name="KS_ATTEST" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="KS_LEEFTIJD_IN_MND" Type="int" StoreGeneratedPattern="Computed" />
+    <Property Name="KS_CONTACTNR" Type="char" MaxLength="12" Unicode="false" />
+    <Property Name="KS_CONTROLECODE_TD" Type="char" MaxLength="2" Unicode="false" />
+    <Property Name="KS_TYPE" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="KS_DATUM_START" Type="date" />
+    <Property Name="KS_PA_SEED" Type="char" MaxLength="10" Unicode="false" />
+    <Property Name="KS_LEEFTIJD" Type="bigint" StoreGeneratedPattern="Computed" />
+    <Property Name="KS_DATUM_OVERLIJDEN" Type="date" />
+    <Property Name="KS_RIZIVNR_WZC" Type="char" MaxLength="11" Unicode="false" />
+    <Property Name="KS_GEHOSPITALISEERD" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="KS_PHARMA_CHECKDIGIT" Type="char" MaxLength="2" Unicode="false" />
+    <Property Name="KS_INSZ" Type="varchar" MaxLength="40" Unicode="true" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Firebird.Firebird.FTBPOSTCODES' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="FTBPOSTCODES">
+    <Key>
+      <PropertyRef Name="PC_ID" />
+    </Key>
+    <Property Name="PC_ID" Type="int" Nullable="false" />
+    <Property Name="PC_NUMMER" Type="varchar" MaxLength="8" Unicode="true" />
+    <Property Name="PC_GEMEENTE" Type="varchar" MaxLength="40" Unicode="true" />
+    <Property Name="PC_VOL_NAAM" Type="varchar" MaxLength="32765" Unicode="true" StoreGeneratedPattern="Computed" />
+    <Property Name="PC_OCMW_NUMMER" Type="char" MaxLength="3" Unicode="false" />
+  </EntityType>
+  <EntityType Name="FTBTELNUMMERS">
+    <Key>
+      <PropertyRef Name="T_ID" />
+    </Key>
+    <Property Name="T_ID" Type="int" Nullable="false" />
+    <Property Name="T_OBJECTNUMMER" Type="int" />
+    <Property Name="T_TELEFOONNUMMER" Type="varchar" MaxLength="20" Unicode="true" />
+    <Property Name="T_OBJECT_TYPE" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="T_TYPE" Type="varchar" MaxLength="40" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="FarmadStoreContainer">
+    <EntitySet Name="FTBADRESSEN" EntityType="Self.FTBADRESSEN" Schema="Firebird" store:Type="Tables" />
+    <EntitySet Name="FTBKLANTEN" EntityType="Self.FTBKLANTEN" Schema="Firebird" store:Type="Tables" />
+    <EntitySet Name="FTBKLANTSIS" EntityType="Self.FTBKLANTSIS" Schema="Firebird" store:Type="Tables" />
+    <EntitySet Name="FTBTELNUMMERS" EntityType="Self.FTBTELNUMMERS" Schema="Firebird" store:Type="Tables" />
+    <EntitySet Name="FTBPOSTCODES" EntityType="Self.FTBPOSTCODES" store:Type="Tables" store:Schema="Firebird">
+      <DefiningQuery>SELECT 
+"A"."PC_ID" AS "PC_ID", 
+"A"."PC_NUMMER" AS "PC_NUMMER", 
+"A"."PC_GEMEENTE" AS "PC_GEMEENTE", 
+"A"."PC_VOL_NAAM" AS "PC_VOL_NAAM", 
+"A"."PC_OCMW_NUMMER" AS "PC_OCMW_NUMMER"
+FROM "FTBPOSTCODES" AS "A"</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

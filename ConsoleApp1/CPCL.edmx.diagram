@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ec1f4715b1414683a836ace2dea4c9e7" Name="Diagram1">
+        <EntityTypeShape EntityType="CPCLModel.Allergies" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.Attestations" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.Credit" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.Customers" Width="1.5" PointX="0.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.InsrCovers" Width="1.5" PointX="10.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.Parameter" Width="1.5" PointX="7.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.Pathologies" Width="1.5" PointX="0.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.Patients" Width="1.5" PointX="12.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.Pharmacies" Width="1.5" PointX="26.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.PlaceLabels" Width="1.5" PointX="27" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.Places" Width="1.5" PointX="24.75" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.Prescribers" Width="1.5" PointX="26.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.RistCards" Width="1.5" PointX="2.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.RistCardsAccounts" Width="1.5" PointX="23.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.Suppliers" Width="1.5" PointX="28.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.Articles" Width="1.5" PointX="5.75" PointY="26.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.ArtNames" Width="1.5" PointX="8" PointY="28.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.ChemicalNames" Width="1.5" PointX="3" PointY="29.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.Chemicals" Width="1.5" PointX="0.75" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.HvtNames" Width="1.5" PointX="22" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.HvtQtyPrices" Width="1.5" PointX="22" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.Hvts" Width="1.5" PointX="19.75" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.IdealStockThresholds" Width="1.5" PointX="28.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.LabelEditorArticles" Width="1.5" PointX="19.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.LabelEditorLocs" Width="1.5" PointX="27" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.Localization" Width="1.5" PointX="24.75" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.LocalizationStock" Width="1.5" PointX="27" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.MultidoseLinks" Width="1.5" PointX="28.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.Peremption" Width="1.5" PointX="25.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.Statistic" Width="1.5" PointX="28.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.StockLog" Width="1.5" PointX="29.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.Stocks" Width="1.5" PointX="30.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.TherapUses" Width="1.5" PointX="30.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.Warehouses" Width="1.5" PointX="24.75" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.AppVersions" Width="1.5" PointX="30.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.ComplementaryMention" Width="1.5" PointX="30.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.Counters" Width="1.5" PointX="30.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.Country" Width="1.5" PointX="27.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.CPCLParamValues" Width="1.5" PointX="30.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.CPCLTables" Width="1.5" PointX="7.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.CustRistGroupLabels" Width="1.5" PointX="31.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.CustRistGroups" Width="1.5" PointX="31.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.GenderCode" Width="1.5" PointX="31.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.GreenockUsers" Width="1.5" PointX="19.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.MagType" Width="1.5" PointX="21.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.OldSoftTableNames" Width="1.5" PointX="23.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.ParameterLabels" Width="1.5" PointX="24" PointY="24.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.ParameterTypes" Width="1.5" PointX="21.75" PointY="24" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.PaymMethods" Width="1.5" PointX="29.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.PharmDocDataLabels" Width="1.5" PointX="26" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.PharmDocDatas" Width="1.5" PointX="23.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.Profiles" Width="1.5" PointX="17" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.ProfileTypes" Width="1.5" PointX="14.75" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.Registration" Width="1.5" PointX="31.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.RegulationType" Width="1.5" PointX="32.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.RoleLabels" Width="1.5" PointX="17" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.Roles" Width="1.5" PointX="14.75" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.TaskGroupLabels" Width="1.5" PointX="19" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.TaskGroupTypes" Width="1.5" PointX="16.75" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.TaskLabels" Width="1.5" PointX="21.25" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.TaskTypes" Width="1.5" PointX="19" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.ToVerify" Width="1.5" PointX="19.75" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.ToVerifyLabel" Width="1.5" PointX="22" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.Trace" Width="1.5" PointX="2.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.TransactionType" Width="1.5" PointX="32.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.TypeNote" Width="1.5" PointX="32.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.UnitCode" Width="1.5" PointX="9.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.UserEmails" Width="1.5" PointX="19.25" PointY="23.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.Users" Width="1.5" PointX="17" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.Version" Width="1.5" PointX="14.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.Note" Width="1.5" PointX="16.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.CustRistGroupLabels1" Width="1.5" PointX="32.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.CustRistGroups1" Width="1.5" PointX="32.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.MarginTypes" Width="1.5" PointX="32.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.Registers" Width="1.5" PointX="33.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.RistCustArticles" Width="1.5" PointX="33.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.RistCustRistGroups" Width="1.5" PointX="33.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.RistCustRules" Width="1.5" PointX="25.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.RistPatRistGroups" Width="1.5" PointX="33.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.UrlTypes" Width="1.5" PointX="33.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.WhLocationLabels" Width="1.5" PointX="24" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.WhLocs" Width="1.5" PointX="21.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.WorkstationDevices" Width="1.5" PointX="3" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.Workstations" Width="1.5" PointX="0.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.WrkstatBackups" Width="1.5" PointX="5.25" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.WrkstatBarcodeReaders" Width="1.5" PointX="34.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.WrkstatCashDrawers" Width="1.5" PointX="5.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.WrkstatEfts" Width="1.5" PointX="5.25" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.WrkstatEidReaders" Width="1.5" PointX="5.25" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.WrkstatModems" Width="1.5" PointX="5.25" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.WrkstatPaperScans" Width="1.5" PointX="34.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.WrkstatPrinters" Width="1.5" PointX="5.25" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.WrkstatRobots" Width="1.5" PointX="5.25" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.WrkstatScreens" Width="1.5" PointX="5.25" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.WrkstatSisReaders" Width="1.5" PointX="5.25" PointY="22" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.Analysis" Width="1.5" PointX="4.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.FormulaItems" Width="1.5" PointX="19" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.FormulaLabels" Width="1.5" PointX="19" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.Formulas" Width="1.5" PointX="16.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.InvCatBreakds" Width="1.5" PointX="6.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.PaymEftBreakds" Width="1.5" PointX="11.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.PaymMethodBreakds" Width="1.5" PointX="18.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.PaymMethodLabels" Width="1.5" PointX="34.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.PaymMethods1" Width="1.5" PointX="34.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.Registers1" Width="1.5" PointX="20.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.RegSessions" Width="1.5" PointX="22.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.RegTransactions" Width="1.5" PointX="34.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.WithdDeps" Width="1.5" PointX="24" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.WithdDepTypes" Width="1.5" PointX="21.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.Magistrals" Width="1.5" PointX="10" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.MagItems" Width="1.5" PointX="12.25" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.RistCardsRists" Width="1.5" PointX="27.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.SaleItems" Width="1.5" PointX="12.25" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.SaleItemType" Width="1.5" PointX="8.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.SalePoso" Width="1.5" PointX="14.5" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.Sales" Width="1.5" PointX="7.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.SaleSections" Width="1.5" PointX="10" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.SaleSectionType" Width="1.5" PointX="35.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.SitmHons" Width="1.5" PointX="14.5" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.SitmUbcs" Width="1.5" PointX="14.5" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.SpecHonCode" Width="1.5" PointX="35.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.ReturnAwaitings" Width="1.5" PointX="13.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.ProductInOrder" Width="1.5" PointX="35.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.PrgRecupVersion" Width="1.5" PointX="15.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.ProfileLabels" Width="1.5" PointX="17" PointY="29.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.Actor_Pharmacies" Width="1.5" PointX="35.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.BarcodeReaderTypes" Width="1.5" PointX="29.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CPCLModel.Params" Width="1.5" PointX="36.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="CPCLModel.FK_PlaceLabels_Places" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.FK_ArtNames_Articles" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.FK_ChemicalNames_Chemicals" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.FK_HvtNames_Hvts" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.FK_HvtQtyPrices_Hvts" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.FK_LabelEditorLocs_Warehouses" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.FK_LocalizationStock_Localization" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.FK_ParameterLabels_ParameterTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.FK_PharmDocDataLabels_PharmDocDatas" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.fk_Profileroles" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.fk_profiletype" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.fk_profilelabel" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.fk_rolelabel" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.fk_Users_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.FK_TaskGroupLabels_TaskGroupTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.FK_TaskTypes_TaskGroupTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.FK_TaskLabels_TaskTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.FK_ToVerifyLabel_ToVerify" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.fk_Emails_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.FK_WhLocationLabels_WhLocs" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.FK_WorkstationBackups_WorkstationDevices" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.FK_WorkstationCashDrawers_WorkstationDevices" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.FK_WorkstationDevices_Workstations" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.FK_WorkstationEfts_WorkstationDevices" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.FK_WorkstationEidReaders_WorkstationDevices" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.FK_WorkstationModems_WorkstationDevices" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.FK_WorkstationPrinters_WorkstationDevices" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.FK_WorkstationRobots_WorkstationDevices" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.FK_WorkstationScreens_WorkstationDevices" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.FK_WorkstationSisReaders_WorkstationDevices" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.FK_FormulaItems_Formulas" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.FK_FormulaLabels_Formulas" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.FK_WithdDeps_WithdDepTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.FK_MagItems_Magistrals" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.FK_SaleItems_Magistrals" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.fk_lig_vte3" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.FK_SaleItems_SaleSections" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.FK_SalePoso_SaleItem" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.FK_SitmHons_SaleItems" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.FK_HeadPrescp_Sale" ManuallyRouted="false" />
+        <AssociationConnector Association="CPCLModel.FK_SaleSections_Sales" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
+  <Alias Key="Model" Value="Farmad" />
+  <Alias Key="Target" Value="Farmad.Store" />
+  <EntityContainerMapping CdmEntityContainer="FarmadContainer" StorageEntityContainer="FarmadStoreContainer">
+    <EntitySetMapping Name="FTBADRESSEN">
+      <EntityTypeMapping TypeName="Farmad.FTBADRESSEN">
+        <MappingFragment StoreEntitySet="FTBADRESSEN">
+          <ScalarProperty Name="A_OBJECT_TYPE" ColumnName="A_OBJECT_TYPE" />
+          <ScalarProperty Name="A_ISFACTURATIEADRES" ColumnName="A_ISFACTURATIEADRES" />
+          <ScalarProperty Name="A_TYPE" ColumnName="A_TYPE" />
+          <ScalarProperty Name="A_PC_ID" ColumnName="A_PC_ID" />
+          <ScalarProperty Name="A_LAND" ColumnName="A_LAND" />
+          <ScalarProperty Name="A_STRAAT" ColumnName="A_STRAAT" />
+          <ScalarProperty Name="A_KAMERNUMMER" ColumnName="A_KAMERNUMMER" />
+          <ScalarProperty Name="A_OBJECTNUMMER" ColumnName="A_OBJECTNUMMER" />
+          <ScalarProperty Name="A_UID" ColumnName="A_UID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FTBKLANTEN">
+      <EntityTypeMapping TypeName="Farmad.FTBKLANTEN">
+        <MappingFragment StoreEntitySet="FTBKLANTEN">
+          <ScalarProperty Name="K_CONSENTREFUSEDON" ColumnName="K_CONSENTREFUSEDON" />
+          <ScalarProperty Name="K_KORTVERBLIJVER" ColumnName="K_KORTVERBLIJVER" />
+          <ScalarProperty Name="K_PASSANT" ColumnName="K_PASSANT" />
+          <ScalarProperty Name="K_MST_MAANDSCHEMA" ColumnName="K_MST_MAANDSCHEMA" />
+          <ScalarProperty Name="K_MST_WEEKSCHEMA" ColumnName="K_MST_WEEKSCHEMA" />
+          <ScalarProperty Name="K_MST_DAGSCHEMA_WEEK" ColumnName="K_MST_DAGSCHEMA_WEEK" />
+          <ScalarProperty Name="K_MST_DAGSCHEMA" ColumnName="K_MST_DAGSCHEMA" />
+          <ScalarProperty Name="K_MST_GEDETAILLEERD_OVERZICHT" ColumnName="K_MST_GEDETAILLEERD_OVERZICHT" />
+          <ScalarProperty Name="K_GFD_CONSENT" ColumnName="K_GFD_CONSENT" />
+          <ScalarProperty Name="K_MUT2_CAT" ColumnName="K_MUT2_CAT" />
+          <ScalarProperty Name="K_DEFAULT_TEL_ID" ColumnName="K_DEFAULT_TEL_ID" />
+          <ScalarProperty Name="K_PARASTATAAL" ColumnName="K_PARASTATAAL" />
+          <ScalarProperty Name="K_EMAIL_ADRES2_GEBRUIKEN" ColumnName="K_EMAIL_ADRES2_GEBRUIKEN" />
+          <ScalarProperty Name="K_EMAIL_ADRES2" ColumnName="K_EMAIL_ADRES2" />
+          <ScalarProperty Name="K_EMAIL_ADRES_GEBRUIKEN" ColumnName="K_EMAIL_ADRES_GEBRUIKEN" />
+          <ScalarProperty Name="K_OVERLEDEN_DATUM" ColumnName="K_OVERLEDEN_DATUM" />
+          <ScalarProperty Name="K_OVERLEDEN" ColumnName="K_OVERLEDEN" />
+          <ScalarProperty Name="K_CONTACTNR" ColumnName="K_CONTACTNR" />
+          <ScalarProperty Name="K_LEEFGROEP" ColumnName="K_LEEFGROEP" />
+          <ScalarProperty Name="K_DIABETES_NIETMEERTONEN" ColumnName="K_DIABETES_NIETMEERTONEN" />
+          <ScalarProperty Name="K_EXTSTOCK" ColumnName="K_EXTSTOCK" />
+          <ScalarProperty Name="K_UDROBOT" ColumnName="K_UDROBOT" />
+          <ScalarProperty Name="K_NEWKSID" ColumnName="K_NEWKSID" />
+          <ScalarProperty Name="K_TEKST" ColumnName="K_TEKST" />
+          <ScalarProperty Name="K_DEFAULT_ADRES_ID" ColumnName="K_DEFAULT_ADRES_ID" />
+          <ScalarProperty Name="K_KORTINGSPERCENT" ColumnName="K_KORTINGSPERCENT" />
+          <ScalarProperty Name="K_VOLNAAM" ColumnName="K_VOLNAAM" />
+          <ScalarProperty Name="K_GEENPROMO" ColumnName="K_GEENPROMO" />
+          <ScalarProperty Name="K_SCHEMAID" ColumnName="K_SCHEMAID" />
+          <ScalarProperty Name="K_GEENKORTING" ColumnName="K_GEENKORTING" />
+          <ScalarProperty Name="K_MEDSEINVOORKEUR" ColumnName="K_MEDSEINVOORKEUR" />
+          <ScalarProperty Name="K_MUT2_STAMNUMMER" ColumnName="K_MUT2_STAMNUMMER" />
+          <ScalarProperty Name="K_MUT2_SOORT" ColumnName="K_MUT2_SOORT" />
+          <ScalarProperty Name="K_TAAL_CBL" ColumnName="K_TAAL_CBL" />
+          <ScalarProperty Name="K_INSZ" ColumnName="K_INSZ" />
+          <ScalarProperty Name="K_SPAARKAARTID" ColumnName="K_SPAARKAARTID" />
+          <ScalarProperty Name="K_FAMILIE_ID" ColumnName="K_FAMILIE_ID" />
+          <ScalarProperty Name="K_GEBRUIKT_KORTTABEL" ColumnName="K_GEBRUIKT_KORTTABEL" />
+          <ScalarProperty Name="K_TAALCODE" ColumnName="K_TAALCODE" />
+          <ScalarProperty Name="K_ISVETERINAIR" ColumnName="K_ISVETERINAIR" />
+          <ScalarProperty Name="K_VOL_NAAM" ColumnName="K_VOL_NAAM" />
+          <ScalarProperty Name="K_KSID" ColumnName="K_KSID" />
+          <ScalarProperty Name="K_GESCHRAPT" ColumnName="K_GESCHRAPT" />
+          <ScalarProperty Name="K_HEEFT_UNIX_KREDIET" ColumnName="K_HEEFT_UNIX_KREDIET" />
+          <ScalarProperty Name="K_BTWNUMMER" ColumnName="K_BTWNUMMER" />
+          <ScalarProperty Name="K_HEEFT_KREDIET" ColumnName="K_HEEFT_KREDIET" />
+          <ScalarProperty Name="K_EMAIL_ADRES" ColumnName="K_EMAIL_ADRES" />
+          <ScalarProperty Name="K_POS_TONEN" ColumnName="K_POS_TONEN" />
+          <ScalarProperty Name="K_INTER_TONEN" ColumnName="K_INTER_TONEN" />
+          <ScalarProperty Name="K_EERSTE_AFLEV" ColumnName="K_EERSTE_AFLEV" />
+          <ScalarProperty Name="K_FACTGROEP" ColumnName="K_FACTGROEP" />
+          <ScalarProperty Name="K_ZOEK" ColumnName="K_ZOEK" />
+          <ScalarProperty Name="K_IS_DUMMY" ColumnName="K_IS_DUMMY" />
+          <ScalarProperty Name="K_WGID" ColumnName="K_WGID" />
+          <ScalarProperty Name="K_DOSSIERNUMMER" ColumnName="K_DOSSIERNUMMER" />
+          <ScalarProperty Name="K_RIJKSWACHT" ColumnName="K_RIJKSWACHT" />
+          <ScalarProperty Name="K_SOUNDEX" ColumnName="K_SOUNDEX" />
+          <ScalarProperty Name="K_LAATSTE_BEZOEK" ColumnName="K_LAATSTE_BEZOEK" />
+          <ScalarProperty Name="K_AFSCHRIFT" ColumnName="K_AFSCHRIFT" />
+          <ScalarProperty Name="K_704" ColumnName="K_704" />
+          <ScalarProperty Name="K_ARTSNUMMER" ColumnName="K_ARTSNUMMER" />
+          <ScalarProperty Name="K_VOORNAAM" ColumnName="K_VOORNAAM" />
+          <ScalarProperty Name="K_FAMILIENAAM" ColumnName="K_FAMILIENAAM" />
+          <ScalarProperty Name="K_KLANTNUMMER" ColumnName="K_KLANTNUMMER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FTBKLANTSIS">
+      <EntityTypeMapping TypeName="Farmad.FTBKLANTSIS">
+        <MappingFragment StoreEntitySet="FTBKLANTSIS">
+          <ScalarProperty Name="KS_INSZ" ColumnName="KS_INSZ" />
+          <ScalarProperty Name="KS_PHARMA_CHECKDIGIT" ColumnName="KS_PHARMA_CHECKDIGIT" />
+          <ScalarProperty Name="KS_GEHOSPITALISEERD" ColumnName="KS_GEHOSPITALISEERD" />
+          <ScalarProperty Name="KS_RIZIVNR_WZC" ColumnName="KS_RIZIVNR_WZC" />
+          <ScalarProperty Name="KS_DATUM_OVERLIJDEN" ColumnName="KS_DATUM_OVERLIJDEN" />
+          <ScalarProperty Name="KS_LEEFTIJD" ColumnName="KS_LEEFTIJD" />
+          <ScalarProperty Name="KS_PA_SEED" ColumnName="KS_PA_SEED" />
+          <ScalarProperty Name="KS_DATUM_START" ColumnName="KS_DATUM_START" />
+          <ScalarProperty Name="KS_TYPE" ColumnName="KS_TYPE" />
+          <ScalarProperty Name="KS_CONTROLECODE_TD" ColumnName="KS_CONTROLECODE_TD" />
+          <ScalarProperty Name="KS_CONTACTNR" ColumnName="KS_CONTACTNR" />
+          <ScalarProperty Name="KS_LEEFTIJD_IN_MND" ColumnName="KS_LEEFTIJD_IN_MND" />
+          <ScalarProperty Name="KS_ATTEST" ColumnName="KS_ATTEST" />
+          <ScalarProperty Name="KS_VOL_NAAM" ColumnName="KS_VOL_NAAM" />
+          <ScalarProperty Name="KS_CG1CG2" ColumnName="KS_CG1CG2" />
+          <ScalarProperty Name="KS_VOL_MUT" ColumnName="KS_VOL_MUT" />
+          <ScalarProperty Name="KS_VOORNAAM" ColumnName="KS_VOORNAAM" />
+          <ScalarProperty Name="KS_FAMILIENAAM" ColumnName="KS_FAMILIENAAM" />
+          <ScalarProperty Name="KS_GEBOORTEDATUM" ColumnName="KS_GEBOORTEDATUM" />
+          <ScalarProperty Name="KS_GESLACHT" ColumnName="KS_GESLACHT" />
+          <ScalarProperty Name="KS_SISLEZERID" ColumnName="KS_SISLEZERID" />
+          <ScalarProperty Name="KS_SISGELDIGHEID" ColumnName="KS_SISGELDIGHEID" />
+          <ScalarProperty Name="KS_CERTIFICAAT" ColumnName="KS_CERTIFICAAT" />
+          <ScalarProperty Name="KS_VERSIE_VERZ" ColumnName="KS_VERSIE_VERZ" />
+          <ScalarProperty Name="KS_NR_SIS" ColumnName="KS_NR_SIS" />
+          <ScalarProperty Name="KS_SIS_GELEZEN" ColumnName="KS_SIS_GELEZEN" />
+          <ScalarProperty Name="KS_STAMNUMMER" ColumnName="KS_STAMNUMMER" />
+          <ScalarProperty Name="KS_CATEGORIE" ColumnName="KS_CATEGORIE" />
+          <ScalarProperty Name="KS_CG2" ColumnName="KS_CG2" />
+          <ScalarProperty Name="KS_CG1" ColumnName="KS_CG1" />
+          <ScalarProperty Name="KS_MUT" ColumnName="KS_MUT" />
+          <ScalarProperty Name="KS_KLANTNUMMER" ColumnName="KS_KLANTNUMMER" />
+          <ScalarProperty Name="KS_ID" ColumnName="KS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FTBTELNUMMERS">
+      <EntityTypeMapping TypeName="Farmad.FTBTELNUMMERS">
+        <MappingFragment StoreEntitySet="FTBTELNUMMERS">
+          <ScalarProperty Name="T_TYPE" ColumnName="T_TYPE" />
+          <ScalarProperty Name="T_OBJECT_TYPE" ColumnName="T_OBJECT_TYPE" />
+          <ScalarProperty Name="T_TELEFOONNUMMER" ColumnName="T_TELEFOONNUMMER" />
+          <ScalarProperty Name="T_OBJECTNUMMER" ColumnName="T_OBJECTNUMMER" />
+          <ScalarProperty Name="T_ID" ColumnName="T_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FTBPOSTCODES">
+      <EntityTypeMapping TypeName="Farmad.FTBPOSTCODES">
+        <MappingFragment StoreEntitySet="FTBPOSTCODES">
+          <ScalarProperty Name="PC_OCMW_NUMMER" ColumnName="PC_OCMW_NUMMER" />
+          <ScalarProperty Name="PC_VOL_NAAM" ColumnName="PC_VOL_NAAM" />
+          <ScalarProperty Name="PC_GEMEENTE" ColumnName="PC_GEMEENTE" />
+          <ScalarProperty Name="PC_NUMMER" ColumnName="PC_NUMMER" />
+          <ScalarProperty Name="PC_ID" ColumnName="PC_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

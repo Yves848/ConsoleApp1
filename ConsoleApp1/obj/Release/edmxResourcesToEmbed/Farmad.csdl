@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Farmad" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="FarmadContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="FTBADRESSEN" EntityType="Farmad.FTBADRESSEN" />
+    <EntitySet Name="FTBKLANTEN" EntityType="Farmad.FTBKLANTEN" />
+    <EntitySet Name="FTBKLANTSIS" EntityType="Farmad.FTBKLANTSIS" />
+    <EntitySet Name="FTBTELNUMMERS" EntityType="Farmad.FTBTELNUMMERS" />
+    <EntitySet Name="FTBPOSTCODES" EntityType="Farmad.FTBPOSTCODES" />
+  </EntityContainer>
+  <EntityType Name="FTBADRESSEN">
+    <Key>
+      <PropertyRef Name="A_UID" />
+    </Key>
+    <Property Name="A_UID" Type="Int32" Nullable="false" />
+    <Property Name="A_OBJECTNUMMER" Type="Int32" />
+    <Property Name="A_KAMERNUMMER" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="A_STRAAT" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="A_LAND" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="A_PC_ID" Type="Int32" />
+    <Property Name="A_TYPE" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="A_ISFACTURATIEADRES" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="A_OBJECT_TYPE" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="FTBKLANTEN">
+    <Key>
+      <PropertyRef Name="K_KLANTNUMMER" />
+    </Key>
+    <Property Name="K_KLANTNUMMER" Type="Int32" Nullable="false" />
+    <Property Name="K_FAMILIENAAM" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="K_VOORNAAM" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="K_ARTSNUMMER" Type="Int32" />
+    <Property Name="K_704" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_AFSCHRIFT" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_LAATSTE_BEZOEK" Type="DateTime" />
+    <Property Name="K_SOUNDEX" Type="String" MaxLength="4" FixedLength="true" Unicode="true" />
+    <Property Name="K_RIJKSWACHT" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_DOSSIERNUMMER" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="K_WGID" Type="Int32" />
+    <Property Name="K_IS_DUMMY" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_ZOEK" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="K_FACTGROEP" Type="Int32" />
+    <Property Name="K_EERSTE_AFLEV" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="K_INTER_TONEN" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="K_POS_TONEN" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="K_EMAIL_ADRES" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="K_HEEFT_KREDIET" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_BTWNUMMER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="K_HEEFT_UNIX_KREDIET" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_GESCHRAPT" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_KSID" Type="Int32" />
+    <Property Name="K_VOL_NAAM" Type="String" MaxLength="32765" FixedLength="false" Unicode="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="K_ISVETERINAIR" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_TAALCODE" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="K_GEBRUIKT_KORTTABEL" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_FAMILIE_ID" Type="Int32" />
+    <Property Name="K_SPAARKAARTID" Type="String" MaxLength="13" FixedLength="true" Unicode="true" />
+    <Property Name="K_INSZ" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
+    <Property Name="K_TAAL_CBL" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="K_MUT2_SOORT" Type="Int32" />
+    <Property Name="K_MUT2_STAMNUMMER" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="K_MEDSEINVOORKEUR" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="K_GEENKORTING" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_SCHEMAID" Type="Int32" />
+    <Property Name="K_GEENPROMO" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_VOLNAAM" Type="String" MaxLength="32765" FixedLength="false" Unicode="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="K_KORTINGSPERCENT" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="K_DEFAULT_ADRES_ID" Type="Int32" />
+    <Property Name="K_TEKST" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="K_NEWKSID" Type="Int32" />
+    <Property Name="K_UDROBOT" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_EXTSTOCK" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_DIABETES_NIETMEERTONEN" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_LEEFGROEP" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="K_CONTACTNR" Type="String" MaxLength="12" FixedLength="true" Unicode="true" />
+    <Property Name="K_OVERLEDEN" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_OVERLEDEN_DATUM" Type="DateTime" />
+    <Property Name="K_EMAIL_ADRES_GEBRUIKEN" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_EMAIL_ADRES2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="K_EMAIL_ADRES2_GEBRUIKEN" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_PARASTATAAL" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_DEFAULT_TEL_ID" Type="Int32" />
+    <Property Name="K_MUT2_CAT" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
+    <Property Name="K_GFD_CONSENT" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="K_MST_GEDETAILLEERD_OVERZICHT" Type="Int32" />
+    <Property Name="K_MST_DAGSCHEMA" Type="Int32" />
+    <Property Name="K_MST_DAGSCHEMA_WEEK" Type="Int32" />
+    <Property Name="K_MST_WEEKSCHEMA" Type="Int32" />
+    <Property Name="K_MST_MAANDSCHEMA" Type="Int32" />
+    <Property Name="K_PASSANT" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_KORTVERBLIJVER" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="K_CONSENTREFUSEDON" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="FTBKLANTSIS">
+    <Key>
+      <PropertyRef Name="KS_ID" />
+    </Key>
+    <Property Name="KS_ID" Type="Int32" Nullable="false" />
+    <Property Name="KS_KLANTNUMMER" Type="Int32" />
+    <Property Name="KS_MUT" Type="Int32" />
+    <Property Name="KS_CG1" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
+    <Property Name="KS_CG2" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
+    <Property Name="KS_CATEGORIE" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="KS_STAMNUMMER" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="KS_SIS_GELEZEN" Type="DateTime" />
+    <Property Name="KS_NR_SIS" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="KS_VERSIE_VERZ" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+    <Property Name="KS_CERTIFICAAT" Type="String" MaxLength="32" FixedLength="true" Unicode="true" />
+    <Property Name="KS_SISGELDIGHEID" Type="DateTime" />
+    <Property Name="KS_SISLEZERID" Type="Int32" />
+    <Property Name="KS_GESLACHT" Type="Int16" />
+    <Property Name="KS_GEBOORTEDATUM" Type="DateTime" />
+    <Property Name="KS_FAMILIENAAM" Type="String" MaxLength="48" FixedLength="false" Unicode="true" />
+    <Property Name="KS_VOORNAAM" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
+    <Property Name="KS_VOL_MUT" Type="String" MaxLength="32765" FixedLength="false" Unicode="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="KS_CG1CG2" Type="String" MaxLength="32765" FixedLength="false" Unicode="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="KS_VOL_NAAM" Type="String" MaxLength="32765" FixedLength="false" Unicode="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="KS_ATTEST" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="KS_LEEFTIJD_IN_MND" Type="Int32" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="KS_CONTACTNR" Type="String" MaxLength="12" FixedLength="true" Unicode="true" />
+    <Property Name="KS_CONTROLECODE_TD" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+    <Property Name="KS_TYPE" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="KS_DATUM_START" Type="DateTime" />
+    <Property Name="KS_PA_SEED" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="KS_LEEFTIJD" Type="Int64" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="KS_DATUM_OVERLIJDEN" Type="DateTime" />
+    <Property Name="KS_RIZIVNR_WZC" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
+    <Property Name="KS_GEHOSPITALISEERD" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="KS_PHARMA_CHECKDIGIT" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+    <Property Name="KS_INSZ" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="FTBTELNUMMERS">
+    <Key>
+      <PropertyRef Name="T_ID" />
+    </Key>
+    <Property Name="T_ID" Type="Int32" Nullable="false" />
+    <Property Name="T_OBJECTNUMMER" Type="Int32" />
+    <Property Name="T_TELEFOONNUMMER" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="T_OBJECT_TYPE" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="T_TYPE" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="FTBPOSTCODES">
+    <Key>
+      <PropertyRef Name="PC_ID" />
+    </Key>
+    <Property Name="PC_ID" Type="Int32" Nullable="false" />
+    <Property Name="PC_NUMMER" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="PC_GEMEENTE" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="PC_VOL_NAAM" Type="String" MaxLength="32765" FixedLength="false" Unicode="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="PC_OCMW_NUMMER" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
+  </EntityType>
+</Schema>

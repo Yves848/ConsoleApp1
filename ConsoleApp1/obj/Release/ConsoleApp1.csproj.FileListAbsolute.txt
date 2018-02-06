@@ -1,0 +1,15 @@
+C:\Develop\Convert POC\ConsoleApp1\ConsoleApp1\bin\Release\ConsoleApp1.exe.config
+C:\Develop\Convert POC\ConsoleApp1\ConsoleApp1\bin\Release\ConsoleApp1.exe
+C:\Develop\Convert POC\ConsoleApp1\ConsoleApp1\bin\Release\ConsoleApp1.pdb
+C:\Develop\Convert POC\ConsoleApp1\ConsoleApp1\bin\Release\EntityFramework.dll
+C:\Develop\Convert POC\ConsoleApp1\ConsoleApp1\bin\Release\EntityFramework.Firebird.dll
+C:\Develop\Convert POC\ConsoleApp1\ConsoleApp1\bin\Release\EntityFramework.SqlServer.dll
+C:\Develop\Convert POC\ConsoleApp1\ConsoleApp1\bin\Release\FirebirdSql.Data.FirebirdClient.dll
+C:\Develop\Convert POC\ConsoleApp1\ConsoleApp1\bin\Release\EntityFramework.xml
+C:\Develop\Convert POC\ConsoleApp1\ConsoleApp1\bin\Release\EntityFramework.Firebird.pdb
+C:\Develop\Convert POC\ConsoleApp1\ConsoleApp1\bin\Release\EntityFramework.SqlServer.xml
+C:\Develop\Convert POC\ConsoleApp1\ConsoleApp1\bin\Release\FirebirdSql.Data.FirebirdClient.pdb
+C:\Develop\Convert POC\ConsoleApp1\ConsoleApp1\obj\Release\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Develop\Convert POC\ConsoleApp1\ConsoleApp1\obj\Release\ConsoleApp1.exe
+C:\Develop\Convert POC\ConsoleApp1\ConsoleApp1\obj\Release\ConsoleApp1.pdb
+C:\Develop\Convert POC\ConsoleApp1\ConsoleApp1\obj\Release\ConsoleApp1.csprojResolveAssemblyReference.cache

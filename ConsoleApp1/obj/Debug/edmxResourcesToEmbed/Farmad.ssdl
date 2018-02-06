@@ -1,0 +1,446 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Farmad.Store" Provider="FirebirdSql.Data.FirebirdClient" ProviderManifestToken="2005" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="FTBADRESSEN">
+    <Key>
+      <PropertyRef Name="A_UID" />
+    </Key>
+    <Property Name="A_UID" Type="int" Nullable="false" />
+    <Property Name="A_OBJECTNUMMER" Type="int" />
+    <Property Name="A_KAMERNUMMER" Type="varchar" MaxLength="6" Unicode="true" />
+    <Property Name="A_STRAAT" Type="varchar" MaxLength="80" Unicode="true" />
+    <Property Name="A_LAND" Type="varchar" MaxLength="40" Unicode="true" />
+    <Property Name="A_PC_ID" Type="int" />
+    <Property Name="A_TYPE" Type="varchar" MaxLength="40" Unicode="true" />
+    <Property Name="A_ISFACTURATIEADRES" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="A_OBJECT_TYPE" Type="char" MaxLength="1" Unicode="false" />
+  </EntityType>
+  <EntityType Name="FTBKLANTEN">
+    <Key>
+      <PropertyRef Name="K_KLANTNUMMER" />
+    </Key>
+    <Property Name="K_KLANTNUMMER" Type="int" Nullable="false" />
+    <Property Name="K_FAMILIENAAM" Type="varchar" MaxLength="40" Unicode="true" />
+    <Property Name="K_VOORNAAM" Type="varchar" MaxLength="40" Unicode="true" />
+    <Property Name="K_ARTSNUMMER" Type="int" />
+    <Property Name="K_704" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="K_AFSCHRIFT" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="K_LAATSTE_BEZOEK" Type="date" />
+    <Property Name="K_SOUNDEX" Type="char" MaxLength="4" Unicode="false" />
+    <Property Name="K_RIJKSWACHT" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="K_DOSSIERNUMMER" Type="varchar" MaxLength="40" Unicode="true" />
+    <Property Name="K_WGID" Type="int" />
+    <Property Name="K_IS_DUMMY" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="K_ZOEK" Type="varchar" MaxLength="40" Unicode="true" />
+    <Property Name="K_FACTGROEP" Type="int" />
+    <Property Name="K_EERSTE_AFLEV" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="K_INTER_TONEN" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="K_POS_TONEN" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="K_EMAIL_ADRES" Type="varchar" MaxLength="50" Unicode="true" />
+    <Property Name="K_HEEFT_KREDIET" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="K_BTWNUMMER" Type="varchar" MaxLength="50" Unicode="true" />
+    <Property Name="K_HEEFT_UNIX_KREDIET" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="K_GESCHRAPT" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="K_KSID" Type="int" />
+    <Property Name="K_VOL_NAAM" Type="varchar" MaxLength="32765" Unicode="true" StoreGeneratedPattern="Computed" />
+    <Property Name="K_ISVETERINAIR" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="K_TAALCODE" Type="varchar" MaxLength="2" Unicode="true" />
+    <Property Name="K_GEBRUIKT_KORTTABEL" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="K_FAMILIE_ID" Type="int" />
+    <Property Name="K_SPAARKAARTID" Type="char" MaxLength="13" Unicode="false" />
+    <Property Name="K_INSZ" Type="char" MaxLength="11" Unicode="false" />
+    <Property Name="K_TAAL_CBL" Type="varchar" MaxLength="2" Unicode="true" />
+    <Property Name="K_MUT2_SOORT" Type="int" />
+    <Property Name="K_MUT2_STAMNUMMER" Type="varchar" MaxLength="20" Unicode="true" />
+    <Property Name="K_MEDSEINVOORKEUR" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="K_GEENKORTING" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="K_SCHEMAID" Type="int" />
+    <Property Name="K_GEENPROMO" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="K_VOLNAAM" Type="varchar" MaxLength="32765" Unicode="true" StoreGeneratedPattern="Computed" />
+    <Property Name="K_KORTINGSPERCENT" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="K_DEFAULT_ADRES_ID" Type="int" />
+    <Property Name="K_TEKST" Type="clob" Unicode="true" />
+    <Property Name="K_NEWKSID" Type="int" />
+    <Property Name="K_UDROBOT" Type="varchar" MaxLength="1" Unicode="true" Nullable="false" />
+    <Property Name="K_EXTSTOCK" Type="varchar" MaxLength="1" Unicode="true" Nullable="false" />
+    <Property Name="K_DIABETES_NIETMEERTONEN" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="K_LEEFGROEP" Type="char" MaxLength="20" Unicode="false" Nullable="false" />
+    <Property Name="K_CONTACTNR" Type="char" MaxLength="12" Unicode="false" />
+    <Property Name="K_OVERLEDEN" Type="varchar" MaxLength="1" Unicode="true" Nullable="false" />
+    <Property Name="K_OVERLEDEN_DATUM" Type="date" />
+    <Property Name="K_EMAIL_ADRES_GEBRUIKEN" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="K_EMAIL_ADRES2" Type="varchar" MaxLength="50" Unicode="true" />
+    <Property Name="K_EMAIL_ADRES2_GEBRUIKEN" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="K_PARASTATAAL" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="K_DEFAULT_TEL_ID" Type="int" />
+    <Property Name="K_MUT2_CAT" Type="char" MaxLength="3" Unicode="false" />
+    <Property Name="K_GFD_CONSENT" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="K_MST_GEDETAILLEERD_OVERZICHT" Type="int" />
+    <Property Name="K_MST_DAGSCHEMA" Type="int" />
+    <Property Name="K_MST_DAGSCHEMA_WEEK" Type="int" />
+    <Property Name="K_MST_WEEKSCHEMA" Type="int" />
+    <Property Name="K_MST_MAANDSCHEMA" Type="int" />
+    <Property Name="K_PASSANT" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="K_KORTVERBLIJVER" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="K_CONSENTREFUSEDON" Type="timestamp" />
+  </EntityType>
+  <EntityType Name="FTBKLANTSIS">
+    <Key>
+      <PropertyRef Name="KS_ID" />
+    </Key>
+    <Property Name="KS_ID" Type="int" Nullable="false" />
+    <Property Name="KS_KLANTNUMMER" Type="int" />
+    <Property Name="KS_MUT" Type="int" />
+    <Property Name="KS_CG1" Type="char" MaxLength="3" Unicode="false" />
+    <Property Name="KS_CG2" Type="char" MaxLength="3" Unicode="false" />
+    <Property Name="KS_CATEGORIE" Type="varchar" MaxLength="3" Unicode="true" />
+    <Property Name="KS_STAMNUMMER" Type="varchar" MaxLength="20" Unicode="true" />
+    <Property Name="KS_SIS_GELEZEN" Type="date" />
+    <Property Name="KS_NR_SIS" Type="char" MaxLength="10" Unicode="false" />
+    <Property Name="KS_VERSIE_VERZ" Type="char" MaxLength="2" Unicode="false" />
+    <Property Name="KS_CERTIFICAAT" Type="char" MaxLength="32" Unicode="false" />
+    <Property Name="KS_SISGELDIGHEID" Type="date" />
+    <Property Name="KS_SISLEZERID" Type="int" />
+    <Property Name="KS_GESLACHT" Type="smallint" />
+    <Property Name="KS_GEBOORTEDATUM" Type="date" />
+    <Property Name="KS_FAMILIENAAM" Type="varchar" MaxLength="48" Unicode="true" />
+    <Property Name="KS_VOORNAAM" Type="varchar" MaxLength="24" Unicode="true" />
+    <Property Name="KS_VOL_MUT" Type="varchar" MaxLength="32765" Unicode="true" StoreGeneratedPattern="Computed" />
+    <Property Name="KS_CG1CG2" Type="varchar" MaxLength="32765" Unicode="true" StoreGeneratedPattern="Computed" />
+    <Property Name="KS_VOL_NAAM" Type="varchar" MaxLength="32765" Unicode="true" StoreGeneratedPattern="Computed" />
+    <Property Name="KS_ATTEST" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="KS_LEEFTIJD_IN_MND" Type="int" StoreGeneratedPattern="Computed" />
+    <Property Name="KS_CONTACTNR" Type="char" MaxLength="12" Unicode="false" />
+    <Property Name="KS_CONTROLECODE_TD" Type="char" MaxLength="2" Unicode="false" />
+    <Property Name="KS_TYPE" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="KS_DATUM_START" Type="date" />
+    <Property Name="KS_PA_SEED" Type="char" MaxLength="10" Unicode="false" />
+    <Property Name="KS_LEEFTIJD" Type="bigint" StoreGeneratedPattern="Computed" />
+    <Property Name="KS_DATUM_OVERLIJDEN" Type="date" />
+    <Property Name="KS_RIZIVNR_WZC" Type="char" MaxLength="11" Unicode="false" />
+    <Property Name="KS_GEHOSPITALISEERD" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="KS_PHARMA_CHECKDIGIT" Type="char" MaxLength="2" Unicode="false" />
+    <Property Name="KS_INSZ" Type="varchar" MaxLength="40" Unicode="true" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Firebird.Firebird.FTBPOSTCODES' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="FTBPOSTCODES">
+    <Key>
+      <PropertyRef Name="PC_ID" />
+    </Key>
+    <Property Name="PC_ID" Type="int" Nullable="false" />
+    <Property Name="PC_NUMMER" Type="varchar" MaxLength="8" Unicode="true" />
+    <Property Name="PC_GEMEENTE" Type="varchar" MaxLength="40" Unicode="true" />
+    <Property Name="PC_VOL_NAAM" Type="varchar" MaxLength="32765" Unicode="true" StoreGeneratedPattern="Computed" />
+    <Property Name="PC_OCMW_NUMMER" Type="char" MaxLength="3" Unicode="false" />
+  </EntityType>
+  <EntityType Name="FTBPRODUCTEN">
+    <Key>
+      <PropertyRef Name="P_CNKNUMMER" />
+    </Key>
+    <Property Name="P_CNKNUMMER" Type="char" MaxLength="7" Unicode="false" Nullable="false" />
+    <Property Name="P_PRIJS" Type="numeric" Precision="15" Scale="4" />
+    <Property Name="P_VORIGE_PUBPRIJS" Type="numeric" Precision="15" Scale="4" />
+    <Property Name="P_MAN_BHOEVEELHEID" Type="int" />
+    <Property Name="P_VERKOOPPRIJS" Type="numeric" Precision="15" Scale="4" />
+    <Property Name="P_BTW_VERKOOP" Type="int" />
+    <Property Name="P_KODE_VVD" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="P_DAT_CREATIE" Type="date" />
+    <Property Name="P_SCHRAPDATUM" Type="date" />
+    <Property Name="P_VERVALDATUM" Type="date" />
+    <Property Name="P_TYPE_PRODUCT" Type="smallint" />
+    <Property Name="P_WETTELIJKE_CODE" Type="char" MaxLength="3" Unicode="false" />
+    <Property Name="P_TYPE_VERKPRIJS" Type="smallint" />
+    <Property Name="P_VERKOOPSVORM" Type="varchar" MaxLength="5" Unicode="true" />
+    <Property Name="P_TMBLINK" Type="char" MaxLength="7" Unicode="false" />
+    <Property Name="P_AUTO_BPOLITIEK" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="P_BEWAARCODE" Type="char" MaxLength="3" Unicode="false" />
+    <Property Name="P_VSPLICHTIG" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="P_VERDOVINGSNUMMER" Type="char" MaxLength="7" Unicode="false" />
+    <Property Name="P_APBZEGEL" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="P_VERKOOPHOEV" Type="varchar" MaxLength="5" Unicode="true" />
+    <Property Name="P_EIGENPRODUCT" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="P_IS_KRUID" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="P_IS_STOCKITEM" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="P_UPDATECODE" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="P_DATUM_WIJZ" Type="date" />
+    <Property Name="P_DATUM_PRIJSWIJZ" Type="date" />
+    <Property Name="P_IS_HOSPAK" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="P_BIJSLUITER" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="P_KRITIEKPUNT" Type="int" />
+    <Property Name="P_LEVNUM" Type="int" />
+    <Property Name="P_KRITIEKLEVNUM" Type="int" />
+    <Property Name="P_SCHRAPCODE" Type="smallint" />
+    <Property Name="P_VOORRAADPLAATS" Type="int" />
+    <Property Name="P_GEBRUIKVRAC" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="P_LABO" Type="int" />
+    <Property Name="P_PRODUCTCODE" Type="smallint" />
+    <Property Name="P_BARCODE" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="P_IN_TARIEF" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="P_INBESTELLING" Type="int" />
+    <Property Name="P_IS_VERDOVING" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="P_WACHTKOFFER" Type="int" />
+    <Property Name="P_YFORM" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="P_WMARGE_AANKOOP" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="P_WMARGE_VERKOOP" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="P_REST_CODE" Type="smallint" />
+    <Property Name="P_STOCK_CODE" Type="smallint" />
+    <Property Name="P_HOMEO_AANVAARD" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="P_RECHTSTR_LEVNUM" Type="int" />
+    <Property Name="P_RECHTSTREEKS" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="P_UPDATEFLAGS" Type="int" />
+    <Property Name="P_GEBRUIK_IN_ZOEK" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="P_AANT_MAANDEN" Type="smallint" />
+    <Property Name="P_HOE_VVD" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="P_AANKOOP_PRIJS" Type="numeric" Precision="9" Scale="4" />
+    <Property Name="P_DRAAGT_UBC" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="P_TARINFO" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="P_DOPINGVL" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="P_DOPINGFR" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="P_MAG_IN_ROBOT" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="P_ROBOT_STOCK" Type="int" />
+    <Property Name="P_REFPRIJS" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="P_REGLET" Type="varchar" MaxLength="80" Unicode="true" />
+    <Property Name="P_VERKOOPPRIJS_PERCENT" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="P_GEENKORTING" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="P_TEKST" Type="clob" Unicode="true" />
+    <Property Name="P_IN_WEBSHOP" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="P_TEKST_PRIJSAANDUIDING" Type="clob" Unicode="true" />
+    <Property Name="P_BVAC" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="P_URL" Type="varchar" MaxLength="255" Unicode="true" />
+    <Property Name="P_LEVNUM_DRINGEND" Type="int" />
+    <Property Name="P_KLASSEOVERGANG" Type="int" Nullable="false" />
+    <Property Name="P_AANTAL_DAGEN" Type="int" />
+    <Property Name="P_VERKOOPHOEV_NUM" Type="numeric" Precision="9" Scale="2" Nullable="false" />
+    <Property Name="P_UDROBOT" Type="int" Nullable="false" />
+    <Property Name="P_UNITDOSE" Type="varchar" MaxLength="1" Unicode="true" Nullable="false" />
+    <Property Name="P_GROEPSAANKOOPPRIJS" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="P_GROEPSKORTING_PERCENT" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="P_GROEPSPRIJS_AANPASDATUM" Type="timestamp" />
+    <Property Name="P_MANREX" Type="varchar" MaxLength="1" Unicode="true" Nullable="false" />
+    <Property Name="P_BESTELKLASSE_OPTIMAAL" Type="int" />
+    <Property Name="P_IS_DYNAMISCH" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="P_SUBCAT" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="P_TRANSTD" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="P_IS_07NR" Type="char" MaxLength="32765" Unicode="false" StoreGeneratedPattern="Computed" />
+    <Property Name="P_IS_UDCNK" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="P_AANKOOPPRIJS_UPDATE" Type="numeric" Precision="9" Scale="4" />
+    <Property Name="P_DIABETES" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="P_ORIG" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="P_BRON_PRIJS" Type="int" />
+    <Property Name="P_LAAGSTE_PRIJS" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="P_OP_DOSIS_RPT" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="P_HON_BASIS" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="P_PRIJS_AF" Type="numeric" Precision="10" Scale="4" />
+    <Property Name="P_DATUM_PRIJSDALING" Type="date" />
+    <Property Name="P_RVTPICKLIJSTOPNEMEN" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="P_ACTIEFBESTANDDEEL" Type="double" />
+    <Property Name="P_INHOUD" Type="double" />
+    <Property Name="P_GALVORM_INDEX" Type="int" />
+    <Property Name="P_GEBRUIK" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="P_CATAPB" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="P_IS_BUITENLANDS" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="P_MANUEEL_LOTNUMMER" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="P_RIZIVCLUSTER" Type="int" />
+    <Property Name="P_GOEDKOOP" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="P_SUBST_VERPLICHT" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="P_NOOIT_KLANTSTOCK" Type="varchar" MaxLength="1" Unicode="true" Nullable="false" />
+    <Property Name="P_VOEDINGSSUP" Type="varchar" MaxLength="1" Unicode="true" Nullable="false" />
+    <Property Name="P_BNM" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="P_AP_HUIDIG" Type="numeric" Precision="10" Scale="4" />
+    <Property Name="P_PP_HUIDIG" Type="numeric" Precision="10" Scale="4" />
+    <Property Name="P_AP_TOEK" Type="numeric" Precision="10" Scale="4" />
+    <Property Name="P_PP_TOEK" Type="numeric" Precision="10" Scale="4" />
+    <Property Name="P_TERUGBET_IN_BEREIDING" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="P_IS_VERGUND" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="P_HEEFT_ANALYSECERTIFICAAT" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="P_VERGUNNINGSNUMMER" Type="varchar" MaxLength="30" Unicode="true" />
+    <Property Name="P_VERBOD_VROEDVROUW" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="P_KORTINGSPERCENT_AP" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="P_HOE_AP_UPDATEN" Type="int" />
+    <Property Name="P_KLASSEOVERGANG_VRAAG_KLASSE1" Type="varchar" MaxLength="1" Unicode="true" Nullable="false" />
+    <Property Name="P_WINKELDOCHTERS" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="P_WINKELDOCHTERS_AANTAL" Type="int" />
+    <Property Name="P_WINKELDOCHTERS_DATUMTIJD" Type="timestamp" />
+    <Property Name="P_PIL_ID" Type="char" MaxLength="7" Unicode="false" />
+    <Property Name="P_FORMULARIUM_ROBOT_IMPORT" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="P_GROOTSTE_VERPAK" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="P_COMBI" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="P_VOORDELIGSTE" Type="varchar" MaxLength="1" Unicode="true" />
+  </EntityType>
+  <EntityType Name="FTBPRODUCTSTOCK">
+    <Key>
+      <PropertyRef Name="PS_CNKNUMMER" />
+    </Key>
+    <Property Name="PS_CNKNUMMER" Type="char" MaxLength="7" Unicode="false" Nullable="false" />
+    <Property Name="PS_INSTOCK" Type="int" Nullable="false" />
+    <Property Name="PS_LAATSTVERKOCHT" Type="date" />
+    <Property Name="PS_LAATSTBESTELD" Type="date" />
+    <Property Name="PS_DUBBELESTOCK" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="PS_MIN_APOTHEEK" Type="smallint" />
+    <Property Name="PS_MAX_APOTHEEK" Type="smallint" />
+    <Property Name="PS_BUFFER_STOCK" Type="smallint" />
+    <Property Name="PS_APOTHEEK_STOCK" Type="bigint" StoreGeneratedPattern="Computed" />
+    <Property Name="PS_BESTELPOLITIEK" Type="int" Nullable="false" />
+    <Property Name="PS_BESTELKLASSE" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FTBTELNUMMERS">
+    <Key>
+      <PropertyRef Name="T_ID" />
+    </Key>
+    <Property Name="T_ID" Type="int" Nullable="false" />
+    <Property Name="T_OBJECTNUMMER" Type="int" />
+    <Property Name="T_TELEFOONNUMMER" Type="varchar" MaxLength="20" Unicode="true" />
+    <Property Name="T_OBJECT_TYPE" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="T_TYPE" Type="varchar" MaxLength="40" Unicode="true" />
+  </EntityType>
+  <EntityType Name="FTBVERKOOPITEMS">
+    <Key>
+      <PropertyRef Name="VI_ID" />
+    </Key>
+    <Property Name="VI_ID" Type="int" Nullable="false" />
+    <Property Name="VI_VSNUMMER" Type="int" Nullable="false" />
+    <Property Name="VI_CNKNUMMER" Type="char" MaxLength="7" Unicode="false" Nullable="false" />
+    <Property Name="VI_AANTAL_AFGELEV" Type="smallint" />
+    <Property Name="VI_AANTAL_AFTELEV" Type="smallint" />
+    <Property Name="VI_PUBLIEKSPRIJS" Type="numeric" Precision="15" Scale="4" />
+    <Property Name="VI_REMGELD" Type="numeric" Precision="15" Scale="4" />
+    <Property Name="VI_TEBETALEN" Type="numeric" Precision="15" Scale="4" />
+    <Property Name="VI_RESTORNO" Type="numeric" Precision="9" Scale="4" />
+    <Property Name="VI_KORTING" Type="numeric" Precision="9" Scale="4" />
+    <Property Name="VI_ATTESTID" Type="int" />
+    <Property Name="VI_TERUGBET_CAT" Type="char" MaxLength="4" Unicode="false" />
+    <Property Name="VI_AFLEVERING" Type="char" MaxLength="2" Unicode="false" />
+    <Property Name="VI_ISBETAALD" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="VI_ISVERWERKT" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="VI_ISSPECIAAL" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="VI_CLASSNAME" Type="varchar" MaxLength="60" Unicode="true" />
+    <Property Name="VI_PRODUCTCODE" Type="int" />
+    <Property Name="VI_AANTAL_GEFACT" Type="int" />
+    <Property Name="VI_DATUM" Type="timestamp" />
+    <Property Name="VI_RESTSTOCK" Type="int" />
+    <Property Name="VI_MAG_CNKNUMMER" Type="char" MaxLength="7" Unicode="false" />
+    <Property Name="VI_ISUITGESTELD" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="VI_GEENATTEST" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="VI_UITSTELLING_AFGELEVERD" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="VI_BEDRAG_OCMW" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="VI_MAG_SPEC_BETAALBAAR" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="VI_VARIA_ID" Type="int" />
+    <Property Name="VI_NIETOPFACTUUR" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="VI_ISVERBETERING" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="VI_POSOLOGIEID" Type="int" />
+    <Property Name="VI_UNIEKE_BC" Type="char" MaxLength="16" Unicode="false" />
+    <Property Name="VI_ISVOS" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="VI_PRIJSTYPE" Type="int" />
+    <Property Name="VI_OPFACTUUR" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="VI_RESULTAAT_AEGATE" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="VI_KREDIET_BLOKKEREN" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="VI_KORTINGLOGIC" Type="int" />
+    <Property Name="VI_KORTING_PATIENT" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="VI_TBVW_ANTW" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="VI_EIGENBEDRAGOCMW" Type="varchar" MaxLength="1" Unicode="true" Nullable="false" />
+    <Property Name="VI_OCMW" Type="varchar" MaxLength="1" Unicode="true" Nullable="false" />
+    <Property Name="VI_AFSCHRIFT_OCMW" Type="varchar" MaxLength="1" Unicode="true" Nullable="false" />
+    <Property Name="VI_ORDERNR" Type="char" MaxLength="20" Unicode="false" Nullable="false" />
+    <Property Name="VI_ORDERLINEUID" Type="int" Nullable="false" />
+    <Property Name="VI_IS_07NR" Type="char" MaxLength="32765" Unicode="false" StoreGeneratedPattern="Computed" />
+    <Property Name="VI_DIABETES" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="VI_ZORGTRAJECT" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="VI_HON_H4" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="VI_HON_1STE_UIT" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="VI_HON_VOS" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="VI_HON_BASIS" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="VI_HON_H4_BEDRAG" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="VI_HON_VOS_BEDRAG" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="VI_HON_1STE_UIT_BEDRAG" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="VI_HON_BEDRAG_OCMW" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="VI_HON_CONTANT" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="VI_SYNKEY" Type="char" MaxLength="4" Unicode="false" />
+    <Property Name="VI_BEDRAG_BETAALD" Type="numeric" Precision="15" Scale="4" />
+    <Property Name="VI_BEDRAG_FACTUUR_BETAALD" Type="numeric" Precision="15" Scale="4" />
+    <Property Name="VI_BEDRAG_TEBETALEN" Type="numeric" Precision="15" Scale="4" />
+    <Property Name="VI_BEDRAG_FACTUUR_TEBETALEN" Type="numeric" Precision="15" Scale="4" />
+    <Property Name="VI_WEB" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="VI_BETAALWIJZE" Type="int" />
+    <Property Name="VI_RBS_ID" Type="int" />
+    <Property Name="VI_PATIENTSTOCK" Type="int" />
+    <Property Name="VI_VET_VOEDSELPROD" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="VI_NOMENCLATUUR" Type="char" MaxLength="6" Unicode="false" />
+    <Property Name="VI_BANDAG_GEBRUIK" Type="varchar" MaxLength="10" Unicode="true" />
+    <Property Name="VI_ISGRATIS" Type="varchar" MaxLength="1" Unicode="true" Nullable="false" />
+    <Property Name="VI_THERAP_BEZWAAR" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="VI_SUBST_VERPLICHT" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="VI_OVERMACHT" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="VI_CONTANT" Type="int" Nullable="false" />
+    <Property Name="VI_IMV" Type="int" Nullable="false" />
+    <Property Name="VI_IMV_LEVERANCIER" Type="int" Nullable="false" />
+    <Property Name="VI_LINKED_VERKOOPITEM" Type="int" />
+    <Property Name="VI_GFD_DGUID" Type="char" MaxLength="36" Unicode="false" />
+    <Property Name="VI_GFD_SGUID" Type="char" MaxLength="36" Unicode="false" />
+    <Property Name="A" Type="int" />
+    <Property Name="VI_TUSSENKOMST" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="VI_RESTORNO_GEGEVEN" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="VI_RESTORNO_ON_RESTORNO" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="VI_KLANTNUMMER" Type="int" />
+    <Property Name="VI_ISDOORFACTURATIE" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="VI_AANKOOPPRIJS" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="VI_FACTGROEP_ID" Type="int" />
+    <Property Name="VI_WINST" Type="numeric" Precision="15" Scale="4" />
+    <Property Name="VI_BTWPERCENT" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="VI_BTWPERCENT_USED" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="VI_TYPE" Type="int" Nullable="false" />
+    <Property Name="VI_UITSTOCK" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="VI_SESSIE" Type="int" />
+    <Property Name="VI_AANTAL_KEER_GEFACT" Type="int" />
+    <Property Name="VI_MAF" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="VI_AANTAL_PILLEN_TOTAAL" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="VI_AANTAL_PILLEN_RESTEREND" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="VI_TPE_FLAG1" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="VI_TPE_TYPE" Type="smallint" />
+    <Property Name="VI_ISAANGEREKEND" Type="varchar" MaxLength="1" Unicode="true" />
+  </EntityType>
+  <EntityType Name="FTBVERKOPEN">
+    <Key>
+      <PropertyRef Name="V_VERKOOPSID" />
+    </Key>
+    <Property Name="V_VERKOOPSID" Type="int" Nullable="false" />
+    <Property Name="V_AFLEVERDATUM" Type="timestamp" Nullable="false" />
+    <Property Name="V_KORTING" Type="numeric" Precision="9" Scale="2" Nullable="false" />
+    <Property Name="V_RESTNUMMER" Type="char" MaxLength="13" Unicode="false" />
+    <Property Name="V_RESTBETAALD" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="V_BEDR_BETAALD" Type="numeric" Precision="9" Scale="2" Nullable="false" />
+    <Property Name="V_RESTORNO" Type="numeric" Precision="9" Scale="2" Nullable="false" />
+    <Property Name="V_CASH" Type="numeric" Precision="9" Scale="2" Nullable="false" />
+    <Property Name="V_PROTON" Type="numeric" Precision="9" Scale="2" Nullable="false" />
+    <Property Name="V_CREDITCARD" Type="numeric" Precision="9" Scale="2" Nullable="false" />
+    <Property Name="V_BANCONTACT" Type="numeric" Precision="9" Scale="2" Nullable="false" />
+    <Property Name="V_KORTINGPERCENTAGE" Type="int" Nullable="false" />
+    <Property Name="V_BETALER" Type="int" />
+    <Property Name="V_SPAARREKENINGID" Type="int" />
+    <Property Name="V_SPAARKAARTGELEZEN" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="V_BANK" Type="numeric" Precision="9" Scale="2" Nullable="false" />
+    <Property Name="V_FACTUURNR" Type="int" Nullable="false" />
+    <Property Name="V_COMPUTER" Type="varchar" MaxLength="15" Unicode="true" />
+    <Property Name="V_GEBRUIKER" Type="varchar" MaxLength="40" Unicode="true" />
+    <Property Name="V_EXTERNEBETALING" Type="numeric" Precision="9" Scale="2" Nullable="false" />
+    <Property Name="V_TYPE" Type="smallint" />
+  </EntityType>
+  <EntityContainer Name="FarmadStoreContainer">
+    <EntitySet Name="FTBADRESSEN" EntityType="Self.FTBADRESSEN" Schema="Firebird" store:Type="Tables" />
+    <EntitySet Name="FTBKLANTEN" EntityType="Self.FTBKLANTEN" Schema="Firebird" store:Type="Tables" />
+    <EntitySet Name="FTBKLANTSIS" EntityType="Self.FTBKLANTSIS" Schema="Firebird" store:Type="Tables" />
+    <EntitySet Name="FTBPRODUCTEN" EntityType="Self.FTBPRODUCTEN" Schema="Firebird" store:Type="Tables" />
+    <EntitySet Name="FTBPRODUCTSTOCK" EntityType="Self.FTBPRODUCTSTOCK" Schema="Firebird" store:Type="Tables" />
+    <EntitySet Name="FTBTELNUMMERS" EntityType="Self.FTBTELNUMMERS" Schema="Firebird" store:Type="Tables" />
+    <EntitySet Name="FTBVERKOOPITEMS" EntityType="Self.FTBVERKOOPITEMS" Schema="Firebird" store:Type="Tables" />
+    <EntitySet Name="FTBVERKOPEN" EntityType="Self.FTBVERKOPEN" Schema="Firebird" store:Type="Tables" />
+    <EntitySet Name="FTBPOSTCODES" EntityType="Self.FTBPOSTCODES" store:Type="Tables" store:Schema="Firebird">
+      <DefiningQuery>SELECT 
+"A"."PC_ID" AS "PC_ID", 
+"A"."PC_NUMMER" AS "PC_NUMMER", 
+"A"."PC_GEMEENTE" AS "PC_GEMEENTE", 
+"A"."PC_VOL_NAAM" AS "PC_VOL_NAAM", 
+"A"."PC_OCMW_NUMMER" AS "PC_OCMW_NUMMER"
+FROM "FTBPOSTCODES" AS "A"</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

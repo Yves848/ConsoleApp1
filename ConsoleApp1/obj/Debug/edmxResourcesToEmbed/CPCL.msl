@@ -1,0 +1,1901 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CPCLModelStoreContainer" CdmEntityContainer="CPCLEntities">
+    <EntitySetMapping Name="Allergies">
+      <EntityTypeMapping TypeName="CPCLModel.Allergies">
+        <MappingFragment StoreEntitySet="Allergies">
+          <ScalarProperty Name="AllergyID" ColumnName="AllergyID" />
+          <ScalarProperty Name="PatientIdCPCL" ColumnName="PatientIdCPCL" />
+          <ScalarProperty Name="ATCCode" ColumnName="ATCCode" />
+          <ScalarProperty Name="ArtID" ColumnName="ArtID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Attestations">
+      <EntityTypeMapping TypeName="CPCLModel.Attestations">
+        <MappingFragment StoreEntitySet="Attestations">
+          <ScalarProperty Name="AttestID" ColumnName="AttestID" />
+          <ScalarProperty Name="PatIdCPCL" ColumnName="PatIdCPCL" />
+          <ScalarProperty Name="ArtID" ColumnName="ArtID" />
+          <ScalarProperty Name="CNKNr" ColumnName="CNKNr" />
+          <ScalarProperty Name="AttestationType" ColumnName="AttestationType" />
+          <ScalarProperty Name="AttestationNr" ColumnName="AttestationNr" />
+          <ScalarProperty Name="DateActiveStart" ColumnName="DateActiveStart" />
+          <ScalarProperty Name="DateActiveEnd" ColumnName="DateActiveEnd" />
+          <ScalarProperty Name="ArtReimbCatCode" ColumnName="ArtReimbCatCode" />
+          <ScalarProperty Name="AttestationQty" ColumnName="AttestationQty" />
+          <ScalarProperty Name="GreenockID" ColumnName="GreenockID" />
+          <ScalarProperty Name="ReimbExcptCode" ColumnName="ReimbExcptCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Credit">
+      <EntityTypeMapping TypeName="CPCLModel.Credit">
+        <MappingFragment StoreEntitySet="Credit">
+          <ScalarProperty Name="CreditId" ColumnName="CreditId" />
+          <ScalarProperty Name="PatIdCPCL" ColumnName="PatIdCPCL" />
+          <ScalarProperty Name="DateSale" ColumnName="DateSale" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="SlsID" ColumnName="SlsID" />
+          <ScalarProperty Name="CreditType" ColumnName="CreditType" />
+          <ScalarProperty Name="GreenockId" ColumnName="GreenockId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="CPCLModel.Customers">
+        <MappingFragment StoreEntitySet="Customers">
+          <ScalarProperty Name="CustomerIdCPCL" ColumnName="CustomerIdCPCL" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PlaceID" ColumnName="PlaceID" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="GSM" ColumnName="GSM" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="VatNr" ColumnName="VatNr" />
+          <ScalarProperty Name="BankAccNr" ColumnName="BankAccNr" />
+          <ScalarProperty Name="langCode" ColumnName="langCode" />
+          <ScalarProperty Name="GreenockID" ColumnName="GreenockID" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="CustRistGrpCode" ColumnName="CustRistGrpCode" />
+          <ScalarProperty Name="PharmApbNr" ColumnName="PharmApbNr" />
+          <ScalarProperty Name="PaymMethodType" ColumnName="PaymMethodType" />
+          <ScalarProperty Name="IsIvc" ColumnName="IsIvc" />
+          <ScalarProperty Name="IsMultidose" ColumnName="IsMultidose" />
+          <ScalarProperty Name="RefHomeLink" ColumnName="RefHomeLink" />
+          <ScalarProperty Name="AccountingId" ColumnName="AccountingId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InsrCovers">
+      <EntityTypeMapping TypeName="CPCLModel.InsrCovers">
+        <MappingFragment StoreEntitySet="InsrCovers">
+          <ScalarProperty Name="InsrCoverId" ColumnName="InsrCoverId" />
+          <ScalarProperty Name="PatIdCPCL" ColumnName="PatIdCPCL" />
+          <ScalarProperty Name="DateRead" ColumnName="DateRead" />
+          <ScalarProperty Name="Nsuite" ColumnName="Nsuite" />
+          <ScalarProperty Name="FedNr" ColumnName="FedNr" />
+          <ScalarProperty Name="IsOaviExist" ColumnName="IsOaviExist" />
+          <ScalarProperty Name="RegistrationNr" ColumnName="RegistrationNr" />
+          <ScalarProperty Name="CgctCt1Cpy" ColumnName="CgctCt1Cpy" />
+          <ScalarProperty Name="CgctCt2Cpy" ColumnName="CgctCt2Cpy" />
+          <ScalarProperty Name="SisCardNr" ColumnName="SisCardNr" />
+          <ScalarProperty Name="DateActiveStart" ColumnName="DateActiveStart" />
+          <ScalarProperty Name="DateActiveEnd" ColumnName="DateActiveEnd" />
+          <ScalarProperty Name="DateValidityEnd" ColumnName="DateValidityEnd" />
+          <ScalarProperty Name="DateValidityStart" ColumnName="DateValidityStart" />
+          <ScalarProperty Name="Siscertificate" ColumnName="Siscertificate" />
+          <ScalarProperty Name="IsAttestSIS" ColumnName="IsAttestSIS" />
+          <ScalarProperty Name="SochelpThresholdAmnt" ColumnName="SochelpThresholdAmnt" />
+          <ScalarProperty Name="SochelpThresholdType" ColumnName="SochelpThresholdType" />
+          <ScalarProperty Name="OaviCode" ColumnName="OaviCode" />
+          <ScalarProperty Name="InsrCatCode" ColumnName="InsrCatCode" />
+          <ScalarProperty Name="GreenockID" ColumnName="GreenockID" />
+          <ScalarProperty Name="OaviVersion" ColumnName="OaviVersion" />
+          <ScalarProperty Name="DateOrdo" ColumnName="DateOrdo" />
+          <ScalarProperty Name="Periode" ColumnName="Periode" />
+          <ScalarProperty Name="InsrCoverSource" ColumnName="InsrCoverSource" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Parameter">
+      <EntityTypeMapping TypeName="CPCLModel.Parameter">
+        <MappingFragment StoreEntitySet="Parameter">
+          <ScalarProperty Name="PharmacyName" ColumnName="PharmacyName" />
+          <ScalarProperty Name="SoftName" ColumnName="SoftName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PlaceID" ColumnName="PlaceID" />
+          <ScalarProperty Name="APBNr" ColumnName="APBNr" />
+          <ScalarProperty Name="PharmacyOrderNr" ColumnName="PharmacyOrderNr" />
+          <ScalarProperty Name="RIZIVNr" ColumnName="RIZIVNr" />
+          <ScalarProperty Name="PhoneNr" ColumnName="PhoneNr" />
+          <ScalarProperty Name="FaxNr" ColumnName="FaxNr" />
+          <ScalarProperty Name="GSMNr" ColumnName="GSMNr" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="BanckAccNr" ColumnName="BanckAccNr" />
+          <ScalarProperty Name="BanckAccNr2" ColumnName="BanckAccNr2" />
+          <ScalarProperty Name="CommercialNr" ColumnName="CommercialNr" />
+          <ScalarProperty Name="VatNr" ColumnName="VatNr" />
+          <ScalarProperty Name="Langcode" ColumnName="Langcode" />
+          <ScalarProperty Name="ExportDate" ColumnName="ExportDate" />
+          <ScalarProperty Name="LastNrSale" ColumnName="LastNrSale" />
+          <ScalarProperty Name="InportExportVersion" ColumnName="InportExportVersion" />
+          <ScalarProperty Name="LastInvoiceNr" ColumnName="LastInvoiceNr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pathologies">
+      <EntityTypeMapping TypeName="CPCLModel.Pathologies">
+        <MappingFragment StoreEntitySet="Pathologies">
+          <ScalarProperty Name="PathologyID" ColumnName="PathologyID" />
+          <ScalarProperty Name="PatIdCPCL" ColumnName="PatIdCPCL" />
+          <ScalarProperty Name="DelphiPathologyCode" ColumnName="DelphiPathologyCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Patients">
+      <EntityTypeMapping TypeName="CPCLModel.Patients">
+        <MappingFragment StoreEntitySet="Patients">
+          <ScalarProperty Name="PatIdCPCL" ColumnName="PatIdCPCL" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName2" ColumnName="FirstName2" />
+          <ScalarProperty Name="NissinszNr" ColumnName="NissinszNr" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PlaceID" ColumnName="PlaceID" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="GSM" ColumnName="GSM" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="DateBirth" ColumnName="DateBirth" />
+          <ScalarProperty Name="GenderCode" ColumnName="GenderCode" />
+          <ScalarProperty Name="LangCode" ColumnName="LangCode" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="PrescriberID" ColumnName="PrescriberID" />
+          <ScalarProperty Name="LastDateSale" ColumnName="LastDateSale" />
+          <ScalarProperty Name="PatIDFamilly" ColumnName="PatIDFamilly" />
+          <ScalarProperty Name="F704PrintType" ColumnName="F704PrintType" />
+          <ScalarProperty Name="CblPrintType" ColumnName="CblPrintType" />
+          <ScalarProperty Name="BlocNr" ColumnName="BlocNr" />
+          <ScalarProperty Name="FloorNr" ColumnName="FloorNr" />
+          <ScalarProperty Name="RoomNr" ColumnName="RoomNr" />
+          <ScalarProperty Name="Deceased" ColumnName="Deceased" />
+          <ScalarProperty Name="GreenockID" ColumnName="GreenockID" />
+          <ScalarProperty Name="ActorCID" ColumnName="ActorCID" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="RecuPrintType" ColumnName="RecuPrintType" />
+          <ScalarProperty Name="BVACPrintType" ColumnName="BVACPrintType" />
+          <ScalarProperty Name="PatLink" ColumnName="PatLink" />
+          <ScalarProperty Name="CustRistGrpCode" ColumnName="CustRistGrpCode" />
+          <ScalarProperty Name="PaymMethodType" ColumnName="PaymMethodType" />
+          <ScalarProperty Name="IsIvc" ColumnName="IsIvc" />
+          <ScalarProperty Name="IsMultidose" ColumnName="IsMultidose" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pharmacies">
+      <EntityTypeMapping TypeName="CPCLModel.Pharmacies">
+        <MappingFragment StoreEntitySet="Pharmacies">
+          <ScalarProperty Name="PharmID" ColumnName="PharmID" />
+          <ScalarProperty Name="TitulName" ColumnName="TitulName" />
+          <ScalarProperty Name="ImsCode" ColumnName="ImsCode" />
+          <ScalarProperty Name="PharmApbNr" ColumnName="PharmApbNr" />
+          <ScalarProperty Name="PharmApbNrSuffix" ColumnName="PharmApbNrSuffix" />
+          <ScalarProperty Name="InamirizvNr" ColumnName="InamirizvNr" />
+          <ScalarProperty Name="TdpPharmID" ColumnName="TdpPharmID" />
+          <ScalarProperty Name="EmailTaroffice" ColumnName="EmailTaroffice" />
+          <ScalarProperty Name="TradeRegstNr" ColumnName="TradeRegstNr" />
+          <ScalarProperty Name="PlaceIDTradeRegst" ColumnName="PlaceIDTradeRegst" />
+          <ScalarProperty Name="ISAcod_perm_db" ColumnName="ISAcod_perm_db" />
+          <ScalarProperty Name="TarProtVersionNr" ColumnName="TarProtVersionNr" />
+          <ScalarProperty Name="DateTarProtVersionStart" ColumnName="DateTarProtVersionStart" />
+          <ScalarProperty Name="RprrpmNr" ColumnName="RprrpmNr" />
+          <ScalarProperty Name="GroupType" ColumnName="GroupType" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="PharmacyName" ColumnName="PharmacyName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PlaceID" ColumnName="PlaceID" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="GSM" ColumnName="GSM" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LangCode" ColumnName="LangCode" />
+          <ScalarProperty Name="CurrencyIsoCodeCust" ColumnName="CurrencyIsoCodeCust" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlaceLabels">
+      <EntityTypeMapping TypeName="CPCLModel.PlaceLabels">
+        <MappingFragment StoreEntitySet="PlaceLabels">
+          <ScalarProperty Name="PlaceID" ColumnName="PlaceID" />
+          <ScalarProperty Name="LangCode" ColumnName="LangCode" />
+          <ScalarProperty Name="PlaceLabel" ColumnName="PlaceLabel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Places">
+      <EntityTypeMapping TypeName="CPCLModel.Places">
+        <MappingFragment StoreEntitySet="Places">
+          <ScalarProperty Name="PlaceID" ColumnName="PlaceID" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="GreenockID" ColumnName="GreenockID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Prescribers">
+      <EntityTypeMapping TypeName="CPCLModel.Prescribers">
+        <MappingFragment StoreEntitySet="Prescribers">
+          <ScalarProperty Name="PrescriberIDCPCL" ColumnName="PrescriberIDCPCL" />
+          <ScalarProperty Name="PrescriberName" ColumnName="PrescriberName" />
+          <ScalarProperty Name="InamirizvNr" ColumnName="InamirizvNr" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PlaceID" ColumnName="PlaceID" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="GSM" ColumnName="GSM" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="GreenockID" ColumnName="GreenockID" />
+          <ScalarProperty Name="IsPrespTheft" ColumnName="IsPrespTheft" />
+          <ScalarProperty Name="DatePrespTheft" ColumnName="DatePrespTheft" />
+          <ScalarProperty Name="PresbProfCode" ColumnName="PresbProfCode" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="CustRistGrpCode" ColumnName="CustRistGrpCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RistCards">
+      <EntityTypeMapping TypeName="CPCLModel.RistCards">
+        <MappingFragment StoreEntitySet="RistCards">
+          <ScalarProperty Name="CardNr" ColumnName="CardNr" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="CustIdCPCL" ColumnName="CustIdCPCL" />
+          <ScalarProperty Name="DateStart" ColumnName="DateStart" />
+          <ScalarProperty Name="CardStatus" ColumnName="CardStatus" />
+          <ScalarProperty Name="GreenockID" ColumnName="GreenockID" />
+          <ScalarProperty Name="CentralizationStatus" ColumnName="CentralizationStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RistCardsAccounts">
+      <EntityTypeMapping TypeName="CPCLModel.RistCardsAccounts">
+        <MappingFragment StoreEntitySet="RistCardsAccounts">
+          <ScalarProperty Name="RcAccountID" ColumnName="RcAccountID" />
+          <ScalarProperty Name="CustID" ColumnName="CustID" />
+          <ScalarProperty Name="CustRistGrpCode" ColumnName="CustRistGrpCode" />
+          <ScalarProperty Name="ReleaseType" ColumnName="ReleaseType" />
+          <ScalarProperty Name="ReleaseLimit" ColumnName="ReleaseLimit" />
+          <ScalarProperty Name="RcAccStatusType" ColumnName="RcAccStatusType" />
+          <ScalarProperty Name="GreenockID" ColumnName="GreenockID" />
+          <ScalarProperty Name="RcAccountCID" ColumnName="RcAccountCID" />
+          <ScalarProperty Name="CentralizationStatus" ColumnName="CentralizationStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Suppliers">
+      <EntityTypeMapping TypeName="CPCLModel.Suppliers">
+        <MappingFragment StoreEntitySet="Suppliers">
+          <ScalarProperty Name="SupplierIDCPCL" ColumnName="SupplierIDCPCL" />
+          <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+          <ScalarProperty Name="PhoneNr1" ColumnName="PhoneNr1" />
+          <ScalarProperty Name="PhoneNr2" ColumnName="PhoneNr2" />
+          <ScalarProperty Name="PasswordBIDI" ColumnName="PasswordBIDI" />
+          <ScalarProperty Name="Protocole" ColumnName="Protocole" />
+          <ScalarProperty Name="SupplierCode" ColumnName="SupplierCode" />
+          <ScalarProperty Name="UrlIbotp1" ColumnName="UrlIbotp1" />
+          <ScalarProperty Name="UrlIbotp2" ColumnName="UrlIbotp2" />
+          <ScalarProperty Name="LogginIbotp" ColumnName="LogginIbotp" />
+          <ScalarProperty Name="PasswordIbotp" ColumnName="PasswordIbotp" />
+          <ScalarProperty Name="GreenockID" ColumnName="GreenockID" />
+          <ScalarProperty Name="SupplierType" ColumnName="SupplierType" />
+          <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+          <ScalarProperty Name="LabApbCode" ColumnName="LabApbCode" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="ContactPhoneNr" ColumnName="ContactPhoneNr" />
+          <ScalarProperty Name="ContactEmail" ColumnName="ContactEmail" />
+          <ScalarProperty Name="OrderMemo" ColumnName="OrderMemo" />
+          <ScalarProperty Name="ISAcod_typ_maj_fou" ColumnName="ISAcod_typ_maj_fou" />
+          <ScalarProperty Name="ISAis_gest_art_fou" ColumnName="ISAis_gest_art_fou" />
+          <ScalarProperty Name="AssemblyOrderType" ColumnName="AssemblyOrderType" />
+          <ScalarProperty Name="FilterText" ColumnName="FilterText" />
+          <ScalarProperty Name="SuppPrefFilter" ColumnName="SuppPrefFilter" />
+          <ScalarProperty Name="StupFilter" ColumnName="StupFilter" />
+          <ScalarProperty Name="MissingFilter" ColumnName="MissingFilter" />
+          <ScalarProperty Name="IsExpensiveFilter" ColumnName="IsExpensiveFilter" />
+          <ScalarProperty Name="IsReservedFilter" ColumnName="IsReservedFilter" />
+          <ScalarProperty Name="WarehouseFilter" ColumnName="WarehouseFilter" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PlaceID" ColumnName="PlaceID" />
+          <ScalarProperty Name="OriginalID" ColumnName="OriginalID" />
+          <ScalarProperty Name="ActorCID" ColumnName="ActorCID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Articles">
+      <EntityTypeMapping TypeName="CPCLModel.Articles">
+        <MappingFragment StoreEntitySet="Articles">
+          <ScalarProperty Name="ArtIdCPCL" ColumnName="ArtIdCPCL" />
+          <ScalarProperty Name="CNKNr" ColumnName="CNKNr" />
+          <ScalarProperty Name="PubPrice" ColumnName="PubPrice" />
+          <ScalarProperty Name="VatCode" ColumnName="VatCode" />
+          <ScalarProperty Name="StockMngmntType" ColumnName="StockMngmntType" />
+          <ScalarProperty Name="HasExpiry" ColumnName="HasExpiry" />
+          <ScalarProperty Name="IsPrintLabel" ColumnName="IsPrintLabel" />
+          <ScalarProperty Name="StorageType" ColumnName="StorageType" />
+          <ScalarProperty Name="BuyPriceCalc" ColumnName="BuyPriceCalc" />
+          <ScalarProperty Name="BuyPriceSrc" ColumnName="BuyPriceSrc" />
+          <ScalarProperty Name="ApbUdStatusCode" ColumnName="ApbUdStatusCode" />
+          <ScalarProperty Name="DateChange" ColumnName="DateChange" />
+          <ScalarProperty Name="AllowUdPubPriceChangeType" ColumnName="AllowUdPubPriceChangeType" />
+          <ScalarProperty Name="ApbCatCode" ColumnName="ApbCatCode" />
+          <ScalarProperty Name="ApbLegCode" ColumnName="ApbLegCode" />
+          <ScalarProperty Name="EanNr" ColumnName="EanNr" />
+          <ScalarProperty Name="AvailabilityCode" ColumnName="AvailabilityCode" />
+          <ScalarProperty Name="EffectiveBuyPrice" ColumnName="EffectiveBuyPrice" />
+          <ScalarProperty Name="IsReimbHomeo" ColumnName="IsReimbHomeo" />
+          <ScalarProperty Name="TherapUseID" ColumnName="TherapUseID" />
+          <ScalarProperty Name="StupNr" ColumnName="StupNr" />
+          <ScalarProperty Name="HasLocation" ColumnName="HasLocation" />
+          <ScalarProperty Name="IsOxygen" ColumnName="IsOxygen" />
+          <ScalarProperty Name="IsSubstitutionTreatment" ColumnName="IsSubstitutionTreatment" />
+          <ScalarProperty Name="ArtType" ColumnName="ArtType" />
+          <ScalarProperty Name="InvCatCode" ColumnName="InvCatCode" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="GreenockID" ColumnName="GreenockID" />
+          <ScalarProperty Name="ArtCID" ColumnName="ArtCID" />
+          <ScalarProperty Name="IsMultidose" ColumnName="IsMultidose" />
+          <ScalarProperty Name="PackageQty" ColumnName="PackageQty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ArtNames">
+      <EntityTypeMapping TypeName="CPCLModel.ArtNames">
+        <MappingFragment StoreEntitySet="ArtNames">
+          <ScalarProperty Name="ArtIdCPCL" ColumnName="ArtIdCPCL" />
+          <ScalarProperty Name="NameNr" ColumnName="NameNr" />
+          <ScalarProperty Name="LangCode" ColumnName="LangCode" />
+          <ScalarProperty Name="ArtName" ColumnName="ArtName" />
+          <ScalarProperty Name="GreenockID" ColumnName="GreenockID" />
+          <ScalarProperty Name="HasArtNameLocked" ColumnName="HasArtNameLocked" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChemicalNames">
+      <EntityTypeMapping TypeName="CPCLModel.ChemicalNames">
+        <MappingFragment StoreEntitySet="ChemicalNames">
+          <ScalarProperty Name="ArtIdCPCL" ColumnName="ArtIdCPCL" />
+          <ScalarProperty Name="NameNr" ColumnName="NameNr" />
+          <ScalarProperty Name="LangCode" ColumnName="LangCode" />
+          <ScalarProperty Name="ArtName" ColumnName="ArtName" />
+          <ScalarProperty Name="Show" ColumnName="Show" />
+          <ScalarProperty Name="Statistics" ColumnName="Statistics" />
+          <ScalarProperty Name="GreenockID" ColumnName="GreenockID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Chemicals">
+      <EntityTypeMapping TypeName="CPCLModel.Chemicals">
+        <MappingFragment StoreEntitySet="Chemicals">
+          <ScalarProperty Name="ArtIdCPCL" ColumnName="ArtIdCPCL" />
+          <ScalarProperty Name="CNKNr" ColumnName="CNKNr" />
+          <ScalarProperty Name="PubPrice" ColumnName="PubPrice" />
+          <ScalarProperty Name="VatCode" ColumnName="VatCode" />
+          <ScalarProperty Name="StockMngmntType" ColumnName="StockMngmntType" />
+          <ScalarProperty Name="HasExpiry" ColumnName="HasExpiry" />
+          <ScalarProperty Name="IsPrintLabel" ColumnName="IsPrintLabel" />
+          <ScalarProperty Name="StorageType" ColumnName="StorageType" />
+          <ScalarProperty Name="BuyPriceCalc" ColumnName="BuyPriceCalc" />
+          <ScalarProperty Name="BuyPriceSrc" ColumnName="BuyPriceSrc" />
+          <ScalarProperty Name="ApbUdStatusCode" ColumnName="ApbUdStatusCode" />
+          <ScalarProperty Name="DateChange" ColumnName="DateChange" />
+          <ScalarProperty Name="AllowUdPubPriceChangeType" ColumnName="AllowUdPubPriceChangeType" />
+          <ScalarProperty Name="ApbCatCode" ColumnName="ApbCatCode" />
+          <ScalarProperty Name="ApbLegCode" ColumnName="ApbLegCode" />
+          <ScalarProperty Name="EanNr" ColumnName="EanNr" />
+          <ScalarProperty Name="AvailabilityCode" ColumnName="AvailabilityCode" />
+          <ScalarProperty Name="EffectiveBuyPrice" ColumnName="EffectiveBuyPrice" />
+          <ScalarProperty Name="IsReimbHomeo" ColumnName="IsReimbHomeo" />
+          <ScalarProperty Name="TherapUseID" ColumnName="TherapUseID" />
+          <ScalarProperty Name="StupNr" ColumnName="StupNr" />
+          <ScalarProperty Name="HasLocation" ColumnName="HasLocation" />
+          <ScalarProperty Name="IsOxygen" ColumnName="IsOxygen" />
+          <ScalarProperty Name="IsSubstitutionTreatment" ColumnName="IsSubstitutionTreatment" />
+          <ScalarProperty Name="ArtType" ColumnName="ArtType" />
+          <ScalarProperty Name="InvCatCode" ColumnName="InvCatCode" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="GreenockID" ColumnName="GreenockID" />
+          <ScalarProperty Name="ArtCID" ColumnName="ArtCID" />
+          <ScalarProperty Name="ChemicalType" ColumnName="ChemicalType" />
+          <ScalarProperty Name="ChemPricePerUnit" ColumnName="ChemPricePerUnit" />
+          <ScalarProperty Name="Qtd" ColumnName="Qtd" />
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+          <ScalarProperty Name="PriceSource" ColumnName="PriceSource" />
+          <ScalarProperty Name="Density" ColumnName="Density" />
+          <ScalarProperty Name="PlantCode" ColumnName="PlantCode" />
+          <ScalarProperty Name="DefaultPresbQtd" ColumnName="DefaultPresbQtd" />
+          <ScalarProperty Name="UnitCodeDefaultPresb" ColumnName="UnitCodeDefaultPresb" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HvtNames">
+      <EntityTypeMapping TypeName="CPCLModel.HvtNames">
+        <MappingFragment StoreEntitySet="HvtNames">
+          <ScalarProperty Name="ArtIdCPCL" ColumnName="ArtIdCPCL" />
+          <ScalarProperty Name="NameNr" ColumnName="NameNr" />
+          <ScalarProperty Name="LangCode" ColumnName="LangCode" />
+          <ScalarProperty Name="ArtName" ColumnName="ArtName" />
+          <ScalarProperty Name="GreenockID" ColumnName="GreenockID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HvtQtyPrices">
+      <EntityTypeMapping TypeName="CPCLModel.HvtQtyPrices">
+        <MappingFragment StoreEntitySet="HvtQtyPrices">
+          <ScalarProperty Name="ArtHvtID" ColumnName="ArtHvtID" />
+          <ScalarProperty Name="HvtQtyCode" ColumnName="HvtQtyCode" />
+          <ScalarProperty Name="HvtQtd" ColumnName="HvtQtd" />
+          <ScalarProperty Name="PubPrice" ColumnName="PubPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hvts">
+      <EntityTypeMapping TypeName="CPCLModel.Hvts">
+        <MappingFragment StoreEntitySet="Hvts">
+          <ScalarProperty Name="ArtHvtID" ColumnName="ArtHvtID" />
+          <ScalarProperty Name="GroupingCode" ColumnName="GroupingCode" />
+          <ScalarProperty Name="TarGroupCode" ColumnName="TarGroupCode" />
+          <ScalarProperty Name="IsList2" ColumnName="IsList2" />
+          <ScalarProperty Name="SupplemLabel" ColumnName="SupplemLabel" />
+          <ScalarProperty Name="DataUdID" ColumnName="DataUdID" />
+          <ScalarProperty Name="GreenockID" ColumnName="GreenockID" />
+          <ScalarProperty Name="CNKNr" ColumnName="CNKNr" />
+          <ScalarProperty Name="ArtCID" ColumnName="ArtCID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IdealStockThresholds">
+      <EntityTypeMapping TypeName="CPCLModel.IdealStockThresholds">
+        <MappingFragment StoreEntitySet="IdealStockThresholds">
+          <ScalarProperty Name="MinQtdSoldPerMonth" ColumnName="MinQtdSoldPerMonth" />
+          <ScalarProperty Name="MaxQtdSoldPerMonth" ColumnName="MaxQtdSoldPerMonth" />
+          <ScalarProperty Name="MinThd" ColumnName="MinThd" />
+          <ScalarProperty Name="MaxThd" ColumnName="MaxThd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LabelEditorArticles">
+      <EntityTypeMapping TypeName="CPCLModel.LabelEditorArticles">
+        <MappingFragment StoreEntitySet="LabelEditorArticles">
+          <ScalarProperty Name="ArtIdCPCL" ColumnName="ArtIdCPCL" />
+          <ScalarProperty Name="LabelEditorLocCode" ColumnName="LabelEditorLocCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LabelEditorLocs">
+      <EntityTypeMapping TypeName="CPCLModel.LabelEditorLocs">
+        <MappingFragment StoreEntitySet="LabelEditorLocs">
+          <ScalarProperty Name="LabelEditorLocCode" ColumnName="LabelEditorLocCode" />
+          <ScalarProperty Name="LabelEditorLocLabel" ColumnName="LabelEditorLocLabel" />
+          <ScalarProperty Name="WarehouseCode" ColumnName="WarehouseCode" />
+          <ScalarProperty Name="GreenockID" ColumnName="GreenockID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Localization">
+      <EntityTypeMapping TypeName="CPCLModel.Localization">
+        <MappingFragment StoreEntitySet="Localization">
+          <ScalarProperty Name="LocalizationCode" ColumnName="LocalizationCode" />
+          <ScalarProperty Name="LocalizationName" ColumnName="LocalizationName" />
+          <ScalarProperty Name="GreenockID" ColumnName="GreenockID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LocalizationStock">
+      <EntityTypeMapping TypeName="CPCLModel.LocalizationStock">
+        <MappingFragment StoreEntitySet="LocalizationStock">
+          <ScalarProperty Name="StockIDCPCL" ColumnName="StockIDCPCL" />
+          <ScalarProperty Name="WarehouseCode" ColumnName="WarehouseCode" />
+          <ScalarProperty Name="LocalisationCode" ColumnName="LocalisationCode" />
+          <ScalarProperty Name="Stock" ColumnName="Stock" />
+          <ScalarProperty Name="MinThd" ColumnName="MinThd" />
+          <ScalarProperty Name="MaxThd" ColumnName="MaxThd" />
+          <ScalarProperty Name="UnitOrder" ColumnName="UnitOrder" />
+          <ScalarProperty Name="GreenockID" ColumnName="GreenockID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MultidoseLinks">
+      <EntityTypeMapping TypeName="CPCLModel.MultidoseLinks">
+        <MappingFragment StoreEntitySet="MultidoseLinks">
+          <ScalarProperty Name="ArtIdCPCL" ColumnName="ArtIdCPCL" />
+          <ScalarProperty Name="CustomerIdCpcl" ColumnName="CustomerIdCpcl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Peremption">
+      <EntityTypeMapping TypeName="CPCLModel.Peremption">
+        <MappingFragment StoreEntitySet="Peremption">
+          <ScalarProperty Name="PeremptionDate" ColumnName="PeremptionDate" />
+          <ScalarProperty Name="LotNr" ColumnName="LotNr" />
+          <ScalarProperty Name="ArtIdCPCL" ColumnName="ArtIdCPCL" />
+          <ScalarProperty Name="CNKNr" ColumnName="CNKNr" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="GreenockID" ColumnName="GreenockID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Statistic">
+      <EntityTypeMapping TypeName="CPCLModel.Statistic">
+        <MappingFragment StoreEntitySet="Statistic">
+          <ScalarProperty Name="ArtIDCPCL" ColumnName="ArtIDCPCL" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Day" ColumnName="Day" />
+          <ScalarProperty Name="CNK" ColumnName="CNK" />
+          <ScalarProperty Name="StatisticBuy" ColumnName="StatisticBuy" />
+          <ScalarProperty Name="StatisticSell" ColumnName="StatisticSell" />
+          <ScalarProperty Name="GreenockID" ColumnName="GreenockID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StockLog">
+      <EntityTypeMapping TypeName="CPCLModel.StockLog">
+        <MappingFragment StoreEntitySet="StockLog">
+          <ScalarProperty Name="StockLogID" ColumnName="StockLogID" />
+          <ScalarProperty Name="StockChangeCode" ColumnName="StockChangeCode" />
+          <ScalarProperty Name="StockChangeReasonCode" ColumnName="StockChangeReasonCode" />
+          <ScalarProperty Name="DateLog" ColumnName="DateLog" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="WrkstatCode" ColumnName="WrkstatCode" />
+          <ScalarProperty Name="ArtIdCPCL" ColumnName="ArtIdCPCL" />
+          <ScalarProperty Name="QtyInStock_Before" ColumnName="QtyInStock_Before" />
+          <ScalarProperty Name="OnOrderQty_Before" ColumnName="OnOrderQty_Before" />
+          <ScalarProperty Name="ExtraOrderQty_Before" ColumnName="ExtraOrderQty_Before" />
+          <ScalarProperty Name="ReservedQty_Before" ColumnName="ReservedQty_Before" />
+          <ScalarProperty Name="IsAllowThresholdChange_Before" ColumnName="IsAllowThresholdChange_Before" />
+          <ScalarProperty Name="MinThd_Before" ColumnName="MinThd_Before" />
+          <ScalarProperty Name="MaxThd_Before" ColumnName="MaxThd_Before" />
+          <ScalarProperty Name="OrderPromoQty_Before" ColumnName="OrderPromoQty_Before" />
+          <ScalarProperty Name="OrderStatusType_Before" ColumnName="OrderStatusType_Before" />
+          <ScalarProperty Name="DateTimeShortageEnd_Before" ColumnName="DateTimeShortageEnd_Before" />
+          <ScalarProperty Name="MaxThdCalc_Before" ColumnName="MaxThdCalc_Before" />
+          <ScalarProperty Name="AvgStock_Before" ColumnName="AvgStock_Before" />
+          <ScalarProperty Name="BuyPriceWeighted_Before" ColumnName="BuyPriceWeighted_Before" />
+          <ScalarProperty Name="QtyInStock_After" ColumnName="QtyInStock_After" />
+          <ScalarProperty Name="OnOrderQty_After" ColumnName="OnOrderQty_After" />
+          <ScalarProperty Name="ExtraOrderQty_After" ColumnName="ExtraOrderQty_After" />
+          <ScalarProperty Name="ReservedQty_After" ColumnName="ReservedQty_After" />
+          <ScalarProperty Name="IsAllowThresholdChange_After" ColumnName="IsAllowThresholdChange_After" />
+          <ScalarProperty Name="MinThd_After" ColumnName="MinThd_After" />
+          <ScalarProperty Name="MaxThd_After" ColumnName="MaxThd_After" />
+          <ScalarProperty Name="OrderPromoQty_After" ColumnName="OrderPromoQty_After" />
+          <ScalarProperty Name="OrderStatusType_After" ColumnName="OrderStatusType_After" />
+          <ScalarProperty Name="DateTimeShortageEnd_After" ColumnName="DateTimeShortageEnd_After" />
+          <ScalarProperty Name="MaxThdCalc_After" ColumnName="MaxThdCalc_After" />
+          <ScalarProperty Name="AvgStock_After" ColumnName="AvgStock_After" />
+          <ScalarProperty Name="BuyPriceWeighted_After" ColumnName="BuyPriceWeighted_After" />
+          <ScalarProperty Name="DateFirstReceipt" ColumnName="DateFirstReceipt" />
+          <ScalarProperty Name="SlsID" ColumnName="SlsID" />
+          <ScalarProperty Name="OrdID" ColumnName="OrdID" />
+          <ScalarProperty Name="DateLastSale_Before" ColumnName="DateLastSale_Before" />
+          <ScalarProperty Name="DateLastSale_After" ColumnName="DateLastSale_After" />
+          <ScalarProperty Name="CentralizationStatus" ColumnName="CentralizationStatus" />
+          <ScalarProperty Name="RescueThd_Before" ColumnName="RescueThd_Before" />
+          <ScalarProperty Name="RescueThd_After" ColumnName="RescueThd_After" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stocks">
+      <EntityTypeMapping TypeName="CPCLModel.Stocks">
+        <MappingFragment StoreEntitySet="Stocks">
+          <ScalarProperty Name="ArtIdCPCL" ColumnName="ArtIdCPCL" />
+          <ScalarProperty Name="QtyInStock" ColumnName="QtyInStock" />
+          <ScalarProperty Name="OnOrderQty" ColumnName="OnOrderQty" />
+          <ScalarProperty Name="ExtraOrderQty" ColumnName="ExtraOrderQty" />
+          <ScalarProperty Name="ReservedQty" ColumnName="ReservedQty" />
+          <ScalarProperty Name="IsAllowThresholdChange" ColumnName="IsAllowThresholdChange" />
+          <ScalarProperty Name="MinThd" ColumnName="MinThd" />
+          <ScalarProperty Name="MaxThd" ColumnName="MaxThd" />
+          <ScalarProperty Name="OrderPromoQty" ColumnName="OrderPromoQty" />
+          <ScalarProperty Name="OrderStatusType" ColumnName="OrderStatusType" />
+          <ScalarProperty Name="DateTimeShortageEnd" ColumnName="DateTimeShortageEnd" />
+          <ScalarProperty Name="MaxThdCalc" ColumnName="MaxThdCalc" />
+          <ScalarProperty Name="DateFirstReceipt" ColumnName="DateFirstReceipt" />
+          <ScalarProperty Name="AvgStock" ColumnName="AvgStock" />
+          <ScalarProperty Name="IsTdpWaitingTrf" ColumnName="IsTdpWaitingTrf" />
+          <ScalarProperty Name="BuyPriceWeighted" ColumnName="BuyPriceWeighted" />
+          <ScalarProperty Name="OnOrderRepresQty" ColumnName="OnOrderRepresQty" />
+          <ScalarProperty Name="DateLastSale" ColumnName="DateLastSale" />
+          <ScalarProperty Name="greenockID" ColumnName="greenockID" />
+          <ScalarProperty Name="AllowUdPubPriceChangeType" ColumnName="AllowUdPubPriceChangeType" />
+          <ScalarProperty Name="SupplierIDPref" ColumnName="SupplierIDPref" />
+          <ScalarProperty Name="SupplierIDNextOrder" ColumnName="SupplierIDNextOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TherapUses">
+      <EntityTypeMapping TypeName="CPCLModel.TherapUses">
+        <MappingFragment StoreEntitySet="TherapUses">
+          <ScalarProperty Name="TherapUseID" ColumnName="TherapUseID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Warehouses">
+      <EntityTypeMapping TypeName="CPCLModel.Warehouses">
+        <MappingFragment StoreEntitySet="Warehouses">
+          <ScalarProperty Name="WarehouseCode" ColumnName="WarehouseCode" />
+          <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+          <ScalarProperty Name="IsAutomat" ColumnName="IsAutomat" />
+          <ScalarProperty Name="GreenockID" ColumnName="GreenockID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AppVersions">
+      <EntityTypeMapping TypeName="CPCLModel.AppVersions">
+        <MappingFragment StoreEntitySet="AppVersions">
+          <ScalarProperty Name="ApplicationType" ColumnName="ApplicationType" />
+          <ScalarProperty Name="UpdateType" ColumnName="UpdateType" />
+          <ScalarProperty Name="UpdateVersionNr" ColumnName="UpdateVersionNr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ComplementaryMention">
+      <EntityTypeMapping TypeName="CPCLModel.ComplementaryMention">
+        <MappingFragment StoreEntitySet="ComplementaryMention">
+          <ScalarProperty Name="ComplementaryMentionID" ColumnName="ComplementaryMentionID" />
+          <ScalarProperty Name="ComplementaryMention1" ColumnName="ComplementaryMention" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Counters">
+      <EntityTypeMapping TypeName="CPCLModel.Counters">
+        <MappingFragment StoreEntitySet="Counters">
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+          <ScalarProperty Name="LastCounterNr" ColumnName="LastCounterNr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Country">
+      <EntityTypeMapping TypeName="CPCLModel.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="CountryLabel" ColumnName="CountryLabel" />
+          <ScalarProperty Name="GreenockID" ColumnName="GreenockID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CPCLParamValues">
+      <EntityTypeMapping TypeName="CPCLModel.CPCLParamValues">
+        <MappingFragment StoreEntitySet="CPCLParamValues">
+          <ScalarProperty Name="ParamID" ColumnName="ParamID" />
+          <ScalarProperty Name="OldSoftParamValue" ColumnName="OldSoftParamValue" />
+          <ScalarProperty Name="GreenockParamValue" ColumnName="GreenockParamValue" />
+          <ScalarProperty Name="MinSecurityLevel" ColumnName="MinSecurityLevel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CPCLTables">
+      <EntityTypeMapping TypeName="CPCLModel.CPCLTables">
+        <MappingFragment StoreEntitySet="CPCLTables">
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+          <ScalarProperty Name="SchemaName" ColumnName="SchemaName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustRistGroupLabels">
+      <EntityTypeMapping TypeName="CPCLModel.CustRistGroupLabels">
+        <MappingFragment StoreEntitySet="CustRistGroupLabels">
+          <ScalarProperty Name="CustRistGrpCode" ColumnName="CustRistGrpCode" />
+          <ScalarProperty Name="LangCode" ColumnName="LangCode" />
+          <ScalarProperty Name="CustRistGroupLabel" ColumnName="CustRistGroupLabel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustRistGroups">
+      <EntityTypeMapping TypeName="CPCLModel.CustRistGroups">
+        <MappingFragment StoreEntitySet="CustRistGroups">
+          <ScalarProperty Name="CustRistGrpCode" ColumnName="CustRistGrpCode" />
+          <ScalarProperty Name="IsPatient" ColumnName="IsPatient" />
+          <ScalarProperty Name="DefaultRistType" ColumnName="DefaultRistType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GenderCode">
+      <EntityTypeMapping TypeName="CPCLModel.GenderCode">
+        <MappingFragment StoreEntitySet="GenderCode">
+          <ScalarProperty Name="GenderCode1" ColumnName="GenderCode" />
+          <ScalarProperty Name="GenderName" ColumnName="GenderName" />
+          <ScalarProperty Name="GreenockID" ColumnName="GreenockID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GreenockUsers">
+      <EntityTypeMapping TypeName="CPCLModel.GreenockUsers">
+        <MappingFragment StoreEntitySet="GreenockUsers">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ShortUserName" ColumnName="ShortUserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="TemplateBiometric" ColumnName="TemplateBiometric" />
+          <ScalarProperty Name="UserCID" ColumnName="UserCID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MagType">
+      <EntityTypeMapping TypeName="CPCLModel.MagType">
+        <MappingFragment StoreEntitySet="MagType">
+          <ScalarProperty Name="MagType1" ColumnName="MagType" />
+          <ScalarProperty Name="MagName" ColumnName="MagName" />
+          <ScalarProperty Name="GreenockID" ColumnName="GreenockID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OldSoftTableNames">
+      <EntityTypeMapping TypeName="CPCLModel.OldSoftTableNames">
+        <MappingFragment StoreEntitySet="OldSoftTableNames">
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+          <ScalarProperty Name="ApplicationType" ColumnName="ApplicationType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParameterLabels">
+      <EntityTypeMapping TypeName="CPCLModel.ParameterLabels">
+        <MappingFragment StoreEntitySet="ParameterLabels">
+          <ScalarProperty Name="ParameterType" ColumnName="ParameterType" />
+          <ScalarProperty Name="LangCode" ColumnName="LangCode" />
+          <ScalarProperty Name="ParameterTypeLabel" ColumnName="ParameterTypeLabel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParameterTypes">
+      <EntityTypeMapping TypeName="CPCLModel.ParameterTypes">
+        <MappingFragment StoreEntitySet="ParameterTypes">
+          <ScalarProperty Name="ParameterType" ColumnName="ParameterType" />
+          <ScalarProperty Name="SortNr" ColumnName="SortNr" />
+          <ScalarProperty Name="Offigest" ColumnName="Offigest" />
+          <ScalarProperty Name="Isa" ColumnName="Isa" />
+          <ScalarProperty Name="Farmix" ColumnName="Farmix" />
+          <ScalarProperty Name="ParamInteger" ColumnName="ParamInteger" />
+          <ScalarProperty Name="ParamDecimal" ColumnName="ParamDecimal" />
+          <ScalarProperty Name="ParamDate" ColumnName="ParamDate" />
+          <ScalarProperty Name="ParamBoolean" ColumnName="ParamBoolean" />
+          <ScalarProperty Name="ParamText" ColumnName="ParamText" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymMethods">
+      <EntityTypeMapping TypeName="CPCLModel.PaymMethods">
+        <MappingFragment StoreEntitySet="PaymMethods">
+          <ScalarProperty Name="PaymMethodCode" ColumnName="PaymMethodCode" />
+          <ScalarProperty Name="GreenockID" ColumnName="GreenockID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PharmDocDataLabels">
+      <EntityTypeMapping TypeName="CPCLModel.PharmDocDataLabels">
+        <MappingFragment StoreEntitySet="PharmDocDataLabels">
+          <ScalarProperty Name="PharmID" ColumnName="PharmID" />
+          <ScalarProperty Name="PharmaDocType" ColumnName="PharmaDocType" />
+          <ScalarProperty Name="LangCode" ColumnName="LangCode" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Chksum" ColumnName="Chksum" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="TelNr" ColumnName="TelNr" />
+          <ScalarProperty Name="FaxNr" ColumnName="FaxNr" />
+          <ScalarProperty Name="RebateLabel" ColumnName="RebateLabel" />
+          <ScalarProperty Name="RistPrefixLabel" ColumnName="RistPrefixLabel" />
+          <ScalarProperty Name="RistSuffixLabel" ColumnName="RistSuffixLabel" />
+          <ScalarProperty Name="HeaderLabel" ColumnName="HeaderLabel" />
+          <ScalarProperty Name="FooterLabel" ColumnName="FooterLabel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PharmDocDatas">
+      <EntityTypeMapping TypeName="CPCLModel.PharmDocDatas">
+        <MappingFragment StoreEntitySet="PharmDocDatas">
+          <ScalarProperty Name="PharmID" ColumnName="PharmID" />
+          <ScalarProperty Name="PharmaDocType" ColumnName="PharmaDocType" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="ImageFilename" ColumnName="ImageFilename" />
+          <ScalarProperty Name="ImageWidth" ColumnName="ImageWidth" />
+          <ScalarProperty Name="ImageHeight" ColumnName="ImageHeight" />
+          <ScalarProperty Name="RebateToken" ColumnName="RebateToken" />
+          <ScalarProperty Name="RistToken" ColumnName="RistToken" />
+          <ScalarProperty Name="PharmImage" ColumnName="PharmImage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Profiles">
+      <EntityTypeMapping TypeName="CPCLModel.Profiles">
+        <MappingFragment StoreEntitySet="Profiles">
+          <ScalarProperty Name="ProfileType" ColumnName="ProfileType" />
+          <ScalarProperty Name="SecurityLevel" ColumnName="SecurityLevel" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="CRC" ColumnName="CRC" />
+          <ScalarProperty Name="DateLastChange" ColumnName="DateLastChange" />
+          <ScalarProperty Name="UIDLastChange" ColumnName="UIDLastChange" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProfileTypes">
+      <EntityTypeMapping TypeName="CPCLModel.ProfileTypes">
+        <MappingFragment StoreEntitySet="ProfileTypes">
+          <ScalarProperty Name="ProfileType" ColumnName="ProfileType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Registration">
+      <EntityTypeMapping TypeName="CPCLModel.Registration">
+        <MappingFragment StoreEntitySet="Registration">
+          <ScalarProperty Name="PharmApbNr" ColumnName="PharmApbNr" />
+          <ScalarProperty Name="TimeCallCorilus" ColumnName="TimeCallCorilus" />
+          <ScalarProperty Name="CorilusLicenseCode" ColumnName="CorilusLicenseCode" />
+          <ScalarProperty Name="GroupType" ColumnName="GroupType" />
+          <ScalarProperty Name="DBIID" ColumnName="DBIID" />
+          <ScalarProperty Name="WsAccount" ColumnName="WsAccount" />
+          <ScalarProperty Name="WsPassword" ColumnName="WsPassword" />
+          <ScalarProperty Name="PermissionCode" ColumnName="PermissionCode" />
+          <ScalarProperty Name="Permissions" ColumnName="Permissions" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RegulationType">
+      <EntityTypeMapping TypeName="CPCLModel.RegulationType">
+        <MappingFragment StoreEntitySet="RegulationType">
+          <ScalarProperty Name="RegulationType1" ColumnName="RegulationType" />
+          <ScalarProperty Name="RegulationName" ColumnName="RegulationName" />
+          <ScalarProperty Name="GreenockID" ColumnName="GreenockID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoleLabels">
+      <EntityTypeMapping TypeName="CPCLModel.RoleLabels">
+        <MappingFragment StoreEntitySet="RoleLabels">
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="LangCode" ColumnName="LangCode" />
+          <ScalarProperty Name="RoleLabel" ColumnName="RoleLabel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="CPCLModel.Roles">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="CorilusRoleType" ColumnName="CorilusRoleType" />
+          <ScalarProperty Name="RoleType" ColumnName="RoleType" />
+          <ScalarProperty Name="IsPharmRole" ColumnName="IsPharmRole" />
+          <ScalarProperty Name="IsCentralRole" ColumnName="IsCentralRole" />
+          <ScalarProperty Name="DateLastChange" ColumnName="DateLastChange" />
+          <ScalarProperty Name="IsUsed" ColumnName="IsUsed" />
+          <ScalarProperty Name="ViewLayoutType" ColumnName="ViewLayoutType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaskGroupLabels">
+      <EntityTypeMapping TypeName="CPCLModel.TaskGroupLabels">
+        <MappingFragment StoreEntitySet="TaskGroupLabels">
+          <ScalarProperty Name="GroupType" ColumnName="GroupType" />
+          <ScalarProperty Name="LangCode" ColumnName="LangCode" />
+          <ScalarProperty Name="GroupTypeLabel" ColumnName="GroupTypeLabel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaskGroupTypes">
+      <EntityTypeMapping TypeName="CPCLModel.TaskGroupTypes">
+        <MappingFragment StoreEntitySet="TaskGroupTypes">
+          <ScalarProperty Name="GroupType" ColumnName="GroupType" />
+          <ScalarProperty Name="SortNr" ColumnName="SortNr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaskLabels">
+      <EntityTypeMapping TypeName="CPCLModel.TaskLabels">
+        <MappingFragment StoreEntitySet="TaskLabels">
+          <ScalarProperty Name="TaskType" ColumnName="TaskType" />
+          <ScalarProperty Name="LangCode" ColumnName="LangCode" />
+          <ScalarProperty Name="TaskTypeLabel" ColumnName="TaskTypeLabel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaskTypes">
+      <EntityTypeMapping TypeName="CPCLModel.TaskTypes">
+        <MappingFragment StoreEntitySet="TaskTypes">
+          <ScalarProperty Name="TaskType" ColumnName="TaskType" />
+          <ScalarProperty Name="SortNr" ColumnName="SortNr" />
+          <ScalarProperty Name="GroupType" ColumnName="GroupType" />
+          <ScalarProperty Name="Checked" ColumnName="Checked" />
+          <ScalarProperty Name="DateStart" ColumnName="DateStart" />
+          <ScalarProperty Name="NbrMonths" ColumnName="NbrMonths" />
+          <ScalarProperty Name="MaxErrorPercent" ColumnName="MaxErrorPercent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ToVerify">
+      <EntityTypeMapping TypeName="CPCLModel.ToVerify">
+        <MappingFragment StoreEntitySet="ToVerify">
+          <ScalarProperty Name="ToVerifyID" ColumnName="ToVerifyID" />
+          <ScalarProperty Name="IsVerified" ColumnName="IsVerified" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ToVerifyLabel">
+      <EntityTypeMapping TypeName="CPCLModel.ToVerifyLabel">
+        <MappingFragment StoreEntitySet="ToVerifyLabel">
+          <ScalarProperty Name="ToVerifyID" ColumnName="ToVerifyID" />
+          <ScalarProperty Name="LangCode" ColumnName="LangCode" />
+          <ScalarProperty Name="ToVerifyName" ColumnName="ToVerifyName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Trace">
+      <EntityTypeMapping TypeName="CPCLModel.Trace">
+        <MappingFragment StoreEntitySet="Trace">
+          <ScalarProperty Name="TraceID" ColumnName="TraceID" />
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Event" ColumnName="Event" />
+          <ScalarProperty Name="LigneNr" ColumnName="LigneNr" />
+          <ScalarProperty Name="LigneRead" ColumnName="LigneRead" />
+          <ScalarProperty Name="LigneInsert" ColumnName="LigneInsert" />
+          <ScalarProperty Name="LigneInError" ColumnName="LigneInError" />
+          <ScalarProperty Name="LigneUpdate" ColumnName="LigneUpdate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransactionType">
+      <EntityTypeMapping TypeName="CPCLModel.TransactionType">
+        <MappingFragment StoreEntitySet="TransactionType">
+          <ScalarProperty Name="TransactionType1" ColumnName="TransactionType" />
+          <ScalarProperty Name="TransactionName" ColumnName="TransactionName" />
+          <ScalarProperty Name="GreenockID" ColumnName="GreenockID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeNote">
+      <EntityTypeMapping TypeName="CPCLModel.TypeNote">
+        <MappingFragment StoreEntitySet="TypeNote">
+          <ScalarProperty Name="TypeNote1" ColumnName="TypeNote" />
+          <ScalarProperty Name="TypeNoteName" ColumnName="TypeNoteName" />
+          <ScalarProperty Name="GreenockID" ColumnName="GreenockID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UnitCode">
+      <EntityTypeMapping TypeName="CPCLModel.UnitCode">
+        <MappingFragment StoreEntitySet="UnitCode">
+          <ScalarProperty Name="UnitID" ColumnName="UnitID" />
+          <ScalarProperty Name="UnitCode1" ColumnName="UnitCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserEmails">
+      <EntityTypeMapping TypeName="CPCLModel.UserEmails">
+        <MappingFragment StoreEntitySet="UserEmails">
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="IsSelected" ColumnName="IsSelected" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="CPCLModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="LangCode" ColumnName="LangCode" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="UxName" ColumnName="UxName" />
+          <ScalarProperty Name="IsLeftHanded" ColumnName="IsLeftHanded" />
+          <ScalarProperty Name="TicketNickname" ColumnName="TicketNickname" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="UserImage" ColumnName="UserImage" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="UserCID" ColumnName="UserCID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="SysUID" ColumnName="SysUID" />
+          <ScalarProperty Name="NissinszNr" ColumnName="NissinszNr" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LastSynchroDateTime" ColumnName="LastSynchroDateTime" />
+          <ScalarProperty Name="AppUserPassword" ColumnName="AppUserPassword" />
+          <ScalarProperty Name="CRC" ColumnName="CRC" />
+          <ScalarProperty Name="DateLastChange" ColumnName="DateLastChange" />
+          <ScalarProperty Name="UIDLastChange" ColumnName="UIDLastChange" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Version">
+      <EntityTypeMapping TypeName="CPCLModel.Version">
+        <MappingFragment StoreEntitySet="Version">
+          <ScalarProperty Name="MajorNr" ColumnName="MajorNr" />
+          <ScalarProperty Name="MinorNr" ColumnName="MinorNr" />
+          <ScalarProperty Name="RevisionNr" ColumnName="RevisionNr" />
+          <ScalarProperty Name="LastUpgradeDate" ColumnName="LastUpgradeDate" />
+          <ScalarProperty Name="DatabaseStatus" ColumnName="DatabaseStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Note">
+      <EntityTypeMapping TypeName="CPCLModel.Note">
+        <MappingFragment StoreEntitySet="Note">
+          <ScalarProperty Name="NoteID" ColumnName="NoteID" />
+          <ScalarProperty Name="TypeNote" ColumnName="TypeNote" />
+          <ScalarProperty Name="LigneNr" ColumnName="LigneNr" />
+          <ScalarProperty Name="Contents" ColumnName="Contents" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustRistGroupLabels1">
+      <EntityTypeMapping TypeName="CPCLModel.CustRistGroupLabels1">
+        <MappingFragment StoreEntitySet="CustRistGroupLabels1">
+          <ScalarProperty Name="CustRistGrpCode" ColumnName="CustRistGrpCode" />
+          <ScalarProperty Name="LangCode" ColumnName="LangCode" />
+          <ScalarProperty Name="CustRistGroupLabel" ColumnName="CustRistGroupLabel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustRistGroups1">
+      <EntityTypeMapping TypeName="CPCLModel.CustRistGroups1">
+        <MappingFragment StoreEntitySet="CustRistGroups1">
+          <ScalarProperty Name="CustRistGrpCode" ColumnName="CustRistGrpCode" />
+          <ScalarProperty Name="IsPatient" ColumnName="IsPatient" />
+          <ScalarProperty Name="DefaultRistType" ColumnName="DefaultRistType" />
+          <ScalarProperty Name="DateLastChange" ColumnName="DateLastChange" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MarginTypes">
+      <EntityTypeMapping TypeName="CPCLModel.MarginTypes">
+        <MappingFragment StoreEntitySet="MarginTypes">
+          <ScalarProperty Name="MarginTypeID" ColumnName="MarginTypeID" />
+          <ScalarProperty Name="MarginMin" ColumnName="MarginMin" />
+          <ScalarProperty Name="MarginMax" ColumnName="MarginMax" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Registers">
+      <EntityTypeMapping TypeName="CPCLModel.Registers">
+        <MappingFragment StoreEntitySet="Registers">
+          <ScalarProperty Name="RegisterCode" ColumnName="RegisterCode" />
+          <ScalarProperty Name="RegisterNr" ColumnName="RegisterNr" />
+          <ScalarProperty Name="IsBox" ColumnName="IsBox" />
+          <ScalarProperty Name="RegSessionNrCurrent" ColumnName="RegSessionNrCurrent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RistCustArticles">
+      <EntityTypeMapping TypeName="CPCLModel.RistCustArticles">
+        <MappingFragment StoreEntitySet="RistCustArticles">
+          <ScalarProperty Name="RistRuleID" ColumnName="RistRuleID" />
+          <ScalarProperty Name="MarginTypeID" ColumnName="MarginTypeID" />
+          <ScalarProperty Name="InvCatCode" ColumnName="InvCatCode" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="ArtRangeLabel" ColumnName="ArtRangeLabel" />
+          <ScalarProperty Name="IsArtRange" ColumnName="IsArtRange" />
+          <ScalarProperty Name="ArtID" ColumnName="ArtID" />
+          <ScalarProperty Name="CnkNr" ColumnName="CnkNr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RistCustRistGroups">
+      <EntityTypeMapping TypeName="CPCLModel.RistCustRistGroups">
+        <MappingFragment StoreEntitySet="RistCustRistGroups">
+          <ScalarProperty Name="RistRuleID" ColumnName="RistRuleID" />
+          <ScalarProperty Name="ArticleStrategy" ColumnName="ArticleStrategy" />
+          <ScalarProperty Name="CustRistGrpCode" ColumnName="CustRistGrpCode" />
+          <ScalarProperty Name="MarginTypeID" ColumnName="MarginTypeID" />
+          <ScalarProperty Name="InvCatCode" ColumnName="InvCatCode" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="ArtRangeLabel" ColumnName="ArtRangeLabel" />
+          <ScalarProperty Name="IsArtRange" ColumnName="IsArtRange" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RistCustRules">
+      <EntityTypeMapping TypeName="CPCLModel.RistCustRules">
+        <MappingFragment StoreEntitySet="RistCustRules">
+          <ScalarProperty Name="RistRuleID" ColumnName="RistRuleID" />
+          <ScalarProperty Name="RistPercent" ColumnName="RistPercent" />
+          <ScalarProperty Name="RistType" ColumnName="RistType" />
+          <ScalarProperty Name="LimitType" ColumnName="LimitType" />
+          <ScalarProperty Name="AmntMax" ColumnName="AmntMax" />
+          <ScalarProperty Name="RistNonReimbType" ColumnName="RistNonReimbType" />
+          <ScalarProperty Name="PharmID" ColumnName="PharmID" />
+          <ScalarProperty Name="PushStatusType" ColumnName="PushStatusType" />
+          <ScalarProperty Name="DateLastPush" ColumnName="DateLastPush" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="DateLastChange" ColumnName="DateLastChange" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RistPatRistGroups">
+      <EntityTypeMapping TypeName="CPCLModel.RistPatRistGroups">
+        <MappingFragment StoreEntitySet="RistPatRistGroups">
+          <ScalarProperty Name="RistRuleID" ColumnName="RistRuleID" />
+          <ScalarProperty Name="ArticleStrategy" ColumnName="ArticleStrategy" />
+          <ScalarProperty Name="CustGroupStrategy" ColumnName="CustGroupStrategy" />
+          <ScalarProperty Name="CustRistGrpCode" ColumnName="CustRistGrpCode" />
+          <ScalarProperty Name="MarginTypeID" ColumnName="MarginTypeID" />
+          <ScalarProperty Name="InvCatCode" ColumnName="InvCatCode" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="ArtRangeLabel" ColumnName="ArtRangeLabel" />
+          <ScalarProperty Name="IsArtRange" ColumnName="IsArtRange" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UrlTypes">
+      <EntityTypeMapping TypeName="CPCLModel.UrlTypes">
+        <MappingFragment StoreEntitySet="UrlTypes">
+          <ScalarProperty Name="UrlName" ColumnName="UrlName" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="UrlParams" ColumnName="UrlParams" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="TimeOut" ColumnName="TimeOut" />
+          <ScalarProperty Name="IsUpdatable" ColumnName="IsUpdatable" />
+          <ScalarProperty Name="PortNr" ColumnName="PortNr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WhLocationLabels">
+      <EntityTypeMapping TypeName="CPCLModel.WhLocationLabels">
+        <MappingFragment StoreEntitySet="WhLocationLabels">
+          <ScalarProperty Name="WhLocId" ColumnName="WhLocId" />
+          <ScalarProperty Name="LangCode" ColumnName="LangCode" />
+          <ScalarProperty Name="WhLocationLabel" ColumnName="WhLocationLabel" />
+          <ScalarProperty Name="WhLocationShortLabel" ColumnName="WhLocationShortLabel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WhLocs">
+      <EntityTypeMapping TypeName="CPCLModel.WhLocs">
+        <MappingFragment StoreEntitySet="WhLocs">
+          <ScalarProperty Name="WhLocCode" ColumnName="WhLocCode" />
+          <ScalarProperty Name="WhID" ColumnName="WhID" />
+          <ScalarProperty Name="WhLocId" ColumnName="WhLocId" />
+          <ScalarProperty Name="LocHorizontalPos" ColumnName="LocHorizontalPos" />
+          <ScalarProperty Name="LocVerticalPos" ColumnName="LocVerticalPos" />
+          <ScalarProperty Name="LocWidth" ColumnName="LocWidth" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkstationDevices">
+      <EntityTypeMapping TypeName="CPCLModel.WorkstationDevices">
+        <MappingFragment StoreEntitySet="WorkstationDevices">
+          <ScalarProperty Name="WrkstatDeviceID" ColumnName="WrkstatDeviceID" />
+          <ScalarProperty Name="WrkstatCode" ColumnName="WrkstatCode" />
+          <ScalarProperty Name="DeviceID" ColumnName="DeviceID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Workstations">
+      <EntityTypeMapping TypeName="CPCLModel.Workstations">
+        <MappingFragment StoreEntitySet="Workstations">
+          <ScalarProperty Name="WrkstatCode" ColumnName="WrkstatCode" />
+          <ScalarProperty Name="WrkstatDescrText" ColumnName="WrkstatDescrText" />
+          <ScalarProperty Name="KeyboardCode" ColumnName="KeyboardCode" />
+          <ScalarProperty Name="RegisterCode" ColumnName="RegisterCode" />
+          <ScalarProperty Name="TicketPrinterID" ColumnName="TicketPrinterID" />
+          <ScalarProperty Name="FormPrinterID" ColumnName="FormPrinterID" />
+          <ScalarProperty Name="ListPrinterID" ColumnName="ListPrinterID" />
+          <ScalarProperty Name="CardPrinterID" ColumnName="CardPrinterID" />
+          <ScalarProperty Name="LabelCompositePrinterID" ColumnName="LabelCompositePrinterID" />
+          <ScalarProperty Name="LabelContinuPrinterID" ColumnName="LabelContinuPrinterID" />
+          <ScalarProperty Name="LabelPluralPrinterID" ColumnName="LabelPluralPrinterID" />
+          <ScalarProperty Name="LabelSinglePrinterID" ColumnName="LabelSinglePrinterID" />
+          <ScalarProperty Name="SlipPrinterID" ColumnName="SlipPrinterID" />
+          <ScalarProperty Name="ScreenID" ColumnName="ScreenID" />
+          <ScalarProperty Name="SisReaderID" ColumnName="SisReaderID" />
+          <ScalarProperty Name="EftID" ColumnName="EftID" />
+          <ScalarProperty Name="CashDrawerID" ColumnName="CashDrawerID" />
+          <ScalarProperty Name="ModemID" ColumnName="ModemID" />
+          <ScalarProperty Name="RobotID" ColumnName="RobotID" />
+          <ScalarProperty Name="EidReaderID" ColumnName="EidReaderID" />
+          <ScalarProperty Name="PaperScanID" ColumnName="PaperScanID" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="BarcodeReaderID" ColumnName="BarcodeReaderID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WrkstatBackups">
+      <EntityTypeMapping TypeName="CPCLModel.WrkstatBackups">
+        <MappingFragment StoreEntitySet="WrkstatBackups">
+          <ScalarProperty Name="WrkstatDeviceID" ColumnName="WrkstatDeviceID" />
+          <ScalarProperty Name="OutputDir" ColumnName="OutputDir" />
+          <ScalarProperty Name="MediaType" ColumnName="MediaType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WrkstatBarcodeReaders">
+      <EntityTypeMapping TypeName="CPCLModel.WrkstatBarcodeReaders">
+        <MappingFragment StoreEntitySet="WrkstatBarcodeReaders">
+          <ScalarProperty Name="WrkstatDeviceID" ColumnName="WrkstatDeviceID" />
+          <ScalarProperty Name="PreAmble" ColumnName="PreAmble" />
+          <ScalarProperty Name="PostAmble" ColumnName="PostAmble" />
+          <ScalarProperty Name="ConfigType" ColumnName="ConfigType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WrkstatCashDrawers">
+      <EntityTypeMapping TypeName="CPCLModel.WrkstatCashDrawers">
+        <MappingFragment StoreEntitySet="WrkstatCashDrawers">
+          <ScalarProperty Name="WrkstatDeviceID" ColumnName="WrkstatDeviceID" />
+          <ScalarProperty Name="PrinterPort" ColumnName="PrinterPort" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WrkstatEfts">
+      <EntityTypeMapping TypeName="CPCLModel.WrkstatEfts">
+        <MappingFragment StoreEntitySet="WrkstatEfts">
+          <ScalarProperty Name="WrkstatDeviceID" ColumnName="WrkstatDeviceID" />
+          <ScalarProperty Name="TerminalName" ColumnName="TerminalName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WrkstatEidReaders">
+      <EntityTypeMapping TypeName="CPCLModel.WrkstatEidReaders">
+        <MappingFragment StoreEntitySet="WrkstatEidReaders">
+          <ScalarProperty Name="WrkstatDeviceID" ColumnName="WrkstatDeviceID" />
+          <ScalarProperty Name="ReaderName" ColumnName="ReaderName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WrkstatModems">
+      <EntityTypeMapping TypeName="CPCLModel.WrkstatModems">
+        <MappingFragment StoreEntitySet="WrkstatModems">
+          <ScalarProperty Name="WrkstatDeviceID" ColumnName="WrkstatDeviceID" />
+          <ScalarProperty Name="Rs232Port" ColumnName="Rs232Port" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WrkstatPaperScans">
+      <EntityTypeMapping TypeName="CPCLModel.WrkstatPaperScans">
+        <MappingFragment StoreEntitySet="WrkstatPaperScans">
+          <ScalarProperty Name="WrkstatDeviceID" ColumnName="WrkstatDeviceID" />
+          <ScalarProperty Name="WIADeviceID" ColumnName="WIADeviceID" />
+          <ScalarProperty Name="PaperScanMode" ColumnName="PaperScanMode" />
+          <ScalarProperty Name="HorizontalResolution" ColumnName="HorizontalResolution" />
+          <ScalarProperty Name="VerticalResolution" ColumnName="VerticalResolution" />
+          <ScalarProperty Name="ScanName" ColumnName="ScanName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WrkstatPrinters">
+      <EntityTypeMapping TypeName="CPCLModel.WrkstatPrinters">
+        <MappingFragment StoreEntitySet="WrkstatPrinters">
+          <ScalarProperty Name="WrkstatDeviceID" ColumnName="WrkstatDeviceID" />
+          <ScalarProperty Name="PrinterPort" ColumnName="PrinterPort" />
+          <ScalarProperty Name="LayoutType" ColumnName="LayoutType" />
+          <ScalarProperty Name="Tray" ColumnName="Tray" />
+          <ScalarProperty Name="Duplex" ColumnName="Duplex" />
+          <ScalarProperty Name="NameTray" ColumnName="NameTray" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WrkstatRobots">
+      <EntityTypeMapping TypeName="CPCLModel.WrkstatRobots">
+        <MappingFragment StoreEntitySet="WrkstatRobots">
+          <ScalarProperty Name="WrkstatDeviceID" ColumnName="WrkstatDeviceID" />
+          <ScalarProperty Name="ServerUnc" ColumnName="ServerUnc" />
+          <ScalarProperty Name="ServerIpPort" ColumnName="ServerIpPort" />
+          <ScalarProperty Name="RobotOutletNr" ColumnName="RobotOutletNr" />
+          <ScalarProperty Name="RobotPriority" ColumnName="RobotPriority" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WrkstatScreens">
+      <EntityTypeMapping TypeName="CPCLModel.WrkstatScreens">
+        <MappingFragment StoreEntitySet="WrkstatScreens">
+          <ScalarProperty Name="WrkstatDeviceID" ColumnName="WrkstatDeviceID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WrkstatSisReaders">
+      <EntityTypeMapping TypeName="CPCLModel.WrkstatSisReaders">
+        <MappingFragment StoreEntitySet="WrkstatSisReaders">
+          <ScalarProperty Name="WrkstatDeviceID" ColumnName="WrkstatDeviceID" />
+          <ScalarProperty Name="SamCode" ColumnName="SamCode" />
+          <ScalarProperty Name="TrialDate" ColumnName="TrialDate" />
+          <ScalarProperty Name="Trial" ColumnName="Trial" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Analysis">
+      <EntityTypeMapping TypeName="CPCLModel.Analysis">
+        <MappingFragment StoreEntitySet="Analysis">
+          <ScalarProperty Name="AnalysisNr" ColumnName="AnalysisNr" />
+          <ScalarProperty Name="BuyDate" ColumnName="BuyDate" />
+          <ScalarProperty Name="DateAnalysis" ColumnName="DateAnalysis" />
+          <ScalarProperty Name="Qtd" ColumnName="Qtd" />
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+          <ScalarProperty Name="LotNr" ColumnName="LotNr" />
+          <ScalarProperty Name="LotNrSuffix" ColumnName="LotNrSuffix" />
+          <ScalarProperty Name="DateExpiry" ColumnName="DateExpiry" />
+          <ScalarProperty Name="ArtID" ColumnName="ArtID" />
+          <ScalarProperty Name="SupplierIDSupplier" ColumnName="SupplierIDSupplier" />
+          <ScalarProperty Name="SupplierIDManuf" ColumnName="SupplierIDManuf" />
+          <ScalarProperty Name="AuthorisNr" ColumnName="AuthorisNr" />
+          <ScalarProperty Name="PhcopeeType" ColumnName="PhcopeeType" />
+          <ScalarProperty Name="Report" ColumnName="Report" />
+          <ScalarProperty Name="IsConform" ColumnName="IsConform" />
+          <ScalarProperty Name="DateOpened" ColumnName="DateOpened" />
+          <ScalarProperty Name="DateEmpty" ColumnName="DateEmpty" />
+          <ScalarProperty Name="BuyPrice" ColumnName="BuyPrice" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="ArtIDTsp" ColumnName="ArtIDTsp" />
+          <ScalarProperty Name="AnalysisStatusType" ColumnName="AnalysisStatusType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FormulaItems">
+      <EntityTypeMapping TypeName="CPCLModel.FormulaItems">
+        <MappingFragment StoreEntitySet="FormulaItems">
+          <ScalarProperty Name="FormID" ColumnName="FormID" />
+          <ScalarProperty Name="FormItemNr" ColumnName="FormItemNr" />
+          <ScalarProperty Name="FormItemType" ColumnName="FormItemType" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="Qtd" ColumnName="Qtd" />
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+          <ScalarProperty Name="ArtID" ColumnName="ArtID" />
+          <ScalarProperty Name="SpecHonCode" ColumnName="SpecHonCode" />
+          <ScalarProperty Name="QtyQualifier" ColumnName="QtyQualifier" />
+          <ScalarProperty Name="GreenockID" ColumnName="GreenockID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FormulaLabels">
+      <EntityTypeMapping TypeName="CPCLModel.FormulaLabels">
+        <MappingFragment StoreEntitySet="FormulaLabels">
+          <ScalarProperty Name="FormID" ColumnName="FormID" />
+          <ScalarProperty Name="LangCode" ColumnName="LangCode" />
+          <ScalarProperty Name="FormulariumLabel" ColumnName="FormulariumLabel" />
+          <ScalarProperty Name="FormulariumLabelNr" ColumnName="FormulariumLabelNr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Formulas">
+      <EntityTypeMapping TypeName="CPCLModel.Formulas">
+        <MappingFragment StoreEntitySet="Formulas">
+          <ScalarProperty Name="FormID" ColumnName="FormID" />
+          <ScalarProperty Name="FormQtd" ColumnName="FormQtd" />
+          <ScalarProperty Name="UnitCodePrepQtd" ColumnName="UnitCodePrepQtd" />
+          <ScalarProperty Name="IsApb" ColumnName="IsApb" />
+          <ScalarProperty Name="Density" ColumnName="Density" />
+          <ScalarProperty Name="FormulariumCode" ColumnName="FormulariumCode" />
+          <ScalarProperty Name="GalformCode" ColumnName="GalformCode" />
+          <ScalarProperty Name="DtQty" ColumnName="DtQty" />
+          <ScalarProperty Name="GreenockID" ColumnName="GreenockID" />
+          <ScalarProperty Name="CnkNr" ColumnName="CnkNr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InvCatBreakds">
+      <EntityTypeMapping TypeName="CPCLModel.InvCatBreakds">
+        <MappingFragment StoreEntitySet="InvCatBreakds">
+          <ScalarProperty Name="RegTransactID" ColumnName="RegTransactID" />
+          <ScalarProperty Name="InvCatCode" ColumnName="InvCatCode" />
+          <ScalarProperty Name="SsecType" ColumnName="SsecType" />
+          <ScalarProperty Name="PubPrice" ColumnName="PubPrice" />
+          <ScalarProperty Name="AmntVat" ColumnName="AmntVat" />
+          <ScalarProperty Name="AmntPaid" ColumnName="AmntPaid" />
+          <ScalarProperty Name="AmntRebate" ColumnName="AmntRebate" />
+          <ScalarProperty Name="TurnoverCatType" ColumnName="TurnoverCatType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymEftBreakds">
+      <EntityTypeMapping TypeName="CPCLModel.PaymEftBreakds">
+        <MappingFragment StoreEntitySet="PaymEftBreakds">
+          <ScalarProperty Name="RegTransactID" ColumnName="RegTransactID" />
+          <ScalarProperty Name="PaymMethodCode" ColumnName="PaymMethodCode" />
+          <ScalarProperty Name="CurrencyIsoCodeCust" ColumnName="CurrencyIsoCodeCust" />
+          <ScalarProperty Name="EftTerminalName" ColumnName="EftTerminalName" />
+          <ScalarProperty Name="EftTermID" ColumnName="EftTermID" />
+          <ScalarProperty Name="EftTxvictxamt" ColumnName="EftTxvictxamt" />
+          <ScalarProperty Name="EftAppid" ColumnName="EftAppid" />
+          <ScalarProperty Name="EftCardID" ColumnName="EftCardID" />
+          <ScalarProperty Name="EftVictxid" ColumnName="EftVictxid" />
+          <ScalarProperty Name="EftPdvclctnr" ColumnName="EftPdvclctnr" />
+          <ScalarProperty Name="EftPdvgentxnb" ColumnName="EftPdvgentxnb" />
+          <ScalarProperty Name="EftEmvcvm" ColumnName="EftEmvcvm" />
+          <ScalarProperty Name="EftEmvdatetime" ColumnName="EftEmvdatetime" />
+          <ScalarProperty Name="EftEmvtransid" ColumnName="EftEmvtransid" />
+          <ScalarProperty Name="DatePaymEft" ColumnName="DatePaymEft" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymMethodBreakds">
+      <EntityTypeMapping TypeName="CPCLModel.PaymMethodBreakds">
+        <MappingFragment StoreEntitySet="PaymMethodBreakds">
+          <ScalarProperty Name="RegTransactID" ColumnName="RegTransactID" />
+          <ScalarProperty Name="PaymMethodCode" ColumnName="PaymMethodCode" />
+          <ScalarProperty Name="CurrencyIsoCodeCust" ColumnName="CurrencyIsoCodeCust" />
+          <ScalarProperty Name="AmntDefaultCurrencyIn" ColumnName="AmntDefaultCurrencyIn" />
+          <ScalarProperty Name="AmntCustCurrencyIn" ColumnName="AmntCustCurrencyIn" />
+          <ScalarProperty Name="AmntDefaultCurrencyOut" ColumnName="AmntDefaultCurrencyOut" />
+          <ScalarProperty Name="AmntCustCurrencyOut" ColumnName="AmntCustCurrencyOut" />
+          <ScalarProperty Name="PaymMethodCost" ColumnName="PaymMethodCost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymMethodLabels">
+      <EntityTypeMapping TypeName="CPCLModel.PaymMethodLabels">
+        <MappingFragment StoreEntitySet="PaymMethodLabels">
+          <ScalarProperty Name="PaymMethodCode" ColumnName="PaymMethodCode" />
+          <ScalarProperty Name="LangCode" ColumnName="LangCode" />
+          <ScalarProperty Name="PaymMethodLabel" ColumnName="PaymMethodLabel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymMethods1">
+      <EntityTypeMapping TypeName="CPCLModel.PaymMethods1">
+        <MappingFragment StoreEntitySet="PaymMethods1">
+          <ScalarProperty Name="PaymMethodCode" ColumnName="PaymMethodCode" />
+          <ScalarProperty Name="PaymMethodCost" ColumnName="PaymMethodCost" />
+          <ScalarProperty Name="RegSortNr" ColumnName="RegSortNr" />
+          <ScalarProperty Name="RegSheetDirectionType" ColumnName="RegSheetDirectionType" />
+          <ScalarProperty Name="IsShowRegSheet" ColumnName="IsShowRegSheet" />
+          <ScalarProperty Name="PaymMethodCostMinAmnt" ColumnName="PaymMethodCostMinAmnt" />
+          <ScalarProperty Name="IsEft" ColumnName="IsEft" />
+          <ScalarProperty Name="PaymMethodCostType" ColumnName="PaymMethodCostType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Registers1">
+      <EntityTypeMapping TypeName="CPCLModel.Registers1">
+        <MappingFragment StoreEntitySet="Registers1">
+          <ScalarProperty Name="RegisterCode" ColumnName="RegisterCode" />
+          <ScalarProperty Name="RegisterDescrText" ColumnName="RegisterDescrText" />
+          <ScalarProperty Name="RegSessionNrCurrent" ColumnName="RegSessionNrCurrent" />
+          <ScalarProperty Name="RegisterNr" ColumnName="RegisterNr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RegSessions">
+      <EntityTypeMapping TypeName="CPCLModel.RegSessions">
+        <MappingFragment StoreEntitySet="RegSessions">
+          <ScalarProperty Name="RegSessionNr" ColumnName="RegSessionNr" />
+          <ScalarProperty Name="DateOpened" ColumnName="DateOpened" />
+          <ScalarProperty Name="DateClosed" ColumnName="DateClosed" />
+          <ScalarProperty Name="OpenType" ColumnName="OpenType" />
+          <ScalarProperty Name="RegSessionNrPrevious" ColumnName="RegSessionNrPrevious" />
+          <ScalarProperty Name="IsAccyFlatrate" ColumnName="IsAccyFlatrate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RegTransactions">
+      <EntityTypeMapping TypeName="CPCLModel.RegTransactions">
+        <MappingFragment StoreEntitySet="RegTransactions">
+          <ScalarProperty Name="RegTransactID" ColumnName="RegTransactID" />
+          <ScalarProperty Name="DateTimeTransact" ColumnName="DateTimeTransact" />
+          <ScalarProperty Name="RegTransactType" ColumnName="RegTransactType" />
+          <ScalarProperty Name="TotalAmntIn" ColumnName="TotalAmntIn" />
+          <ScalarProperty Name="TotalAmntVatex" ColumnName="TotalAmntVatex" />
+          <ScalarProperty Name="TotalAmntOut" ColumnName="TotalAmntOut" />
+          <ScalarProperty Name="RegisterCode" ColumnName="RegisterCode" />
+          <ScalarProperty Name="RegSessionNr" ColumnName="RegSessionNr" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="PendingID" ColumnName="PendingID" />
+          <ScalarProperty Name="SlsID" ColumnName="SlsID" />
+          <ScalarProperty Name="CurrencyIsoCodeCust" ColumnName="CurrencyIsoCodeCust" />
+          <ScalarProperty Name="IsIvc" ColumnName="IsIvc" />
+          <ScalarProperty Name="CentralizationStatus" ColumnName="CentralizationStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WithdDeps">
+      <EntityTypeMapping TypeName="CPCLModel.WithdDeps">
+        <MappingFragment StoreEntitySet="WithdDeps">
+          <ScalarProperty Name="RegTransactID" ColumnName="RegTransactID" />
+          <ScalarProperty Name="WithdDepCode" ColumnName="WithdDepCode" />
+          <ScalarProperty Name="TdpIvcReference" ColumnName="TdpIvcReference" />
+          <ScalarProperty Name="AccyNr" ColumnName="AccyNr" />
+          <ScalarProperty Name="DateWithdDep" ColumnName="DateWithdDep" />
+          <ScalarProperty Name="IvcID" ColumnName="IvcID" />
+          <ScalarProperty Name="PaymSeqNr" ColumnName="PaymSeqNr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WithdDepTypes">
+      <EntityTypeMapping TypeName="CPCLModel.WithdDepTypes">
+        <MappingFragment StoreEntitySet="WithdDepTypes">
+          <ScalarProperty Name="WithdDepCode" ColumnName="WithdDepCode" />
+          <ScalarProperty Name="AccySchemeNr" ColumnName="AccySchemeNr" />
+          <ScalarProperty Name="IsShowIvcReference" ColumnName="IsShowIvcReference" />
+          <ScalarProperty Name="IsShowAccySchemeNr" ColumnName="IsShowAccySchemeNr" />
+          <ScalarProperty Name="WithdDepDirectionType" ColumnName="WithdDepDirectionType" />
+          <ScalarProperty Name="WithdDepLabel" ColumnName="WithdDepLabel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Magistrals">
+      <EntityTypeMapping TypeName="CPCLModel.Magistrals">
+        <MappingFragment StoreEntitySet="Magistrals">
+          <ScalarProperty Name="MagistralID" ColumnName="MagistralID" />
+          <ScalarProperty Name="MagistralNr" ColumnName="MagistralNr" />
+          <ScalarProperty Name="MagistralName" ColumnName="MagistralName" />
+          <ScalarProperty Name="DateMag" ColumnName="DateMag" />
+          <ScalarProperty Name="GalformCode" ColumnName="GalformCode" />
+          <ScalarProperty Name="DtQty" ColumnName="DtQty" />
+          <ScalarProperty Name="UnitCodePresb" ColumnName="UnitCodePresb" />
+          <ScalarProperty Name="PresbQtd" ColumnName="PresbQtd" />
+          <ScalarProperty Name="BaseAmntNetto" ColumnName="BaseAmntNetto" />
+          <ScalarProperty Name="MagFullPrice" ColumnName="MagFullPrice" />
+          <ScalarProperty Name="AmntChem" ColumnName="AmntChem" />
+          <ScalarProperty Name="AmntChemReimb" ColumnName="AmntChemReimb" />
+          <ScalarProperty Name="AmntExcipient" ColumnName="AmntExcipient" />
+          <ScalarProperty Name="AmntExcipientReimb" ColumnName="AmntExcipientReimb" />
+          <ScalarProperty Name="ModCount" ColumnName="ModCount" />
+          <ScalarProperty Name="ReimbModCount" ColumnName="ReimbModCount" />
+          <ScalarProperty Name="AmntHon" ColumnName="AmntHon" />
+          <ScalarProperty Name="AmntHonReimb" ColumnName="AmntHonReimb" />
+          <ScalarProperty Name="RgtmCount" ColumnName="RgtmCount" />
+          <ScalarProperty Name="UnitPriceRgtm" ColumnName="UnitPriceRgtm" />
+          <ScalarProperty Name="RgtmType" ColumnName="RgtmType" />
+          <ScalarProperty Name="CoeffReductQtd" ColumnName="CoeffReductQtd" />
+          <ScalarProperty Name="CoeffReductDt" ColumnName="CoeffReductDt" />
+          <ScalarProperty Name="MagCalcMethodCode" ColumnName="MagCalcMethodCode" />
+          <ScalarProperty Name="IsNasalUse" ColumnName="IsNasalUse" />
+          <ScalarProperty Name="IsReimbHomeo" ColumnName="IsReimbHomeo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MagItems">
+      <EntityTypeMapping TypeName="CPCLModel.MagItems">
+        <MappingFragment StoreEntitySet="MagItems">
+          <ScalarProperty Name="MagistralID" ColumnName="MagistralID" />
+          <ScalarProperty Name="MitmNr" ColumnName="MitmNr" />
+          <ScalarProperty Name="SlsID" ColumnName="SlsID" />
+          <ScalarProperty Name="SsecNr" ColumnName="SsecNr" />
+          <ScalarProperty Name="SitmNr" ColumnName="SitmNr" />
+          <ScalarProperty Name="MagItemType" ColumnName="MagItemType" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="Thirdpartypaid" ColumnName="Thirdpartypaid" />
+          <ScalarProperty Name="AmntNetto" ColumnName="AmntNetto" />
+          <ScalarProperty Name="FullPrice" ColumnName="FullPrice" />
+          <ScalarProperty Name="ArtIDSold" ColumnName="ArtIDSold" />
+          <ScalarProperty Name="Qtd" ColumnName="Qtd" />
+          <ScalarProperty Name="QtdUnitCode" ColumnName="QtdUnitCode" />
+          <ScalarProperty Name="QtyQualifier" ColumnName="QtyQualifier" />
+          <ScalarProperty Name="FormType" ColumnName="FormType" />
+          <ScalarProperty Name="FormID" ColumnName="FormID" />
+          <ScalarProperty Name="LegConstrListCpy" ColumnName="LegConstrListCpy" />
+          <ScalarProperty Name="SpecHonCode" ColumnName="SpecHonCode" />
+          <ScalarProperty Name="RecrsDepth" ColumnName="RecrsDepth" />
+          <ScalarProperty Name="IsAntioxidant" ColumnName="IsAntioxidant" />
+          <ScalarProperty Name="InamirizivListNr" ColumnName="InamirizivListNr" />
+          <ScalarProperty Name="ArtIDFromStock" ColumnName="ArtIDFromStock" />
+          <ScalarProperty Name="DeliveredQty" ColumnName="DeliveredQty" />
+          <ScalarProperty Name="ArtIdSoldType" ColumnName="ArtIdSoldType" />
+          <ScalarProperty Name="ArtReimbCatCode" ColumnName="ArtReimbCatCode" />
+          <ScalarProperty Name="ReimbExcptCode" ColumnName="ReimbExcptCode" />
+          <ScalarProperty Name="IsAttestNeeded" ColumnName="IsAttestNeeded" />
+          <ScalarProperty Name="AttestID" ColumnName="AttestID" />
+          <ScalarProperty Name="IsAttestMissing" ColumnName="IsAttestMissing" />
+          <ScalarProperty Name="IsReimbMarkNeeded" ColumnName="IsReimbMarkNeeded" />
+          <ScalarProperty Name="ArtReimbMarkCode" ColumnName="ArtReimbMarkCode" />
+          <ScalarProperty Name="IsStampNeeded" ColumnName="IsStampNeeded" />
+          <ScalarProperty Name="HasStamp" ColumnName="HasStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RistCardsRists">
+      <EntityTypeMapping TypeName="CPCLModel.RistCardsRists">
+        <MappingFragment StoreEntitySet="RistCardsRists">
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+          <ScalarProperty Name="RistCardNr" ColumnName="RistCardNr" />
+          <ScalarProperty Name="DatetimeFirst" ColumnName="DatetimeFirst" />
+          <ScalarProperty Name="VatRate" ColumnName="VatRate" />
+          <ScalarProperty Name="AmntRist" ColumnName="AmntRist" />
+          <ScalarProperty Name="RistTransactType" ColumnName="RistTransactType" />
+          <ScalarProperty Name="SlsID" ColumnName="SlsID" />
+          <ScalarProperty Name="CentralizationStatus" ColumnName="CentralizationStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SaleItems">
+      <EntityTypeMapping TypeName="CPCLModel.SaleItems">
+        <MappingFragment StoreEntitySet="SaleItems">
+          <ScalarProperty Name="SlsID" ColumnName="SlsID" />
+          <ScalarProperty Name="SsecNr" ColumnName="SsecNr" />
+          <ScalarProperty Name="SitmNr" ColumnName="SitmNr" />
+          <ScalarProperty Name="ArtID" ColumnName="ArtID" />
+          <ScalarProperty Name="MagistralID" ColumnName="MagistralID" />
+          <ScalarProperty Name="PubPricePerUnit" ColumnName="PubPricePerUnit" />
+          <ScalarProperty Name="BuyPriceEstmPerUnit" ColumnName="BuyPriceEstmPerUnit" />
+          <ScalarProperty Name="SaleQty" ColumnName="SaleQty" />
+          <ScalarProperty Name="AttestID" ColumnName="AttestID" />
+          <ScalarProperty Name="OriginalPrescpNr" ColumnName="OriginalPrescpNr" />
+          <ScalarProperty Name="Dci" ColumnName="Dci" />
+          <ScalarProperty Name="ClusterID" ColumnName="ClusterID" />
+          <ScalarProperty Name="SitmType" ColumnName="SitmType" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="SitmRegulType" ColumnName="SitmRegulType" />
+          <ScalarProperty Name="PendType" ColumnName="PendType" />
+          <ScalarProperty Name="VatRateCpy" ColumnName="VatRateCpy" />
+          <ScalarProperty Name="DeliveredQty" ColumnName="DeliveredQty" />
+          <ScalarProperty Name="ReservedQty" ColumnName="ReservedQty" />
+          <ScalarProperty Name="PayableQty" ColumnName="PayableQty" />
+          <ScalarProperty Name="RistType" ColumnName="RistType" />
+          <ScalarProperty Name="Thirdpartypaid" ColumnName="Thirdpartypaid" />
+          <ScalarProperty Name="AmntNetto" ColumnName="AmntNetto" />
+          <ScalarProperty Name="ArtIDFromStock" ColumnName="ArtIDFromStock" />
+          <ScalarProperty Name="Qtd" ColumnName="Qtd" />
+          <ScalarProperty Name="LegConstrListCpy" ColumnName="LegConstrListCpy" />
+          <ScalarProperty Name="IsBackofficeMode" ColumnName="IsBackofficeMode" />
+          <ScalarProperty Name="AmntPaid" ColumnName="AmntPaid" />
+          <ScalarProperty Name="AmntRist" ColumnName="AmntRist" />
+          <ScalarProperty Name="AmntRebate" ColumnName="AmntRebate" />
+          <ScalarProperty Name="AmntRistNetto" ColumnName="AmntRistNetto" />
+          <ScalarProperty Name="AmntRebateNetto" ColumnName="AmntRebateNetto" />
+          <ScalarProperty Name="PaidQty" ColumnName="PaidQty" />
+          <ScalarProperty Name="UnpaidDeliveredQty" ColumnName="UnpaidDeliveredQty" />
+          <ScalarProperty Name="RenewalCount" ColumnName="RenewalCount" />
+          <ScalarProperty Name="RenewalNr" ColumnName="RenewalNr" />
+          <ScalarProperty Name="RenewalPeriodCount" ColumnName="RenewalPeriodCount" />
+          <ScalarProperty Name="RenewalPeriodType" ColumnName="RenewalPeriodType" />
+          <ScalarProperty Name="IsTdpTarTrf" ColumnName="IsTdpTarTrf" />
+          <ScalarProperty Name="IsTdpIvcTrfs" ColumnName="IsTdpIvcTrfs" />
+          <ScalarProperty Name="BasepricePerUnit" ColumnName="BasepricePerUnit" />
+          <ScalarProperty Name="AmntRistPat" ColumnName="AmntRistPat" />
+          <ScalarProperty Name="AmntRebatePat" ColumnName="AmntRebatePat" />
+          <ScalarProperty Name="AmntRistPatNetto" ColumnName="AmntRistPatNetto" />
+          <ScalarProperty Name="AmntRebatePatNetto" ColumnName="AmntRebatePatNetto" />
+          <ScalarProperty Name="DeferredDeliveryQty" ColumnName="DeferredDeliveryQty" />
+          <ScalarProperty Name="F704PrintType" ColumnName="F704PrintType" />
+          <ScalarProperty Name="BvacPrintType" ColumnName="BvacPrintType" />
+          <ScalarProperty Name="IsSubst" ColumnName="IsSubst" />
+          <ScalarProperty Name="ArtReimbCatCode" ColumnName="ArtReimbCatCode" />
+          <ScalarProperty Name="ReimbExcptCode" ColumnName="ReimbExcptCode" />
+          <ScalarProperty Name="IsReimbMarkNeeded" ColumnName="IsReimbMarkNeeded" />
+          <ScalarProperty Name="IsStampNeeded" ColumnName="IsStampNeeded" />
+          <ScalarProperty Name="RgtmCount" ColumnName="RgtmCount" />
+          <ScalarProperty Name="AmntPaidSecondCover" ColumnName="AmntPaidSecondCover" />
+          <ScalarProperty Name="pendingResolve" ColumnName="pendingResolve" />
+          <ScalarProperty Name="IsAttestMissing" ColumnName="IsAttestMissing" />
+          <ScalarProperty Name="UnDeliveredQty" ColumnName="UnDeliveredQty" />
+          <ScalarProperty Name="IsFirstDeliv" ColumnName="IsFirstDeliv" />
+          <ScalarProperty Name="DeferredDeliveryType" ColumnName="DeferredDeliveryType" />
+          <ScalarProperty Name="SupplPackageQty" ColumnName="SupplPackageQty" />
+          <ScalarProperty Name="InnSubstPrescType" ColumnName="InnSubstPrescType" />
+          <ScalarProperty Name="RgtmCountReimbursable" ColumnName="RgtmCountReimbursable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SaleItemType">
+      <EntityTypeMapping TypeName="CPCLModel.SaleItemType">
+        <MappingFragment StoreEntitySet="SaleItemType">
+          <ScalarProperty Name="SaleItemType1" ColumnName="SaleItemType" />
+          <ScalarProperty Name="SaleItemTypeName" ColumnName="SaleItemTypeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalePoso">
+      <EntityTypeMapping TypeName="CPCLModel.SalePoso">
+        <MappingFragment StoreEntitySet="SalePoso">
+          <ScalarProperty Name="SlsID" ColumnName="SlsID" />
+          <ScalarProperty Name="SaleSectionID" ColumnName="SaleSectionID" />
+          <ScalarProperty Name="LignNr" ColumnName="LignNr" />
+          <ScalarProperty Name="text" ColumnName="text" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sales">
+      <EntityTypeMapping TypeName="CPCLModel.Sales">
+        <MappingFragment StoreEntitySet="Sales">
+          <ScalarProperty Name="SlsID" ColumnName="SlsID" />
+          <ScalarProperty Name="SaleTicketNr" ColumnName="SaleTicketNr" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="IsInvoiced" ColumnName="IsInvoiced" />
+          <ScalarProperty Name="InvoiceNr" ColumnName="InvoiceNr" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="PrintInvoiceDate" ColumnName="PrintInvoiceDate" />
+          <ScalarProperty Name="DateSale" ColumnName="DateSale" />
+          <ScalarProperty Name="WrkstatCode" ColumnName="WrkstatCode" />
+          <ScalarProperty Name="AmntRebate" ColumnName="AmntRebate" />
+          <ScalarProperty Name="AmntRist" ColumnName="AmntRist" />
+          <ScalarProperty Name="AmntNetto" ColumnName="AmntNetto" />
+          <ScalarProperty Name="AmntPaid" ColumnName="AmntPaid" />
+          <ScalarProperty Name="CurrencyIsoCodeCust" ColumnName="CurrencyIsoCodeCust" />
+          <ScalarProperty Name="IsBackofficeMode" ColumnName="IsBackofficeMode" />
+          <ScalarProperty Name="TimeSaleStart" ColumnName="TimeSaleStart" />
+          <ScalarProperty Name="TimeTicketPrinted" ColumnName="TimeTicketPrinted" />
+          <ScalarProperty Name="GreenockID" ColumnName="GreenockID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SaleSections">
+      <EntityTypeMapping TypeName="CPCLModel.SaleSections">
+        <MappingFragment StoreEntitySet="SaleSections">
+          <ScalarProperty Name="SlsID" ColumnName="SlsID" />
+          <ScalarProperty Name="SsecNr" ColumnName="SsecNr" />
+          <ScalarProperty Name="SectionType" ColumnName="SectionType" />
+          <ScalarProperty Name="PrescriptionNr" ColumnName="PrescriptionNr" />
+          <ScalarProperty Name="DateDeliv" ColumnName="DateDeliv" />
+          <ScalarProperty Name="DatePresp" ColumnName="DatePresp" />
+          <ScalarProperty Name="PatID" ColumnName="PatID" />
+          <ScalarProperty Name="PrescriberID" ColumnName="PrescriberID" />
+          <ScalarProperty Name="HonUrg" ColumnName="HonUrg" />
+          <ScalarProperty Name="PriceHonUrg" ColumnName="PriceHonUrg" />
+          <ScalarProperty Name="Oxygene" ColumnName="Oxygene" />
+          <ScalarProperty Name="CertificatSIS" ColumnName="CertificatSIS" />
+          <ScalarProperty Name="RenewalNr" ColumnName="RenewalNr" />
+          <ScalarProperty Name="InamirizvNrCpy" ColumnName="InamirizvNrCpy" />
+          <ScalarProperty Name="PresbSpecCodeCpy" ColumnName="PresbSpecCodeCpy" />
+          <ScalarProperty Name="IsTariffing" ColumnName="IsTariffing" />
+          <ScalarProperty Name="DateIsTar" ColumnName="DateIsTar" />
+          <ScalarProperty Name="IsWaitingTaroffice" ColumnName="IsWaitingTaroffice" />
+          <ScalarProperty Name="WaittingTarofficeReason" ColumnName="WaittingTarofficeReason" />
+          <ScalarProperty Name="IsBackofficeMode" ColumnName="IsBackofficeMode" />
+          <ScalarProperty Name="DateChange" ColumnName="DateChange" />
+          <ScalarProperty Name="InsrCoverID" ColumnName="InsrCoverID" />
+          <ScalarProperty Name="InsrCoverSecondID" ColumnName="InsrCoverSecondID" />
+          <ScalarProperty Name="IsSisCardMissing" ColumnName="IsSisCardMissing" />
+          <ScalarProperty Name="DateStartOxygen" ColumnName="DateStartOxygen" />
+          <ScalarProperty Name="DateStopOxygen" ColumnName="DateStopOxygen" />
+          <ScalarProperty Name="FlowOxygen" ColumnName="FlowOxygen" />
+          <ScalarProperty Name="DelivTypeOxygen" ColumnName="DelivTypeOxygen" />
+          <ScalarProperty Name="DailyAmntOxygen" ColumnName="DailyAmntOxygen" />
+          <ScalarProperty Name="DatetimeSisRead" ColumnName="DatetimeSisRead" />
+          <ScalarProperty Name="DateMaxDeliv" ColumnName="DateMaxDeliv" />
+          <ScalarProperty Name="DateMaxReimb" ColumnName="DateMaxReimb" />
+          <ScalarProperty Name="CertificateSeed" ColumnName="CertificateSeed" />
+          <ScalarProperty Name="OttdCheckDigits" ColumnName="OttdCheckDigits" />
+          <ScalarProperty Name="IsMyCareNetBackup" ColumnName="IsMyCareNetBackup" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SaleSectionType">
+      <EntityTypeMapping TypeName="CPCLModel.SaleSectionType">
+        <MappingFragment StoreEntitySet="SaleSectionType">
+          <ScalarProperty Name="SaleSectionType1" ColumnName="SaleSectionType" />
+          <ScalarProperty Name="SaleSectionName" ColumnName="SaleSectionName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SitmHons">
+      <EntityTypeMapping TypeName="CPCLModel.SitmHons">
+        <MappingFragment StoreEntitySet="SitmHons">
+          <ScalarProperty Name="SlsID" ColumnName="SlsID" />
+          <ScalarProperty Name="SsecNr" ColumnName="SsecNr" />
+          <ScalarProperty Name="SitmNr" ColumnName="SitmNr" />
+          <ScalarProperty Name="SeqNr" ColumnName="SeqNr" />
+          <ScalarProperty Name="SitmHonType" ColumnName="SitmHonType" />
+          <ScalarProperty Name="ArtID" ColumnName="ArtID" />
+          <ScalarProperty Name="HonPrice" ColumnName="HonPrice" />
+          <ScalarProperty Name="AmntHonThirdpartypaid" ColumnName="AmntHonThirdpartypaid" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SitmUbcs">
+      <EntityTypeMapping TypeName="CPCLModel.SitmUbcs">
+        <MappingFragment StoreEntitySet="SitmUbcs">
+          <ScalarProperty Name="SitmUbcYear" ColumnName="SitmUbcYear" />
+          <ScalarProperty Name="UbcNr" ColumnName="UbcNr" />
+          <ScalarProperty Name="SlsID" ColumnName="SlsID" />
+          <ScalarProperty Name="SsecNr" ColumnName="SsecNr" />
+          <ScalarProperty Name="SitmNr" ColumnName="SitmNr" />
+          <ScalarProperty Name="SitmUbcNr" ColumnName="SitmUbcNr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SpecHonCode">
+      <EntityTypeMapping TypeName="CPCLModel.SpecHonCode">
+        <MappingFragment StoreEntitySet="SpecHonCode">
+          <ScalarProperty Name="SpecHonID" ColumnName="SpecHonID" />
+          <ScalarProperty Name="SpecHonCode1" ColumnName="SpecHonCode" />
+          <ScalarProperty Name="GreenockID" ColumnName="GreenockID" />
+          <ScalarProperty Name="SpecHonName" ColumnName="SpecHonName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReturnAwaitings">
+      <EntityTypeMapping TypeName="CPCLModel.ReturnAwaitings">
+        <MappingFragment StoreEntitySet="ReturnAwaitings">
+          <ScalarProperty Name="ReturnAwaitingID" ColumnName="ReturnAwaitingID" />
+          <ScalarProperty Name="ReturnType" ColumnName="ReturnType" />
+          <ScalarProperty Name="DateReturn" ColumnName="DateReturn" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="ArtID" ColumnName="ArtID" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="BuyPricePerUnit" ColumnName="BuyPricePerUnit" />
+          <ScalarProperty Name="DateExpiry" ColumnName="DateExpiry" />
+          <ScalarProperty Name="LotNr" ColumnName="LotNr" />
+          <ScalarProperty Name="WrkstatCode" ColumnName="WrkstatCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductInOrder">
+      <EntityTypeMapping TypeName="CPCLModel.ProductInOrder">
+        <MappingFragment StoreEntitySet="ProductInOrder">
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="ArtIdCPCL" ColumnName="ArtIdCPCL" />
+          <ScalarProperty Name="CNKNr" ColumnName="CNKNr" />
+          <ScalarProperty Name="QtySend" ColumnName="QtySend" />
+          <ScalarProperty Name="OrderNr" ColumnName="OrderNr" />
+          <ScalarProperty Name="FreeText" ColumnName="FreeText" />
+          <ScalarProperty Name="GreenockID" ColumnName="GreenockID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrgRecupVersion">
+      <EntityTypeMapping TypeName="CPCLModel.PrgRecupVersion">
+        <MappingFragment StoreEntitySet="PrgRecupVersion">
+          <ScalarProperty Name="MajorNr" ColumnName="MajorNr" />
+          <ScalarProperty Name="MinorNr" ColumnName="MinorNr" />
+          <ScalarProperty Name="RevisionNr" ColumnName="RevisionNr" />
+          <ScalarProperty Name="LastUpgradeDate" ColumnName="LastUpgradeDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProfileLabels">
+      <EntityTypeMapping TypeName="CPCLModel.ProfileLabels">
+        <MappingFragment StoreEntitySet="ProfileLabels">
+          <ScalarProperty Name="ProfileType" ColumnName="ProfileType" />
+          <ScalarProperty Name="ProfileLabel" ColumnName="ProfileLabel" />
+          <ScalarProperty Name="LangCode" ColumnName="LangCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Actor_Pharmacies">
+      <EntityTypeMapping TypeName="CPCLModel.Actor_Pharmacies">
+        <MappingFragment StoreEntitySet="Actor_Pharmacies">
+          <ScalarProperty Name="PharmID" ColumnName="PharmID" />
+          <ScalarProperty Name="TitulName" ColumnName="TitulName" />
+          <ScalarProperty Name="ImsCode" ColumnName="ImsCode" />
+          <ScalarProperty Name="PharmApbNr" ColumnName="PharmApbNr" />
+          <ScalarProperty Name="PharmApbNrSuffix" ColumnName="PharmApbNrSuffix" />
+          <ScalarProperty Name="InamirizvNr" ColumnName="InamirizvNr" />
+          <ScalarProperty Name="TdpPharmID" ColumnName="TdpPharmID" />
+          <ScalarProperty Name="EmailTaroffice" ColumnName="EmailTaroffice" />
+          <ScalarProperty Name="TradeRegstNr" ColumnName="TradeRegstNr" />
+          <ScalarProperty Name="PlaceIDTradeRegst" ColumnName="PlaceIDTradeRegst" />
+          <ScalarProperty Name="ISAcod_perm_db" ColumnName="ISAcod_perm_db" />
+          <ScalarProperty Name="TarProtVersionNr" ColumnName="TarProtVersionNr" />
+          <ScalarProperty Name="DateTarProtVersionStart" ColumnName="DateTarProtVersionStart" />
+          <ScalarProperty Name="RprrpmNr" ColumnName="RprrpmNr" />
+          <ScalarProperty Name="GroupType" ColumnName="GroupType" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="PharmacyName" ColumnName="PharmacyName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PlaceID" ColumnName="PlaceID" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="GSM" ColumnName="GSM" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LangCode" ColumnName="LangCode" />
+          <ScalarProperty Name="CurrencyIsoCodeCust" ColumnName="CurrencyIsoCodeCust" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BarcodeReaderTypes">
+      <EntityTypeMapping TypeName="CPCLModel.BarcodeReaderTypes">
+        <MappingFragment StoreEntitySet="BarcodeReaderTypes">
+          <ScalarProperty Name="DeviceID" ColumnName="DeviceID" />
+          <ScalarProperty Name="ScannerType" ColumnName="ScannerType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Params">
+      <EntityTypeMapping TypeName="CPCLModel.Params">
+        <MappingFragment StoreEntitySet="Params">
+          <ScalarProperty Name="ParamID" ColumnName="ParamID" />
+          <ScalarProperty Name="ParamValue" ColumnName="ParamValue" />
+          <ScalarProperty Name="ParamValueType" ColumnName="ParamValueType" />
+          <ScalarProperty Name="MinSecurityLevel" ColumnName="MinSecurityLevel" />
+          <ScalarProperty Name="IsCentralLocked" ColumnName="IsCentralLocked" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

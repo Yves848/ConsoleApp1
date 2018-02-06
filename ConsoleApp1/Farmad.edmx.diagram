@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0caac1a67a484320a9a57399b7667881" Name="Diagram2" >
+        <EntityTypeShape EntityType="Farmad.FTBATTESTEN" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Farmad.FTBADRESSEN" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Farmad.FTBKLANTEN" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Farmad.FTBKLANTSIS" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Farmad.FTBTELNUMMERS" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Farmad.FTBPOSTCODES" Width="1.5" PointX="6.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Farmad.FTBPRODUCTEN" Width="1.5" PointX="7.375" PointY="6.75" />
+        <EntityTypeShape EntityType="Farmad.FTBPRODUCTSTOCK" Width="1.5" PointX="9.375" PointY="0.75" />
+        <EntityTypeShape EntityType="Farmad.FTBVERKOPEN" Width="1.5" PointX="9.375" PointY="4.75" />
+        <EntityTypeShape EntityType="Farmad.FTBVERKOOPITEMS" Width="1.5" PointX="9.375" PointY="10.75" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
