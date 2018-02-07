@@ -10,6 +10,7 @@
     <EntitySet Name="FTBPRODUCTSTOCK" EntityType="Farmad.FTBPRODUCTSTOCK" />
     <EntitySet Name="FTBVERKOPEN" EntityType="Farmad.FTBVERKOPEN" />
     <EntitySet Name="FTBVERKOOPITEMS" EntityType="Farmad.FTBVERKOOPITEMS" />
+    <EntitySet Name="FTBPOMSCHRIJVING" EntityType="Farmad.FTBPOMSCHRIJVING" />
   </EntityContainer>
   <EntityType Name="FTBADRESSEN">
     <Key>
@@ -432,5 +433,20 @@
     <Property Name="VI_TPE_FLAG1" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="VI_TPE_TYPE" Type="Int16" />
     <Property Name="VI_ISAANGEREKEND" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="FTBPOMSCHRIJVING">
+    <Key>
+      <PropertyRef Name="PT_CNKNUMMER" />
+      <PropertyRef Name="PT_VOLGNUMMER" />
+    </Key>
+    <Property Name="PT_CNKNUMMER" Type="String" Nullable="false" MaxLength="7" FixedLength="true" Unicode="true" />
+    <Property Name="PT_VOLGNUMMER" Type="Int16" Nullable="false" />
+    <Property Name="PT_OMSCHRIJVING__" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="PT_OMSCHRIJVINGFR" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="PT_SOUNDEX__" Type="String" MaxLength="4" FixedLength="true" Unicode="true" />
+    <Property Name="PT_SOUNDEXFR" Type="String" MaxLength="4" FixedLength="true" Unicode="true" />
+    <Property Name="PT_ZOEK__" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="PT_ZOEKFR" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="PT_KEY" Type="String" MaxLength="32765" FixedLength="false" Unicode="true" annotation:StoreGeneratedPattern="Computed" />
   </EntityType>
 </Schema>

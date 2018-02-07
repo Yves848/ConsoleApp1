@@ -15,6 +15,7 @@
         <EntityTypeShape EntityType="Farmad.FTBPRODUCTSTOCK" Width="1.5" PointX="9.375" PointY="0.75" />
         <EntityTypeShape EntityType="Farmad.FTBVERKOPEN" Width="1.5" PointX="9.375" PointY="4.75" />
         <EntityTypeShape EntityType="Farmad.FTBVERKOOPITEMS" Width="1.5" PointX="9.375" PointY="10.75" />
+        <EntityTypeShape EntityType="Farmad.FTBPOMSCHRIJVING" Width="1.5" PointX="11.375" PointY="0.75" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

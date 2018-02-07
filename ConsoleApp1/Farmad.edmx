@@ -126,6 +126,21 @@
           <Property Name="KS_PHARMA_CHECKDIGIT" Type="char" MaxLength="2" Unicode="false" />
           <Property Name="KS_INSZ" Type="varchar" MaxLength="40" Unicode="true" />
         </EntityType>
+        <EntityType Name="FTBPOMSCHRIJVING">
+          <Key>
+            <PropertyRef Name="PT_CNKNUMMER" />
+            <PropertyRef Name="PT_VOLGNUMMER" />
+          </Key>
+          <Property Name="PT_CNKNUMMER" Type="char" MaxLength="7" Unicode="false" Nullable="false" />
+          <Property Name="PT_VOLGNUMMER" Type="smallint" Nullable="false" />
+          <Property Name="PT_OMSCHRIJVING$$" Type="varchar" MaxLength="80" Unicode="true" />
+          <Property Name="PT_OMSCHRIJVINGFR" Type="varchar" MaxLength="80" Unicode="true" />
+          <Property Name="PT_SOUNDEX$$" Type="char" MaxLength="4" Unicode="false" />
+          <Property Name="PT_SOUNDEXFR" Type="char" MaxLength="4" Unicode="false" />
+          <Property Name="PT_ZOEK$$" Type="varchar" MaxLength="80" Unicode="true" />
+          <Property Name="PT_ZOEKFR" Type="varchar" MaxLength="80" Unicode="true" />
+          <Property Name="PT_KEY" Type="varchar" MaxLength="32765" Unicode="true" StoreGeneratedPattern="Computed" />
+        </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'Firebird.Firebird.FTBPOSTCODES' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="FTBPOSTCODES">
@@ -433,6 +448,7 @@ warning 6002: The table/view 'Firebird.Firebird.FTBPOSTCODES' does not have a pr
           <EntitySet Name="FTBADRESSEN" EntityType="Self.FTBADRESSEN" Schema="Firebird" store:Type="Tables" />
           <EntitySet Name="FTBKLANTEN" EntityType="Self.FTBKLANTEN" Schema="Firebird" store:Type="Tables" />
           <EntitySet Name="FTBKLANTSIS" EntityType="Self.FTBKLANTSIS" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="FTBPOMSCHRIJVING" EntityType="Self.FTBPOMSCHRIJVING" Schema="Firebird" store:Type="Tables" />
           <EntitySet Name="FTBPRODUCTEN" EntityType="Self.FTBPRODUCTEN" Schema="Firebird" store:Type="Tables" />
           <EntitySet Name="FTBPRODUCTSTOCK" EntityType="Self.FTBPRODUCTSTOCK" Schema="Firebird" store:Type="Tables" />
           <EntitySet Name="FTBTELNUMMERS" EntityType="Self.FTBTELNUMMERS" Schema="Firebird" store:Type="Tables" />
@@ -462,6 +478,7 @@ FROM "FTBPOSTCODES" AS "A"</DefiningQuery>
           <EntitySet Name="FTBPRODUCTSTOCK" EntityType="Farmad.FTBPRODUCTSTOCK" />
           <EntitySet Name="FTBVERKOPEN" EntityType="Farmad.FTBVERKOPEN" />
           <EntitySet Name="FTBVERKOOPITEMS" EntityType="Farmad.FTBVERKOOPITEMS" />
+          <EntitySet Name="FTBPOMSCHRIJVING" EntityType="Farmad.FTBPOMSCHRIJVING" />
         </EntityContainer>
         <EntityType Name="FTBADRESSEN">
           <Key>
@@ -884,6 +901,21 @@ FROM "FTBPOSTCODES" AS "A"</DefiningQuery>
           <Property Name="VI_TPE_FLAG1" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
           <Property Name="VI_TPE_TYPE" Type="Int16" />
           <Property Name="VI_ISAANGEREKEND" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="FTBPOMSCHRIJVING">
+          <Key>
+            <PropertyRef Name="PT_CNKNUMMER" />
+            <PropertyRef Name="PT_VOLGNUMMER" />
+          </Key>
+          <Property Name="PT_CNKNUMMER" Type="String" Nullable="false" MaxLength="7" FixedLength="true" Unicode="true" />
+          <Property Name="PT_VOLGNUMMER" Type="Int16" Nullable="false" />
+          <Property Name="PT_OMSCHRIJVING__" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="PT_OMSCHRIJVINGFR" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="PT_SOUNDEX__" Type="String" MaxLength="4" FixedLength="true" Unicode="true" />
+          <Property Name="PT_SOUNDEXFR" Type="String" MaxLength="4" FixedLength="true" Unicode="true" />
+          <Property Name="PT_ZOEK__" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="PT_ZOEKFR" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="PT_KEY" Type="String" MaxLength="32765" FixedLength="false" Unicode="true" annotation:StoreGeneratedPattern="Computed" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -1321,6 +1353,21 @@ FROM "FTBPOSTCODES" AS "A"</DefiningQuery>
                 <ScalarProperty Name="VI_CNKNUMMER" ColumnName="VI_CNKNUMMER" />
                 <ScalarProperty Name="VI_VSNUMMER" ColumnName="VI_VSNUMMER" />
                 <ScalarProperty Name="VI_ID" ColumnName="VI_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FTBPOMSCHRIJVING">
+            <EntityTypeMapping TypeName="Farmad.FTBPOMSCHRIJVING">
+              <MappingFragment StoreEntitySet="FTBPOMSCHRIJVING">
+                <ScalarProperty Name="PT_KEY" ColumnName="PT_KEY" />
+                <ScalarProperty Name="PT_ZOEKFR" ColumnName="PT_ZOEKFR" />
+                <ScalarProperty Name="PT_ZOEK__" ColumnName="PT_ZOEK$$" />
+                <ScalarProperty Name="PT_SOUNDEXFR" ColumnName="PT_SOUNDEXFR" />
+                <ScalarProperty Name="PT_SOUNDEX__" ColumnName="PT_SOUNDEX$$" />
+                <ScalarProperty Name="PT_OMSCHRIJVINGFR" ColumnName="PT_OMSCHRIJVINGFR" />
+                <ScalarProperty Name="PT_OMSCHRIJVING__" ColumnName="PT_OMSCHRIJVING$$" />
+                <ScalarProperty Name="PT_VOLGNUMMER" ColumnName="PT_VOLGNUMMER" />
+                <ScalarProperty Name="PT_CNKNUMMER" ColumnName="PT_CNKNUMMER" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

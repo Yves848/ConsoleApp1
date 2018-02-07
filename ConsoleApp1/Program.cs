@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.Entity.Core.Common.CommandTrees;
 using System.Data.Entity.Core.Objects;
 using System.Data.Odbc;
@@ -14,15 +15,82 @@ using ConsoleApp1;
 namespace ConsoleApp1
 {
 
+
+
+
     class Program
     {
-        private static void GetProducts()
+        private static DataTable GetStats()
         {
-            using (FarmadContainer farmad = new FarmadContainer())
+            DataTable Stats = new DataTable();
+            Stats.Columns.Add("CNK", typeof(string));
+            Stats.Columns.Add("Aant", typeof(int));
+            Stats.Columns.Add("mnd", typeof(int));
+            Stats.Columns.Add("Yr", typeof(int));
+            Stats.Columns.Add("YM", typeof(int));
+
+            using (var farmad = new FarmadContainer())
             {
-               
+                var qryStats = from stats in farmad.FTBVERKOOPITEMS
+                               orderby stats.VI_CNKNUMMER, stats.VI_DATUM
+                               select new
+                               {
+                                   CNK = stats.VI_CNKNUMMER,
+                                   AANT = stats.VI_AANTAL_AFGELEV,
+                                   DATE = stats.VI_DATUM
+                               };
+                int i = 0;
+
+                var oldCnk = string.Empty;
+                var oldmnd = 0;
+                var oldYr = 0;
+
+                var cnk = string.Empty;
+                short? Aant = 0;
+                var mnd = 0;
+                var Yr = 0;
+                var YM = 0;
+                foreach (var row in qryStats)
+                {
+                    int y1 = DateTime.Now.Year - 3;
+                    int y2 = DateTime.Now.Year;
+
+                    if (((DateTime)(row.DATE)).Year >= y1 && ((DateTime)(row.DATE)).Year <= y2)
+                    {
+                        cnk = row.CNK;
+
+                        mnd = ((DateTime)row.DATE).Month;
+                        Yr = ((DateTime)row.DATE).Year;
+                        if (oldCnk == cnk && oldYr == Yr && oldmnd == mnd)
+                        {
+                            Aant += row.AANT;
+                        }
+                        else
+                        {
+                            if (oldCnk == string.Empty)
+                            {
+                                oldCnk = cnk;
+                                oldmnd = mnd;
+                                oldYr = Yr;
+                            }
+                            else
+                            {
+                                YM = ((4 - ((DateTime.Now).Year - oldYr))) * 100 + oldmnd;
+                                Stats.Rows.Add(oldCnk, Aant, oldmnd, oldYr, YM);
+                                oldCnk = cnk;
+                                oldmnd = mnd;
+                                oldYr = Yr;
+                                Aant = 0;
+                            }
+                            Aant += row.AANT;
+                        }
+                    }
+                }
             }
+            return Stats;
         }
+
+
         static void Main(string[] args)
         {
             Console.WriteLine(DateTime.Now.ToLongTimeString());
@@ -82,10 +150,27 @@ namespace ConsoleApp1
                                       T_OBJECTNUMMER = g.T_OBJECTNUMMER,
                                       T_TELNR = g.T_TELEFOONNUMMER
                                   };
-
+                /*
                 foreach (var Ligne in klantTelNrs)
                 {
                     Console.WriteLine(Ligne.ToString());
+                }
+                */
+                DataTable tblStats = GetStats();
+                var tbl = from stat in tblStats.AsEnumerable()
+                    orderby stat.Field<string>("CNK"),stat.Field<int>("mnd"),stat.Field<int>("Yr")
+                    select stat;
+
+                var i = 0;
+                foreach (DataRow row in tbl.ToList())
+                { 
+                    i++;
+                    Console.WriteLine("{0}  {1} {2} {3} {4}", row.Field<string>(0), row.Field<int>(1), row.Field<int>(2), row.Field<int>(3), row.Field<int>(4));
+                    if (i % 100 == 0)
+                    {
+                        Console.ReadLine();
+                        i = 0;
+                    }
                 }
 
             }

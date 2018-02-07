@@ -34,5 +34,6 @@ namespace ConsoleApp1
         public virtual DbSet<FTBPRODUCTSTOCK> FTBPRODUCTSTOCK { get; set; }
         public virtual DbSet<FTBVERKOPEN> FTBVERKOPEN { get; set; }
         public virtual DbSet<FTBVERKOOPITEMS> FTBVERKOOPITEMS { get; set; }
+        public virtual DbSet<FTBPOMSCHRIJVING> FTBPOMSCHRIJVING { get; set; }
     }
 }

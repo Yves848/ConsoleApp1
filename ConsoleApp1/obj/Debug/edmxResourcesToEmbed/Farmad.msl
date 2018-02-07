@@ -434,5 +434,20 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="FTBPOMSCHRIJVING">
+      <EntityTypeMapping TypeName="Farmad.FTBPOMSCHRIJVING">
+        <MappingFragment StoreEntitySet="FTBPOMSCHRIJVING">
+          <ScalarProperty Name="PT_KEY" ColumnName="PT_KEY" />
+          <ScalarProperty Name="PT_ZOEKFR" ColumnName="PT_ZOEKFR" />
+          <ScalarProperty Name="PT_ZOEK__" ColumnName="PT_ZOEK$$" />
+          <ScalarProperty Name="PT_SOUNDEXFR" ColumnName="PT_SOUNDEXFR" />
+          <ScalarProperty Name="PT_SOUNDEX__" ColumnName="PT_SOUNDEX$$" />
+          <ScalarProperty Name="PT_OMSCHRIJVINGFR" ColumnName="PT_OMSCHRIJVINGFR" />
+          <ScalarProperty Name="PT_OMSCHRIJVING__" ColumnName="PT_OMSCHRIJVING$$" />
+          <ScalarProperty Name="PT_VOLGNUMMER" ColumnName="PT_VOLGNUMMER" />
+          <ScalarProperty Name="PT_CNKNUMMER" ColumnName="PT_CNKNUMMER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

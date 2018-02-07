@@ -121,6 +121,21 @@
     <Property Name="KS_PHARMA_CHECKDIGIT" Type="char" MaxLength="2" Unicode="false" />
     <Property Name="KS_INSZ" Type="varchar" MaxLength="40" Unicode="true" />
   </EntityType>
+  <EntityType Name="FTBPOMSCHRIJVING">
+    <Key>
+      <PropertyRef Name="PT_CNKNUMMER" />
+      <PropertyRef Name="PT_VOLGNUMMER" />
+    </Key>
+    <Property Name="PT_CNKNUMMER" Type="char" MaxLength="7" Unicode="false" Nullable="false" />
+    <Property Name="PT_VOLGNUMMER" Type="smallint" Nullable="false" />
+    <Property Name="PT_OMSCHRIJVING$$" Type="varchar" MaxLength="80" Unicode="true" />
+    <Property Name="PT_OMSCHRIJVINGFR" Type="varchar" MaxLength="80" Unicode="true" />
+    <Property Name="PT_SOUNDEX$$" Type="char" MaxLength="4" Unicode="false" />
+    <Property Name="PT_SOUNDEXFR" Type="char" MaxLength="4" Unicode="false" />
+    <Property Name="PT_ZOEK$$" Type="varchar" MaxLength="80" Unicode="true" />
+    <Property Name="PT_ZOEKFR" Type="varchar" MaxLength="80" Unicode="true" />
+    <Property Name="PT_KEY" Type="varchar" MaxLength="32765" Unicode="true" StoreGeneratedPattern="Computed" />
+  </EntityType>
   <!--Errors Found During Generation:
 warning 6002: The table/view 'Firebird.Firebird.FTBPOSTCODES' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="FTBPOSTCODES">
@@ -428,6 +443,7 @@ warning 6002: The table/view 'Firebird.Firebird.FTBPOSTCODES' does not have a pr
     <EntitySet Name="FTBADRESSEN" EntityType="Self.FTBADRESSEN" Schema="Firebird" store:Type="Tables" />
     <EntitySet Name="FTBKLANTEN" EntityType="Self.FTBKLANTEN" Schema="Firebird" store:Type="Tables" />
     <EntitySet Name="FTBKLANTSIS" EntityType="Self.FTBKLANTSIS" Schema="Firebird" store:Type="Tables" />
+    <EntitySet Name="FTBPOMSCHRIJVING" EntityType="Self.FTBPOMSCHRIJVING" Schema="Firebird" store:Type="Tables" />
     <EntitySet Name="FTBPRODUCTEN" EntityType="Self.FTBPRODUCTEN" Schema="Firebird" store:Type="Tables" />
     <EntitySet Name="FTBPRODUCTSTOCK" EntityType="Self.FTBPRODUCTSTOCK" Schema="Firebird" store:Type="Tables" />
     <EntitySet Name="FTBTELNUMMERS" EntityType="Self.FTBTELNUMMERS" Schema="Firebird" store:Type="Tables" />

@@ -169,6 +169,9 @@
     <Compile Include="FTBKLANTSIS.cs">
       <DependentUpon>Farmad.tt</DependentUpon>
     </Compile>
+    <Compile Include="FTBPOMSCHRIJVING.cs">
+      <DependentUpon>Farmad.tt</DependentUpon>
+    </Compile>
     <Compile Include="FTBPOSTCODES.cs">
       <DependentUpon>Farmad.tt</DependentUpon>
     </Compile>
